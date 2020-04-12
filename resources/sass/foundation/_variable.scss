@@ -1,0 +1,17 @@
+//header
+$headerHeight: 64px;
+
+//color
+$headerBgColor: #FFF4E1;
+$toppageBgColor: #9DDCDC;
+
+//サイト幅
+$site-width: 980px;
+
+//マップ型変数
+$breakpoints: (
+  'sm': 'screen and (max-width: 476px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 1000px)',
+  'xl': 'screen and (max-width: 1200px)',
+) !default;

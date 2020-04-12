@@ -1,0 +1,18 @@
+//スマホ
+@mixin mq() {
+  @media #{map-get($breakpoints,sm)} {
+    @content;
+  }
+}
+//タブレット
+@mixin md() {
+  @media #{map-get($breakpoints,md)} {
+    @content;
+  }
+}
+//ベンダープレフィックス
+@mixin css3($property, $value) {
+   @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+        #{$prefix}#{$property}: $value;
+   }
+}

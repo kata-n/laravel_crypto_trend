@@ -22,9 +22,9 @@
 @endsection
 
 @section('content')
-  <section class="toppage">
+  <section class="l-toppage">
       <div id="app">
-        <router-view />
+        <toppage-component></toppage-component>
       </div>
   </section>
 @endsection

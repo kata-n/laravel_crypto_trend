@@ -1,8 +1,11 @@
 //foundation
 @import "foundation/_reset";
-@import "foundation/_sample1";
+@import "foundation/_variable";
+@import "foundation/_mixins";
 //layout
-@import "layout/_sample2";
+@import "layout/_header";
+@import "layout/_container";
+@import "layout/_section";
 //component
 @import "component/_sample3";
 //project

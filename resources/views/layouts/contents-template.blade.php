@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <header class="header">
+    <header class="l-header">
     @section('header')
       <div class="header__logo"><a href="/">Crypto Trend</a></div>
     @show
@@ -31,7 +31,7 @@
       </div>
     @endif
 
-    <div class="contain">
+    <div class="l-container">
       @yield('content')
     </div>
 
