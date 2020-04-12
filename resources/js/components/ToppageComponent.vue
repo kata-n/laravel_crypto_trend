@@ -10,6 +10,7 @@
                     </div>
                     <a href="/login" class="quiz__startbtn">ログインする</a>
                     <a href="/register" class="quiz__startbtn">登録する</a>
+                    <a href="/twitter/login" class="quiz__startbtn">Twitterでログインする</a>
                 </div>
             </div>
         </div>
