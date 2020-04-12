@@ -28,9 +28,9 @@ class TwitterAuthController extends Controller
         $user = Socialite::with('twitter')->user();
         // 初めて来た人はユーザー登録、すでにIDがあるひとは、とってくる
         return redirect('/mainpage');
-        $authUser = $this->findOrCreateUser($user);
-        // その後ログイン
-        Auth::login($authUser, true);
+//        $authUser = $this->findOrCreateUser($user);
+//        // その後ログイン
+//        Auth::login($authUser, true);
     }
 
     /**
