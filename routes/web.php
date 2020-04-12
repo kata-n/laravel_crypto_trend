@@ -16,12 +16,15 @@ Route::get('/', function () {
     return view('top_page/top_page');
 });
 
+
+Route::get('/mainpage', function () {
+    return view('main_page/main_page');
+});
+
 //Teitterログイン
 Route::get('twitter/login', 'Auth\TwitterAuthController@redirectToProvider');
-//Twitter認証
+//Twitterコールバック
 Route::get('twitter/callback', 'Auth\TwitterAuthController@handleProviderCallback');
-
-
 
 Auth::routes();
 
