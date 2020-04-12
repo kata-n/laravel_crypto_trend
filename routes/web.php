@@ -11,13 +11,17 @@
 |
 */
 
+//トップページ
 Route::get('/', function () {
     return view('top_page/top_page');
 });
 
-Auth::routes();
+//Teitterログイン
+Route::get('twitter/login', 'Auth\TwitterAuthController@redirectToProvider');
+//Twitter認証
+Route::get('twitter/callback', 'Auth\TwitterAuthController@handleProviderCallback');
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 
 Auth::routes();
 

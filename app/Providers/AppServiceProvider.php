@@ -25,4 +25,17 @@ class AppServiceProvider extends ServiceProvider
     {
         //
     }
+
+    private function bootTwitterSocialite()
+    {
+        $twitter = $this->app->make('Laravel\Socialite\Contracts\Factory');
+        $twitter->extend(
+            'spotify',
+            function ($app) use ($twitter) {
+                $config = $app['config']['services.twitter'];
+                return $twitter->buildProvider(TwitterProvider::class, $config);
+            }
+        );
+    }
+
 }
