@@ -37,7 +37,7 @@ class TwitterAuthController extends Controller
           Auth::login($authUser[0]->user);
           return redirect('/mainpage')->with('status', 'ログインしました');
         } else {
-          //まだログインしたことない場合 情報をセッションに保存し新規会員登録へ
+          //まだログインしたことない場合は、Twitter情報をセッションに保存し新規会員登録へ
           session(['twitter' => $data]);
           return redirect('register')->with('status', 'ユーザー登録を行ってください');
         }
