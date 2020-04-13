@@ -54,7 +54,8 @@ class TwitterAuthController extends Controller
             throw new \Exception("twitter userがいるけどuserテーブルに紐づいていない");
             return redirect('/');
         }
-        return redirect('/');
+
+      return Redirect::route('/');
 //        $user = User::create([
 //            'name' => $twitter_account->name,
 //            'email' => str_random(16)."@example.com",
