@@ -55,7 +55,7 @@ class TwitterAuthController extends Controller
             return redirect('/');
         }
 
-      return Redirect::route('/');
+        return redirect('/mainpage');
 //        $user = User::create([
 //            'name' => $twitter_account->name,
 //            'email' => str_random(16)."@example.com",
