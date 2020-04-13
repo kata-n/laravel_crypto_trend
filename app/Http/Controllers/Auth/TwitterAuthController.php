@@ -29,38 +29,16 @@ class TwitterAuthController extends Controller
     public function handleProviderCallback()
     {
         $user = Socialite::with('twitter')->user();
-        // 初めて来た人はユーザー登録、すでにIDがある場合はデータ取得
+        // 初めて来た人はユーザー登録、すでにIDがあるひとはデータ取得
         $authUser = $this->findOrCreateUser($user);
-        Auth::login($authUser, true);
-        // その後ログイン
-        return redirect('/mainpage');
-    }
-
-    /**
-     * Return user if exists; create and return if doesn't
-     *
-     * @param $twitterUser
-     * @return User
-     */
-    private function findOrCreateUser($twitter_account)
-    {
-        $twitterUser = TwitterUser::where('twitter_user_id', $twitter_account->id)->first();
-
-        //twitterを登録している場合
-        if($twitterUser) {
-            $authUser = $twitterUser->user;
-            if ($authUser){
-              return $authUser;
-            }
-            throw new \Exception("登録しているが、userテーブルに紐づいていない");
-            return redirect('/');
-        }else{
-            //twitter登録していない場合
-            session(['twitter' => $twitter_account]);
-            return redirect('/login');
+        if(!empty($authUser[0]->user->id)){
+          //ログインしている場合
+          Auth::login($authUser[0]->user);
+          return redirect('/mainpage')->with('status', 'ログインしました');
+        } else {
+          //まだログインしたことない場合 情報をセッションに保存し新規会員登録へ
+          session(['twitter' => $user]);
+          return redirect('login')->with('status', 'Twitter連携しました');
         }
-
-        $user->twitter_users()->save($twitter_user);
-        return $user;
     }
 }
