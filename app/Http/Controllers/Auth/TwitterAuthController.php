@@ -46,7 +46,7 @@ class TwitterAuthController extends Controller
         if($twitterUser) {
             $authUser = $twitterUser->user;
             if ($authUser){
-                return $authUser;
+              return $authUser;
             }
             throw new \Exception("twitter userがいるけどuserテーブルに紐づいていない");
             return redirect('/');

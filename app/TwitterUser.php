@@ -10,12 +10,11 @@ class TwitterUser extends Model
     /**
      * Get the user that owns the twitter user.
      */
-    protected $fillable = ['twitter_user_id','email','name',
-    'nickname','avatar','token','token_secret',];
 
     public function user()
     {
         return $this->belongsTo('App\User');
     }
-
+    protected $fillable = ['twitter_user_id','email','name',
+    'nickname','avatar','token','token_secret',];
 }
