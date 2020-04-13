@@ -56,7 +56,7 @@ class TwitterAuthController extends Controller
             return redirect('/');
         }else{
             //twitter登録していない場合
-            session(['twitter' => $twitterUser]);
+            session(['twitter' => $twitter_account]);
             return redirect('/login');
         }
 
