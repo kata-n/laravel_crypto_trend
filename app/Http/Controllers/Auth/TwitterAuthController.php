@@ -30,7 +30,8 @@ class TwitterAuthController extends Controller
     {
         $user = Socialite::with('twitter')->user();
         // 初めて来た人はユーザー登録、すでにIDがあるひとはデータ取得
-        $authUser = $this->findOrCreateUser($user);
+        $authUser = TwitterUser::where('twitter_user_id', $twitter_account->id)->first();
+
         if(!empty($authUser[0]->user->id)){
           //ログインしている場合
           Auth::login($authUser[0]->user);
