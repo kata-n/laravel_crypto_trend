@@ -12,11 +12,7 @@
     </div>
   <nav class="header-nav js-toggle-sp-menu-target" id="js-classtaget">
     <ul>
-      <li><a href="/mainpage">クイズに挑戦</a></li>
-      <li><a href="#about-keigen" id="toAbout" class="js-toggle-sp-menu">軽減税率のフシギ</a></li>
-      <li><a href="#book" id="toBook" class="js-toggle-sp-menu">本</a></li>
-      <li><a href="#imformation" id="toImformation" class="js-toggle-sp-menu">お知らせ</a></li>
-      <li><a href="/policy" class="js-toggle-sp-menu">このサイトについて</a></li>
+      <li><a href="/mainpage">TEST!</a></li>
     </ul>
   </nav>
 @endsection

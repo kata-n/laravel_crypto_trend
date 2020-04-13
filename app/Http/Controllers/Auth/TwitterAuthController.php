@@ -26,11 +26,11 @@ class TwitterAuthController extends Controller
     public function handleProviderCallback()
     {
         $user = Socialite::with('twitter')->user();
-        // 初めて来た人はユーザー登録、すでにIDがあるひとは、とってくる
+        // 初めて来た人はユーザー登録、すでにIDがあるひとはデータ取得
+        $authUser = $this->findOrCreateUser($user);
+        Auth::login($authUser, true);
+        // その後ログイン
         return redirect('/mainpage');
-//        $authUser = $this->findOrCreateUser($user);
-//        // その後ログイン
-//        Auth::login($authUser, true);
     }
 
     /**
@@ -42,14 +42,16 @@ class TwitterAuthController extends Controller
     private function findOrCreateUser($twitterUser)
     {
         $twitterUser = TwitterUser::where('twitter_user_id', $twitter_account->id)->first();
+
         if($twitterUser) {
             $authUser = $twitterUser->user;
             if ($authUser){
                 return $authUser;
             }
             throw new \Exception("twitter userがいるけどuserテーブルに紐づいていない");
+            return redirect('/');
         }
-        return redirect('/mainpage');
+        return redirect('/login');
 //        $user = User::create([
 //            'name' => $twitter_account->name,
 //            'email' => str_random(16)."@example.com",
