@@ -68,5 +68,24 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        if(session('twitter')){
+
+            $twitter_account = session('twitter');
+
+            TwitterUser::create([
+            'twitter_user_id' => $twitter_account->id,
+            'email' => $twitter_account->email,
+            'name' => $twitter_account->name,
+            'nickname' => $twitter_account->nickname,
+            'avatar' => $twitter_account->avatar,
+            'token' => $twitter_account->token,
+            'token_secret' => $twitter_account->tokenSecret,
+            ]);
+
+            session()->forget('twitter');
+        }
+
+        return $authUser;
     }
 }
