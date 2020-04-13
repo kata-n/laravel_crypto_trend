@@ -41,7 +41,7 @@ class TwitterAuthController extends Controller
      * @param $twitterUser
      * @return User
      */
-    private function findOrCreateUser($twitterUser)
+    private function findOrCreateUser($twitter_account)
     {
         $twitterUser = TwitterUser::where('twitter_user_id', $twitter_account->id)->first();
 
