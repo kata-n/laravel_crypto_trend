@@ -55,7 +55,8 @@ class TwitterAuthController extends Controller
             throw new \Exception("登録しているが、userテーブルに紐づいていない");
             return redirect('/');
         }else{
-            session(['twitter' => $user]);
+            //twitter登録していない場合
+            session(['twitter' => $twitterUser]);
             return redirect('/login');
         }
 
