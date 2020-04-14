@@ -15,6 +15,6 @@ class TwitterUser extends Model
     {
         return $this->belongsTo('App\User');
     }
-    protected $fillable = ['twitter_user_id','email','name',
-    'nickname','avatar','token','token_secret',];
+        protected $fillable = ['twitter_user_id','email','name',
+        'nickname','avatar','token','token_secret',];
 }
