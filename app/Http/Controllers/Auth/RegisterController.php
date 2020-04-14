@@ -75,7 +75,7 @@ class RegisterController extends Controller
             $twitter_account = session('twitter');
 
             $twitter_user = new TwitterUser([
-            'user_id' => $res->id,
+            'user_id' => auth()->id,
             'twitter_user_id' => $twitter_account->id,
             'email' => $twitter_account->email,
             'name' => $twitter_account->name,
