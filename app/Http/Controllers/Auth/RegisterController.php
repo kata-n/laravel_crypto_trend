@@ -68,7 +68,7 @@ class RegisterController extends Controller
             'user_id' => auth()->id(),
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => $data['password'],
+            'password' => password_hash($data['password'], PASSWORD_DEFAULT);
         ]);
 
         if(session('twitter')){
