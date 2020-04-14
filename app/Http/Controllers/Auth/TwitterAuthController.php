@@ -29,15 +29,15 @@ class TwitterAuthController extends Controller
     public function handleProviderCallback()
     {
         $data = Socialite::with('twitter')->user();
-        // 初めて来た人はユーザー登録、すでにIDがあるひとはデータ取得
+        //ユーザー登録Twitterデータ確認
         $authUser = TwitterUser::where('twitter_user_id', $data->id)->first();
 
         if(!empty($authUser[0]->user->id)){
-          //ログインしている場合
+          //ユーザー登録している場合
           Auth::login($authUser[0]->user);
           return redirect('/mainpage')->with('status', 'ログインしました');
         } else {
-          //まだログインしたことない場合は、Twitter情報をセッションに保存し新規会員登録へ
+          //ユーザー登録していない場合は、Twitter情報をセッションに保存し新規会員登録へ
           session(['twitter' => $data]);
           return redirect('register')->with('status', 'ユーザー登録を行ってください');
         }
