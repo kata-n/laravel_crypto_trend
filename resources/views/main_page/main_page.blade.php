@@ -17,9 +17,6 @@
       <li><a href="#book" id="toBook" class="js-toggle-sp-menu">本</a></li>
       <li><a href="#imformation" id="toImformation" class="js-toggle-sp-menu">お知らせ</a></li>
       <li><a href="/policy" class="js-toggle-sp-menu">このサイトについて</a></li>
-      <a class="" href="{{ route('logout') }}">
-       {{ __('Logout') }}
-      </a>
     </ul>
   </nav>
 @endsection
@@ -27,6 +24,15 @@
 @section('content')
   <section class="l-mainpage">
       <p>メインページです</p>
+            <a class="dropdown-item" href="{{ route('logout') }}"
+        onclick="event.preventDefault();
+        document.getElementById('logout-form').submit();">
+        {{ __('Logout') }}
+      </a>
+
+      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+      </form>
   </section>
 @endsection
 
