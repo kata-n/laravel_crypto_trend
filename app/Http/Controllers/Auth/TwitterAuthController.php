@@ -30,11 +30,11 @@ class TwitterAuthController extends Controller
     {
         $data = Socialite::with('twitter')->user();
         //ユーザー登録Twitterデータ確認
-        $query = TwitterUser::where('twitter_user_id', $data->id)->first();
-var_dump($query->toSql(), $query->getBindings());
-        if(!empty($authUser[0]->user->id)){
+        $authUser = TwitterUser::where('twitter_user_id', $data->id)->first();
+
+        if(!empty($authUser->user->id)){
           //ユーザー登録している場合
-          Auth::login($authUser[0]->user);
+          Auth::login($authUser->user);
           return redirect('/mainpage')->with('status', 'ログインしました');
         } else {
           //ユーザー登録していない場合は、Twitter情報をセッションに保存し新規会員登録へ

@@ -71,8 +71,8 @@ class RegisterController extends Controller
             'password' => password_hash($data['password'], PASSWORD_DEFAULT)
         ]);
 
-        if(session('twitter')){
 
+        if(session('twitter')){
             $twitter_account = session('twitter');
 
             $twitter_user = new TwitterUser([
