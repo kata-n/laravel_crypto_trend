@@ -31,7 +31,7 @@ class TwitterAuthController extends Controller
         $data = Socialite::with('twitter')->user();
         //ユーザー登録Twitterデータ確認
         $authUser = TwitterUser::where('twitter_user_id', $data->id)->first();
-
+var_dump($authUser);
         if(!empty($authUser[0]->user->id)){
           //ユーザー登録している場合
           Auth::login($authUser[0]->user);
