@@ -63,10 +63,10 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $res = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'password' => $data['password'],
         ]);
 
         if(session('twitter')){
@@ -74,6 +74,7 @@ class RegisterController extends Controller
             $twitter_account = session('twitter');
 
             $twitter_user = new TwitterUser([
+            'user_id' => $res->id,
             'twitter_user_id' => $twitter_account->id,
             'email' => $twitter_account->email,
             'name' => $twitter_account->name,
@@ -82,12 +83,9 @@ class RegisterController extends Controller
             'token' => $twitter_account->token,
             'token_secret' => $twitter_account->tokenSecret,
             ]);
-
-            //DBへ登録
-            $twitter_account->save($twitter_user);
+$twitter_user->save();
             session()->forget('twitter');
         }
-
-        return $authUser;
+            return $res;
     }
 }
