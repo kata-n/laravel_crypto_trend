@@ -73,7 +73,7 @@ class RegisterController extends Controller
 
             $twitter_account = session('twitter');
 
-            TwitterUser::create([
+            $twitter_user = new TwitterUser([
             'twitter_user_id' => $twitter_account->id,
             'email' => $twitter_account->email,
             'name' => $twitter_account->name,
@@ -84,7 +84,7 @@ class RegisterController extends Controller
             ]);
 
             //DBへ登録
-            $twitter_account->save();
+            $twitter_account->save($twitter_user);
             session()->forget('twitter');
         }
 
