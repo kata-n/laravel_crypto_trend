@@ -455,7 +455,8 @@ th {
   margin: 0 auto;
 }
 
-.l-toppage {
+.l-toppage,
+.l-mainpage {
   padding-top: 64px;
 }
 
