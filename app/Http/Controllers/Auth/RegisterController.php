@@ -84,7 +84,9 @@ class RegisterController extends Controller
             'token' => $twitter_account->token,
             'token_secret' => $twitter_account->tokenSecret,
             ]);
-$twitter_user->save();
+
+            //DBへ登録
+            $twitter_user->save();
             session()->forget('twitter');
         }
             return $res;
