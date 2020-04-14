@@ -65,6 +65,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $res = User::create([
+            'user_id' => auth()->id(),
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => $data['password'],
@@ -75,7 +76,7 @@ class RegisterController extends Controller
             $twitter_account = session('twitter');
 
             $twitter_user = new TwitterUser([
-            'user_id' => auth()->id,
+            'user_id' => $res->id,
             'twitter_user_id' => $twitter_account->id,
             'email' => $twitter_account->email,
             'name' => $twitter_account->name,
