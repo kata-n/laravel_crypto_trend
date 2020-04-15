@@ -76,14 +76,14 @@ class RegisterController extends Controller
             $twitter_account = session('twitter');
 
             $twitter_user = new TwitterUser([
-            'user_id' => $res->id,
-            'twitter_user_id' => $twitter_account->id,
-            'email' => $twitter_account->email,
-            'name' => $twitter_account->name,
-            'nickname' => $twitter_account->nickname,
-            'avatar' => $twitter_account->avatar,
-            'token' => $twitter_account->token,
-            'token_secret' => $twitter_account->tokenSecret,
+              'user_id' => $res->id,
+              'twitter_user_id' => $twitter_account->id,
+              'email' => $twitter_account->email,
+              'name' => $twitter_account->name,
+              'nickname' => $twitter_account->nickname,
+              'avatar' => $twitter_account->avatar,
+              'token' => $twitter_account->token,
+              'token_secret' => $twitter_account->tokenSecret,
             ]);
 
             //DBへ登録
