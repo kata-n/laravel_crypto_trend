@@ -16,10 +16,10 @@ Route::get('/', function () {
     return view('top_page/top_page');
 });
 
-Route::get('/mainpage', 'TwitterAccountController@index');
-//Route::get('/mainpage', function () {
-////    return view('main_page/main_page');
-//});
+//Route::get('/mainpage', 'TwitterAccountController@index');
+Route::get('/mainpage', function () {
+    return view('main_page/main_page');
+});
 
 //Teitterログイン
 Route::get('twitter/login', 'Auth\TwitterAuthController@redirectToProvider');
