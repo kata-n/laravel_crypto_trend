@@ -8,7 +8,7 @@ use Laravel\Socialite\Facades\Socialite;
 
 class TwitterAccountController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
 //        //ツイートを5件取得
 //        $result = \Twitter::get('statuses/home_timeline', array("count" => 5));
@@ -17,5 +17,6 @@ class TwitterAccountController extends Controller
 //        return view('main_page/main_page', [
 //            "result" => $result
 //        ]);
+          return view('main_page/main_page');
     }
 }
