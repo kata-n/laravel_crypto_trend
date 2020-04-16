@@ -17,6 +17,6 @@ class TwitterAccountController extends Controller
 //        return view('main_page/main_page', [
 //            "result" => $result
 //        ]);
-          return view('main_page/main_page');
+//          return view('main_page/main_page');
     }
 }
