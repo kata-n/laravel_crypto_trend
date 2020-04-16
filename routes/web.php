@@ -17,7 +17,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/mainpage', function () {
+Route::get('mainpage', function () {
     return view('main_page/main_page');
 });
 
