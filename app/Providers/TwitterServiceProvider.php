@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Abraham\twitteroauth\TwitterOAuth;
+use Abraham\TwitterOAuth\TwitterOAuth;
 
 class TwitterServiceProvider extends ServiceProvider
 {
