@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+require 'vendor/autoload.php';
 use Abraham\TwitterOAuth\TwitterOAuth;
 
 class TwitterServiceProvider extends ServiceProvider
