@@ -12,7 +12,7 @@ class TwitterAccountController extends Controller
     {
 
       $config = config('services');
-require_once('path/to/twitteroauth.php');
+
       $twitter = new TwitterOAuth($config['api_key'], $config['secret_key'], $config['access_token'], $config['access_token_secret']);
 
         //ツイートを5件取得
