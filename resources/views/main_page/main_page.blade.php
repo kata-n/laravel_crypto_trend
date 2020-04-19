@@ -19,6 +19,9 @@
 
 @section('content')
   <section class="l-mainpage">
+    <div id="app">
+      <mainpage-component></mainpage-component>
+    </div>
       <p>メインページです</p>
       <a class="dropdown-item" href="{{ route('logout') }}"
         onclick="event.preventDefault();

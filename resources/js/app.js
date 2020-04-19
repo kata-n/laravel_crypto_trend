@@ -17,7 +17,11 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+//トップページ
 Vue.component('toppage-component', require('./components/ToppageComponent.vue').default);
+
+//メインページ
+Vue.component('mainpage-component', require('./components/MainpageComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
