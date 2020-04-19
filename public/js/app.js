@@ -107,12 +107,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -653,25 +647,7 @@ var staticRenderFns = [
           _c("div", { staticClass: "card" }, [
             _c("div", { staticClass: "card-header" }, [
               _vm._v("Example Componentメインのページです")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    I'm an example component.\n                "
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              { staticClass: "quiz__startbtn", attrs: { href: "/login" } },
-              [_vm._v("ログインする")]
-            ),
-            _vm._v(" "),
-            _c(
-              "a",
-              { staticClass: "quiz__startbtn", attrs: { href: "/register" } },
-              [_vm._v("登録する")]
-            )
+            ])
           ])
         ])
       ])

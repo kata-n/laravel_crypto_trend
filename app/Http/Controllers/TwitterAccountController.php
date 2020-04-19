@@ -32,7 +32,7 @@ class TwitterAccountController extends Controller
         );
 
         //ツイートを取得
-        $result = $twitter->get('search/tweets', $params);
+        $result = $twitter->get('search/tweets', $params)->result;
 
         echo $request;
 
