@@ -32,8 +32,13 @@ class TwitterAccountController extends Controller
         );
 
         //ツイートを5件取得
-        $result = $twitter->get('statuses/home_timeline', array("count" => 5));
-//        $result = $twitter->get('search/tweets', $params);
+//        $result = $twitter->get('statuses/home_timeline', array("count" => 5));
+        $result = $twitter->get('search/tweets', array
+        (
+          "q" => "仮想通貨 filter:images",
+          "count" => 5,
+        )
+        );
 
         //ViewのTwitter.blade.phpに渡す
         return view('main_page/main_page', [
