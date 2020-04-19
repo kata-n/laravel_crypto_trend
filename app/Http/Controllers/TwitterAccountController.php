@@ -10,17 +10,14 @@ class TwitterAccountController extends Controller
 {
     public function index(Request $request)
     {
-//
-//        $twitter = new TwitterOAuth(env('TWITTER_CLIENT_ID'),
-//            env('TWITTER_CLIENT_SECRET'),
-//            env('TWITTER_CLIENT_ID_ACCESS_TOKEN'),
-//            env('TWITTER_CLIENT_ID_ACCESS_TOKEN_SECRET'));
+        //Twitter情報取得
         $twitter = new TwitterOAuth(
             config('services.twitter.client_id'),
             config('services.twitter.client_secret'),
             config('services.twitter.access_token'),
             config('services.twitter.access_token_secret')
         );
+
         //ツイートを5件取得
         $result = $twitter->get('statuses/home_timeline', array("count" => 5));
 
@@ -29,5 +26,4 @@ class TwitterAccountController extends Controller
             "result" => $result
         ]);
     }
-
 }
