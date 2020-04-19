@@ -34,6 +34,7 @@
                 <div class="card-body">
                     <div class="media">
                         <div class="media-body">
+                            <h5>{{ $tweet->user->name }}</h5>
                             <p class="mt-3 mb-0">{{ $tweet->text }}</p>
                         </div>
                     </div>
