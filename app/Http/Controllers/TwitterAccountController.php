@@ -21,20 +21,20 @@ class TwitterAccountController extends Controller
 
         //パラメータ
         $params = array(
-//            "q" => "仮想通貨",
-//            "lang" => "ja",
-//            "locale" => "ja",
+            "q" => "仮想通貨",
+            "lang" => "ja",
+            "locale" => "ja",
             "count" => "6",
     //      "until" => "2020-01-01",
     //      "since_id" => "643299864344788992",
-//    //      "max_id" => "643299864344788992",
-//            "include_entities" => "true",
+    //      "max_id" => "643299864344788992",
+            "include_entities" => "true",
         );
 
 //        $result = $twitter->get('statuses/home_timeline', $params);
-        $result = $twitter->get('statuses/user_timeline', $params);
+//        $result = $twitter->get('statuses/user_timeline', $params);
 
-//        $result = $twitter->get('search/tweets', $params);
+        $result = $twitter->get('search/tweets', $params)->statuses;
 
         //ViewのTwitter.blade.phpに渡す
         return view('main_page/main_page', [
