@@ -11,10 +11,9 @@ class TwitterAccountController extends Controller
     public function index(Request $request)
     {
 
-$twitter = new TwitterOAuth(env('TWITTER_CLIENT_ID'),
-            env('TWITTER_CLIENT_SECRET'),
-            env('TWITTER_CLIENT_ID_ACCESS_TOKEN'),
-            env('TWITTER_CLIENT_ID_ACCESS_TOKEN_SECRET'));
+      $config = config('services');
+
+      $twitter = new TwitterOAuth($config['api_key'], $config['secret_key'], $config['access_token'], $config['access_token_secret']);
 
         //ツイートを5件取得
         $result = $twitter->get('statuses/home_timeline', array("count" => 5));
