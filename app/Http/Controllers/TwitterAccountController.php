@@ -29,7 +29,7 @@ class TwitterAccountController extends Controller
 //      "until" => "2020-01-01",
 //      "since_id" => "643299864344788992",
 //      "max_id" => "643299864344788992",
-        "include_entities" => "true",
+//        "include_entities" => "true",
         );
 
         $result = $twitter->get('statuses/home_timeline', $params);
