@@ -32,7 +32,6 @@ class TwitterAccountController extends Controller
         );
 
 //        $result = $twitter->get('statuses/home_timeline', $params);
-//        $result = $twitter->get('statuses/user_timeline', $params);
 
         $result = $twitter->get('search/tweets', $params)->statuses;
 
