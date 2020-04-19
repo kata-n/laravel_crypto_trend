@@ -16,10 +16,7 @@ Route::get('/', function () {
     return view('top_page/top_page');
 });
 
-//Route::get('/mainpage', function () {
-//    return view('main_page/main_page');
-//});
-
+//メインページ
 Route::get('/mainpage', 'TwitterAccountController@index');
 
 //Teitterログイン
