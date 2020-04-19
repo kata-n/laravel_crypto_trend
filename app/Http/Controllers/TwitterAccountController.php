@@ -19,7 +19,7 @@ class TwitterAccountController extends Controller
             config('services.twitter.client_id'),
             config('services.twitter.client_secret'),
             config('services.twitter.access_token'),
-            config('services.twitter.access_token_secret'),
+            config('services.twitter.access_token_secret')
         );
         //ツイートを5件取得
         $result = $twitter->get('statuses/home_timeline', array("count" => 5));
