@@ -36,7 +36,7 @@ class TwitterAccountController extends Controller
 //        $result = $twitter->get('statuses/home_timeline', $params);
 
         $result = $twitter->get($tw_rest_api, $params);
-
+echo $request;
         //ViewのTwitter.blade.phpに渡す
         return view('main_page/main_page', [
             "result" => $result
