@@ -35,8 +35,11 @@ class TwitterAccountController extends Controller
 //ツイートを5件取得
 //        $result = $twitter->get('statuses/home_timeline', $params);
 
-        $result = $twitter->get($tw_rest_api, $params);
+//        $result = $twitter->get($tw_rest_api, $params);
+
+        $result = $twitter->get('https://api.twitter.com/1.1/search/tweets.json?q=murashun&lang=ja&result_type=mixed&count=3&include_entities=true');
 echo $request;
+
         //ViewのTwitter.blade.phpに渡す
         return view('main_page/main_page', [
             "result" => $result
