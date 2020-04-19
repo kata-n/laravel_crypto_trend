@@ -34,7 +34,7 @@
                 <div class="card-body">
                     <div class="media">
                         <div class="media-body">
-                            <p class="mt-3 mb-0">{{ $tweet->text }}</p>
+                            <h5 class="d-inline mr-3"><strong>{{ $tweet->statuses->text }}</strong></h5>
                         </div>
                     </div>
                 </div>
