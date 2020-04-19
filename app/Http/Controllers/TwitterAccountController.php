@@ -26,15 +26,14 @@ class TwitterAccountController extends Controller
         "locale" => "ja",
         "count" => "5",
         "until" => "2020-01-01",
+        "include_entities" => "true",
 //		"since_id" => "643299864344788992",
 //		"max_id" => "643299864344788992",
-        "include_entities" => "true",
         );
 
-        //ツイートを5件取得
-        //$result = $twitter->get('statuses/home_timeline', array("count" => 5));
+        //ツイートを取得
         $result = $twitter->get("search/tweets", array($params));
-
+        echo $request;
         //ViewのTwitter.blade.phpに渡す
         return view('main_page/main_page', [
             "result" => $result
