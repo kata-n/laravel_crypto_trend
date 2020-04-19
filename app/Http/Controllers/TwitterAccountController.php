@@ -32,7 +32,8 @@ class TwitterAccountController extends Controller
         );
 
         //ツイートを取得
-        $result = $twitter->get($tw_rest_api, array($params));
+        $result = $twitter->get('search/tweets', $params);
+        return json_decode($result);
 
         echo $request;
 
