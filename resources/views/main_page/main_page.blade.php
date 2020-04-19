@@ -29,6 +29,7 @@
         {{ __('Logout') }}
       </a>
 
+<!--
         @foreach ($result as $tweet)
             <div class="card mb-2">
                 <div class="card-body">
@@ -42,7 +43,9 @@
                 </div>
             </div>
         @endforeach
+-->
 
+     print($result);
       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
         @csrf
       </form>
