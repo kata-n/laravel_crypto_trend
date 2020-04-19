@@ -18,7 +18,7 @@ class TwitterAccountController extends Controller
             config('services.twitter.access_token_secret')
         );
 
-//        $tw_rest_api = 'https://api.twitter.com/1.1/search/tweets.json';
+        $tw_rest_api = 'https://api.twitter.com/1.1/search/tweets.json';
 
         //パラメータ
         $params = array(
@@ -35,7 +35,7 @@ class TwitterAccountController extends Controller
 //ツイートを5件取得
 //        $result = $twitter->get('statuses/home_timeline', $params);
 
-        $result = $twitter->get("search/tweets", $params);
+        $result = $twitter->get($tw_rest_api, $params);
 
         //ViewのTwitter.blade.phpに渡す
         return view('main_page/main_page', [
