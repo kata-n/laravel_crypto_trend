@@ -24,7 +24,7 @@ class TwitterAccountController extends Controller
             "q" => "仮想通貨",
             "lang" => "ja",
             "locale" => "ja",
-            "count" => "6",
+            "count" => "10",
     //      "until" => "2020-01-01",
     //      "since_id" => "643299864344788992",
     //      "max_id" => "643299864344788992",
