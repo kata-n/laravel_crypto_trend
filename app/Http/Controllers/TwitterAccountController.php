@@ -25,7 +25,7 @@ class TwitterAccountController extends Controller
 $tw_rest_api = 'https://api.twitter.com/1.1/users/show.json';
 $request_method = 'GET';
 
-$result = $tw_obj->OAuthRequest($tw_rest_api, $request_method, array('cursor' => '-1', 'screen_name' => 'mikaaaandayo'));
+$result = $twitter->OAuthRequest($tw_rest_api, $request_method, array('cursor' => '-1', 'screen_name' => 'mikaaaandayo'));
 
 
 //        $result_json = json_decode($result, true);
