@@ -34,9 +34,7 @@
                 <div class="card-body">
                     <div class="media">
                         <div class="media-body">
-                            <h5 class="d-inline mr-3"><strong>{{ $tweet->user->name }}</strong></h5>
-                            <h6 class="d-inline text-secondary">{{ date('Y/m/d', strtotime($tweet->created_at)) }}</h6>
-                            <p class="mt-3 mb-0">{{ $tweet->text }}</p>
+                            <p class="mt-3 mb-0">{{ $tweet }}</p>
                         </div>
                     </div>
                 </div>
