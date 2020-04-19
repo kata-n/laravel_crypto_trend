@@ -34,7 +34,7 @@
                 <div class="card-body">
                     <div class="media">
                         <div class="media-body">
-                            <p class="mt-3 mb-0">{{ $tweet }}</p>
+                            <p class="mt-3 mb-0">{{ $tweet->text }}</p>
                         </div>
                     </div>
                 </div>
