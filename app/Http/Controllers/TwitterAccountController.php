@@ -21,7 +21,7 @@ class TwitterAccountController extends Controller
 
         //パラメータ
         $params = array(
-        "q" => "仮想通貨 filter:images",
+        "q" => "仮想通貨",
         "lang" => "ja",
         "locale" => "ja",
         "count" => "5",
@@ -33,7 +33,9 @@ class TwitterAccountController extends Controller
 
         //ツイートを取得
         $result = $twitter->get("search/tweets", array($params));
+
         echo $request;
+
         //ViewのTwitter.blade.phpに渡す
         return view('main_page/main_page', [
             "result" => $result
