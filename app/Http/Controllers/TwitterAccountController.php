@@ -34,7 +34,7 @@ class TwitterAccountController extends Controller
         //ツイートを5件取得
         $result = $twitter->get('statuses/home_timeline', array("count" => 5));
 //        $result = $twitter->get('search/tweets', $params);
-echo $result;
+
         //ViewのTwitter.blade.phpに渡す
         return view('main_page/main_page', [
             "result" => $result
