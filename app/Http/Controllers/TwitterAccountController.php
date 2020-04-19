@@ -24,7 +24,6 @@ class TwitterAccountController extends Controller
         "q" => "仮想通貨 filter:images",
         "lang" => "ja",
         "locale" => "ja",
-//		"result_type" => "popular",
         "count" => "5",
         "until" => "2020-01-01",
 //		"since_id" => "643299864344788992",
@@ -32,8 +31,8 @@ class TwitterAccountController extends Controller
         "include_entities" => "true",
         );
 
-      //ツイートを5件取得
-      //$result = $twitter->get('statuses/home_timeline', array("count" => 5));
+        //ツイートを5件取得
+        //$result = $twitter->get('statuses/home_timeline', array("count" => 5));
         $result = $twitter->get("search/tweets", array($params));
 
         //ViewのTwitter.blade.phpに渡す
