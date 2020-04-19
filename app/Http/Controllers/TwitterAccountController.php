@@ -17,18 +17,24 @@ class TwitterAccountController extends Controller
             config('services.twitter.access_token'),
             config('services.twitter.access_token_secret')
         );
+        $tw_rest_api = 'https://api.twitter.com/1.1/search/tweets.json';
 
-        //ツイートを5件取得
-//        $result = $twitter->get('statuses/home_timeline', array("count" => 5));
+        //パラメータ
+        $params = array(
+        "q" => "仮想通貨 filter:images",
+        "lang" => "ja",
+        "locale" => "ja",
+//		"result_type" => "popular",
+        "count" => "5",
+        "until" => "2020-01-01",
+//		"since_id" => "643299864344788992",
+//		"max_id" => "643299864344788992",
+        "include_entities" => "true",
+        );
 
-      
-$tw_rest_api = 'https://api.twitter.com/1.1/users/show.json';
-$request_method = 'GET';
-
-$result = $twitter->OAuthRequest($tw_rest_api, $request_method, array('cursor' => '-1', 'screen_name' => 'mikaaaandayo'));
-
-
-//        $result_json = json_decode($result, true);
+      //ツイートを5件取得
+      //$result = $twitter->get('statuses/home_timeline', array("count" => 5));
+        $result = $twitter->get("search/tweets", array($params));
 
         //ViewのTwitter.blade.phpに渡す
         return view('main_page/main_page', [
