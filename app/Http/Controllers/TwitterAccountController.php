@@ -19,7 +19,16 @@ class TwitterAccountController extends Controller
         );
 
         //ツイートを5件取得
-        $result = $twitter->get('statuses/home_timeline', array("count" => 5));
+//        $result = $twitter->get('statuses/home_timeline', array("count" => 5));
+
+      
+$tw_rest_api = 'https://api.twitter.com/1.1/users/show.json';
+$request_method = 'GET';
+
+$result = $tw_obj->OAuthRequest($tw_rest_api, $request_method, array('cursor' => '-1', 'screen_name' => 'mikaaaandayo'));
+
+
+//        $result_json = json_decode($result, true);
 
         //ViewのTwitter.blade.phpに渡す
         return view('main_page/main_page', [
