@@ -14,6 +14,6 @@ class TwitterServiceProvider extends ServiceProvider
      */
     public function register()
     {
-      $this->app()->bind( 'twitter', 'app\Services\TwitterConnection' );
+      $this->app->bind( 'twitter', 'app\Services\TwitterConnection' );
     }
 }
