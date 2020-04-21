@@ -12,7 +12,7 @@
                       <dt>フォロー数：{{account.friends_count}}</dt>
                       <dt>フォロワー数：{{account.followers_count}}</dt>
                       <dt>プロフィール：{{account.description}}</dt>
-                      <dt>最新ツイート：{{account.text}}</dt>
+                      <dt>最新ツイート：{{account.status.text}}</dt>
                     </dl>
                 </div>
             </div>

@@ -2531,7 +2531,9 @@ var render = function() {
                   _vm._v("プロフィール：" + _vm._s(account.description))
                 ]),
                 _vm._v(" "),
-                _c("dt", [_vm._v("最新ツイート：" + _vm._s(account.text))])
+                _c("dt", [
+                  _vm._v("最新ツイート：" + _vm._s(account.status.text))
+                ])
               ])
             })
           ],
