@@ -6,9 +6,6 @@
   @parent
   <nav class="nav">
     <div class="menu-trigger js-toggle-sp-menu" id="js-sp-nav-menu">
-      <span></span>
-      <span></span>
-      <span></span>
     </div>
   <nav class="header-nav js-toggle-sp-menu-target" id="js-classtaget">
     <ul>

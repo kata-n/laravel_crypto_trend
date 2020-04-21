@@ -24,7 +24,7 @@ class TwitterAccountController extends Controller
             "q" => "仮想通貨",
             "lang" => "ja",
             "locale" => "ja",
-            "count" => "4",
+            "count" => "2",
     //      "until" => "2020-01-01",
     //      "since_id" => "643299864344788992",
     //      "max_id" => "643299864344788992",
@@ -33,10 +33,7 @@ class TwitterAccountController extends Controller
 
         $result = $twitter->get('search/tweets', $params)->statuses;
 
-        //ViewのTwitter_account_page.blade.phpに渡す
-//        return view('main_page/twitter_account_page', [
-//            "result" => $result
-//        ]);
+        //jSONでVueに渡す
         return response()->json(['results' => $result]);
     }
 }

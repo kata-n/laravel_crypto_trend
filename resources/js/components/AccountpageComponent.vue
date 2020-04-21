@@ -8,6 +8,7 @@
 
                     <dl v-for="(account in accountdata.results">
                       <dt>{{account.user.name}}</dt>
+                      <dt>{{account.user.screen_name}}</dt>
                       <dt>{{account.text}}</dt>
                     </dl>
                 </div>
