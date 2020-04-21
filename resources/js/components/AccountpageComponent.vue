@@ -6,7 +6,7 @@
                     <div class="card-header">Twitterアカウントのページです</div>
                     <a href="/mainpage" class="">メインページへ</a>
 
-                    <dl v-for="(account in accountdata">
+                    <dl v-for="(account in accountdata.results">
                       <dt>{{account.text}}</dt>
                     </dl>
                 </div>
@@ -23,9 +23,9 @@
           };
         },
         mounted() {
-          this.$http.get("/twitteraccount").then(response => {
-            this.accountdata = response.data;
+          this.$http.get("/twitteraccount")
+          .then(response => {this.accountdata = response.data;
           });
-        },
+        }
     }
 </script>
