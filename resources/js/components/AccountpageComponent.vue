@@ -4,7 +4,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Twitterアカウントのページです</div>
-                    <a href="/mainpage" class="">メインページ</a>
+                    <a href="/mainpage" class="">メインページへ</a>
                 </div>
             </div>
         </div>

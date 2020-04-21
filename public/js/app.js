@@ -680,7 +680,9 @@ var staticRenderFns = [
               _vm._v("Twitterアカウントのページです")
             ]),
             _vm._v(" "),
-            _c("a", { attrs: { href: "/mainpage" } }, [_vm._v("メインページ")])
+            _c("a", { attrs: { href: "/mainpage" } }, [
+              _vm._v("メインページへ")
+            ])
           ])
         ])
       ])

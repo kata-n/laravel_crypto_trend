@@ -31,13 +31,12 @@ class TwitterAccountController extends Controller
             "include_entities" => "true",
         );
 
-//        $result = $twitter->get('statuses/home_timeline', $params);
-
         $result = $twitter->get('search/tweets', $params)->statuses;
 
         //ViewのTwitter_account_page.blade.phpに渡す
-        return view('main_page/twitter_account_page', [
-            "result" => $result
-        ]);
+//        return view('main_page/twitter_account_page', [
+//            "result" => $result
+//        ]);
+      return response()->json(['results' => $result]);
     }
 }
