@@ -1925,6 +1925,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2507,7 +2508,11 @@ var render = function() {
             ]),
             _vm._v(" "),
             _vm._l(_vm.accountdata.results, function(account) {
-              return _c("dl", [_c("dt", [_vm._v(_vm._s(account.text))])])
+              return _c("dl", [
+                _c("dt", [_vm._v(_vm._s(account.user.name))]),
+                _vm._v(" "),
+                _c("dt", [_vm._v(_vm._s(account.text))])
+              ])
             })
           ],
           2
