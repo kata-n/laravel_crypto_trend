@@ -18,7 +18,7 @@ Route::get('/', function () {
 
 //メインページ
 Route::get('/mainpage', function () {
-    return view('top_page/top_page');
+    return view('main_page/main_page');
 });
 
 //Twitterアカウントページ
