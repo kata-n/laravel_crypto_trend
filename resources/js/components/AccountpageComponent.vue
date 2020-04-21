@@ -7,7 +7,7 @@
                     <a href="/mainpage" class="">メインページへ</a>
 
                     <dl v-for="(account, index) in accountdata" :key="index">
-                      <dt>{{account.user.name}}</dt>
+                      <dt>{{account.text}}</dt>
                       <dd>{{account.user.description}}</dd>
                     </dl>
                 </div>
