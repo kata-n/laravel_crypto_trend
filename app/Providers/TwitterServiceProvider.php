@@ -14,31 +14,6 @@ class TwitterServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('twitter', function () {
-
-        //Twitter情報取得
-        return new TwitterOAuth(
-            config('services.twitter.client_id'),
-            config('services.twitter.client_secret'),
-            config('services.twitter.access_token'),
-            config('services.twitter.access_token_secret')
-        );
-
-        });
-    }
-
-    public function provides()
-    {
-        return ['twitter'];
-    }
-
-    /**
-     * Bootstrap services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        //
+      $this->app->bind( 'Twitter', 'app\Services\TwitterConnection' );
     }
 }
