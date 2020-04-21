@@ -6,6 +6,7 @@
 
 window.Vue = require('vue');
 import axios from 'axios'
+Vue.prototype.$http = axios;
 
 /**
  * The following block of code may be used to automatically register your
