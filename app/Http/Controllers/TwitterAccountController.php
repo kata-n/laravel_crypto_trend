@@ -21,14 +21,11 @@ class TwitterAccountController extends Controller
 
         //パラメータ
         $params = array(
-            "q" => "仮想通貨",
+            "q" => "from:仮想通貨",
             "lang" => "ja",
             "locale" => "ja",
             "count" => "2",
-    //      "until" => "2020-01-01",
-    //      "since_id" => "643299864344788992",
-    //      "max_id" => "643299864344788992",
-            "include_entities" => "true",
+            "include_entities" => "false",
         );
 
         $result = $twitter->get('search/tweets', $params)->statuses;
