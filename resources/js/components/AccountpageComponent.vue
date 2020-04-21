@@ -5,6 +5,11 @@
                 <div class="card">
                     <div class="card-header">Twitterアカウントのページです</div>
                     <a href="/mainpage" class="">メインページへ</a>
+
+                    <dl v-for="(account, index) in accountData" :key="index">
+                      <dt>{{account.user.name}}</dt>
+                      <dd>{{account.user.description}}</dd>
+                    </dl>
                 </div>
             </div>
         </div>
@@ -13,8 +18,15 @@
 
 <script>
     export default {
+        data() {
+          return {
+            accountData :[]
+          };
+        },
         mounted() {
-            console.log('Component mounted.')
+          this.$http.get("/twitteraccount").then(response => {
+            this.accountData = response.data;
+          });
         }
     }
 </script>

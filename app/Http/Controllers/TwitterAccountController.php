@@ -24,7 +24,7 @@ class TwitterAccountController extends Controller
             "q" => "仮想通貨",
             "lang" => "ja",
             "locale" => "ja",
-            "count" => "10",
+            "count" => "4",
     //      "until" => "2020-01-01",
     //      "since_id" => "643299864344788992",
     //      "max_id" => "643299864344788992",
@@ -37,6 +37,6 @@ class TwitterAccountController extends Controller
 //        return view('main_page/twitter_account_page', [
 //            "result" => $result
 //        ]);
-      return response()->json(['results' => $result]);
+        return response()->json(['results' => $result]);
     }
 }

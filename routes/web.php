@@ -22,6 +22,11 @@ Route::get('/mainpage', function () {
 });
 
 //Twitterアカウントページ
+Route::get('/accountpage', function () {
+    return view('main_page/twitter_account_page');
+});
+
+//TwitterAPI
 Route::get('/twitteraccount', 'TwitterAccountController@index');
 
 //Teitterログイン

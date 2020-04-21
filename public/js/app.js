@@ -108,9 +108,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      accountData: []
+    };
+  },
   mounted: function mounted() {
-    console.log('Component mounted.');
+    var _this = this;
+
+    this.$http.get("/twitteraccount").then(function (response) {
+      _this.accountData = response.data;
+    });
   }
 });
 
@@ -665,30 +679,36 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "l-container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
+  return _c("div", { staticClass: "l-container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-8" }, [
+        _c(
+          "div",
+          { staticClass: "card" },
+          [
             _c("div", { staticClass: "card-header" }, [
               _vm._v("Twitterアカウントのページです")
             ]),
             _vm._v(" "),
             _c("a", { attrs: { href: "/mainpage" } }, [
               _vm._v("メインページへ")
-            ])
-          ])
-        ])
+            ]),
+            _vm._v(" "),
+            _vm._l(_vm.accountData, function(account, index) {
+              return _c("dl", { key: index }, [
+                _c("dt", [_vm._v(_vm._s(account.user.name))]),
+                _vm._v(" "),
+                _c("dd", [_vm._v(_vm._s(account.user.description))])
+              ])
+            })
+          ],
+          2
+        )
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -725,7 +745,7 @@ var staticRenderFns = [
               _vm._v("Example Componentメインのページです")
             ]),
             _vm._v(" "),
-            _c("a", { attrs: { href: "/twitteraccount" } }, [
+            _c("a", { attrs: { href: "/accountpage" } }, [
               _vm._v("アカウントページ")
             ])
           ])
