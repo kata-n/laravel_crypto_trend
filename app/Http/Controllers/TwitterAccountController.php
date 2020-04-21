@@ -28,7 +28,7 @@ class TwitterAccountController extends Controller
             "include_entities" => "false",
         );
 
-        $result = $twitter->get('users/search', $params)->statuses;
+        $result = $twitter->get('users/search', $params);
 
         //jSONでVueに渡す
         return response()->json(['results' => $result]);
