@@ -3,8 +3,8 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Example Componentメインのページです</div>
-                    <a href="/twitteraccount" class="">アカウントページ</a>
+                    <div class="card-header">Twitterアカウントのページです</div>
+                    <a href="/mainpage" class="">メインページ</a>
                 </div>
             </div>
         </div>

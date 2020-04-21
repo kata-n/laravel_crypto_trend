@@ -17,7 +17,12 @@ Route::get('/', function () {
 });
 
 //メインページ
-Route::get('/mainpage', 'TwitterAccountController@index');
+Route::get('/mainpage', function () {
+    return view('top_page/top_page');
+});
+
+//Twitterアカウントページ
+Route::get('/twitteraccount', 'TwitterAccountController@index');
 
 //Teitterログイン
 Route::get('twitter/login', 'Auth\TwitterAuthController@redirectToProvider');

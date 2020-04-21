@@ -35,8 +35,8 @@ class TwitterAccountController extends Controller
 
         $result = $twitter->get('search/tweets', $params)->statuses;
 
-        //ViewのTwitter.blade.phpに渡す
-        return view('main_page/main_page', [
+        //ViewのTwitter_account_page.blade.phpに渡す
+        return view('main_page/twitter_account_page', [
             "result" => $result
         ]);
     }

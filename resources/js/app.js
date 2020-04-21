@@ -23,6 +23,8 @@ Vue.component('toppage-component', require('./components/ToppageComponent.vue').
 //メインページ
 Vue.component('mainpage-component', require('./components/MainpageComponent.vue').default);
 
+//Twitterアカウントページ
+Vue.component('accountpage-component', require('./components/AccountpageComponent.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
