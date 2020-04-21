@@ -11,13 +11,6 @@ class TwitterAccountController extends Controller
     public function index(Request $request)
     {
 
-        //Twitter情報取得
-        $twitter = new TwitterOAuth(
-            config('services.twitter.client_id'),
-            config('services.twitter.client_secret'),
-            config('services.twitter.access_token'),
-            config('services.twitter.access_token_secret')
-        );
 
         //パラメータ
         $params = array(
@@ -31,7 +24,8 @@ class TwitterAccountController extends Controller
             "include_entities" => "true",
         );
 
-        $result = $twitter->get('search/tweets', $params)->statuses;
+
+        $result = \Twitter::get('search/tweets', $params)->statuses;
 
         //jSONでVueに渡す
         return response()->json(['results' => $result]);
