@@ -6,9 +6,8 @@
                     <div class="card-header">Twitterアカウントのページです</div>
                     <a href="/mainpage" class="">メインページへ</a>
 
-                    <dl v-for="(account, results) in accountdata" :key="results">
-                      <dt>{{account.text}}</dt>
-
+                    <dl v-for="(account, index) in accountdata" :key="index">
+                      <dt>{{account.results.text}}</dt>
                     </dl>
                 </div>
             </div>
