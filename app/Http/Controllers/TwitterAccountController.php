@@ -10,7 +10,6 @@ class TwitterAccountController extends Controller
 {
     public function index(Request $request)
     {
-
         //Twitter情報取得
         $twitter = new TwitterOAuth(
             config('services.twitter.client_id'),
@@ -19,7 +18,7 @@ class TwitterAccountController extends Controller
             config('services.twitter.access_token_secret')
         );
 
-        //パラメータ
+        //検索クエリ指定
         $params = array(
             "q" => "仮想通貨",
             "lang" => "ja",
@@ -30,7 +29,7 @@ class TwitterAccountController extends Controller
 
         $result = $twitter->get('users/search', $params);
 
-        //jSONでVueに渡す
+        //jsonにてVueに渡す
         return response()->json(['results' => $result]);
     }
 }

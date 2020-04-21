@@ -7,9 +7,12 @@
                     <a href="/mainpage" class="">メインページへ</a>
 
                     <dl v-for="(account in accountdata.results">
-                      <dt>{{account.user.name}}</dt>
-                      <dt>{{account.user.screen_name}}</dt>
-                      <dt>{{account.text}}</dt>
+                      <dt>アカウント名：{{account.name}}</dt>
+                      <dt>ユーザー名：{{account.screen_name}}</dt>
+                      <dt>フォロー数：{{account.friends_count}}</dt>
+                      <dt>フォロワー数：{{account.followers_count}}</dt>
+                      <dt>プロフィール：{{account.description}}</dt>
+                      <dt>最新ツイート：{{account.text}}</dt>
                     </dl>
                 </div>
             </div>

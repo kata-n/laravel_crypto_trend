@@ -1927,6 +1927,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2510,11 +2513,25 @@ var render = function() {
             _vm._v(" "),
             _vm._l(_vm.accountdata.results, function(account) {
               return _c("dl", [
-                _c("dt", [_vm._v(_vm._s(account.user.name))]),
+                _c("dt", [_vm._v("アカウント名：" + _vm._s(account.name))]),
                 _vm._v(" "),
-                _c("dt", [_vm._v(_vm._s(account.user.screen_name))]),
+                _c("dt", [
+                  _vm._v("ユーザー名：" + _vm._s(account.screen_name))
+                ]),
                 _vm._v(" "),
-                _c("dt", [_vm._v(_vm._s(account.text))])
+                _c("dt", [
+                  _vm._v("フォロー数：" + _vm._s(account.friends_count))
+                ]),
+                _vm._v(" "),
+                _c("dt", [
+                  _vm._v("フォロワー数：" + _vm._s(account.followers_count))
+                ]),
+                _vm._v(" "),
+                _c("dt", [
+                  _vm._v("プロフィール：" + _vm._s(account.description))
+                ]),
+                _vm._v(" "),
+                _c("dt", [_vm._v("最新ツイート：" + _vm._s(account.text))])
               ])
             })
           ],
