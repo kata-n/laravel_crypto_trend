@@ -2507,8 +2507,8 @@ var render = function() {
               _vm._v("メインページへ")
             ]),
             _vm._v(" "),
-            _vm._l(_vm.accountdata, function(account, index) {
-              return _c("dl", { key: index }, [
+            _vm._l(_vm.accountdata, function(account, results) {
+              return _c("dl", { key: results }, [
                 _c("dt", [_vm._v(_vm._s(account.text))])
               ])
             })
