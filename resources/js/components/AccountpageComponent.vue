@@ -8,7 +8,7 @@
 
                     <dl v-for="(account, index) in accountdata" :key="index">
                       <dt>{{account.text}}</dt>
-                      <dd>{{account.user.description}}</dd>
+
                     </dl>
                 </div>
             </div>

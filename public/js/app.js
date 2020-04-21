@@ -2509,9 +2509,7 @@ var render = function() {
             _vm._v(" "),
             _vm._l(_vm.accountdata, function(account, index) {
               return _c("dl", { key: index }, [
-                _c("dt", [_vm._v(_vm._s(account.text))]),
-                _vm._v(" "),
-                _c("dd", [_vm._v(_vm._s(account.user.description))])
+                _c("dt", [_vm._v(_vm._s(account.text))])
               ])
             })
           ],
