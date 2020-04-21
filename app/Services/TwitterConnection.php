@@ -1,9 +1,9 @@
 <?php
-namespace App\Providers;
+namespace App\Services;
 
 use Abraham\TwitterOAuth\TwitterOAuth;
 
-class TwitterConnection
+class TwitterConnection()
 {
     public function connect()
     {
