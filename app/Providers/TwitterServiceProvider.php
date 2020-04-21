@@ -17,7 +17,7 @@ class TwitterServiceProvider extends ServiceProvider
         $this->app->singleton('twitter', function () {
 
         //Twitter情報取得
-        $twitter = new TwitterOAuth(
+        return new TwitterOAuth(
             config('services.twitter.client_id'),
             config('services.twitter.client_secret'),
             config('services.twitter.access_token'),
