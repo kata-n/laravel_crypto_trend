@@ -5,7 +5,7 @@
                 <div class="card">
                     <div class="card-header">Twitterアカウントのページです</div>
                     <dl v-for="(account in accountdata.results">
-                      <button type="submit" @click.stop.prevent="changefollow()">フォローする</button>
+                      <button type="submit" @click="changefollow(account.screen_name)">フォローする</button>
                       <dt>アカウント名：{{account.name}}</dt>
                       <dt>ユーザー名：{{account.screen_name}}</dt>
                       <dt>フォロー数：{{account.friends_count}}</dt>
@@ -31,6 +31,12 @@
           this.$http.get("/twitteraccount")
           .then(response => {this.accountdata = response.data;
           });
+        },
+        methods: {
+          getfollow: function(screen_name){
+            const url = '/twitteraccountfollow';
+            axios.post(url, screen_name)
+          }
         }
     }
 </script>

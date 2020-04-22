@@ -1942,6 +1942,12 @@ __webpack_require__.r(__webpack_exports__);
     this.$http.get("/twitteraccount").then(function (response) {
       _this.accountdata = response.data;
     });
+  },
+  methods: {
+    getfollow: function getfollow(screen_name) {
+      var url = '/twitteraccountfollow';
+      axios.post(url, screen_name);
+    }
   }
 });
 
@@ -2515,9 +2521,7 @@ var render = function() {
                     attrs: { type: "submit" },
                     on: {
                       click: function($event) {
-                        $event.stopPropagation()
-                        $event.preventDefault()
-                        return _vm.changefollow()
+                        return _vm.changefollow(account.screen_name)
                       }
                     }
                   },
