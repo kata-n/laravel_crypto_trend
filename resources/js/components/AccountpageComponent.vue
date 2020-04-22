@@ -24,33 +24,13 @@
     export default {
         data() {
           return {
-            accountdata :[],
-            isFollowedBy : {
-              type: Boolean,
-              default: false,
-              Screenname : account.screen_name,
-            }
+            accountdata :[]
           };
         },
         mounted() {
           this.$http.get("/twitteraccount")
           .then(response => {this.accountdata = response.data;
           });
-        },
-        methods: {
-          changefollow() {
-            this.isFollowedBy
-            ? this.ubfollow()
-            : this.follow()
-          },
-          async follow(isFollowedBy) {
-            const response = await axios.post('https://api.twitter.com/1.1/friendships/create.json' + Screenname);
-            this.isFollowedBy = true
-          },
-          async unfollow() {
-            const response = await axios.delete(this.endpoint)
-            this.isFollowedBy = false
-          },
         }
     }
 </script>
