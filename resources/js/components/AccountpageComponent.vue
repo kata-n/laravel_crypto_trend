@@ -28,6 +28,7 @@
             isFollowedBy : {
               type: Boolean,
               default: false,
+              Screenname : account.screen_name,
             }
           };
         },
@@ -42,8 +43,8 @@
             ? this.ubfollow()
             : this.follow()
           },
-          async follow() {
-            const response = await axios.post('https://api.twitter.com/1.1/friendships/create.json');
+          async follow(isFollowedBy) {
+            const response = await axios.post('https://api.twitter.com/1.1/friendships/create.json' + Screenname);
             this.isFollowedBy = true
           },
           async unfollow() {
