@@ -34,8 +34,8 @@
         },
         methods: {
           getfollow: function(screen_name){
-            const url = '/twitteraccountfollow';
-            axios.post(url, screen_name)
+            axios
+              .post(`/twitteraccountfollow/${screen_name}`)
           }
         }
     }

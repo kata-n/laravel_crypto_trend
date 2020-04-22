@@ -1945,8 +1945,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     getfollow: function getfollow(screen_name) {
-      var url = '/twitteraccountfollow';
-      axios.post(url, screen_name);
+      axios.post("/twitteraccountfollow/".concat(screen_name));
     }
   }
 });
