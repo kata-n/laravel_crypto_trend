@@ -2524,7 +2524,7 @@ var render = function() {
                     attrs: { type: "submit" },
                     on: {
                       click: function($event) {
-                        return _vm.changefollow(account.id)
+                        return _vm.changefollow(account.screen_name)
                       }
                     }
                   },

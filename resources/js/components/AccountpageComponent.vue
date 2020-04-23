@@ -5,7 +5,7 @@
                 <div class="card">
                     <div class="card-header">Twitterアカウントのページです</div>
                     <dl v-for="(account in accountdata.results">
-                      <button type="submit" @click="changefollow(account.id)">フォローする</button>
+                      <button type="submit" @click="changefollow(account.screen_name)">フォローする</button>
                       <dt>アカウント名：{{account.name}}</dt>
                       <dt>ユーザー名：{{account.screen_name}}</dt>
                       <dt>フォロー数：{{account.friends_count}}</dt>
