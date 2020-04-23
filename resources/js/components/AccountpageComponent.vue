@@ -33,7 +33,7 @@
           });
         },
         methods: {
-          getfollow: function(screen_name){
+          changefollow: function(screen_name){
             const data = screen_name
             axios.post('/twitteraccountfollow/', data)
           }
