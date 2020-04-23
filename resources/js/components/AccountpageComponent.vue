@@ -39,7 +39,7 @@
                 'twitter_name' : data,
             };
 
-            this.$http.post('/twitteraccountfollow', params)
+            this.$http.get('/twitteraccountfollow', params)
           }
         }
     }

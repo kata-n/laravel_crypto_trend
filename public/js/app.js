@@ -1949,7 +1949,7 @@ __webpack_require__.r(__webpack_exports__);
       var params = {
         'twitter_name': data
       };
-      this.$http.post('/twitteraccountfollow', params);
+      this.$http.get('/twitteraccountfollow', params);
     }
   }
 });
