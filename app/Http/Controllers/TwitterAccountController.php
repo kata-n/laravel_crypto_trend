@@ -43,10 +43,10 @@ class TwitterAccountController extends Controller
             config('services.twitter.access_token_secret')
         );
 
-        $user_id = $request->input('twitter_name');
+//        $user_id = $request->input('twitter_name');
         //ユーザークエリ指定
         $params = array(
-            "user_id" => "edindin_crypto",
+            "user_id" => "ZARASOKU",
             "follow" => "true",
         );
 
