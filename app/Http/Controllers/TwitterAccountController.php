@@ -46,7 +46,8 @@ class TwitterAccountController extends Controller
         $user_id = $request->input('twitter_name');
         //ユーザークエリ指定
         $params = array(
-            "user_id" => 'edindin_crypto'
+            "user_id" => "edindin_crypto",
+            "follow" => "true",
         );
 
         $result = $twitter->post('friendships/create', $params);
