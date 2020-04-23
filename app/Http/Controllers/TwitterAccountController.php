@@ -50,7 +50,7 @@ class TwitterAccountController extends Controller
             "follow" => "true",
         );
 
-        $result = $twitter->post('friendships/create', $params);
+        $result = $twitter->post('friendships/create', $params)->status;
         return response()->json(['results' => $result]);
 
     }
