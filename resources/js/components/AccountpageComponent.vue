@@ -35,7 +35,11 @@
         methods: {
           changefollow: function(twitter_id){
             const data = twitter_id
-            this.$http.post('/twitteraccountfollow', data)
+            let params = {
+                'twitter_name' : data,
+            };
+
+            this.$http.post('/twitteraccountfollow', params)
           }
         }
     }
