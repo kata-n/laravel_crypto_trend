@@ -50,6 +50,7 @@ class TwitterAccountController extends Controller
         );
 
         $twitter->post('friendships/create', $params);
+       return response()->json(['results' => $result]);
 
     }
 }
