@@ -1946,10 +1946,9 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     changefollow: function changefollow(twitter_id) {
       var data = twitter_id;
-      var params = {
-        'twitter_name': data
-      };
-      this.$http.get('/twitteraccountfollow', params);
+      this.$http.post('/twitteraccountfollow', {
+        id: data
+      });
     }
   }
 });
