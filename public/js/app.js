@@ -1944,8 +1944,8 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   methods: {
-    changefollow: function changefollow(screen_name) {
-      var data = screen_name;
+    changefollow: function changefollow(twitter_id) {
+      var data = twitter_id;
       this.$http.post('/twitteraccountfollow', data);
     }
   }
@@ -2521,7 +2521,7 @@ var render = function() {
                     attrs: { type: "submit" },
                     on: {
                       click: function($event) {
-                        return _vm.changefollow(account.screen_name)
+                        return _vm.changefollow(account.id)
                       }
                     }
                   },

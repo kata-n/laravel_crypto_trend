@@ -44,13 +44,13 @@ class TwitterAccountController extends Controller
         );
 
 //        $user_id = $request->input('twitter_name');
-        //ユーザークエリ指定
-        $params = array(
-            "user_id" => "ZARASOKU",
-            "follow" => "true",
-        );
+////        //ユーザークエリ指定
+////        $params = array(
+////            "user_id" => "1735344702",
+////            "follow" => "true",
+////        );
 
-        $result = $twitter->post('friendships/create', $params);
+        $result = $twitter->post('friendships/create', ['user_id'=> '1735344702']);
         return response()->json(['results' => $result]);
 
     }

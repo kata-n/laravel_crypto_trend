@@ -5,7 +5,7 @@
                 <div class="card">
                     <div class="card-header">Twitterアカウントのページです</div>
                     <dl v-for="(account in accountdata.results">
-                      <button type="submit" @click="changefollow(account.screen_name)">フォローする</button>
+                      <button type="submit" @click="changefollow(account.id)">フォローする</button>
                       <dt>アカウント名：{{account.name}}</dt>
                       <dt>ユーザー名：{{account.screen_name}}</dt>
                       <dt>フォロー数：{{account.friends_count}}</dt>
@@ -33,8 +33,8 @@
           });
         },
         methods: {
-          changefollow: function(screen_name){
-            const data = screen_name
+          changefollow: function(twitter_id){
+            const data = twitter_id
             this.$http.post('/twitteraccountfollow', data)
           }
         }
