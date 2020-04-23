@@ -35,7 +35,8 @@
         methods: {
           changefollow: function(screen_name){
             const data = screen_name
-            axios.post('/twitteraccountfollow/', data)
+            console.log(data)
+            this.$http.post('/twitteraccountfollow/', data)
           }
         }
     }
