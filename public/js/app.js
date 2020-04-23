@@ -1946,9 +1946,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     changefollow: function changefollow(screen_name) {
       var data = screen_name;
-      this.$http.post('/twitteraccountfollow', {
-        twitter_name: data
-      });
+      this.$http.post('/twitteraccountfollow', data);
     }
   }
 });
