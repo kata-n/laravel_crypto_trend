@@ -43,11 +43,8 @@ class TwitterAccountController extends Controller
             config('services.twitter.access_token_secret')
         );
 
-        $user_id = $request->input('id');
-
-        $result = $twitter->post('friendships/create', ['screen_name'=> $user_id]);
-
-        return response()->json(['results' => $result]);
+        $user_name = $request->input('name');
+        $result = $twitter->post('friendships/create', ['screen_name'=> $user_name]);
 
     }
 }

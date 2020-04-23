@@ -33,11 +33,10 @@
           });
         },
         methods: {
-          changefollow: function(twitter_id){
-            const data = twitter_id
-            console.log(data)
+          changefollow: function(twitter_name){
+            const data = twitter_name
             this.$http.post("/twitteraccountfollow", {
-              id: data
+              name: data
             })
           }
         }

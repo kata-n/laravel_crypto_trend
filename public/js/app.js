@@ -1944,11 +1944,10 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   methods: {
-    changefollow: function changefollow(twitter_id) {
-      var data = twitter_id;
-      console.log(data);
+    changefollow: function changefollow(twitter_name) {
+      var data = twitter_name;
       this.$http.post("/twitteraccountfollow", {
-        id: data
+        name: data
       });
     }
   }
