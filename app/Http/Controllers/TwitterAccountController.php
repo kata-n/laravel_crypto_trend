@@ -45,7 +45,7 @@ class TwitterAccountController extends Controller
 
         $user_id = $request->input('id');
 
-        $result = $twitter->post('friendships/create', ['user_id'=> $user_id]);
+        $result = $twitter->post('friendships/create', ['screen_name'=> $user_id]);
 
         return response()->json(['results' => $result]);
 
