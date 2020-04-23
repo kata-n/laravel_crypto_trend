@@ -43,14 +43,10 @@ class TwitterAccountController extends Controller
             config('services.twitter.access_token_secret')
         );
 
-//        $user_id = $request->input('twitter_name');
-////        //ユーザークエリ指定
-////        $params = array(
-////            "user_id" => "1735344702",
-////            "follow" => "true",
-////        );
+        $user_id = $request->data;
 
-        $result = $twitter->post('friendships/create', ['user_id'=> '1735344702']);
+        $result = $twitter->post('friendships/create', ['user_id'=> $user_id]);
+
         return response()->json(['results' => $result]);
 
     }
