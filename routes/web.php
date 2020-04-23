@@ -28,7 +28,7 @@ Route::get('/accountpage', function () {
 
 //TwitterAPI
 Route::get('/twitteraccount', 'TwitterAccountController@index');
-Route::get('/twitteraccountfollow', 'TwitterAccountController@follow');
+Route::post('/twitteraccountfollow', 'TwitterAccountController@follow');
 
 //Teitterログイン
 Route::get('twitter/login', 'Auth\TwitterAuthController@redirectToProvider');
