@@ -35,7 +35,6 @@
         methods: {
           changefollow: function(screen_name){
             const data = screen_name
-            console.log(data)
             this.$http.post('/twitteraccountfollow/', data)
           }
         }

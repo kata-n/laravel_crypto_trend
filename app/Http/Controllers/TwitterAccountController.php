@@ -32,4 +32,24 @@ class TwitterAccountController extends Controller
         //jsonにてVueに渡す
         return response()->json(['results' => $result]);
     }
+
+    public function follow(Request $request)
+    {
+        //Twitter情報取得
+        $twitter = new TwitterOAuth(
+            config('services.twitter.client_id'),
+            config('services.twitter.client_secret'),
+            config('services.twitter.access_token'),
+            config('services.twitter.access_token_secret')
+        );
+
+        $user_id = $request->data;
+        //ユーザークエリ指定
+        $params = array(
+            "user_id" => $user_id
+        );
+
+        $twitter->post('friendships/create', $params);
+
+    }
 }
