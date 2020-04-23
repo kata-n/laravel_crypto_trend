@@ -35,9 +35,13 @@
         methods: {
           changefollow: function(twitter_id){
             const data = twitter_id
-            this.$http.post('/twitteraccountfollow', {
-              id: data
-            })
+
+              axios({
+  method: 'post',
+  url: '/twitteraccountfollow',
+  auth: { id : 'data' },
+})
+
           }
         }
     }
