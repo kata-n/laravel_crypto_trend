@@ -43,7 +43,7 @@ class TwitterAccountController extends Controller
             config('services.twitter.access_token_secret')
         );
 
-        $user_id = $request
+        $user_id = $request;
         //ユーザークエリ指定
         $params = array(
             "user_id" => $user_id
