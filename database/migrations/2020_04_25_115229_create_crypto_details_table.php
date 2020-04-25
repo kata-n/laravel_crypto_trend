@@ -15,7 +15,13 @@ class CreateCryptoDetailsTable extends Migration
     {
         Schema::create('crypto_details', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->unsignedinteger('crypto_id');
+            $table->string('name');
+            $table->string('name_ja');
+            $table->decimal('crypto_high')->nullable;
+            $table->decimal('crypto_low')->nullable;
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 
