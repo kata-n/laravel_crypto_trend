@@ -8,7 +8,7 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 
 class TwitterAccountController extends Controller
 {
-    public function index(Request $request)
+    public function account(Request $request)
     {
         //Twitter情報取得
         $twitter = new TwitterOAuth(

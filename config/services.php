@@ -42,4 +42,9 @@ return [
         'redirect' => env('CALLBACK_URL'),
     ],
 
+    'coincheck' => [
+        'access_key' => env('COINCHECK_ACCESS_KEY'),
+        'secret_key' => env('COINCHECK_API_SECRET'),
+    ],
+
 ];

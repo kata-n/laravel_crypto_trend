@@ -18,7 +18,8 @@
         "laravel/tinker": "^1.0",
         "laravel/ui": "^1.1",
         "socialiteproviders/twitter": "^3.0",
-        "thujohn/twitter": "^2.2"
+        "thujohn/twitter": "^2.2",
+        "coincheck/coincheck": "1.1.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
