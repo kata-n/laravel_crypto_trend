@@ -30,6 +30,9 @@ Route::get('/accountpage', function () {
 Route::get('/twitteraccount', 'TwitterAccountController@account');
 Route::post('/twitteraccountfollow', 'TwitterAccountController@follow');
 
+//CoincheckAPI
+Route::get('/ticker', 'CoincheckController@ticker');
+
 //Teitterログイン
 Route::get('twitter/login', 'Auth\TwitterAuthController@redirectToProvider');
 //Twitterコールバック
