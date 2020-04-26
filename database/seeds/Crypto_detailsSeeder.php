@@ -107,22 +107,22 @@ class Crypto_detailsSeeder extends Seeder
             'crypto_id' => 14,
             'name' => 'ZEC',
             'name_ja' => 'ジーキャッシュ',
-            'crypto_high' => '',
-            'crypto_low' => '',
+            'crypto_high' => null,
+            'crypto_low' => null,
           ],
           $crypto15 = [
             'crypto_id' => 15,
             'name' => 'XMR',
             'name_ja' => 'モネロ',
-            'crypto_high' => '',
-            'crypto_low' => '',
+            'crypto_high' => null,
+            'crypto_low' => null,
           ],
           $crypto16 = [
             'crypto_id' => 16,
             'name' => 'REP',
             'name_ja' => 'オーガー',
-            'crypto_high' => '',
-            'crypto_low' => '',
+            'crypto_high' => null,
+            'crypto_low' => null,
           ],
         ];
         foreach ($cryptos as $crypto) {
