@@ -17,6 +17,6 @@ class CoincheckController extends Controller
       $result = json_decode($file,true);
 
     //jsonにてVueに渡す
-    return response()->json(['results' => $result]);
+    return response()->json(['results' => $result["high","low"]]);
   }
 }
