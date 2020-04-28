@@ -11,14 +11,14 @@ class CoincheckCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'command:coincheck';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Get BTC information';
 
     /**
      * Create a new command instance.
@@ -37,6 +37,6 @@ class CoincheckCommand extends Command
      */
     public function handle()
     {
-        //
+        CoincheckController::ticker();
     }
 }

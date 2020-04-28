@@ -13,7 +13,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        \App\Console\Commands\CoincheckCommand::class,
     ];
 
     /**
@@ -26,6 +26,11 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+
+        $schedule
+        ->command('command:send_mail')
+        ->withoutOverlapping()
+        ->daily(); //深夜12時に実行
     }
 
     /**
