@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use APP\HTTP\Controllers\CoincheckController;
 
 class CoincheckCommand extends Command
 {

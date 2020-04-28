@@ -23,7 +23,5 @@ class CoincheckController extends Controller
     $cryptodb_BTC->crypto_low = $result['low'];
     $cryptodb_BTC->save();
 
-    //jsonにてVueに渡す
-    return response()->json(['results' => $result]);
   }
 }

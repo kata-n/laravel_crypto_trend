@@ -47,4 +47,9 @@ class TwitterAccountController extends Controller
         $result = $twitter->post('friendships/create', ['screen_name'=> $user_name]);
 
     }
+
+    public function tweet_count()
+    {
+      
+    }
 }
