@@ -28,7 +28,7 @@ class Kernel extends ConsoleKernel
         //          ->hourly();
 
         $schedule
-        ->command('command:send_mail')
+        ->command('command:coincheck')
         ->withoutOverlapping()
         ->daily(); //深夜12時に実行
     }
