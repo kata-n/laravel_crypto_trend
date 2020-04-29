@@ -9,7 +9,7 @@ use App\CoincheckApi;
 
 class CoincheckController extends Controller
 {
-  public function ticker(Request $request)
+  public static function ticker(Request $request)
   {
 
     $strUrl = "https://coincheck.com/api/ticker";
