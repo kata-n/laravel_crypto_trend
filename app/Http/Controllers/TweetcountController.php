@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\CoincheckApi;
+use Abraham\TwitterOAuth\TwitterOAuth;
 
 class TweetcountController extends Controller
 {
