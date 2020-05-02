@@ -26,6 +26,9 @@ Route::get('/accountpage', function () {
     return view('main_page/twitter_account_page');
 });
 
+//TweetCount
+Route::get('/tweetcount', 'TweetcountController@counter');
+
 //TwitterAPI
 Route::get('/twitteraccount', 'TwitterAccountController@account');
 Route::post('/twitteraccountfollow', 'TwitterAccountController@follow');
