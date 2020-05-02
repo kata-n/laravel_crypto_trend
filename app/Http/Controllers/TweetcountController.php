@@ -31,7 +31,7 @@ class TweetcountController extends Controller
 
         //検索クエリ指定
         $params = array(
-            "q" => $crypto_name,
+            "q" => $crypto_list,
             "lang" => "ja",
             "locale" => "ja",
             "count" => "4",
