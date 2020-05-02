@@ -25,7 +25,7 @@ class TweetcountController extends Controller
     $cryptos = \App\CoincheckApi::select('crypto_id','name','name_ja')->get();
 
 
-      $crypto_list = array_column($cryptos, 'name');
+      $crypto_list = array_column((array)$cryptos, 'name');
 
       for($i=0; $i<$crypto_list; $i++){
 
