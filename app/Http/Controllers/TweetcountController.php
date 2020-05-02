@@ -31,19 +31,18 @@ class TweetcountController extends Controller
 
       for($i=0; $i<$count; $i++){
 
-        $crypto = array_column($keys, $i);
+        $result = array_column($keys, $i);
 
-        //検索クエリ指定
-        $params = array(
-            "q" => $crypto[$i],
-            "lang" => "ja",
-            "locale" => "ja",
-            "count" => "4",
-            "include_entities" => "false",
-        );
+//        //検索クエリ指定
+//        $params = array(
+//            "q" => $crypto[$i],
+//            "lang" => "ja",
+//            "locale" => "ja",
+//            "count" => "4",
+//            "include_entities" => "false",
+//        );
 
 //        $result = $twitter->get('users/search', $params);
-        $result = $params;
 
     }
         //jsonにてVueに渡す
