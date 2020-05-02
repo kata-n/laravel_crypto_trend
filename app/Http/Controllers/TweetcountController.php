@@ -24,9 +24,8 @@ class TweetcountController extends Controller
     //DBから銘柄を取得する
     $cryptos = \App\CoincheckApi::select('crypto_id','name','name_ja')->get();
     $cryptos_array = array($cryptos);
-    $crypto_list = array_column($cryptos_array,0);
-    $result = $crypto_list;
-//
+    $crypto_list = array_column($cryptos_array,1);
+
 //      for($i=0; $i<$count; $i++){
 //
 //        $result = array_column($keys, $i);
@@ -44,6 +43,6 @@ class TweetcountController extends Controller
 //
 //    }
         //jsonにてVueに渡す
-        return response()->json(['results' => $result]);
+        return response()->json(['results' => $crypto_list]);
   }
 }
