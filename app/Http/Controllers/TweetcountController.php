@@ -25,20 +25,20 @@ class TweetcountController extends Controller
     $cryptos = \App\CoincheckApi::select('crypto_id','name','name_ja')->get();
 
 
-      $crypto_list = array_column((array)$cryptos, 'name');
+      $result = array_column((array)$cryptos, 'name');
 
-      for($i=0; $i<$crypto_list; $i++){
+//      for($i=0; $i<$crypto_list; $i++){
+//
+//        //検索クエリ指定
+//        $params = array(
+//            "q" => $crypto_list,
+//            "lang" => "ja",
+//            "locale" => "ja",
+//            "count" => "4",
+//            "include_entities" => "false",
+//        );
 
-        //検索クエリ指定
-        $params = array(
-            "q" => $crypto_list,
-            "lang" => "ja",
-            "locale" => "ja",
-            "count" => "4",
-            "include_entities" => "false",
-        );
-
-        $result = $twitter->get('users/search', $params);
+//        $result = $twitter->get('users/search', $params);
 
     }
         //jsonにてVueに渡す
