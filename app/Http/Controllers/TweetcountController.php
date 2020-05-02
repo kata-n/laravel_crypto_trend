@@ -30,7 +30,7 @@ class TweetcountController extends Controller
 
       for($i=0; $i<$count; $i++){
 
-        $crypto = array_column($cryptos, $i);
+        $crypto = array_column($keys, $i);
 
         //検索クエリ指定
         $params = array(
