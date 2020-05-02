@@ -12,6 +12,7 @@ class TweetcountController extends Controller
 {
   public function counter(Request $request){
 
+
     //Twitter情報取得
     $twitter = new TwitterOAuth(
         config('services.twitter.client_id'),
@@ -21,21 +22,25 @@ class TweetcountController extends Controller
     );
 
     //DBから銘柄を取得する
-    $result = \App\CoincheckApi::select('crypto_id','name','name_ja')->get();
+    $cryptos = \App\CoincheckApi::select('crypto_id','name','name_ja')->get();
 
 
+      $crypto_list = array_column($cryptos, 'name');
 
-//        //検索クエリ指定
-//        $params = array(
-//            "q" => $cryptos['name'].' -RT',
-//            "lang" => "ja",
-//            "locale" => "ja",
-//            "count" => "4",
-//            "include_entities" => "false",
-//        );
-//
-//        $result = $twitter->get('users/search', $params);
+      for($i=0; $i<$crypto_list; $i++){
 
+        //検索クエリ指定
+        $params = array(
+            "q" => $crypto_name,
+            "lang" => "ja",
+            "locale" => "ja",
+            "count" => "4",
+            "include_entities" => "false",
+        );
+
+        $result = $twitter->get('users/search', $params);
+
+    }
         //jsonにてVueに渡す
         return response()->json(['results' => $result]);
   }
