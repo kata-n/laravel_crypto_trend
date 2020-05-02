@@ -24,7 +24,7 @@ class TweetcountController extends Controller
 
     foreach ($cryptos as $crypto) {
 
-      $crypto_name = $crypto['name']
+      $crypto_name = $crypto['name'];
       $crypt_name_ja = $crypyo['name_ja'];
 
         //検索クエリ指定
