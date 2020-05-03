@@ -28,7 +28,7 @@ class TweetcountController extends Controller
 
         //検索クエリ指定
         $params = array(
-            "q" => $value['name'] OR $value['name_ja'],
+            "q" => $value['name_ja'],
             "lang" => "ja",
             "locale" => "ja",
             "count" => "4",
@@ -36,6 +36,7 @@ class TweetcountController extends Controller
         );
 
       $result = $twitter->get('search/tweets', $params);
+
       $tweet_results[] = $result;
   }
 
