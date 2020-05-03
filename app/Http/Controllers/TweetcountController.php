@@ -22,14 +22,13 @@ class TweetcountController extends Controller
     );
 
     //DBから銘柄を取得する
-    $cryptos = \App\CoincheckApi::select('crypto_id','name','name_ja')->get();
-    $crypto_list = array($cryptos);
+    $cryptos = \App\CoincheckApi::select('crypto_id','name','name_ja')->get()->toArray();
 
-    foreach($crypto_list as $key) {
+    foreach($crypto_list as $crypto) {
 
         //検索クエリ指定
         $params = array(
-            "q" => $key['name'],
+            "q" => $crypto['name'],
             "lang" => "ja",
             "locale" => "ja",
             "count" => "4",
