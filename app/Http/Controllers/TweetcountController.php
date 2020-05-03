@@ -35,7 +35,7 @@ class TweetcountController extends Controller
             "include_entities" => "false",
         );
 
-      $result = $twitter->get('users/search', $params);
+      $result = $twitter->get('search/tweets', $params);
       $tweet_results[] = $result;
   }
 
