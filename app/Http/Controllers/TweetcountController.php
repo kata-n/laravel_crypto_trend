@@ -26,15 +26,18 @@ class TweetcountController extends Controller
     $crypto_list = array($cryptos);
 
     foreach($crypto_list as $key => $value) {
+      foreach ($value as $key2 => $value2) {
 
         //検索クエリ指定
         $params = array(
-            "q" => $key['name'].$value[],
+            "q" => $key2['name'],
             "lang" => "ja",
             "locale" => "ja",
             "count" => "4",
             "include_entities" => "false",
         );
+
+      }
   }
 
 //        $result = $twitter->get('users/search', $params);
