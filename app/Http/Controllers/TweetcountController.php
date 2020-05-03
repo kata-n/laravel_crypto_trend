@@ -38,6 +38,6 @@ class TweetcountController extends Controller
 //        $result = $twitter->get('users/search', $params);
 
         //jsonにてVueに渡す
-        return response()->json(['results' => $crypto_list]);
+        return response()->json(['results' => $list]);
   }
 }
