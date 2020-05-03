@@ -38,6 +38,6 @@ var_export(array_column($crypto_list, 'name'));
 //        $result = $twitter->get('users/search', $params);
 
         //jsonにてVueに渡す
-        return response()->json(['results' => $list]);
+        return response()->json(['results' => $crypto_list]);
   }
 }
