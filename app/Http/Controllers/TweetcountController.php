@@ -28,17 +28,17 @@ class TweetcountController extends Controller
 
         //検索クエリ指定
         $params = array(
-            "q" => $value['name'] +OR+ $value['name_ja'],
+            "q" => $value['name'] OR $value['name_ja'],
             "lang" => "ja",
             "locale" => "ja",
             "count" => "4",
             "include_entities" => "false",
         );
 
-      $tweet_results[] = $params;
+      $result = $twitter->get('users/search', $params);
+      $tweet_results[] = $result;
   }
 
-//        $result = $twitter->get('users/search', $params);
 
 //        jsonにてVueに渡す
         return response()->json(['results' => $tweet_results]);
