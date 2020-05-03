@@ -25,19 +25,17 @@ class TweetcountController extends Controller
     $cryptos = \App\CoincheckApi::select('crypto_id','name','name_ja')->get();
     $crypto_list = array($cryptos);
 
-    foreach($crypto_list as $key => $value) {
-      foreach ($value as $key2 => $value2) {
+    foreach($crypto_list as $key) {
 
         //検索クエリ指定
         $params = array(
-            "q" => $key2['name'],
+            "q" => $key['name'],
             "lang" => "ja",
             "locale" => "ja",
             "count" => "4",
             "include_entities" => "false",
         );
 
-      }
   }
 
 //        $result = $twitter->get('users/search', $params);
