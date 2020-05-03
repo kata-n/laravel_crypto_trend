@@ -35,11 +35,12 @@ class TweetcountController extends Controller
             "include_entities" => "false",
         );
 
+      $tweet_results[] = $params;
   }
 
 //        $result = $twitter->get('users/search', $params);
 
 //        jsonにてVueに渡す
-        return response()->json(['results' => $params]);
+        return response()->json(['results' => $tweet_results]);
   }
 }
