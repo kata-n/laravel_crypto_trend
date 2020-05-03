@@ -24,22 +24,22 @@ class TweetcountController extends Controller
     //DBから銘柄を取得する
     $cryptos = \App\CoincheckApi::select('crypto_id','name','name_ja')->get()->toArray();
 
-    foreach($cryptos as $crypto) {
-
-        //検索クエリ指定
-        $params = array(
-            "q" => $crypto['name'],
-            "lang" => "ja",
-            "locale" => "ja",
-            "count" => "4",
-            "include_entities" => "false",
-        );
-
-  }
+//    foreach($cryptos as $crypto) {
+//
+//        //検索クエリ指定
+//        $params = array(
+//            "q" => $crypto['name'],
+//            "lang" => "ja",
+//            "locale" => "ja",
+//            "count" => "4",
+//            "include_entities" => "false",
+//        );
+//
+//  }
 
 //        $result = $twitter->get('users/search', $params);
 
 //        jsonにてVueに渡す
-        return response()->json(['results' => $params]);
+        return response()->json(['results' => $cryptos]);
   }
 }
