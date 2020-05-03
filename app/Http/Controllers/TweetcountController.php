@@ -30,7 +30,7 @@ class TweetcountController extends Controller
 
         //検索クエリ指定
         $params = array(
-            "q" => $key2[1],
+            "q" => $value2,
             "lang" => "ja",
             "locale" => "ja",
             "count" => "4",
