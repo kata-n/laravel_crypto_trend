@@ -31,7 +31,7 @@ class TweetcountController extends Controller
             "q" => $value["name"].'+'.$value["name_ja"].' -rt -bot',
             "lang" => "ja",
             "locale" => "ja",
-            "count" => "4",
+//            "count" => "4",
             "include_entities" => "false",
         );
 
