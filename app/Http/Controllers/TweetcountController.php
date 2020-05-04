@@ -24,9 +24,10 @@ class TweetcountController extends Controller
     //DBから銘柄を取得する
     $cryptos = \App\CoincheckApi::select('crypto_id','name','name_ja')->get()->toArray();
 
+    //各銘柄毎にループ処理
     foreach($cryptos as $crypto => $value) {
 
-      //一階につき100件までしか取得できない為、ループ処理する
+      //一回につき100件までしか取得できない為、ループ処理する
       $request_loop = 2;
 
       for($i=0; $i<$request_loop; $i++){
@@ -36,7 +37,7 @@ class TweetcountController extends Controller
             "q" => $value["name"].'+#'.$value["name_ja"].' -rt -bot',
             "lang" => "ja",
             "locale" => "ja",
-            "count" => "2",
+            "count" => "50",
             "include_entities" => "false",
         );
 
@@ -44,10 +45,10 @@ class TweetcountController extends Controller
 
       $tweet_results[] = $result;
 
-      // これ以上取得できるツイートがあるか条件分岐
-      if(isset($results->search_metadata->next_results)){
+      // これ以上取得できるツイートがあるか
+      if(isset($result->search_metadata->next_results)){
          // 次ページURLのmax_id値を取得
-         $max_id = preg_replace('/.*?max_id=([\d]+)&.*/', '$1', $results->search_metadata->next_results);
+         $max_id = preg_replace('/.*?max_id=([\d]+)&.*/', '$1', $result->search_metadata->next_results);
          // あればmax_idをparamsに追加
          $params['max_id'] = $max_id;
       }else{
