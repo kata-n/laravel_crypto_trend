@@ -27,37 +27,34 @@ class TweetcountController extends Controller
     //各銘柄毎にループ処理
     foreach($cryptos as $crypto => $value) {
 
-      //一回につき100件までしか取得できない為、ループ処理する
-      $request_loop = 2;
+        //一回につき100件までしか取得できない為、ループ処理する
+        $request_loop = 10;
+        for($i=0; $i<$request_loop; $i++){
 
-      for($i=0; $i<$request_loop; $i++){
+          //検索クエリ指定
+          $params = array(
+              "q" => $value["name"].'+#'.$value["name_ja"].' -rt -bot',
+              "lang" => "ja",
+              "locale" => "ja",
+              "count" => "4",
+              "include_entities" => "false",
+          );
 
-        //検索クエリ指定
-        $params = array(
-            "q" => $value["name"].'+#'.$value["name_ja"].' -rt -bot',
-            "lang" => "ja",
-            "locale" => "ja",
-            "count" => "4",
-            "include_entities" => "false",
-        );
+        $result = $twitter->get('search/tweets', $params);
 
-      $result = $twitter->get('search/tweets', $params);
+        $tweet_results[] = $result;
 
-      $tweet_results[] = $result;
-
-      // これ以上取得できるツイートがあるか
-      if(isset($result->search_metadata->next_results)){
-         // 次ページURLのmax_id値を取得
-         $max_id = preg_replace('/.*?max_id=([\d]+)&.*/', '$1', $result->search_metadata->next_results);
-         // あればmax_idをparamsに追加
-         $params['max_id'] = $max_id;
-      }else{
-         break;
+        // これ以上取得できるツイートがあるか
+        if(isset($result->search_metadata->next_results)){
+           // 次ページURLのmax_id値を取得
+           $max_id = preg_replace('/.*?max_id=([\d]+)&.*/', '$1', $result->search_metadata->next_results);
+           // あればmax_idをparamsに追加
+           $params['max_id'] = $max_id;
+        }else{
+           break;
+        }
       }
     }
-  }
-
-
 //    jsonにてVueに渡す
       return response()->json(['results' => $tweet_results]);
   }
