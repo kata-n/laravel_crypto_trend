@@ -27,7 +27,7 @@ class TweetcountController extends Controller
     foreach($cryptos as $crypto => $value) {
 
       //一階につき100件までしか取得できない為、ループ処理する
-      $request_loop = 2
+      $request_loop = 2;
 
       for($i=0; $i<$request_loop; $i++){
 
