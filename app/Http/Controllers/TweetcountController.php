@@ -28,7 +28,7 @@ class TweetcountController extends Controller
 
       //時間指定
       $nowdate = date('Y-n-j_H:i:s');
-      $onehourdate = date('Y-n-j_H:i:s',strtotime("-1 year"));
+      $onehourdate = date('Y-n-j_H:i:s',strtotime("-1 hour"));
 
       $time = "since:".$onehourdate."_JST until:".$nowdate."_JST";
 
