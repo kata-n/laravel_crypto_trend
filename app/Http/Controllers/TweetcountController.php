@@ -28,7 +28,7 @@ class TweetcountController extends Controller
 
       //時間指定
       $getdateq = date('Y-n-j');
-      $getdate = date('Y-n-j'._.'H:i:s');
+      $getdate = date('Y-n-j'_'H:i:s');
 
 
       $time = "since:".$getdateq."_20:00:00_JST until:".$getdate."_JST";
