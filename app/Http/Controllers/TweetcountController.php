@@ -47,17 +47,18 @@ class TweetcountController extends Controller
         // これ以上取得できるツイートがあるか
         if(isset($result->search_metadata->next_results)){
            // max_id値を取得
-           $max_id = $result->search_metadata->max_id;
+           $max_id = preg_replace('/.*?max_id=([\d]+)&.*/', '$1', $results->search_metadata->next_results);
            // max_idをparamsに追加
-           $params["max_id"] = $max_id + 1;
+           $params["max_id"] = $max_id;
           //配列化
            $tweet_results[] = $result;
+           $tweet_result[] = array_unique($tweet_results);
         }else{
            break;
         }
       }
     }
 //    jsonにてVueに渡す
-      return response()->json(['results' => $tweet_results]);
+      return response()->json(['results' => $tweet_result]);
   }
 }
