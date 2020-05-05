@@ -29,8 +29,8 @@ class TweetcountController extends Controller
       //時間指定
       $year = date('Y-n-j');
 
-      $time = "since:2020-5-5_21:30:00_JST until:".$year.
-      "_21:50:00_JST";
+      $time = "since:".$year."_20:00:00_JST until:".$year.
+      "_20:10:00_JST";
 
       //一回につき100件までしか取得できない為、ループ処理する
       $request_loop = 2;
