@@ -47,7 +47,7 @@ class TweetcountController extends Controller
         // これ以上取得できるツイートがあるか
         if(isset($result->search_metadata->next_results)){
            // max_id値を取得
-           $max_id = preg_replace('/.*?max_id=([\d]+)&.*/', '$1', $results->search_metadata->next_results);
+           $max_id = preg_replace('/.*?max_id=([\d]+)&.*/', '$1', $result->search_metadata->next_results);
            // max_idをparamsに追加
            $params["max_id"] = $max_id;
           //配列化
