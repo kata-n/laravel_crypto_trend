@@ -12,7 +12,6 @@ class TweetcountController extends Controller
 {
   public function counter(Request $request){
 
-
     //Twitter情報取得
     $twitter = new TwitterOAuth(
         config('services.twitter.client_id'),
@@ -27,13 +26,14 @@ class TweetcountController extends Controller
     //各銘柄毎にループ処理
     foreach($cryptos as $crypto => $value) {
 
+        $time = "since:2020-5-1_20:00:00_JST until:2020-05-01_20:15:00_JST"
         //一回につき100件までしか取得できない為、ループ処理する
         $request_loop = 3;
         for($i=0; $i<$request_loop; $i++){
 
           //検索クエリ指定
           $params = array(
-              "q" => $value["name"].'+#'.$value["name_ja"].' -rt -bot',
+              "q" => $value["name"].'+#'.$value["name_ja"].' -rt -bot'.$time,
               "lang" => "ja",
               "locale" => "ja",
               "count" => "5",
@@ -48,6 +48,7 @@ class TweetcountController extends Controller
            $max_id = preg_replace('/.*?max_id=([\d]+)&.*/', '$1', $result->search_metadata->next_results);
            // あればmax_idをparamsに追加
            $params['max_id'] = $max_id;
+           //配列化
            $tweet_results[] = $result;
         }else{
            break;
