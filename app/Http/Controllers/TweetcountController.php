@@ -26,10 +26,9 @@ class TweetcountController extends Controller
     //各銘柄毎にループ処理
     foreach($cryptos as $crypto => $value) {
 
-      //時間指定（現在〜前1時間毎）
+      //時間指定（現在〜前1時間毎を取得）
       $nowdate = date('Y-n-j_H:i:s');
       $onehourdate = date('Y-n-j_H:i:s',strtotime("-1 hour"));
-
       $time = "since:".$onehourdate."_JST until:".$nowdate."_JST";
 
       //一回につき100件までしか取得できない為、ループ処理する
@@ -38,7 +37,7 @@ class TweetcountController extends Controller
 
         //検索クエリ指定
         $params = array(
-            "q" => '$'.$value["name"].'+OR+'.$value["name_ja"].$time.' -rt -bot -replies',
+            "q" => $value["name"].'+'.$value["name_ja"].$time.' -rt -Bot -replies',
             "lang" => "ja",
             "locale" => "ja",
             "count" => "10",
@@ -60,7 +59,7 @@ class TweetcountController extends Controller
         }
       }
     }
-//    jsonにてVueに渡す
+      //jsonにてVueに渡す
       return response()->json(['results' => $tweet_results]);
   }
 }
