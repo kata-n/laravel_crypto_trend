@@ -52,13 +52,13 @@ class TweetcountController extends Controller
            $params["max_id"] = $max_id;
           //配列化
            $tweet_results[] = $result;
-           $tweet_result[] = array_unique($tweet_results);
+           $tweet_results[] = array_unique($tweet_results);
         }else{
            break;
         }
       }
     }
 //    jsonにてVueに渡す
-      return response()->json(['results' => $tweet_result]);
+      return response()->json(['results' => $tweet_results]);
   }
 }
