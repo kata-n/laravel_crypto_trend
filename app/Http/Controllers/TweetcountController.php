@@ -42,17 +42,26 @@ class TweetcountController extends Controller
             "include_entities" => "false",
         );
 
-        $result = $twitter->get('search/tweets', $params);
+        $results = $twitter->get('search/tweets', $params);
 
         // これ以上取得できるツイートがあるか
-        if(isset($result->search_metadata->next_results)){
+        if(isset($results->search_metadata->next_results)){
            // max_id値を取得
-           $max_id = preg_replace('/.*?max_id=([\d]+)&.*/', '$1', $result->search_metadata->next_results);
+           $max_id = preg_replace('/.*?max_id=([\d]+)&.*/', '$1', $results->search_metadata->next_results);
            // max_idをparamsに追加
            $params["max_id"] = $max_id;
           //配列化
-           $tweet_results[] = $result;
-           $tweet_results[] = array_unique($tweet_results[]);
+           $tweet_results[] = $results;
+          
+
+$uniqueTweets = [];
+foreach ($results as $result){
+   if (!in_array($result['max_id'], $tweet_results)) {
+      $tweet_results[] = $result['max_id'];
+      $uniqueTweets[] = $result;
+   }
+}
+
         }else{
            break;
         }
