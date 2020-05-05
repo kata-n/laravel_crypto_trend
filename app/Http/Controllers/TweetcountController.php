@@ -52,7 +52,7 @@ class TweetcountController extends Controller
            $params["max_id"] = $max_id;
           //配列化
            $tweet_results[] = $result;
-           $tweet_results[] = array_unique($tweet_results);
+           $tweet_results[] = array_unique($tweet_results[]);
         }else{
            break;
         }
