@@ -49,7 +49,7 @@ class TweetcountController extends Controller
            // max_id値を取得
            $max_id = $result->search_metadata->max_id;
            // max_idをparamsに追加
-           $params["max_id"] = $max_id;
+           $params["max_id"] = $max_id - 1;
           //配列化
            $tweet_results[] = $result;
         }else{
