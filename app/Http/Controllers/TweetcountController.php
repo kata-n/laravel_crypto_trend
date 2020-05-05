@@ -27,10 +27,10 @@ class TweetcountController extends Controller
     foreach($cryptos as $crypto => $value) {
 
       //時間指定
-      $year = date('Y-n-j');
+      $year = date('Y-n-j_H:i:s');
 
-      $time = "since:".$year."_20:00:00_JST until:".$year.
-      "_20:10:00_JST";
+      $time = "since:2020-5-5_21:30:00_JST until:".$year.
+      "_JST";
 
       //一回につき100件までしか取得できない為、ループ処理する
       $request_loop = 2;
