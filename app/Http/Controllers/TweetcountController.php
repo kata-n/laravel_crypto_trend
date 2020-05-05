@@ -40,6 +40,7 @@ class TweetcountController extends Controller
             "locale" => "ja",
             "count" => "5",
             "include_entities" => "false",
+            "max_id" => "",
         );
 
         $result = $twitter->get('search/tweets', $params);
