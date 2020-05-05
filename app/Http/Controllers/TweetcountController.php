@@ -27,7 +27,7 @@ class TweetcountController extends Controller
     foreach($cryptos as $crypto => $value) {
 
       //時間指定
-      $time = "since:2020-5-1_20:00:00_JST until:2020-05-01_20:15:00_JST";
+      $time = "since:2020-5-1_20:00:00_JST until:2020-05-01_20:10:00_JST";
 
       //一回につき100件までしか取得できない為、ループ処理する
       $request_loop = 2;
@@ -38,12 +38,13 @@ class TweetcountController extends Controller
             "q" => '$'.$value["name"].'+OR+'.$value["name_ja"].$time.' -rt -bot',
             "lang" => "ja",
             "locale" => "ja",
-            "count" => "5",
+            "count" => "30",
             "include_entities" => "false",
-            "max_id" => "",
         );
 
         $result = $twitter->get('search/tweets', $params);
+          //配列化
+           $tweet_results[] = $result;
 
         // これ以上取得できるツイートがあるか
         if(isset($result->search_metadata->next_results)){
@@ -51,8 +52,6 @@ class TweetcountController extends Controller
            $max_id = $result->search_metadata->max_id;
            // max_idをparamsに追加
            $params["max_id"] = $max_id;
-          //配列化
-           $tweet_results[] = $result;
         }else{
            break;
         }
