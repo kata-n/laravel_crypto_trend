@@ -52,16 +52,6 @@ class TweetcountController extends Controller
            $params["max_id"] = $max_id;
           //配列化
            $tweet_results[] = $results;
-          
-
-$uniqueTweets = [];
-foreach ($results as $result){
-   if (!in_array($result['search_metadata']['max_id'], $tweet_results)) {
-      $tweet_results[] = $result['max_id'];
-      $uniqueTweets[] = $result;
-   }
-}
-
         }else{
            break;
         }
