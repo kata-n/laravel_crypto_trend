@@ -68,7 +68,6 @@ class TweetcountController extends Controller
         }
       }
     }
-      //jsonにてVueに渡す
       //return response()->json(['results' => $tweet_count]);
   }
 }
