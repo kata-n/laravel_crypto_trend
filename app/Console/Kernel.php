@@ -34,9 +34,9 @@ class Kernel extends ConsoleKernel
         ->daily();
 
         $schedule
-        ->command('command:getTweet')
+        ->command('command:gettweet')
         ->withoutOverlapping()
-        ->hourlyAt('40');
+        ->hourlyAt('59');
 
     }
 

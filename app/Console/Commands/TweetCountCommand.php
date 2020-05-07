@@ -12,7 +12,7 @@ class TweetCountCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'command:getTweet';
+    protected $signature = 'command:gettweet';
 
     /**
      * The console command description.

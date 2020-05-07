@@ -36,9 +36,8 @@ Route::post('/twitteraccountfollow', 'TwitterAccountController@follow');
 //CoincheckAPI
 Route::get('/ticker', 'CoincheckController@ticker');
 
-
 //googlenews
-Route::get('/news', 'TweetcountController@counter');
+Route::get('/news', 'GoogleNewsController@shownews');
 
 //Teitterログイン
 Route::get('twitter/login', 'Auth\TwitterAuthController@redirectToProvider');
