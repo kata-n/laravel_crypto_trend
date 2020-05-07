@@ -36,7 +36,7 @@ class Kernel extends ConsoleKernel
         $schedule
         ->command('command:get_tweet_count')
         ->withoutOverlapping()
-        ->hourly()
+        ->hourly();
 
     }
 
