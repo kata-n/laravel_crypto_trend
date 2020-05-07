@@ -44,6 +44,7 @@ class TweetcountController extends Controller
             "include_entities" => "false",
         );
 
+        //API実行
         $results = $twitter->get('search/tweets', $params);
 
         // これ以上取得できるツイートがあるか
