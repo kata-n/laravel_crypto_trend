@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class GoogleNewsController extends Controller
 {
-    puclic function shownews(){
+    puclic function shownews()
+    {
       
     }
 }
