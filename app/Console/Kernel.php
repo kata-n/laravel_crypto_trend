@@ -26,7 +26,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')
-        //          ->hourly();
+        // ->hourly();
 
         $schedule
         ->command('command:coincheck')
@@ -36,7 +36,7 @@ class Kernel extends ConsoleKernel
         $schedule
         ->command('command:getTweet')
         ->withoutOverlapping()
-        ->hourly();
+        ->hourlyAt('40');
 
     }
 
