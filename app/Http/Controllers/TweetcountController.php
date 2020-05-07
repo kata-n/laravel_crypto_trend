@@ -41,7 +41,7 @@ class TweetcountController extends Controller
             "q" => $value["name"].'+'.$value["name_ja"].$time.' -rt -Bot -replies',
             "lang" => "ja",
             "locale" => "ja",
-            "count" => "10",
+            "count" => "50",
             "include_entities" => "false",
         );
 
@@ -55,8 +55,8 @@ class TweetcountController extends Controller
            // max_idをparamsに追加
            $params["max_id"] = $max_id;
           //配列化
-//           $tweet_results[] = count(array($results));
-           $tweet_results[] = $results;
+           $tweet_results[] = count(array($results[0]));
+//           $tweet_results[] = $results;
         }else{
            break;
         }
