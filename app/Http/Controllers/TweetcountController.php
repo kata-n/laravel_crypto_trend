@@ -48,7 +48,13 @@ class TweetcountController extends Controller
         //API実行
         $results = $twitter->get('search/tweets', $params);
         //ツイートの数を数える
-        $tweet_count[] = count($results->statuses);
+        $tweet_count = count($results->statuses);
+
+        //DBに登録する値をセット
+        $tweet_regist = new Tweetcount;
+        $tweet_regist->crypto_id = $value['crypto_id'];
+        $tweet_regist->tweet_count = $tweet_count;
+        $tweet_regist->save();
 
         // これ以上取得できるツイートがあるか
         if(isset($results->search_metadata->next_results)){
@@ -56,15 +62,13 @@ class TweetcountController extends Controller
            $max_id = preg_replace('/.*?max_id=([\d]+)&.*/', '$1', $results->search_metadata->next_results);
            // max_idをparamsに追加
            $params["max_id"] = $max_id;
-          //ツイートの数を数える
-           $tweet_results[] = count($results->statuses);
-//           $tweet_results[] = $results;
+           //$tweet_results[] = $results;
         }else{
            break;
         }
       }
     }
       //jsonにてVueに渡す
-      return response()->json(['results' => $tweet_count]);
+      //return response()->json(['results' => $tweet_count]);
   }
 }
