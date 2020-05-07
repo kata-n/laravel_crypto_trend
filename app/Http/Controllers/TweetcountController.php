@@ -55,7 +55,7 @@ class TweetcountController extends Controller
            // max_idをparamsに追加
            $params["max_id"] = $max_id;
           //配列化
-          $resultout = $results[0];
+          $resultout = array($results[0]);
            $tweet_results[] = count(array($resultout));
 //           $tweet_results[] = $results;
         }else{
