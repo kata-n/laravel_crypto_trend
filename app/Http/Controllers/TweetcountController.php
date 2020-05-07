@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\CoincheckApi;
+use App\Tweetcount;
 use Abraham\TwitterOAuth\TwitterOAuth;
 
 class TweetcountController extends Controller
@@ -54,7 +55,7 @@ class TweetcountController extends Controller
            // max_idをparamsに追加
            $params["max_id"] = $max_id;
           //配列化
-           $tweet_results[] = count($results);
+           $tweet_results[] = count(array($results));
         }else{
            break;
         }
