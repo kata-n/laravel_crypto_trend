@@ -11,7 +11,7 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 
 class TweetcountController extends Controller
 {
-  public function counter(Request $request){
+  public function counter(){
 
     //Twitter情報取得
     $twitter = new TwitterOAuth(

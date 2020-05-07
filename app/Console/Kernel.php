@@ -31,13 +31,11 @@ class Kernel extends ConsoleKernel
         $schedule
         ->command('command:coincheck')
         ->withoutOverlapping()
-        //深夜12時に実行
         ->daily();
 
         $schedule
         ->command('command:get_tweet_count')
         ->withoutOverlapping()
-        //毎時間実行する
         ->hourly()
 
     }
