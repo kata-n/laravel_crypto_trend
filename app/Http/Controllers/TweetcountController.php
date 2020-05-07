@@ -54,7 +54,7 @@ class TweetcountController extends Controller
         $tweet_regist = new Tweetcount;
         $tweet_regist->crypto_id = $value['crypto_id'];
         $tweet_regist->tweet_count = $tweet_count;
-//        $tweet_regist->save();
+        $tweet_regist->save();
 
         // これ以上取得できるツイートがあるか
         if(isset($results->search_metadata->next_results)){
@@ -68,6 +68,6 @@ class TweetcountController extends Controller
         }
       }
     }
-      return response()->json(['results' => $tweet_count]);
+      //return response()->json(['results' => $tweet_count]);
   }
 }
