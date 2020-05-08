@@ -5,8 +5,8 @@
                 <div class="card">
                     <div class="card-header">Google Newsから取得したニュース一覧です</div>
                     <dl v-for="(news in NewsData.results">
-                      <h2>{{news.title}}</h2>
-                      <h3>{{news.url}}</h3>
+                      <dt>{{news.title}}</dt>
+                      <dt><a v-bind:href="news.url" target="_blank">詳細（外部ページへ）</a></dt>
                     </dl>
                 </div>
             </div>

@@ -2691,9 +2691,13 @@ var render = function() {
             _vm._v(" "),
             _vm._l(_vm.NewsData.results, function(news) {
               return _c("dl", [
-                _c("h2", [_vm._v(_vm._s(news.title))]),
+                _c("dt", [_vm._v(_vm._s(news.title))]),
                 _vm._v(" "),
-                _c("h3", [_vm._v(_vm._s(news.url))])
+                _c("dt", [
+                  _c("a", { attrs: { href: news.url, target: "_blank" } }, [
+                    _vm._v("詳細（外部ページへ）")
+                  ])
+                ])
               ])
             })
           ],
