@@ -26,12 +26,12 @@ Route::get('/accountpage', function () {
     return view('main_page/twitter_account_page');
 });
 
-//googlenews
+//googleNewsページ
 Route::get('/newspage', function () {
     return view('news_page/news_page');
 });
 
-//Tweet数ランキング表示ページ
+//Tweet数ランキングAPI
 Route::get('/tweetcount', 'TweetcountController@counter');
 
 //TwitterAPI
@@ -42,7 +42,7 @@ Route::post('/twitteraccountfollow', 'TwitterAccountController@follow');
 Route::get('/ticker', 'CoincheckController@ticker');
 
 //GoogleNewsAPI
-Route::get('/news', 'GoogleNewsController@shownews');
+Route::get('/newslist', 'GoogleNewsController@shownews');
 
 //Teitterログイン
 Route::get('twitter/login', 'Auth\TwitterAuthController@redirectToProvider');

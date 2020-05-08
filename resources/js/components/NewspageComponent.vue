@@ -22,7 +22,7 @@
           };
         },
         mounted() {
-          this.$http.get("/news")
+          this.$http.get("/newslist")
           .then(response => {this.Newsdata = response.data;
           });
         }
