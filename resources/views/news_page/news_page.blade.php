@@ -20,7 +20,7 @@
 @section('content')
   <section class="l-toppage">
     <div id="app">
-      <toppage-component></toppage-component>
+      <newspage-component></newspage-component>
     </div>
 
     <a class="dropdown-item" href="{{ route('logout') }}"

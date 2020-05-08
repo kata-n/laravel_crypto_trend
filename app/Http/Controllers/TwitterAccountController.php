@@ -48,8 +48,4 @@ class TwitterAccountController extends Controller
 
     }
 
-    public function tweet_count()
-    {
-      
-    }
 }

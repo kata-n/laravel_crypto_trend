@@ -26,7 +26,12 @@ Route::get('/accountpage', function () {
     return view('main_page/twitter_account_page');
 });
 
-//TweetCount
+//googlenews
+Route::get('/news', function () {
+    return view('news_page/news_page');
+});
+
+//Tweet数ランキング表示ページ
 Route::get('/tweetcount', 'TweetcountController@counter');
 
 //TwitterAPI
@@ -35,9 +40,6 @@ Route::post('/twitteraccountfollow', 'TwitterAccountController@follow');
 
 //CoincheckAPI
 Route::get('/ticker', 'CoincheckController@ticker');
-
-//googlenews
-Route::get('/news', 'GoogleNewsController@shownews');
 
 //Teitterログイン
 Route::get('twitter/login', 'Auth\TwitterAuthController@redirectToProvider');
