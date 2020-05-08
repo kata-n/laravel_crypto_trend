@@ -11,16 +11,16 @@ class GoogleNewsController extends Controller
        set_time_limit(90);
 
         //キーワード検索したいときのベースURL
-        $API_BASE_URL = "https://news.google.com/news?hl=ja&ned=us&ie=UTF-8&oe=UTF-8&output=atom&q=仮想通貨";
-//
-//        //”仮想通貨”文字コード指定
-//        $query = urlencode(mb_convert_encoding("仮想通貨","UTF-8", "auto"));
-//
-//        //APIへのリクエストURL生成
-//        $api_url = $API_BASE_URL.$query;
+        $API_BASE_URL = "https://news.google.com/news?hl=ja&ned=ja&ie=UTF-8&oe=UTF-8&output=atom&q=";
+
+        //”仮想通貨”文字コード指定
+        $query = urlencode(mb_convert_encoding('仮想通貨',"UTF-8", "auto"));
+
+        //APIへのリクエストURL生成
+        $api_url = $API_BASE_URL.$query;
 
         //APIにアクセス、結果をsimplexmlに格納
-        $contents = file_get_contents($API_BASE_URL);
+        $contents = file_get_contents($api_url);
         $xml = simplexml_load_string($contents);
 
 //        //記事エントリを取り出す
