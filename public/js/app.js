@@ -1977,6 +1977,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -2019,7 +2020,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    this.$http.get("/news").then(function (response) {
+    this.$http.get("/newslist").then(function (response) {
       _this.Newsdata = response.data;
     });
   }
@@ -2645,6 +2646,10 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("a", { attrs: { href: "/accountpage" } }, [
               _vm._v("アカウントページ")
+            ]),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "/newspage" } }, [
+              _vm._v("仮想通貨ニュース一覧")
             ])
           ])
         ])

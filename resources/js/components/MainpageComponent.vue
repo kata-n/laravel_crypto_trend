@@ -5,6 +5,7 @@
                 <div class="card">
                     <div class="card-header">Example Componentメインのページです</div>
                     <a href="/accountpage" class="">アカウントページ</a>
+                    <a href="/newspage" class="">仮想通貨ニュース一覧</a>
                 </div>
             </div>
         </div>
