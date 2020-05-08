@@ -23,30 +23,31 @@ class GoogleNewsController extends Controller
         $contents = file_get_contents($api_url);
         $xml = simplexml_load_string($contents);
 
-//        //記事エントリを取り出す
-//        $data = $xml->entry;
-//
-//        //記事のタイトルとURLを取り出して配列に格納
-//        for ($i = 0; $i < count($data); $i++) {
-//
-//            $list[$i]['title'] = mb_convert_encoding($data[$i]->title ,"UTF-8", "auto");
-//            $url_split =  explode("=", (string)$data[$i]->link->attributes()->href);
-//            $list[$i]['url'] = end($url_split);
-//
-//        }
-//
-//        //記事数は10県とする
-//        $max_num = 10;
-//        //$max_num以上の記事数の場合は切り捨て
-//        if(count($list)>$max_num){
-//            for ($i = 0; $i < $max_num; $i++){
-//                $list_gn[$i] = $list{$i};
-//                $i++;
-//            }
-//        }else{
-//            $list_gn = $list;
-//        }
-      return response()->json(['results' => $xml]);
+        //記事エントリを取り出す
+        $getNewsdata = $xml->entry;
+
+        //記事のタイトルとURLを取り出して配列に格納
+        for ($i = 0; $i < count($getNewsdata); $i++) {
+
+            $list[$i]['title'] = mb_convert_encoding($getNewsdata[$i]->title ,"UTF-8", "auto");
+            $url_split = explode("=", (string)$getNewsdata[$i]->link->attributes()->href);
+            $list[$i]['url'] = end($url_split);
+
+        }
+
+        //記事数は10件とする
+        $max_num = 10;
+        //$max_num以上の記事数の場合は切り捨て
+        if(count($list)>$max_num){
+            for ($i = 0; $i < $max_num; $i++){
+                $google_news_list[$i] = $list{$i};
+                $i++;
+            }
+        }else{
+            $google_news_list = $list;
+        }
+
+      return response()->json(['results' => $google_news_list]);
 //      return view('/news_page/news_page',compact('lists'));
 //      return view('/news_page/news_page');
         }
