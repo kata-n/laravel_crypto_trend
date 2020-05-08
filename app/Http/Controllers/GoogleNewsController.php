@@ -21,8 +21,32 @@ class GoogleNewsController extends Controller
 
         //APIにアクセス、結果をsimplexmlに格納
         $contents = file_get_contents($api_url);
+        $xml = simplexml_load_string($contents);
 
-      return response()->json(['results' => $contents]);
+//        //記事エントリを取り出す
+//        $data = $xml->entry;
+//
+//        //記事のタイトルとURLを取り出して配列に格納
+//        for ($i = 0; $i < count($data); $i++) {
+//
+//            $list[$i]['title'] = mb_convert_encoding($data[$i]->title ,"UTF-8", "auto");
+//            $url_split =  explode("=", (string)$data[$i]->link->attributes()->href);
+//            $list[$i]['url'] = end($url_split);
+//
+//        }
+//
+//        //記事数は10県とする
+//        $max_num = 10;
+//        //$max_num以上の記事数の場合は切り捨て
+//        if(count($list)>$max_num){
+//            for ($i = 0; $i < $max_num; $i++){
+//                $list_gn[$i] = $list{$i};
+//                $i++;
+//            }
+//        }else{
+//            $list_gn = $list;
+//        }
+      return response()->json(['results' => $xml]);
 //      return view('/news_page/news_page',compact('lists'));
 //      return view('/news_page/news_page');
         }
