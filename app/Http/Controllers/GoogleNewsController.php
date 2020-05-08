@@ -46,11 +46,8 @@ class GoogleNewsController extends Controller
         }else{
             $list_gn = $list;
         }
-
-        //配列を出力
-        return $list_gn;
-        }
       return response()->json(['results' => $contents]);
 //      return view('/news_page/news_page',compact('lists'));
 //      return view('/news_page/news_page');
+        }
 }
