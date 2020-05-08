@@ -14,7 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         \App\Console\Commands\CoincheckCommand::class,
-        \App\Console\Commands\TweetCountCommand::class,
+        \App\Console\Commands\TweetCountCommand::class
     ];
 
     /**
@@ -34,7 +34,7 @@ class Kernel extends ConsoleKernel
         $schedule
         ->command('command:gettweet')
         ->withoutOverlapping()
-        ->hourlyAt('12');
+        ->hourlyAt('30');
 
     }
 
