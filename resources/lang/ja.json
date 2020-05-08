@@ -7,6 +7,8 @@
   "Registed": "登録しました！",
   "Deleted": "削除しました",
   "Login": "ログイン",
+  "Logout": "ログアウト",
+  "Confirm Password": "パスワード再入力",
   "E-Mail Address": "メールアドレス",
   "Password": "パスワード",
   "validation.required": "必須入力項目です"
