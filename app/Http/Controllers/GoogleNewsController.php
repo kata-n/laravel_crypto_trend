@@ -30,7 +30,7 @@ class GoogleNewsController extends Controller
         for ($i = 0; $i < count($getNewsdata); $i++) {
 
             $list[$i]['title'] = mb_convert_encoding($getNewsdata[$i]->title ,"UTF-8", "auto");
-            $url_split = explode("=", (string)$getNewsdata[$i]->link->attributes()->href);
+            $url_split = explode("=", $getNewsdata[$i]->link->attributes()->href);
             $list[$i]['url'] = end($url_split);
 
         }
