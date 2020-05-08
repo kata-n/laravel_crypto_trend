@@ -26,10 +26,10 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
 
-//        $schedule
-//        ->command('command:coincheck')
-//        ->withoutOverlapping()
-//        ->daily();
+        $schedule
+        ->command('command:coincheck')
+        ->withoutOverlapping()
+        ->daily();
 
         $schedule
         ->command('command:gettweet')
