@@ -30,6 +30,7 @@ Vue.component('newspage-component', require('./components/NewspageComponent.vue'
 
 //Twitterアカウントページ
 Vue.component('accountpage-component', require('./components/AccountpageComponent.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

@@ -27,7 +27,7 @@ Route::get('/accountpage', function () {
 });
 
 //googlenews
-Route::get('/news', function () {
+Route::get('/newspage', function () {
     return view('news_page/news_page');
 });
 
@@ -40,6 +40,9 @@ Route::post('/twitteraccountfollow', 'TwitterAccountController@follow');
 
 //CoincheckAPI
 Route::get('/ticker', 'CoincheckController@ticker');
+
+//GoogleNewsAPI
+Route::get('/news', 'GoogleNewsController@shownews');
 
 //Teitterログイン
 Route::get('twitter/login', 'Auth\TwitterAuthController@redirectToProvider');

@@ -4,10 +4,9 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Google Newsから取得したニュース一覧です</div>
-                    <dl v-for="(account in accountdata.results">
-                      <button type="submit" @click="changefollow(account.screen_name)">フォローする</button>
-                      <h2>{{Newsdata.title}}</h2>
-                      <h3>{{Newsdata.url}}</h3>
+                    <dl v-for="(news in NewsData.results">
+                      <h2>{{news.title}}</h2>
+                      <h3>{{news.url}}</h3>
                     </dl>
                 </div>
             </div>
@@ -19,7 +18,7 @@
     export default {
         data() {
           return {
-            Newsdata :[]
+            NewsData :[]
           };
         },
         mounted() {

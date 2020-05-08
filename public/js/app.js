@@ -2010,11 +2010,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      Newsdata: []
+      NewsData: []
     };
   },
   mounted: function mounted() {
@@ -2685,24 +2684,11 @@ var render = function() {
               _vm._v("Google Newsから取得したニュース一覧です")
             ]),
             _vm._v(" "),
-            _vm._l(_vm.accountdata.results, function(account) {
+            _vm._l(_vm.NewsData.results, function(news) {
               return _c("dl", [
-                _c(
-                  "button",
-                  {
-                    attrs: { type: "submit" },
-                    on: {
-                      click: function($event) {
-                        return _vm.changefollow(account.screen_name)
-                      }
-                    }
-                  },
-                  [_vm._v("フォローする")]
-                ),
+                _c("h2", [_vm._v(_vm._s(news.title))]),
                 _vm._v(" "),
-                _c("h2", [_vm._v(_vm._s(_vm.Newsdata.title))]),
-                _vm._v(" "),
-                _c("h3", [_vm._v(_vm._s(_vm.Newsdata.url))])
+                _c("h3", [_vm._v(_vm._s(news.url))])
               ])
             })
           ],
