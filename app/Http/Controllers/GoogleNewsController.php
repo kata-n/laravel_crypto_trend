@@ -35,8 +35,8 @@ class GoogleNewsController extends Controller
 
         }
 
-        //記事数は10件とする
-        $max_num = 10;
+        //記事数の指定
+        $max_num = 20;
         //$max_num以上の記事数の場合は切り捨て
         if(count($list)>$max_num){
             for ($i = 0; $i < $max_num; $i++){
