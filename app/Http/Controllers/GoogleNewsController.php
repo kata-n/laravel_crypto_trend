@@ -39,9 +39,9 @@ class GoogleNewsController extends Controller
         $max_num = 20;
         //$max_num以上の記事数の場合は切り捨て
         if(count($list)>$max_num){
-            for ($i = 0; $i < $max_num; $i++){
-                $google_news_list[$i] = $list{$i};
-                $i++;
+            for($i = 0; $i < $max_num; $i++){
+              $google_news_list[$i] = $list[$i];
+              $i++;
             }
         }else{
             $google_news_list = $list;
