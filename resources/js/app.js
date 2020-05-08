@@ -25,6 +25,9 @@ Vue.component('toppage-component', require('./components/ToppageComponent.vue').
 //メインページ
 Vue.component('mainpage-component', require('./components/MainpageComponent.vue').default);
 
+//Googlenewsページ
+Vue.component('newspage-component', require('./components/NewspageComponent.vue').default);
+
 //Twitterアカウントページ
 Vue.component('accountpage-component', require('./components/AccountpageComponent.vue').default);
 /**

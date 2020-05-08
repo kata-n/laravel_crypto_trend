@@ -10,7 +10,7 @@ class GoogleNewsController extends Controller
     {
        set_time_limit(90);
 
-        //キーワード検索したいときのベースURL
+        //URL指定
         $API_BASE_URL = "https://news.google.com/news?hl=ja&ned=ja&ie=UTF-8&oe=UTF-8&output=atom&q=";
 
         //”仮想通貨”文字コード指定
@@ -19,7 +19,7 @@ class GoogleNewsController extends Controller
         //APIへのリクエストURL生成
         $api_url = $API_BASE_URL.$query;
 
-        //APIにアクセス、結果をsimplexmlに格納
+        //APIにアクセス、結果を格納
         $contents = file_get_contents($api_url);
         $xml = simplexml_load_string($contents);
 
@@ -47,8 +47,8 @@ class GoogleNewsController extends Controller
             $google_news_list = $list;
         }
 
-      return response()->json(['results' => $google_news_list]);
-//      return view('/news_page/news_page',compact('lists'));
-//      return view('/news_page/news_page');
-        }
+        //JOSN形式で渡す
+        return response()->json(['results' => $google_news_list]);
+
+    }
 }
