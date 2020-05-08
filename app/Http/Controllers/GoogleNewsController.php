@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class GoogleNewsController extends Controller
 {
-    puclic function shownews()
+    public function shownews()
     {
        set_time_limit(90);
 
