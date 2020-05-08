@@ -2021,7 +2021,7 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     this.$http.get("/newslist").then(function (response) {
-      _this.Newsdata = response.data;
+      _this.NewsData = response.data;
     });
   }
 });
