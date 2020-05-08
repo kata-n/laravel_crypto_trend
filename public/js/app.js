@@ -2011,6 +2011,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2695,11 +2696,15 @@ var render = function() {
                 _vm._v(" "),
                 _c("dt", [
                   _c("a", { attrs: { href: news.url, target: "_blank" } }, [
-                    _vm._v("詳細（外部ページへ）")
+                    _vm._v("詳細(外部ページへ)")
                   ])
                 ])
               ])
-            })
+            }),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "/mainpage" } }, [
+              _vm._v("メインページへ")
+            ])
           ],
           2
         )
