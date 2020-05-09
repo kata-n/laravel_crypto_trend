@@ -39,7 +39,7 @@ class Kernel extends ConsoleKernel
         $schedule
         ->call(function(){
           Tweetcount::query()
-          ->where('created_at','=','2020-05-09')->delete();
+          ->where('created_at','<','2020-05-09')->delete();
         })->everyFiveMinutes();
 
     }
