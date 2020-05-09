@@ -20,4 +20,8 @@ class MainpageController extends Controller
     return view('main_page/twitter_account_page');
   }
 
+  //GoogleNews一覧表示ページへ
+  public function shownews(){
+    return view('news_page/news_page');
+  }
 }

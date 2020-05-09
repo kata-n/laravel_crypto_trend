@@ -26,9 +26,7 @@ Route::get('/mainpage', 'MainpageController@index');
 Route::get('/accountpage', 'MainpageController@accountlist');
 
 //googleNewsページ
-Route::get('/newspage', function () {
-    return view('news_page/news_page');
-});
+Route::get('/newspage', 'MainpageController@shownews');
 
 //Tweet数ランキングAPI
 Route::get('/tweetcount', 'TweetcountController@counter');
