@@ -27,14 +27,13 @@ class Kernel extends ConsoleKernel
     {
 
         $schedule
+        ->command('command:gettweet')
+        ->everyFiveMinutes();
+
+        $schedule
         ->command('command:coincheck')
         ->withoutOverlapping()
         ->daily();
-
-        $schedule
-        ->command('command:gettweet')
-->everyFiveMinutes();
-
 
     }
 
