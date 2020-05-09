@@ -13,6 +13,7 @@
   "Logout": "ログアウト",
   "Confirm Password": "パスワード再入力",
   "E-Mail Address": "メールアドレス",
+  "Send Password Reset Link": "メールを送信する",
   "Password": "パスワード",
   "Hello!":"お知らせ",
   "validation.required": "必須入力項目です",
