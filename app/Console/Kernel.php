@@ -34,7 +34,7 @@ class Kernel extends ConsoleKernel
         $schedule
         ->command('command:gettweet')
         ->withoutOverlapping()
-        ->hourlyAt('38');
+->everyFiveMinutes();
 
     }
 
