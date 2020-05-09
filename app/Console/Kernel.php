@@ -34,7 +34,7 @@ class Kernel extends ConsoleKernel
 
         $schedule
         ->command('command:gettweet')
-        ->everyFiveMinutes();
+        ->hourlyAt(40);
 
         //一週間前のものはテーブルから削除する
         $schedule
