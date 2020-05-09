@@ -36,11 +36,12 @@ class Kernel extends ConsoleKernel
         ->command('command:gettweet')
         ->everyFiveMinutes();
 
+        //一週間前のものはテーブルから削除する
         $schedule
         ->call(function(){
           Tweetcount::query()
-          ->where('created_at','<',date("Y-m-d", strtotime("tomorrow")))->delete();
-        })->everyFiveMinutes();
+          ->where('created_at','<',date("Y-m-d", strtotime("-7 day"));)->delete();
+        })->weeklyOn(1, '8:00');
 
     }
 
