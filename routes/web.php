@@ -20,9 +20,7 @@ Route::get('/', function () {
 });
 
 //メインページ
-Route::get('/mainpage', function () {
-    return view('main_page/main_page');
-});
+Route::get('/mainpage', 'MainpageController@index');
 
 //Twitterアカウントページ
 Route::get('/accountpage', function () {
