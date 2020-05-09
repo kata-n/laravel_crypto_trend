@@ -38,6 +38,7 @@ class TweetCountCommand extends Command
      */
     public function handle()
     {
-        TweetcountController::counter();
+//        TweetcountController::counter();
+              CoincheckController::ticker();
     }
 }
