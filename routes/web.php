@@ -11,6 +11,9 @@
 |
 */
 
+//認証
+Auth::routes();
+
 //トップページ
 Route::get('/', function () {
     return view('top_page/top_page');
@@ -49,6 +52,4 @@ Route::get('twitter/login', 'Auth\TwitterAuthController@redirectToProvider');
 //Twitterコールバック
 Route::get('twitter/callback', 'Auth\TwitterAuthController@handleProviderCallback');
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
