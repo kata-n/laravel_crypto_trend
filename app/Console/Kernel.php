@@ -40,7 +40,7 @@ class Kernel extends ConsoleKernel
         ->call(function(){
           $delete_day = date("Y-m-d", strtotime("yesterday"));
           Tweetcount::query()
-          ->where('created_at','<=',$delete_day)->delete();
+          ->where('created_at','=',$delete_day)->delete();
         })->weekly();
 
     }
