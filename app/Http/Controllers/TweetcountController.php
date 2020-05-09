@@ -14,7 +14,6 @@ class TweetcountController extends Controller
   public function counter()
   {
 
-    //Twitter情報取得
     $twitter = new TwitterOAuth(
         config('services.twitter.client_id'),
         config('services.twitter.client_secret'),
@@ -22,7 +21,6 @@ class TweetcountController extends Controller
         config('services.twitter.access_token_secret')
     );
 
-    //DBから銘柄を取得する
     $cryptos = \App\CoincheckApi::select('crypto_id','name','name_ja')->get()->toArray();
 
     //各銘柄毎にループ処理
@@ -63,12 +61,10 @@ class TweetcountController extends Controller
            $max_id = preg_replace('/.*?max_id=([\d]+)&.*/', '$1', $results->search_metadata->next_results);
            // max_idをparamsに追加
            $params["max_id"] = $max_id;
-           //$tweet_results[] = $results;
         }else{
            break;
         }
       }
     }
-      //return response()->json(['results' => $tweet_count]);
   }
 }
