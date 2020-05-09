@@ -41,7 +41,7 @@ class Kernel extends ConsoleKernel
           $delete_day = date("Y-m-d", strtotime("yesterday"));
           Tweetcount::query()
           ->where('created_at','=',$delete_day)->delete();
-        })->weekly();
+        })->everyFiveMinutes();
 
     }
 
