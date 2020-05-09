@@ -46,7 +46,7 @@ class CustomPasswordReset extends Notification
         return (new MailMessage)
             ->subject(__('Reset Password'))
             ->line(__('Click button below and reset password.'))
-            ->action(__('Reset password'), url(config('app.url').route('password.reset', $this->token, false)))
+            ->action(__('Reset Password'), url(config('app.url').route('password.reset', $this->token, false)))
             ->line(__('If you did not request a password reset, no further action is required.'));
     }
 
