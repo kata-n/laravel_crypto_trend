@@ -38,9 +38,8 @@ class Kernel extends ConsoleKernel
 
         $schedule
         ->call(function(){
-          $delete_day = date("Y-m-d", strtotime("today"));
           Tweetcount::query()
-          ->where('created_at','=',$delete_day)->delete();
+          ->where('created_at','=',date("Y-m-d", strtotime("today")))->delete();
         })->everyFiveMinutes();
 
     }
