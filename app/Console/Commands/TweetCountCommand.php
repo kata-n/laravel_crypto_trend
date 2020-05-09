@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Http\Controllers\TweetcountController;
+use Abraham\TwitterOAuth\TwitterOAuth;
 
 class TweetCountCommand extends Command
 {
