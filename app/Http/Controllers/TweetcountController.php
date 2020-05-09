@@ -11,7 +11,7 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 
 class TweetcountController extends Controller
 {
-  public function counter()
+  public static function counter()
   {
 
     $twitter = new TwitterOAuth(
