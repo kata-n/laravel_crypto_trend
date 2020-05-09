@@ -4,7 +4,7 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-use DB;
+use App\Tweetcount;
 
 class Kernel extends ConsoleKernel
 {
@@ -38,7 +38,8 @@ class Kernel extends ConsoleKernel
 
         $schedule
         ->call(function(){
-          DB::table('tweetcount')->where('created_at','<','2020-05-08')->delete();
+          Tweetcount::query()
+          ->where('created_at','<','2020-05-08')->delete();
         })->everyFiveMinutes();
 
     }
