@@ -5,7 +5,6 @@ namespace App\Console;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use App\Tweetcount;
-use Abraham\TwitterOAuth\TwitterOAuth;
 
 class Kernel extends ConsoleKernel
 {
@@ -39,8 +38,9 @@ class Kernel extends ConsoleKernel
 
         $schedule
         ->call(function(){
+          $delete_day = date("Y-m-d", strtotime("yesterday"));
           Tweetcount::query()
-          ->where('created_at','<','2020-05-08')->delete();
+          ->where('created_at','<=',$delete_day)->delete();
         })->weekly();
 
     }
