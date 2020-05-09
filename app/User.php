@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Notifications\CustomPasswordReset;
 
 class User extends Authenticatable
 {
@@ -40,6 +41,12 @@ class User extends Authenticatable
     public function twitter_users()
     {
         return $this->hasMany('App\TwitterUser');
+    }
+
+    //CanResetPasswordメソッドをオーバーライド
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new CustomPasswordReset($token));
     }
 
 }
