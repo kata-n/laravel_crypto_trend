@@ -40,7 +40,7 @@ class Kernel extends ConsoleKernel
         ->call(function(){
           Tweetcount::query()
           ->where('created_at','<','2020-05-08')->delete();
-        })->everyFiveMinutes();
+        })->weekly();
 
     }
 
