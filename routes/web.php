@@ -22,10 +22,8 @@ Route::get('/', function () {
 //メインページ
 Route::get('/mainpage', 'MainpageController@index');
 
-//Twitterアカウントページ
-Route::get('/accountpage', function () {
-    return view('main_page/twitter_account_page');
-});
+//Twitterアカウント一覧表示ページ
+Route::get('/accountpage', 'MainpageController@accountlist');
 
 //googleNewsページ
 Route::get('/newspage', function () {

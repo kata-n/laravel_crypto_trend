@@ -14,4 +14,10 @@ class MainpageController extends Controller
   public function index(){
     return view('main_page/main_page');
   }
+
+  //Twitterアカウント一覧ページへ
+  public function accountlist(){
+    return view('main_page/twitter_account_page');
+  }
+
 }
