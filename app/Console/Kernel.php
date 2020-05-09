@@ -4,6 +4,7 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use DB;
 
 class Kernel extends ConsoleKernel
 {
@@ -27,13 +28,18 @@ class Kernel extends ConsoleKernel
     {
 
         $schedule
+        ->command('command:coincheck')
+        ->withoutOverlapping()
+        ->daily();
+
+        $schedule
         ->command('command:gettweet')
         ->everyFiveMinutes();
 
         $schedule
-        ->command('command:coincheck')
-        ->withoutOverlapping()
-        ->daily();
+        ->call(function(){
+          DB::table('tweetcount')->where('created_at','<','2020-05-08')->delete();
+        })->everyFiveMinutes();
 
     }
 
