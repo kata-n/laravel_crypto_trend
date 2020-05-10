@@ -11,7 +11,8 @@ class RankingController extends Controller
     public function index()
     {
       $hourRnking = CoincheckApi::
-      select('name_ja','tweet_count')->tweetcounts()
+      find()->tweetcounts()
+      ->where('name_ja','tweet_count')
       ->groupBy('rankings.user_id')
       ->get(5);
 
