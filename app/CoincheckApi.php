@@ -11,7 +11,7 @@ class CoincheckApi extends Model
 
   //ツイートは複数なので１対多
   public function tweetcounts(){
-    return $this->hasMany('App\Models\Tweetcount');
+    return $this->hasMany('App\Tweetcount');
   }
 
 }
