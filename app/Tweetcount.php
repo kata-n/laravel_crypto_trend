@@ -12,7 +12,7 @@ class Tweetcount extends Model
     //belongsTo設定
     public function crypto()
     {
-        return $this->belongsTo('App\CoincheckApi','crypto_id');
+        return $this->belongsTo('App\CoincheckApi');
     }
 
 
