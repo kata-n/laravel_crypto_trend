@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\CoincheckApi;
-use App\Tweetcount;
 
 class RankingController extends Controller
 {
@@ -13,9 +12,12 @@ class RankingController extends Controller
     {
       $Ranking = CoincheckApi::
       with(['tweetcounts' => function($q){
-        $q->select(Tweetcount::raw("sum(tweet_count) as total_tweet"))->
-          where('created_at', '>', date("Y-m-d", strtotime("-1 day")));
+        $q->where('created_at', '>', date("Y-m-d", strtotime("-1 day")));
       }])->get();
+
+      $DayRankingData = [
+        'name' => $Ranking->pluck('user.name')->all()
+      ];
 
       return ['weekRankingData' => $Ranking];
 
