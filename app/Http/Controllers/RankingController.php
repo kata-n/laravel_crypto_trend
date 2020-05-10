@@ -10,10 +10,12 @@ class RankingController extends Controller
 
     public function index()
     {
-      $hourRnking = CoincheckApi::with('tweetcounts')->get();
+      $DayRnking = CoincheckApi::with('tweetcounts'=>function($q){
+        $q->('created_at', '>', date("Y-m-d", strtotime("-1 day")))
+      })->get();
 
 
-      return ['weekRankingData' => $hourRnking];
+      return ['weekRankingData' => $DayRnking];
 
     }
 }
