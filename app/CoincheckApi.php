@@ -8,4 +8,10 @@ class CoincheckApi extends Model
 {
   //SQLのテーブル名を指定
   protected $table = 'crypto_details';
+
+  //ツイートは複数なので１対多
+  public function tweetcount(){
+    return $this->hasMany('App\Models\Tweetcount');
+  }
+
 }
