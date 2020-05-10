@@ -13,4 +13,5 @@ class CoincheckApi extends Model
   public function tweetcounts(){
     return $this->hasMany('App\Tweetcount','crypto_id');
   }
+
 }
