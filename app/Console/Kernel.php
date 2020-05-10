@@ -41,7 +41,7 @@ class Kernel extends ConsoleKernel
         ->call(function(){
           Tweetcount::query()
           ->where('created_at','<',date("Y-m-d", strtotime("-7 day")))->delete();
-        })->weeklyOn(1, '8:00');
+        })->dailyAt('13:00');
 
     }
 

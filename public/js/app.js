@@ -1978,6 +1978,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -2630,29 +2642,96 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "l-container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", [
+        _c("h2", [_vm._v("仮想通貨Twitterランキング")]),
+        _vm._v(" "),
+        _c("label", [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.rankingType,
+                expression: "rankingType"
+              }
+            ],
+            attrs: { type: "radio", value: "1" },
+            domProps: { checked: _vm._q(_vm.rankingType, "1") },
+            on: {
+              change: function($event) {
+                _vm.rankingType = "1"
+              }
+            }
+          }),
+          _vm._v("過去1時間\n          ")
+        ]),
+        _vm._v(" "),
+        _c("label", [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.rankingType,
+                expression: "rankingType"
+              }
+            ],
+            attrs: { type: "radio", value: "2" },
+            domProps: { checked: _vm._q(_vm.rankingType, "2") },
+            on: {
+              change: function($event) {
+                _vm.rankingType = "2"
+              }
+            }
+          }),
+          _vm._v("過去24時間\n          ")
+        ]),
+        _vm._v(" "),
+        _c("label", [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.rankingType,
+                expression: "rankingType"
+              }
+            ],
+            attrs: { type: "radio", value: "3" },
+            domProps: { checked: _vm._q(_vm.rankingType, "3") },
+            on: {
+              change: function($event) {
+                _vm.rankingType = "3"
+              }
+            }
+          }),
+          _vm._v("過去一週間\n          ")
+        ])
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "l-container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Componentメインのページです")
-            ]),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "/accountpage" } }, [
-              _vm._v("アカウントページ")
-            ]),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "/newspage" } }, [
-              _vm._v("仮想通貨ニュース一覧")
-            ])
-          ])
+    return _c("div", { staticClass: "col-md-8" }, [
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "card-header" }, [
+          _vm._v("Example Componentメインのページです")
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "/accountpage" } }, [
+          _vm._v("アカウントページ")
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "/newspage" } }, [
+          _vm._v("仮想通貨ニュース一覧")
         ])
       ])
     ])

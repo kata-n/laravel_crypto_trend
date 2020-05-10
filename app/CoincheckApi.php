@@ -10,7 +10,7 @@ class CoincheckApi extends Model
   protected $table = 'crypto_details';
 
   //ツイートは複数なので１対多
-  public function tweetcount(){
+  public function tweetcounts(){
     return $this->hasMany('App\Models\Tweetcount');
   }
 
