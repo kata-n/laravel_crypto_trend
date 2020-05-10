@@ -19,3 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //ランキング情報取得
 Route::get('/ranking', 'RankingController@index');
+//
+//Route::group(['middleware' => ['api']], function () {
+//  //ランキング情報取得
+//  Route::get('/ranking', 'RankingController@index');
+//});

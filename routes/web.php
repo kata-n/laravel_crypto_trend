@@ -41,6 +41,9 @@ Route::get('/ticker', 'CoincheckController@ticker');
 //GoogleNewsAPI
 Route::get('/newslist', 'GoogleNewsController@shownews');
 
+//ランキング情報取得
+Route::get('/ranking', 'RankingController@index');
+
 //Teitterログイン
 Route::get('twitter/login', 'Auth\TwitterAuthController@redirectToProvider');
 //Twitterコールバック
