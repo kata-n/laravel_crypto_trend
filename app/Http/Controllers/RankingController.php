@@ -16,11 +16,11 @@ class RankingController extends Controller
       }])->get();
 
       $DayRankingData = [
-        'name' => $Rnking('name'),
-        'name_ja' => $Rnking('name_ja'),
-        'crypto_high' => $Rnking('crypto_high'),
-        'crypto_low' => $Rnking('crypto_low'),
-        'tweet_count' => $Rnking->tweetcounts->tweet_count
+        'name' => $Ranking('name'),
+        'name_ja' => $Ranking('name_ja'),
+        'crypto_high' => $Ranking('crypto_high'),
+        'crypto_low' => $Ranking('crypto_low'),
+        'tweet_count' => $Ranking->tweetcounts->tweet_count
       ];
 
       return ['weekRankingData' => $DayRankingData];
