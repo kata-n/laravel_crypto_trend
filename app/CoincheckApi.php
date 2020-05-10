@@ -11,7 +11,8 @@ class CoincheckApi extends Model
 
   //ツイートは複数なので１対多
   public function tweetcounts(){
-    return $this->hasMany('App\Tweetcount','crypto_id');
+    return $this->hasMany('App\Tweetcount','crypto_id')
+      select('tweet_count', \DB::raw('sum(crypto_id)as total_tweet'))->groupBy('tweet_count');
   }
 
 }
