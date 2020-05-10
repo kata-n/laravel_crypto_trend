@@ -10,7 +10,8 @@ class RankingController extends Controller
 
     public function index()
     {
-      $hourRnking = CoincheckApi::find(5)->tweetcounts;
+      $hourRnking = CoincheckApi::with('tweetcounts')->get();
+
 
       return ['weekRankingData' => $hourRnking];
 
