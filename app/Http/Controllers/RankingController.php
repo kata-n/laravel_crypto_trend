@@ -21,7 +21,7 @@ class RankingController extends Controller
         'crypto_high' => $Rnking('crypto_high'),
         'crypto_low' => $Rnking('crypto_low'),
         'tweet_count' => $Rnking->tweetcounts->tweet_count
-      ]
+      ];
 
       return ['weekRankingData' => $DayRankingData];
 
