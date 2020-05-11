@@ -20,7 +20,7 @@ class RankingController extends Controller
         'name' => $Ranking->pluck('user.name')->all()
       ];
 
-      return ['weekRankingData' => $DayRankingDatas];
+      return ['weekRankingData' => $Ranking];
 
     }
 }
