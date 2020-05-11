@@ -23,7 +23,7 @@ class RankingController extends Controller
 //        'tweet_count' => $Ranking->tweetcounts->tweet_count
 //      ];
 
-      return ['weekRankingData' => $DayRankingData];
+      return ['weekRankingData' => $Ranking];
 
     }
 }
