@@ -15,11 +15,11 @@ class RankingController extends Controller
         $q->where('created_at', '>', date("Y-m-d", strtotime("-1 day")));
       }])->get();
 
-
-      $DayRankingData = [
-
-        'tweet_count' => $Ranking->tweetcounts->sum(tweet_count)
-      ];
+//
+//      $DayRankingData = [
+//
+//        'tweet_count' => $Ranking->tweetcounts->sum(tweet_count)
+//      ];
 
       return ['weekRankingData' => $Ranking];
 
