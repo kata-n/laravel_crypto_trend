@@ -13,7 +13,7 @@ class RankingController extends Controller
 
       $Ranking = CoincheckApi::
       with(['tweetcounts' => function($q){
-        $q->whereBetween('created_at', [now()->startOfDay(-1)->format('Y-m-d'), now()->endOfDay(-1)->format('Y-m-d')]);
+        $q->whereDate('created_at', date("Y-m-d", strtotime("-1 day")));
       }])->get();
 
 //      $Ranking = CoincheckApi::
