@@ -11,21 +11,13 @@ class RankingController extends Controller
     public function index()
     {
 
+      //過去２４時間
       $Ranking = CoincheckApi::
       with(['tweetcounts' => function($q){
         $q->whereDate('created_at', date("Y-m-d", strtotime("-1 day")));
-      }])->get();
-
-//      $Ranking = CoincheckApi::
-//      with(['tweetcounts' => function($q){
-//        $q->where('created_at', '=', date("Y-m-d", strtotime("-1 day")));
-//      }])->get();
-
-//
-//      $DayRankingData = [
-//
-//        'tweet_count' => $Ranking->tweetcounts->sum(tweet_count)
-//      ];
+      }])
+        ->groupBy('crypto_id')
+        ->get();
 
       return ['weekRankingData' => $Ranking];
 
