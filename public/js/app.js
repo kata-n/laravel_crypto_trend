@@ -1992,7 +1992,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
-    console.log('Component mounted.');
+    var _this = this;
+
+    this.$http.get("/ranking").then(function (response) {
+      _this.quizData = response.data;
+    });
   }
 });
 

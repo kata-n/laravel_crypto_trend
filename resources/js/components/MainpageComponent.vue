@@ -27,7 +27,12 @@
 <script>
     export default {
         mounted() {
-            console.log('Component mounted.')
+
+    this.$http.get(`/ranking`).then(response => {
+      this.quizData = response.data;
+
+    });
+
         }
     }
 </script>
