@@ -28,12 +28,13 @@
     export default {
       data(){
         return {
+          RnkingData: {},
           rankingType: "1"
         }
       },
       mounted() {
         this.$http.get(`/ranking`).then(response => {
-        this.quizData = response.data;
+        this.RnkingData = response.data;
         });
       }
     }

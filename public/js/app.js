@@ -1993,6 +1993,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      RnkingData: {},
       rankingType: "1"
     };
   },
@@ -2000,7 +2001,7 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     this.$http.get("/ranking").then(function (response) {
-      _this.quizData = response.data;
+      _this.RnkingData = response.data;
     });
   }
 });
