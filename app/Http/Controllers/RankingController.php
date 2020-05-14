@@ -18,7 +18,7 @@ class RankingController extends Controller
         $q->groupBy('tweet_count');
       }])->get();
 
-      return ['weekRankingData' => $DayRanking];
+      return ['DayRankingData' => $DayRanking];
 
     }
 }

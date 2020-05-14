@@ -26,13 +26,15 @@
 
 <script>
     export default {
-        mounted() {
-
-    this.$http.get(`/ranking`).then(response => {
-      this.quizData = response.data;
-
-    });
-
+      data(){
+        return {
+          rankingType: "1"
         }
+      },
+      mounted() {
+        this.$http.get(`/ranking`).then(response => {
+        this.quizData = response.data;
+        });
+      }
     }
 </script>
