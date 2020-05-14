@@ -17,11 +17,7 @@ class RankingController extends Controller
         $q->whereDate('created_at', date("Y-m-d", strtotime("-1 day")));
       }])->get();
 
-      $ar_total = array_reduce($DayRanking, function($carry, $item){
-            return $carry += $item['twwet_count'];
-        });
-
-      return ['DayRankingData' => $ar_total];
+      return ['DayRankingData' => $DayRanking];
 
     }
 }
