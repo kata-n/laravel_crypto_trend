@@ -18,12 +18,9 @@ class RankingController extends Controller
         $q->whereDate('created_at', date("Y-m-d", strtotime("-1 day")));
       }])->get();
 
-      $f_total = 0;
-foreach ($DayCrtptos as $DayCrtpto) {
-    $f_total += $DayCrtpto['tweetcounts']['tweet_count'];
-}
+$as_total = array_sum(array_column($DayCrtptos, 'tweet_count'));
 
-      return ['DayRankingData' => $f_total];
+      return ['DayRankingData' => $as_total];
 
     }
 }
