@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\CoincheckApi;
+use App\Tweetcount;
 
 class RankingController extends Controller
 {
@@ -18,7 +19,7 @@ class RankingController extends Controller
         $q->sum("tweet_count");
       }])->get();
 
-$orders = DB::table('tweetcount')
+$orders = Tweetcount::
                 ->select('crypto_id', DB::raw('SUM(tweet_count) as total_tweets'))
                 ->groupBy('crypto_id')
                 ->get();
