@@ -20,7 +20,7 @@ class RankingController extends Controller
 
       $f_total = 0;
 foreach ($DayCrtptos as $DayCrtpto) {
-    $f_total += $DayCrtpto['tweet_count'];
+    $f_total += $DayCrtpto['tweetcounts']['tweet_count'];
 }
 
       return ['DayRankingData' => $f_total];
