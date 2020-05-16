@@ -20,7 +20,7 @@ class RankingController extends Controller
       }])->get();
 
 $orders = Tweetcount::
-                ->select('crypto_id', DB::raw('SUM(tweet_count) as total_tweets'))
+                select('crypto_id', DB::raw('SUM(tweet_count) as total_tweets'))
                 ->groupBy('crypto_id')
                 ->get();
 
