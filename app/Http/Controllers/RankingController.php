@@ -12,14 +12,14 @@ class RankingController extends Controller
     {
 
       //過去２４時間
-      $DayRanking = CoincheckApi::
-      with(['tweetcounts' => function($q){
-        $q->whereDate('created_at', date("Y-m-d", strtotime("-1 day")));
-      }])->get();
+//      $DayRanking = CoincheckApi::
+//      with(['tweetcounts' => function($q){
+//        $q->whereDate('created_at', date("Y-m-d", strtotime("-1 day")));
+//      }])->get();
 
-      $DayRanking = CoincheckApi::withCount('tweet_counts')
-    ->orderByDesc('tweet_count')
-    ->get();
+      $DayRanking = CoincheckApi::withCount('tweetcounts')
+      ->orderByDesc('tweet_count')
+      ->get();
 
       return ['DayRankingData' => $DayRanking];
 
