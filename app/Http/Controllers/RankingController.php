@@ -19,10 +19,10 @@ class RankingController extends Controller
       }])->get();
 
 foreach ($DayCrtptos as $DayCrtpto) {
-$sum = array_sum($DayCrtpto=>"tweetcount");
+    $f_total += $DayCrtpto['tweet_count'];
 }
 
-      return ['DayRankingData' => $sum];
+      return ['DayRankingData' => $f_total];
 
     }
 }
