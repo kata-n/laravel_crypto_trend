@@ -19,14 +19,7 @@ class RankingController extends Controller
       }])->get();
 
 $DayCrtptos = [];
-
-
-$ar_total = array_reduce($DayCrtptos, function($carry, $item){
-            return $carry += $item['tweet_count'];
-        });
-
-
-      return ['DayRankingData' => $as_total];
+      return ['DayRankingData' => $DayCrtptos];
 
     }
 }
