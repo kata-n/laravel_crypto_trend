@@ -18,6 +18,7 @@ class RankingController extends Controller
         $q->whereDate('created_at', date("Y-m-d", strtotime("-1 day")));
       }])->get();
 
+$DayCrtptos = array();
 
 foreach ($DayCrtptos as $DayCrtpto) {
 $ar_total = array_reduce($DayCrtpto, function($carry, $item){
