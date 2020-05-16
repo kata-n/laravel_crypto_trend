@@ -11,7 +11,7 @@ class RankingController extends Controller
     public function index()
     {
 
-      過去２４時間
+//      過去２４時間
       $DayRanking = CoincheckApi::
       with(['tweetcounts' => function($q){
         $q->whereDate('created_at', date("Y-m-d", strtotime("-1 day")));
