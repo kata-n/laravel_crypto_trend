@@ -20,7 +20,9 @@ class RankingController extends Controller
 
 
 foreach ($DayCrtptos as $DayCrtpto) {
-$as_total = array_sum(array_column($DayCrtpto, 'tweet_count'));
+$ar_total = array_reduce($DayCrtpto, function($carry, $item){
+            return $carry += $item['tweet_count'];
+        });
 }
 
       return ['DayRankingData' => $as_total];
