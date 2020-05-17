@@ -21,7 +21,7 @@ class RankingController extends Controller
       foreach($DayCrtptos as $Daycrypto => $value){
          $results['Crypto_name'] = $value['name_ja'];
          $results['Tweet_count'] = $value->tweetcounts->sum('tweet_count');
-         $results['Tweet_time'] = date("Y-m-d", strtotime("-1 day");
+         $results['Tweet_time'] = date("Y-m-d", strtotime("-1 day"));
          $results['Crypto_high'] = $value['crypto_high'];
          $results['Crypto_low'] = $value['crypto_low'];
 
