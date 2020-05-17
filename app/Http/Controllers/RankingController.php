@@ -13,13 +13,13 @@ class RankingController extends Controller
       //過去1時間
       $HourCrtptos = CoincheckApi::
       with(['tweetcounts' => function($q){
-$q->where('created_at', '>', date("Y-m-d", strtotime("-1 hour")));
+      $q->where('created_at', '>', date("Y-m-d H-i-s", strtotime("-1 hour")));
       }])->get();
 
       foreach($HourCrtptos as $HourCrtpto => $value){
          $results['Crypto_name'] = $value['name_ja'];
          $results['Tweet_count'] = $value->tweetcounts->sum('tweet_count');
-         $results['Tweet_time'] = date("Y-m-d", strtotime("-1 hour"));
+         $results['Tweet_time'] = date("Y-m-d H-i-s", strtotime("-1 hour"));
          $results['Crypto_high'] = $value['crypto_high'];
          $results['Crypto_low'] = $value['crypto_low'];
          $HourCountresults[] = $results;
