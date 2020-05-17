@@ -18,7 +18,7 @@ class RankingController extends Controller
         $q->whereDate('created_at', date("Y-m-d", strtotime("-1 day")));
       }])->get();
 
-    foreach($DayCrtptos as $Daycrypto){
+    foreach($DayCrtptos as $Daycrypto => $value){
        $results[0] = $Daycrypto->tweetcounts->sum('tweet_count');
        $results[1] = $Daycrypto->get('name_ja');
        $Countresults[] = $results;
