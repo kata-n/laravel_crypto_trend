@@ -20,7 +20,7 @@ class RankingController extends Controller
 
     foreach($DayCrtptos as $Daycrypto){
        $results[0] = $Daycrypto->tweetcounts->sum('tweet_count');
-       $results[1] = $Daycrypto->[0]->get('name');
+       $results[1] = $Daycrypto->get('name')->first();
        $Countresults[] = $results;
     }
 
