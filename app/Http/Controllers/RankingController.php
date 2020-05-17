@@ -24,7 +24,7 @@ class RankingController extends Controller
        $results['Tweet_count'] = $value->tweetcounts->sum('tweet_count');
        $results['Crypto_high'] = $value['crypto_high'];
        $results['Crypto_low'] = $value['crypto_low'];
-       $results['Tweet_time'] = $value->tweetcounts->first('created_at');
+
        $Countresults[] = $results;
     }
 
