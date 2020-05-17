@@ -27,11 +27,10 @@ class RankingController extends Controller
          $Countresults[] = $results;
       }
 
+      //ツイート数が多い順に並び替え
       foreach ((array) $Countresults as $key => $value) {
           $sort[$key] = $value['Tweet_count'];
-      }
-
-      array_multisort($sort, SORT_ASC, $Countresults);
+      }array_multisort($sort, SORT_DESC, $Countresults);
 
       return ['DayRankingData' => $Countresults];
 
