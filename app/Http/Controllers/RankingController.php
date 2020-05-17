@@ -18,8 +18,8 @@ class RankingController extends Controller
         $q->whereDate('created_at', date("Y-m-d", strtotime("-1 day")));
       }])->get();
 
-$collection = new Collection([$DayCrtptos]);
-$totalSpeakers = $collection->sum('tweet_count');
+
+$totalSpeakers = $DayCrtptos->sum('tweet_count');
 
       return ['DayRankingData' => $totalSpeakers];
 
