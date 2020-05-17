@@ -13,7 +13,7 @@ class RankingController extends Controller
       //過去1時間
       $HourCrtptos = CoincheckApi::
       with(['tweetcounts' => function($q){
-        $q->whereDate('created_at', date("Y-m-d", ">" ,strtotime("-1 hour")));
+        $q->where('created_at', date("Y-m-d", ">" ,strtotime("-1 hour")));
       }])->get();
 
       foreach($HourCrtptos as $HourCrtpto => $value){
@@ -54,7 +54,7 @@ class RankingController extends Controller
       //過去一週間
       $WeekCrtptos = CoincheckApi::
       with(['tweetcounts' => function($q){
-        $q->whereDate('created_at', date("Y-m-d", ">",strtotime("-7 day")));
+        $q->where('created_at', date("Y-m-d", ">",strtotime("-7 day")));
       }])->get();
 
       foreach($WeekCrtptos as $Weekcrypto => $value){
