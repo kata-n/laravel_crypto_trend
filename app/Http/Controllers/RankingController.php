@@ -19,7 +19,7 @@ class RankingController extends Controller
       }])->get();
 
 
-$totalSpeakers = $DayCrtptos->sum('tweet_count');
+$totalSpeakers = $DayCrtptos->pluck('name');
 
       return ['DayRankingData' => $totalSpeakers];
 
