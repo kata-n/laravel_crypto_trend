@@ -23,8 +23,8 @@ class RankingController extends Controller
        $results[1] = $value->tweetcounts->sum('tweet_count');
        $Countresults[] = $results;
     }
-
-      $Totalcount = $Countresults->sortByDesc('tweet_count')->toArray();
+      $Counts = collect($Countresults);
+      $Totalcount = $Counts->sortByDesc('tweet_count')->toArray();
 
       return ['DayRankingData' => $Totalcount];
 
