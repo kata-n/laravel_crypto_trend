@@ -24,7 +24,7 @@ class RankingController extends Controller
        $Countresults[] = $results;
     }
 
-      $Totalcount = $Countresults->SortByDesc('tweet_count');
+      $Totalcount = $Countresults->SortByDesc('tweet_count')->toArray();
 
       return ['DayRankingData' => $Totalcount];
 
