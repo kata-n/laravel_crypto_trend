@@ -72,7 +72,7 @@ class RankingController extends Controller
       }array_multisort($sort, SORT_DESC, $WeekCountresults);
 
       //JSONでVueに渡す
-      return ['DayRankingData' => $HourCountresults,
+      return ['HourRankingData' => $HourCountresults,
               'DayRankingData' => $DayCountresults,
               'WeekRankingData' => $WeekCountresults,
              ];
