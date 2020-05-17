@@ -18,10 +18,13 @@ class RankingController extends Controller
         $q->whereDate('created_at', date("Y-m-d", strtotime("-1 day")));
       }])->get();
 
-$flattened = $DayCrtptos->flatten();
+    foreach($DayCrtptos as $Daycrypto => $value){
+       $results = $Daycrypto->sum($value['tweet_count']);
+           $results[] = $results;
+    }
 
 
-      return ['DayRankingData' => $flattened];
+      return ['DayRankingData' => $results];
 
     }
 }
