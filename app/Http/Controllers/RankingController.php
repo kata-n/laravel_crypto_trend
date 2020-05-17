@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\CoincheckApi;
-use App\Tweetcount;
+use Illuminate\Support\Collection;
 
 class RankingController extends Controller
 {
@@ -18,11 +18,10 @@ class RankingController extends Controller
         $q->whereDate('created_at', date("Y-m-d", strtotime("-1 day")));
       }])->get();
 
-$collection = new collection([$DayCrtptos]);
+$collection = new Collection([$DayCrtptos]);
+$totalSpeakers = $collection->sum('tweet_count');
 
-$sum = $collection->sum('tweet_count');
-
-      return ['DayRankingData' => $sum];
+      return ['DayRankingData' => $totalSpeakers];
 
     }
 }
