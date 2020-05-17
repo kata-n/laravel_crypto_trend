@@ -19,9 +19,9 @@ class RankingController extends Controller
       }])->get();
 
 $flattened = $DayCrtptos->flatten();
-$totalSpeakers = $flattened->sum('tweet_count');
 
-      return ['DayRankingData' => $totalSpeakers];
+
+      return ['DayRankingData' => $flattened];
 
     }
 }
