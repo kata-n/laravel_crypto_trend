@@ -16,7 +16,8 @@ class RankingController extends Controller
       $DayCrtptos = CoincheckApi::
       with(['tweetcounts' => function($q){
         $q->whereDate('created_at', date("Y-m-d", strtotime("-1 day")));
-      }])->orderByDesc('tweet_count')->get();
+        $q->orderByDesc('post_counts_count') ;
+      }])->get();
 
     foreach($DayCrtptos as $Daycrypto => $value){
        $results['Crypto_name'] = $value['name_ja'];
@@ -24,10 +25,7 @@ class RankingController extends Controller
        $Countresults[] = $results;
     }
 
-      $Counts = collect($Countresults);
-      $Totalcount = $Counts->sortByDesc('Tweet_count');
-
-      return ['DayRankingData' => $Totalcount];
+      return ['DayRankingData' => $Countresults];
 
     }
 }
