@@ -19,12 +19,12 @@ class RankingController extends Controller
       }])->get();
 
     foreach($DayCrtptos as $Daycrypto => $value){
-       $results[0] = $value['name_ja'];
-       $results[1] = $value->tweetcounts->sum('tweet_count');
+       $results['crypto_name'] = $value['name_ja'];
+       $results['tweet_count'] = $value->tweetcounts->sum('tweet_count');
        $Countresults[] = $results;
     }
       $Counts = collect($Countresults);
-      $Totalcount = $Counts->sortByDesc('tweet_count')->toArray();
+      $Totalcount = $Counts->sortByDesc('tweet_count');
 
       return ['DayRankingData' => $Totalcount];
 
