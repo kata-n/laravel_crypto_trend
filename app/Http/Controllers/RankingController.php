@@ -12,7 +12,7 @@ class RankingController extends Controller
     public function index()
     {
 
-//      過去２４時間
+      //過去２４時間
       $DayCrtptos = CoincheckApi::
       with(['tweetcounts' => function($q){
         $q->whereDate('created_at', date("Y-m-d", strtotime("-1 day")));
@@ -24,9 +24,14 @@ class RankingController extends Controller
          $results['Tweet_time'] = date("Y-m-d", strtotime("-1 day"));
          $results['Crypto_high'] = $value['crypto_high'];
          $results['Crypto_low'] = $value['crypto_low'];
-
          $Countresults[] = $results;
       }
+
+      foreach ((array) $Countresults as $key => $value) {
+          $sort[$key] = $value['Tweet_count'];
+      }
+
+      array_multisort($sort, SORT_ASC, $Countresults);
 
       return ['DayRankingData' => $Countresults];
 
