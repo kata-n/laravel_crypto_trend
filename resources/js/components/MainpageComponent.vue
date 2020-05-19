@@ -81,12 +81,14 @@
             for (var i = 0; i < Weekdatas.length; i++) {
               var cryptoname = Weekdatas[i].Crypto_name;
               console.log(cryptoname);
-                if(preview.indexOf(cryptoname) == -1){
-                  Weekdatas[i].display = false;
+              for (var j = 0; j < preview.length; j++){
+                if(preview.indexOf(cryptoname) >= 0){
+                  Weekdatas[i].display = true;
                   break;
                 } else {
-                  Weekdatas[i].display = true;
+                  Weekdatas[i].display = false;
                 }
+              }
             }
 
           } else {

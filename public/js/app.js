@@ -2048,11 +2048,13 @@ __webpack_require__.r(__webpack_exports__);
           var cryptoname = Weekdatas[i].Crypto_name;
           console.log(cryptoname);
 
-          if (preview.indexOf(cryptoname) == -1) {
-            Weekdatas[i].display = false;
-            break;
-          } else {
-            Weekdatas[i].display = true;
+          for (var j = 0; j < preview.length; j++) {
+            if (preview.indexOf(cryptoname) >= 0) {
+              Weekdatas[i].display = true;
+              break;
+            } else {
+              Weekdatas[i].display = false;
+            }
           }
         }
       } else {
