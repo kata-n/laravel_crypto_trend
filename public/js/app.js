@@ -2041,25 +2041,26 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     find_categories: function find_categories() {
       var Weekdatas = this.Weekdatas;
-      var preview = this.preview; //          if(preview.length > 0) {
+      var preview = this.preview;
 
-      for (var i = 0; i < Weekdatas.length; i++) {
-        var cryptoname = Weekdatas[i].Crypto_name;
-        console.log(cryptoname);
+      if (preview.length > 0) {
+        for (var i = 0; i < Weekdatas.length; i++) {
+          var cryptoname = Weekdatas[i].Crypto_name;
+          console.log(cryptoname);
 
-        if (preview.indexOf(cryptoname) >= 0) {
-          Weekdatas[i].display = true;
-          break;
-        } else {
-          Weekdatas[i].display = false;
+          if (preview.indexOf(cryptoname) == -1) {
+            Weekdatas[i].display = false;
+            break;
+          } else {
+            Weekdatas[i].display = true;
+          }
         }
-      } //          } else {
-      //            for (var i = 0; i < Weekdatas.length; i++) {
-      //              var categories = Weekdatas[i].Crypto_name;
-      //              Weekdatas[i].display = true;
-      //            }
-      //          }
-
+      } else {
+        for (var i = 0; i < Weekdatas.length; i++) {
+          var categories = Weekdatas[i].Crypto_name;
+          Weekdatas[i].display = true;
+        }
+      }
     }
   }
 });

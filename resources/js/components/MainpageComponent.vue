@@ -77,24 +77,24 @@
           var Weekdatas = this.Weekdatas;
           var preview = this.preview;
 
-//          if(preview.length > 0) {
+          if(preview.length > 0) {
             for (var i = 0; i < Weekdatas.length; i++) {
               var cryptoname = Weekdatas[i].Crypto_name;
               console.log(cryptoname);
-                if(preview.indexOf(cryptoname) >= 0){
-                  Weekdatas[i].display = true;
+                if(preview.indexOf(cryptoname) == -1){
+                  Weekdatas[i].display = false;
                   break;
                 } else {
-                  Weekdatas[i].display = false;
+                  Weekdatas[i].display = true;
                 }
             }
 
-//          } else {
-//            for (var i = 0; i < Weekdatas.length; i++) {
-//              var categories = Weekdatas[i].Crypto_name;
-//              Weekdatas[i].display = true;
-//            }
-//          }
+          } else {
+            for (var i = 0; i < Weekdatas.length; i++) {
+              var categories = Weekdatas[i].Crypto_name;
+              Weekdatas[i].display = true;
+            }
+          }
 
         }
       }
