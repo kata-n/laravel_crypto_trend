@@ -1996,7 +1996,7 @@ __webpack_require__.r(__webpack_exports__);
       Hourdata: {},
       Daydata: {},
       Weekdata: {},
-      crypto_lists: [],
+      Crypto_lists: [],
       preview: [],
       RankingType: 1,
       display: true
@@ -2013,9 +2013,10 @@ __webpack_require__.r(__webpack_exports__);
 
       for (var key in array) {
         var cryptoname = array[key].Crypto_name;
+        console.log(cryptoname);
 
         if (cryptoname) {
-          self.crypto_lists.push(cryptoname);
+          self.Crypto_lists.push(cryptoname);
         }
       }
     });

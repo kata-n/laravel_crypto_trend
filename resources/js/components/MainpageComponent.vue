@@ -31,7 +31,7 @@
           Hourdata: {},
           Daydata: {},
           Weekdata: {},
-          crypto_lists: [],
+          Crypto_lists: [],
           preview: [],
           RankingType: 1,
           display: true
@@ -46,8 +46,9 @@
       var array = response.data.WeekRankingData;
       for (var key in array) {
         var cryptoname = array[key].Crypto_name
+        console.log(cryptoname);
         if(cryptoname) {
-          self.crypto_lists.push(cryptoname)
+          self.Crypto_lists.push(cryptoname)
         }}
 
         });
