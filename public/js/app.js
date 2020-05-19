@@ -2008,12 +2008,16 @@ __webpack_require__.r(__webpack_exports__);
     this.$http.get("/ranking").then(function (response) {
       _this.Hourdata = response.data.HourRankingData;
       _this.Daydata = response.data.DayRankingData;
-      _this.Weekdata = response.data.WeekRankingData; //      var RankingAlldata = response.data;
-      //          console.log(RankingAlldata);
-      //      for (var key in RankingAlldata)
-      //        {
-      //          var cryptoname = RankingAlldata.[key].Crypto_name
-      //          if(cryptoname){self.crypto_lists.push(cryptoname)}}
+      _this.Weekdata = response.data.WeekRankingData;
+      var array = response.data.WeekRankingData;
+
+      for (var key in array) {
+        var cryptoname = array[key].Crypto_name;
+
+        if (cryptoname) {
+          self.crypto_lists.push(cryptoname);
+        }
+      }
     });
   }
 });

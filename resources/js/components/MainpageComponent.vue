@@ -43,12 +43,13 @@
         this.Daydata = response.data.DayRankingData;
         this.Weekdata = response.data.WeekRankingData;
 
-//      var RankingAlldata = response.data;
-//          console.log(RankingAlldata);
-//      for (var key in RankingAlldata)
-//        {
-//          var cryptoname = RankingAlldata.[key].Crypto_name
-//          if(cryptoname){self.crypto_lists.push(cryptoname)}}
+      var array = response.data.WeekRankingData;
+      for (var key in array) {
+        var cryptoname = array[key].Crypto_name
+        if(cryptoname) {
+          self.crypto_lists.push(cryptoname)
+        }}
+
         });
       }
     }
