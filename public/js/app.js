@@ -2041,7 +2041,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     find_categories: function find_categories() {
       var Weekdatas = this.Weekdatas;
-      var preview = this.preview.splice(2, 0);
+      var preview = $set["this"].preview.splice();
       console.log(preview);
 
       if (preview.length > 0) {
