@@ -74,8 +74,9 @@
       },
       methods: {
         find_categories: function(){
+          var self = this
           var Weekdatas = this.Weekdatas;
-          var preview = this.$set(preview);
+          var preview = self.preview.splice;
 
           if(preview.length > 0) {
             for (var i = 0; i < Weekdatas.length; i++) {
