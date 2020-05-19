@@ -43,7 +43,7 @@
           console.log(RankingAlldata);
       for (var key in RankingAlldata)
         {
-          var cryptoname = RankingAlldata[key].Crypto_name
+          var cryptoname = RankingAlldata.HourRankingData[key].Crypto_name
           if(cryptoname){self.crypto_lists.push(cryptoname)}}
         });
       }
