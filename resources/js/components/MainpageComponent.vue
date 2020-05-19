@@ -69,6 +69,10 @@
             var cryptoname = array[key].Crypto_name
             self.Crypto_lists.push(cryptoname)
           }
+          for (var key in array) {
+            var cryptoname = array[key].Crypto_name
+            self.preview.push(cryptoname)
+          }
 
         });
       },
@@ -77,7 +81,7 @@
           var Weekdatas = this.Weekdatas;
           var preview = this.preview;
 
-//          if(preview.length > 0) {
+          if(preview.length > 0) {
             for (var i = 0; i < Weekdatas.length; i++) {
               var cryptoname = Weekdatas[i].Crypto_name;
               for (var j = 0; j < preview.length; j++) {
@@ -89,12 +93,12 @@
                 }
               }
             }
-//          } else {
-//            for (var i = 0; i < Weekdatas.length; i++) {
-//              var categories = Weekdatas[i].Crypto_name;
-//              Weekdatas[i].display = true;
-//            }
-//          }
+          } else {
+            for (var i = 0; i < Weekdatas.length; i++) {
+              var categories = Weekdatas[i].Crypto_name;
+              Weekdatas[i].display = true;
+            }
+          }
         }
       }
     }
