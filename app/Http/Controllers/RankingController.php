@@ -63,6 +63,7 @@ $q->where('created_at', '>', date("Y-m-d", strtotime("-7 day")));
          $results['Tweet_time'] = date("Y-m-d", strtotime("-7 day"));
          $results['Crypto_high'] = $value['crypto_high'];
          $results['Crypto_low'] = $value['crypto_low'];
+         $results['display'] = true;
          $WeekCountresults[] = $results;
       }
 
