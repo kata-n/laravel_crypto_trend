@@ -69,14 +69,13 @@
             var cryptoname = array[key].Crypto_name
             self.Crypto_lists.push(cryptoname)
           }
-
+          var preview = this.preview;
         });
       },
       methods: {
         find_categories: function(){
           var Weekdatas = this.Weekdatas;
-          var previewz = this.preview[0];
-          var preview = this.preview.splice(0, 1, previewz);
+          var preview = this.preview;
           console.log(preview);
 
           if(preview.length > 0) {
