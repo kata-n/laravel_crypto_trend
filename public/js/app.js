@@ -2040,9 +2040,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     find_categories: function find_categories() {
-      var self = this;
       var Weekdatas = this.Weekdatas;
-      var preview = self.preview.push('cryptoname');
+      var preview = this.preview.splice(0, 0);
 
       if (preview.length > 0) {
         for (var i = 0; i < Weekdatas.length; i++) {

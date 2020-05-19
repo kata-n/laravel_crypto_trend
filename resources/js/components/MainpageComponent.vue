@@ -74,9 +74,8 @@
       },
       methods: {
         find_categories: function(){
-          var self = this
           var Weekdatas = this.Weekdatas;
-          var preview = self.preview.push('cryptoname');
+          var preview = this.preview.splice(0,0);
 
           if(preview.length > 0) {
             for (var i = 0; i < Weekdatas.length; i++) {
