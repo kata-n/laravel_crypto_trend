@@ -2784,14 +2784,13 @@ var render = function() {
             return _c(
               "li",
               {
-                directives: [
-                  {
-                    name: "show",
-                    rawName: "v-show",
-                    value: Weekdata.display,
-                    expression: "Weekdata.display"
-                  }
-                ]
+                model: {
+                  value: _vm.preview,
+                  callback: function($$v) {
+                    _vm.preview = $$v
+                  },
+                  expression: "preview"
+                }
               },
               [_c("p", [_vm._v(_vm._s(Weekdata.Crypto_name))])]
             )
