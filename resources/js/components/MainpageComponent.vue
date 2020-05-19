@@ -15,10 +15,10 @@
     <ul class="crypto_list">
       <li v-for="Cryopto in Crypto_lists">
         <input type="checkbox"
-          v-bind:id="category"
-          v-bind:value="category"
+          v-bind:id="cryptoname"
+          v-bind:value="cryptoname"
           v-model="preview">
-        <label v-bind:for="category">{{ category }}</label>
+        <label v-bind:for="cryptoname">{{ Cryopto }}</label>
       </li>
     </ul>
   </div>

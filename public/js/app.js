@@ -2708,11 +2708,11 @@ var render = function() {
                       expression: "preview"
                     }
                   ],
-                  attrs: { type: "checkbox", id: _vm.category },
+                  attrs: { type: "checkbox", id: _vm.cryptoname },
                   domProps: {
-                    value: _vm.category,
+                    value: _vm.cryptoname,
                     checked: Array.isArray(_vm.preview)
-                      ? _vm._i(_vm.preview, _vm.category) > -1
+                      ? _vm._i(_vm.preview, _vm.cryptoname) > -1
                       : _vm.preview
                   },
                   on: {
@@ -2721,7 +2721,7 @@ var render = function() {
                         $$el = $event.target,
                         $$c = $$el.checked ? true : false
                       if (Array.isArray($$a)) {
-                        var $$v = _vm.category,
+                        var $$v = _vm.cryptoname,
                           $$i = _vm._i($$a, $$v)
                         if ($$el.checked) {
                           $$i < 0 && (_vm.preview = $$a.concat([$$v]))
@@ -2738,8 +2738,8 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: _vm.category } }, [
-                  _vm._v(_vm._s(_vm.category))
+                _c("label", { attrs: { for: _vm.cryptoname } }, [
+                  _vm._v(_vm._s(Cryopto))
                 ])
               ])
             }),
