@@ -38,8 +38,8 @@
       mounted() {
         this.$http.get(`/ranking`).then(response => {
         this.RankingAlldata = response.data;
-        this.HourRanking = RankingAlldata[0];
-        this.setRanking();
+        this.HourRanking = RankingAlldata.DayRankingData;
+
         });
       },
       methods:{
