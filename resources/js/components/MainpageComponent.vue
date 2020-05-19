@@ -69,10 +69,6 @@
             var cryptoname = array[key].Crypto_name
             self.Crypto_lists.push(cryptoname)
           }
-          for (var key in array) {
-            var cryptoname = array[key].Crypto_name
-            self.preview.push(cryptoname)
-          }
 
         });
       },
@@ -85,7 +81,7 @@
             for (var i = 0; i < Weekdatas.length; i++) {
               var cryptoname = Weekdatas[i].Crypto_name;
               for (var j = 0; j < preview.length; j++) {
-                if(cryptoname == indexOf(preview)){
+                if(cryptoname.indexOf(preview[j]) >= 0){
                   Weekdatas[i].display = true;
                   break;
                 } else {

@@ -2036,11 +2036,6 @@ __webpack_require__.r(__webpack_exports__);
         var cryptoname = array[key].Crypto_name;
         self.Crypto_lists.push(cryptoname);
       }
-
-      for (var key in array) {
-        var cryptoname = array[key].Crypto_name;
-        self.preview.push(cryptoname);
-      }
     });
   },
   methods: {
@@ -2053,7 +2048,7 @@ __webpack_require__.r(__webpack_exports__);
           var cryptoname = Weekdatas[i].Crypto_name;
 
           for (var j = 0; j < preview.length; j++) {
-            if (cryptoname == indexOf(preview)) {
+            if (cryptoname.indexOf(preview[j]) >= 0) {
               Weekdatas[i].display = true;
               break;
             } else {
