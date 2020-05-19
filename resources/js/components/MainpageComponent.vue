@@ -40,6 +40,7 @@
         this.RankingAlldata = response.data;
 
       var RankingAlldata = response.data;
+          console.log(RankingAlldata);
       for (var key in RankingAlldata)
         {
           var cryptoname = RankingAlldata[key].Crypto_name
