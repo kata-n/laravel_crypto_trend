@@ -67,10 +67,37 @@
           var array = response.data.WeekRankingData;
           for (var key in array) {
             var cryptoname = array[key].Crypto_name
-              self.Crypto_lists.push(cryptoname)
+            self.Crypto_lists.push(cryptoname)
+            var display = display
+            self.Weekdatas.push(display)
           }
 
         });
+      },
+      methods: {
+        find_categories: function(){
+          var Weekdatas = this.Weekdatas;
+          var preview = this.preview;
+
+          if(preview.length > 0) {
+            for (var i = 0; i < Weekdatas.length; i++) {
+              var cryptoname = Weekdatas[i].Crypto_name;
+              for (var j = 0; j < preview.length; j++) {
+                if(cryptoname.indexOf(preview[j]) >= 0){
+                  Weekdatas[i].display = true;
+                  break;
+                } else {
+                  Weekdatas[i].display = false;
+                }
+              }
+            }
+          } else {
+            for (var i = 0; i < Weekdatas.length; i++) {
+              var categories = Weekdatas[i].Crypto_name;
+              Weekdatas[i].display = true;
+            }
+          }
+        }
       }
     }
 </script>
