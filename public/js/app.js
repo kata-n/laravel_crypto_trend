@@ -2005,6 +2005,7 @@ __webpack_require__.r(__webpack_exports__);
 
     this.$http.get("/ranking").then(function (response) {
       _this.RankingAlldata = response.data;
+      _this.HourRanking = RankingAlldata[0];
 
       _this.setRanking();
     });
