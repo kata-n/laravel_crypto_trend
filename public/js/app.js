@@ -2038,7 +2038,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     });
   },
-  methods: {
+  computed: {
     find_categories: function find_categories() {
       var Weekdatas = this.Weekdatas;
       var preview = this.preview;
@@ -2049,7 +2049,6 @@ __webpack_require__.r(__webpack_exports__);
 
           for (var j = 0; j < preview.length; j++) {
             if (preview.indexOf(cryptoname) >= 0) {
-              console.log(preview);
               Weekdatas[i].display = true;
               break;
             } else {

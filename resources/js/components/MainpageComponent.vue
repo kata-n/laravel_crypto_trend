@@ -72,7 +72,7 @@
 
         });
       },
-      methods: {
+      computed: {
         find_categories: function(){
           var Weekdatas = this.Weekdatas;
           var preview = this.preview;
@@ -82,7 +82,6 @@
               var cryptoname = Weekdatas[i].Crypto_name;
               for (var j = 0; j < preview.length; j++){
                 if(preview.indexOf(cryptoname) >= 0){
-                                console.log(preview);
                   Weekdatas[i].display = true;
                   break;
                 } else {
