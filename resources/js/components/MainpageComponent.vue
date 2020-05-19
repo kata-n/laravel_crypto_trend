@@ -74,7 +74,7 @@
 
 for (var i = 0; i < array.length; i++){
   var Weekdatas = this.Weekdatas;
-  Weekdatas[i].push({display:true});
+  self.Weekdatas[i].push({display:true});
 }
 
 
