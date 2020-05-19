@@ -15,16 +15,16 @@
     <ul class="crypto_list">
       <li v-for="Cryopto in Crypto_lists">
         <input type="checkbox"
-          v-bind:id="cryptoname"
-          v-bind:value="cryptoname"
+          v-bind:id="Cryopto"
+          v-bind:value="Cryopto"
           v-model="preview">
-        <label v-bind:for="cryptoname">{{ Cryopto }}</label>
+        <label v-bind:for="Cryopto">{{ Cryopto }}</label>
       </li>
     </ul>
   </div>
   <p>選択している仮想通貨：{{ preview }}</p>
   <ul class="entry_list">
-    <li v-for="Weekdata in Weekdatas" v-show="post.display">
+    <li v-for="Weekdata in Weekdatas">
       <p>{{ Weekdata.Crypto_name }}</p>
     </li>
   </ul>

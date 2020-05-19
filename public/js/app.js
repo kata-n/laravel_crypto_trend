@@ -2708,11 +2708,11 @@ var render = function() {
                       expression: "preview"
                     }
                   ],
-                  attrs: { type: "checkbox", id: _vm.cryptoname },
+                  attrs: { type: "checkbox", id: Cryopto },
                   domProps: {
-                    value: _vm.cryptoname,
+                    value: Cryopto,
                     checked: Array.isArray(_vm.preview)
-                      ? _vm._i(_vm.preview, _vm.cryptoname) > -1
+                      ? _vm._i(_vm.preview, Cryopto) > -1
                       : _vm.preview
                   },
                   on: {
@@ -2721,7 +2721,7 @@ var render = function() {
                         $$el = $event.target,
                         $$c = $$el.checked ? true : false
                       if (Array.isArray($$a)) {
-                        var $$v = _vm.cryptoname,
+                        var $$v = Cryopto,
                           $$i = _vm._i($$a, $$v)
                         if ($$el.checked) {
                           $$i < 0 && (_vm.preview = $$a.concat([$$v]))
@@ -2738,7 +2738,7 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: _vm.cryptoname } }, [
+                _c("label", { attrs: { for: Cryopto } }, [
                   _vm._v(_vm._s(Cryopto))
                 ])
               ])
@@ -2753,20 +2753,7 @@ var render = function() {
           "ul",
           { staticClass: "entry_list" },
           _vm._l(_vm.Weekdatas, function(Weekdata) {
-            return _c(
-              "li",
-              {
-                directives: [
-                  {
-                    name: "show",
-                    rawName: "v-show",
-                    value: _vm.post.display,
-                    expression: "post.display"
-                  }
-                ]
-              },
-              [_c("p", [_vm._v(_vm._s(Weekdata.Crypto_name))])]
-            )
+            return _c("li", [_c("p", [_vm._v(_vm._s(Weekdata.Crypto_name))])])
           }),
           0
         ),
