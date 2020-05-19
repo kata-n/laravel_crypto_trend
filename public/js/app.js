@@ -2038,7 +2038,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       for (var i = 0; i < array.length; i++) {
-        _this.array[i].push({
+        _this.Weekdatas[i].push({
           display: true
         });
       }

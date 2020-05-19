@@ -73,7 +73,7 @@
 
 
 for (var i = 0; i < array.length; i++){
-  this.array[i].push({display:true});
+  this.Weekdatas[i].push({display:true});
 }
 
 
