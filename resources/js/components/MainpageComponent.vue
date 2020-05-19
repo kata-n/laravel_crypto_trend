@@ -38,6 +38,7 @@
         }
       },
       mounted() {
+        var self = this
         this.$http.get(`/ranking`).then(response => {
         this.Hourdata = response.data.HourRankingData;
         this.Daydata = response.data.DayRankingData;
@@ -46,10 +47,8 @@
       var array = response.data.WeekRankingData;
       for (var key in array) {
         var cryptoname = array[key].Crypto_name
-        console.log(cryptoname);
-        if(cryptoname) {
           self.Crypto_lists.push(cryptoname)
-        }}
+        }
 
         });
       }

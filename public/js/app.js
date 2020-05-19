@@ -2005,6 +2005,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
+    var self = this;
     this.$http.get("/ranking").then(function (response) {
       _this.Hourdata = response.data.HourRankingData;
       _this.Daydata = response.data.DayRankingData;
@@ -2013,11 +2014,7 @@ __webpack_require__.r(__webpack_exports__);
 
       for (var key in array) {
         var cryptoname = array[key].Crypto_name;
-        console.log(cryptoname);
-
-        if (cryptoname) {
-          self.Crypto_lists.push(cryptoname);
-        }
+        self.Crypto_lists.push(cryptoname);
       }
     });
   }
