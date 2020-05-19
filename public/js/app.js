@@ -2046,10 +2046,10 @@ __webpack_require__.r(__webpack_exports__);
       if (preview.length > 0) {
         for (var i = 0; i < Weekdatas.length; i++) {
           var cryptoname = Weekdatas[i].Crypto_name;
-          console.log(cryptoname);
 
           for (var j = 0; j < preview.length; j++) {
             if (preview.indexOf(cryptoname) >= 0) {
+              console.log(preview);
               Weekdatas[i].display = true;
               break;
             } else {
