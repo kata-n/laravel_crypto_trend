@@ -29,25 +29,21 @@
       data(){
         return {
           RankingAlldata: {},
-          HourRanking: {},
-          DayRanking: {},
-          WeekRanking: {},
-          RankingType: "1"
+          crypto_lists: [],
+          preview: [],
+          display: true
         }
       },
       mounted() {
         this.$http.get(`/ranking`).then(response => {
         this.RankingAlldata = response.data;
-        this.HourRanking = RankingAlldata[0];
 
+      var RankingAlldata = response.data;
+      for (var key in RankingAlldata)
+        {
+          var cryptoname = RankingAlldata[key].Crypto_name
+          if(cryptoname){self.items.push(cryptoname)}}
         });
-      },
-      methods:{
-        setRanking(){
-          this.HourRanking = RankingAlldata[0];
-          this.DayRanking = RankingAlldata[1];
-          this.WeekRanking = RankingAlldata[2];
-        }
       }
     }
 </script>
