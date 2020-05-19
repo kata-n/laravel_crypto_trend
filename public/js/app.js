@@ -1993,16 +1993,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      RnkingData: {},
-      rankingType: "1"
+      RankingAlldata: {},
+      HourRanking: {},
+      DayRanking: {},
+      WeekRanking: {},
+      RankingType: "1"
     };
   },
   mounted: function mounted() {
     var _this = this;
 
     this.$http.get("/ranking").then(function (response) {
-      _this.RnkingData = response.data;
+      _this.RankingAlldata = response.data;
+
+      _this.setRanking();
     });
+  },
+  methods: {
+    setRanking: function setRanking() {
+      this.HourRanking = RankingAlldata.HourRankingData;
+      this.DayRanking = RankingAlldata.DayRankingData;
+      this.WeekRanking = RankingAlldata.WeekRankingData;
+    }
   }
 });
 
@@ -2665,15 +2677,15 @@ var render = function() {
               {
                 name: "model",
                 rawName: "v-model",
-                value: _vm.rankingType,
-                expression: "rankingType"
+                value: _vm.RankingType,
+                expression: "RankingType"
               }
             ],
             attrs: { type: "radio", value: "1" },
-            domProps: { checked: _vm._q(_vm.rankingType, "1") },
+            domProps: { checked: _vm._q(_vm.RankingType, "1") },
             on: {
               change: function($event) {
-                _vm.rankingType = "1"
+                _vm.RankingType = "1"
               }
             }
           }),
@@ -2686,15 +2698,15 @@ var render = function() {
               {
                 name: "model",
                 rawName: "v-model",
-                value: _vm.rankingType,
-                expression: "rankingType"
+                value: _vm.RankingType,
+                expression: "RankingType"
               }
             ],
             attrs: { type: "radio", value: "2" },
-            domProps: { checked: _vm._q(_vm.rankingType, "2") },
+            domProps: { checked: _vm._q(_vm.RankingType, "2") },
             on: {
               change: function($event) {
-                _vm.rankingType = "2"
+                _vm.RankingType = "2"
               }
             }
           }),
@@ -2707,15 +2719,15 @@ var render = function() {
               {
                 name: "model",
                 rawName: "v-model",
-                value: _vm.rankingType,
-                expression: "rankingType"
+                value: _vm.RankingType,
+                expression: "RankingType"
               }
             ],
             attrs: { type: "radio", value: "3" },
-            domProps: { checked: _vm._q(_vm.rankingType, "3") },
+            domProps: { checked: _vm._q(_vm.RankingType, "3") },
             on: {
               change: function($event) {
-                _vm.rankingType = "3"
+                _vm.RankingType = "3"
               }
             }
           }),

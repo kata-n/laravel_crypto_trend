@@ -11,13 +11,13 @@
             <div>
               <h2>仮想通貨Twitterランキング</h2>
               <label>
-                <input type="radio" v-model="rankingType" value="1">過去1時間
+                <input type="radio" v-model="RankingType" value="1">過去1時間
               </label>
               <label>
-                <input type="radio" v-model="rankingType" value="2">過去24時間
+                <input type="radio" v-model="RankingType" value="2">過去24時間
               </label>
               <label>
-                <input type="radio" v-model="rankingType" value="3">過去一週間
+                <input type="radio" v-model="RankingType" value="3">過去一週間
               </label>
             </div>
         </div>
@@ -28,14 +28,25 @@
     export default {
       data(){
         return {
-          RnkingData: {},
-          rankingType: "1"
+          RankingAlldata: {},
+          HourRanking: {},
+          DayRanking: {},
+          WeekRanking: {},
+          RankingType: "1"
         }
       },
       mounted() {
         this.$http.get(`/ranking`).then(response => {
-        this.RnkingData = response.data;
+        this.RankingAlldata = response.data;
+        this.setRanking();
         });
+      },
+      methods:{
+        setRanking(){
+          this.HourRanking = RankingAlldata.HourRankingData;
+          this.DayRanking = RankingAlldata.DayRankingData;
+          this.WeekRanking = RankingAlldata.WeekRankingData;
+        }
       }
     }
 </script>
