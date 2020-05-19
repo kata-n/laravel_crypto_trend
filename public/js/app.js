@@ -1996,6 +1996,7 @@ __webpack_require__.r(__webpack_exports__);
       RankingAlldata: {},
       crypto_lists: [],
       preview: [],
+      RankingType: 1,
       display: true
     };
   },
@@ -2010,7 +2011,7 @@ __webpack_require__.r(__webpack_exports__);
         var cryptoname = RankingAlldata[key].Crypto_name;
 
         if (cryptoname) {
-          self.items.push(cryptoname);
+          self.crypto_lists.push(cryptoname);
         }
       }
     });

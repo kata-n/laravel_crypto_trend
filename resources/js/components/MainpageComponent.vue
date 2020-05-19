@@ -31,6 +31,7 @@
           RankingAlldata: {},
           crypto_lists: [],
           preview: [],
+          RankingType: 1,
           display: true
         }
       },
@@ -42,7 +43,7 @@
       for (var key in RankingAlldata)
         {
           var cryptoname = RankingAlldata[key].Crypto_name
-          if(cryptoname){self.items.push(cryptoname)}}
+          if(cryptoname){self.crypto_lists.push(cryptoname)}}
         });
       }
     }
