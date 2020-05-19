@@ -2041,26 +2041,25 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     find_categories: function find_categories() {
       var Weekdatas = this.Weekdatas;
-      var preview = this.Crypto_lists;
+      var preview = this.Crypto_lists; //          if(preview.length > 0) {
 
-      if (preview.length > 0) {
-        for (var i = 0; i < Weekdatas.length; i++) {
-          var cryptoname = Weekdatas[i].Crypto_name;
-          console.log(cryptoname);
+      for (var i = 0; i < Weekdatas.length; i++) {
+        var cryptoname = Weekdatas[i].Crypto_name;
+        console.log(cryptoname);
 
-          if (cryptoname.indexOf(preview[cryptoname]) >= 0) {
-            Weekdatas[i].display = true;
-            break;
-          } else {
-            Weekdatas[i].display = false;
-          }
-        }
-      } else {
-        for (var i = 0; i < Weekdatas.length; i++) {
-          var categories = Weekdatas[i].Crypto_name;
+        if (cryptoname.indexOf(preview[cryptoname]) >= 0) {
           Weekdatas[i].display = true;
+          break;
+        } else {
+          Weekdatas[i].display = false;
         }
-      }
+      } //          } else {
+      //            for (var i = 0; i < Weekdatas.length; i++) {
+      //              var categories = Weekdatas[i].Crypto_name;
+      //              Weekdatas[i].display = true;
+      //            }
+      //          }
+
     }
   }
 });

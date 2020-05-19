@@ -77,7 +77,7 @@
           var Weekdatas = this.Weekdatas;
           var preview = this.Crypto_lists;
 
-          if(preview.length > 0) {
+//          if(preview.length > 0) {
             for (var i = 0; i < Weekdatas.length; i++) {
               var cryptoname = Weekdatas[i].Crypto_name;
               console.log(cryptoname);
@@ -89,12 +89,12 @@
                 }
 
             }
-          } else {
-            for (var i = 0; i < Weekdatas.length; i++) {
-              var categories = Weekdatas[i].Crypto_name;
-              Weekdatas[i].display = true;
-            }
-          }
+//          } else {
+//            for (var i = 0; i < Weekdatas.length; i++) {
+//              var categories = Weekdatas[i].Crypto_name;
+//              Weekdatas[i].display = true;
+//            }
+//          }
         }
       }
     }
