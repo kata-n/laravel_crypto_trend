@@ -2784,6 +2784,14 @@ var render = function() {
             return _c(
               "li",
               {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: Weekdata.display,
+                    expression: "Weekdata.display"
+                  }
+                ],
                 model: {
                   value: _vm.preview,
                   callback: function($$v) {
