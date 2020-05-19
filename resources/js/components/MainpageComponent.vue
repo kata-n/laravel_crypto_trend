@@ -25,7 +25,7 @@
   </div>
   <p>選択している仮想通貨：{{ preview }}</p>
   <ul class="entry_list">
-    <li v-for="Weekdata in Weekdatas">
+    <li v-for="Weekdata in Weekdatas"  v-show="Weekdata.display">
       <p>{{ Weekdata.Crypto_name }}</p>
     </li>
   </ul>

@@ -2009,6 +2009,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2017,8 +2018,7 @@ __webpack_require__.r(__webpack_exports__);
       Weekdatas: {},
       Crypto_lists: [],
       preview: [],
-      RankingType: 1,
-      display: true
+      RankingType: 1
     };
   },
   mounted: function mounted() {
@@ -2035,11 +2035,6 @@ __webpack_require__.r(__webpack_exports__);
       for (var key in array) {
         var cryptoname = array[key].Crypto_name;
         self.Crypto_lists.push(cryptoname);
-      }
-
-      for (var key in array) {
-        var Weekdatas = _this.Weekdatas;
-        Weekdatas.display = true;
       }
     });
   },
@@ -2747,6 +2742,7 @@ var render = function() {
                       : _vm.preview
                   },
                   on: {
+                    click: _vm.find_categories,
                     change: function($event) {
                       var $$a = _vm.preview,
                         $$el = $event.target,
@@ -2784,7 +2780,20 @@ var render = function() {
           "ul",
           { staticClass: "entry_list" },
           _vm._l(_vm.Weekdatas, function(Weekdata) {
-            return _c("li", [_c("p", [_vm._v(_vm._s(Weekdata.Crypto_name))])])
+            return _c(
+              "li",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: Weekdata.display,
+                    expression: "Weekdata.display"
+                  }
+                ]
+              },
+              [_c("p", [_vm._v(_vm._s(Weekdata.Crypto_name))])]
+            )
           }),
           0
         ),
