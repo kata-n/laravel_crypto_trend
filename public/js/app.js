@@ -2037,7 +2037,7 @@ __webpack_require__.r(__webpack_exports__);
         self.Crypto_lists.push(cryptoname);
       }
 
-      for (var i = 0; i < Weekdatas.length; i++) {
+      for (var i = 0; i < array.length; i++) {
         self.Weekdatas[i].push({
           display: true
         });

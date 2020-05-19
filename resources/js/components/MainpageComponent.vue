@@ -69,12 +69,13 @@
             var cryptoname = array[key].Crypto_name
             self.Crypto_lists.push(cryptoname)
           }
-          
-          for (var i = 0; i < Weekdatas.length; i++){
+
+          for (var i = 0; i < array.length; i++){
               self.Weekdatas[i].push({
                 display: true
               });
             }
+
         });
       },
       methods: {
