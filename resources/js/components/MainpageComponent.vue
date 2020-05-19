@@ -68,8 +68,6 @@
           for (var key in array) {
             var cryptoname = array[key].Crypto_name
             self.Crypto_lists.push(cryptoname)
-            var display = display
-            self.Weekdatas.push(display)
           }
 
         });
