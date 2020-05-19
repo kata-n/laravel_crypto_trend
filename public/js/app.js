@@ -2053,7 +2053,7 @@ __webpack_require__.r(__webpack_exports__);
           var cryptoname = Weekdatas[i].Crypto_name;
 
           for (var j = 0; j < preview.length; j++) {
-            if (cryptoname.indexOf(preview[j]) >= 0) {
+            if (cryptoname == str.indexOf(preview)) {
               Weekdatas[i].display = true;
               break;
             } else {
