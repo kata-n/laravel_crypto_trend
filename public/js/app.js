@@ -2038,6 +2038,8 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       for (var i = 0; i < array.length; i++) {
+        var Weekdatas = _this.Weekdatas;
+
         _this.Weekdatas[i].push({
           display: true
         });
