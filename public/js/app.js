@@ -2011,9 +2011,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     setRanking: function setRanking() {
-      this.HourRanking = RankingAlldata.HourRankingData[0];
-      this.DayRanking = RankingAlldata.DayRankingData[1];
-      this.WeekRanking = RankingAlldata.WeekRankingData[2];
+      this.HourRanking = RankingAlldata[0];
+      this.DayRanking = RankingAlldata[1];
+      this.WeekRanking = RankingAlldata[2];
     }
   }
 });
