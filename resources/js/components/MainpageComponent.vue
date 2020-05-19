@@ -70,10 +70,12 @@
             self.Crypto_lists.push(cryptoname)
           }
 
-var Weekdatas = this.Weekdatas;
-for (var i = 0; i < Weekdatas.length; i++){
-  this.Weekdatas[i].push({display:true});
+
+
+for (var i = 0; i < array.length; i++){
+  this.array[i].push({display:true});
 }
+
 
         });
       },
