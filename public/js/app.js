@@ -2035,6 +2035,9 @@ __webpack_require__.r(__webpack_exports__);
       for (var key in array) {
         var cryptoname = array[key].Crypto_name;
         self.Crypto_lists.push(cryptoname);
+        array.push({
+          display: true
+        });
       }
     });
   },
