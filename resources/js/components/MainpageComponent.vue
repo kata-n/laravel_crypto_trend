@@ -37,14 +37,14 @@
       },
       mounted() {
         this.$http.get(`/ranking`).then(response => {
-        this.RankingAlldata = response.data;
+        this.RankingAlldata = response.data.HourRankingData;
 
-      var RankingAlldata = response.data;
-          console.log(RankingAlldata);
-      for (var key in RankingAlldata)
-        {
-          var cryptoname = RankingAlldata.HourRankingData[key].Crypto_name
-          if(cryptoname){self.crypto_lists.push(cryptoname)}}
+//      var RankingAlldata = response.data;
+//          console.log(RankingAlldata);
+//      for (var key in RankingAlldata)
+//        {
+//          var cryptoname = RankingAlldata.[key].Crypto_name
+//          if(cryptoname){self.crypto_lists.push(cryptoname)}}
         });
       }
     }

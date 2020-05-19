@@ -2004,17 +2004,12 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     this.$http.get("/ranking").then(function (response) {
-      _this.RankingAlldata = response.data;
-      var RankingAlldata = response.data;
-      console.log(RankingAlldata);
-
-      for (var key in RankingAlldata) {
-        var cryptoname = RankingAlldata.HourRankingData[key].Crypto_name;
-
-        if (cryptoname) {
-          self.crypto_lists.push(cryptoname);
-        }
-      }
+      _this.RankingAlldata = response.data.HourRankingData; //      var RankingAlldata = response.data;
+      //          console.log(RankingAlldata);
+      //      for (var key in RankingAlldata)
+      //        {
+      //          var cryptoname = RankingAlldata.[key].Crypto_name
+      //          if(cryptoname){self.crypto_lists.push(cryptoname)}}
     });
   }
 });
