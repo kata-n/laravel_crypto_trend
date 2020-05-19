@@ -2036,6 +2036,14 @@ __webpack_require__.r(__webpack_exports__);
         var cryptoname = array[key].Crypto_name;
         self.Crypto_lists.push(cryptoname);
       }
+
+      var Weekdatas = _this.Weekdatas;
+
+      for (var i = 0; i < Weekdatas.length; i++) {
+        _this.Weekdatas[i].push({
+          display: true
+        });
+      }
     });
   },
   methods: {
