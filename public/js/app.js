@@ -1990,12 +1990,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      Hourdata: {},
-      Daydata: {},
-      Weekdata: {},
+      Hourdatas: {},
+      Daydatas: {},
+      Weekdatas: {},
       Crypto_lists: [],
       preview: [],
       RankingType: 1,
@@ -2007,9 +2026,10 @@ __webpack_require__.r(__webpack_exports__);
 
     var self = this;
     this.$http.get("/ranking").then(function (response) {
-      _this.Hourdata = response.data.HourRankingData;
-      _this.Daydata = response.data.DayRankingData;
-      _this.Weekdata = response.data.WeekRankingData;
+      _this.Hourdatas = response.data.HourRankingData;
+      _this.Daydatas = response.data.DayRankingData;
+      _this.Weekdatas = response.data.WeekRankingData; //DBからcrypto_listsを生成する
+
       var array = response.data.WeekRankingData;
 
       for (var key in array) {
@@ -2673,6 +2693,84 @@ var render = function() {
       _c("div", [
         _c("h2", [_vm._v("仮想通貨Twitterランキング")]),
         _vm._v(" "),
+        _c("div", [
+          _c(
+            "ul",
+            { staticClass: "crypto_list" },
+            _vm._l(_vm.Crypto_lists, function(Cryopto) {
+              return _c("li", [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.preview,
+                      expression: "preview"
+                    }
+                  ],
+                  attrs: { type: "checkbox", id: _vm.category },
+                  domProps: {
+                    value: _vm.category,
+                    checked: Array.isArray(_vm.preview)
+                      ? _vm._i(_vm.preview, _vm.category) > -1
+                      : _vm.preview
+                  },
+                  on: {
+                    change: function($event) {
+                      var $$a = _vm.preview,
+                        $$el = $event.target,
+                        $$c = $$el.checked ? true : false
+                      if (Array.isArray($$a)) {
+                        var $$v = _vm.category,
+                          $$i = _vm._i($$a, $$v)
+                        if ($$el.checked) {
+                          $$i < 0 && (_vm.preview = $$a.concat([$$v]))
+                        } else {
+                          $$i > -1 &&
+                            (_vm.preview = $$a
+                              .slice(0, $$i)
+                              .concat($$a.slice($$i + 1)))
+                        }
+                      } else {
+                        _vm.preview = $$c
+                      }
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("label", { attrs: { for: _vm.category } }, [
+                  _vm._v(_vm._s(_vm.category))
+                ])
+              ])
+            }),
+            0
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", [_vm._v("選択している仮想通貨：" + _vm._s(_vm.preview))]),
+        _vm._v(" "),
+        _c(
+          "ul",
+          { staticClass: "entry_list" },
+          _vm._l(_vm.Weekdatas, function(Weekdata) {
+            return _c(
+              "li",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.post.display,
+                    expression: "post.display"
+                  }
+                ]
+              },
+              [_c("p", [_vm._v(_vm._s(Weekdata.Crypto_name))])]
+            )
+          }),
+          0
+        ),
+        _vm._v(" "),
         _c("label", [
           _c("input", {
             directives: [
@@ -2691,7 +2789,7 @@ var render = function() {
               }
             }
           }),
-          _vm._v("過去1時間\n          ")
+          _vm._v("過去1時間\n            ")
         ]),
         _vm._v(" "),
         _c("label", [
@@ -2712,7 +2810,7 @@ var render = function() {
               }
             }
           }),
-          _vm._v("過去24時間\n          ")
+          _vm._v("過去24時間\n            ")
         ]),
         _vm._v(" "),
         _c("label", [
@@ -2733,7 +2831,7 @@ var render = function() {
               }
             }
           }),
-          _vm._v("過去一週間\n          ")
+          _vm._v("過去一週間\n            ")
         ])
       ])
     ])
