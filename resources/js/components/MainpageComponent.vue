@@ -72,10 +72,10 @@
 
         });
       },
-      computed: {
+      methods: {
         find_categories: function(){
           var Weekdatas = this.Weekdatas;
-          var preview = this.preview;
+          var preview = this.$set(preview);
 
           if(preview.length > 0) {
             for (var i = 0; i < Weekdatas.length; i++) {

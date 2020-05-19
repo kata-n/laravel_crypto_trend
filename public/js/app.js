@@ -2038,10 +2038,10 @@ __webpack_require__.r(__webpack_exports__);
       }
     });
   },
-  computed: {
+  methods: {
     find_categories: function find_categories() {
       var Weekdatas = this.Weekdatas;
-      var preview = this.preview;
+      var preview = this.$set(preview);
 
       if (preview.length > 0) {
         for (var i = 0; i < Weekdatas.length; i++) {
