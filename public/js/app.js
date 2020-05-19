@@ -2041,13 +2041,13 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     find_categories: function find_categories() {
       var Weekdatas = this.Weekdatas;
-      var preview = this.Crypto_lists; //          if(preview.length > 0) {
+      var preview = this.preview; //          if(preview.length > 0) {
 
       for (var i = 0; i < Weekdatas.length; i++) {
         var cryptoname = Weekdatas[i].Crypto_name;
         console.log(cryptoname);
 
-        if (cryptoname.indexOf(preview[cryptoname]) >= 0) {
+        if (preview.indexOf(preview[cryptoname]) >= 0) {
           Weekdatas[i].display = true;
           break;
         } else {
