@@ -17,7 +17,8 @@
         <input type="checkbox"
           v-bind:id="Cryopto"
           v-bind:value="Cryopto"
-          v-model="preview">
+          v-model="preview"
+          v-on:click="find_categories">
         <label v-bind:for="Cryopto">{{ Cryopto }}</label>
       </li>
     </ul>
@@ -53,7 +54,6 @@
           Crypto_lists: [],
           preview: [],
           RankingType: 1,
-          display: true
         }
       },
       mounted() {
