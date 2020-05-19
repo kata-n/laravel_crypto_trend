@@ -28,7 +28,9 @@
     export default {
       data(){
         return {
-          RankingAlldata: {},
+          Hourdata: {},
+          Daydata: {},
+          Weekdata: {},
           crypto_lists: [],
           preview: [],
           RankingType: 1,
@@ -37,7 +39,9 @@
       },
       mounted() {
         this.$http.get(`/ranking`).then(response => {
-        this.RankingAlldata = response.data.HourRankingData;
+        this.Hourdata = response.data.HourRankingData;
+        this.Daydata = response.data.DayRankingData;
+        this.Weekdata = response.data.WeekRankingData;
 
 //      var RankingAlldata = response.data;
 //          console.log(RankingAlldata);

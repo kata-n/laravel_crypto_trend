@@ -1993,7 +1993,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      RankingAlldata: {},
+      Hourdata: {},
+      Daydata: {},
+      Weekdata: {},
       crypto_lists: [],
       preview: [],
       RankingType: 1,
@@ -2004,7 +2006,9 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     this.$http.get("/ranking").then(function (response) {
-      _this.RankingAlldata = response.data.HourRankingData; //      var RankingAlldata = response.data;
+      _this.Hourdata = response.data.HourRankingData;
+      _this.Daydata = response.data.DayRankingData;
+      _this.Weekdata = response.data.WeekRankingData; //      var RankingAlldata = response.data;
       //          console.log(RankingAlldata);
       //      for (var key in RankingAlldata)
       //        {
