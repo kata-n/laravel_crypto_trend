@@ -81,20 +81,21 @@
             for (var i = 0; i < Weekdatas.length; i++) {
               var cryptoname = Weekdatas[i].Crypto_name;
               console.log(cryptoname);
-                if(preview.indexOf(preview[cryptoname]) >= 0){
+                if(preview.indexOf(cryptoname) >= 0){
                   Weekdatas[i].display = true;
                   break;
                 } else {
                   Weekdatas[i].display = false;
                 }
-
             }
+
 //          } else {
 //            for (var i = 0; i < Weekdatas.length; i++) {
 //              var categories = Weekdatas[i].Crypto_name;
 //              Weekdatas[i].display = true;
 //            }
 //          }
+
         }
       }
     }

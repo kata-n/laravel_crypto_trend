@@ -2047,7 +2047,7 @@ __webpack_require__.r(__webpack_exports__);
         var cryptoname = Weekdatas[i].Crypto_name;
         console.log(cryptoname);
 
-        if (preview.indexOf(preview[cryptoname]) >= 0) {
+        if (preview.indexOf(cryptoname) >= 0) {
           Weekdatas[i].display = true;
           break;
         } else {
