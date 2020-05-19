@@ -25,7 +25,7 @@
   </div>
   <p>選択している仮想通貨：{{ preview }}</p>
   <ul class="entry_list">
-    <li v-for="Weekdata in Weekdatas"  v-show="Weekdata.display" v-model="preview">
+    <li v-for="Weekdata in Weekdatas"  v-show="Weekdata.display">
       <p>{{ Weekdata.Crypto_name }}</p>
     </li>
   </ul>
@@ -75,8 +75,8 @@
       methods: {
         find_categories: function(){
           var Weekdatas = this.Weekdatas;
-          var preview = this.preview;
-          console.log(preview);
+          var preview = this.preview.splice(2, 0);
+                    console.log(preview);
 
           if(preview.length > 0) {
             for (var i = 0; i < Weekdatas.length; i++) {

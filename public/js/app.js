@@ -2041,7 +2041,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     find_categories: function find_categories() {
       var Weekdatas = this.Weekdatas;
-      var preview = this.preview;
+      var preview = this.preview.splice(2, 0);
       console.log(preview);
 
       if (preview.length > 0) {
@@ -2791,14 +2791,7 @@ var render = function() {
                     value: Weekdata.display,
                     expression: "Weekdata.display"
                   }
-                ],
-                model: {
-                  value: _vm.preview,
-                  callback: function($$v) {
-                    _vm.preview = $$v
-                  },
-                  expression: "preview"
-                }
+                ]
               },
               [_c("p", [_vm._v(_vm._s(Weekdata.Crypto_name))])]
             )
