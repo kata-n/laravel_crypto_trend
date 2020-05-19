@@ -43,9 +43,9 @@
       },
       methods:{
         setRanking(){
-          this.HourRanking = RankingAlldata.HourRankingData;
-          this.DayRanking = RankingAlldata.DayRankingData;
-          this.WeekRanking = RankingAlldata.WeekRankingData;
+          this.HourRanking = RankingAlldata.HourRankingData[0];
+          this.DayRanking = RankingAlldata.DayRankingData[1];
+          this.WeekRanking = RankingAlldata.WeekRankingData[2];
         }
       }
     }
