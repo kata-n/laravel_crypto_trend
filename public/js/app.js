@@ -2038,7 +2038,8 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       for (var key in array) {
-        array.display = true;
+        var Weekdatas = _this.Weekdatas;
+        Weekdatas.display = true;
       }
     });
   },

@@ -71,7 +71,8 @@
           }
 
           for (var key in array) {
-            array.display = true;
+            var Weekdatas = this.Weekdatas;
+            Weekdatas.display = true;
           }
 
         });
