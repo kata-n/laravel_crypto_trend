@@ -73,7 +73,7 @@
         });
       },
       watch: {
-        find_categories: function(){
+        find_categories: function(newVal, oldVal){
           var Weekdatas = this.Weekdatas;
           var preview = this.preview;
 

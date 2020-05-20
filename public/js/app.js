@@ -2039,7 +2039,7 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   watch: {
-    find_categories: function find_categories() {
+    find_categories: function find_categories(newVal, oldVal) {
       var Weekdatas = this.Weekdatas;
       var preview = this.preview;
 
