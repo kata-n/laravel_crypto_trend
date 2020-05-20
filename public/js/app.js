@@ -2036,15 +2036,12 @@ __webpack_require__.r(__webpack_exports__);
         var cryptoname = array[key].Crypto_name;
         self.Crypto_lists.push(cryptoname);
       }
-
-      var preview = _this.preview;
     });
   },
-  methods: {
+  watch: {
     find_categories: function find_categories() {
       var Weekdatas = this.Weekdatas;
       var preview = this.preview;
-      console.log(preview);
 
       if (preview.length > 0) {
         for (var i = 0; i < Weekdatas.length; i++) {
