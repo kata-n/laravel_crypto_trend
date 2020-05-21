@@ -2018,7 +2018,8 @@ __webpack_require__.r(__webpack_exports__);
       Weekdatas: {},
       Crypto_lists: [],
       preview: [],
-      RankingType: 1
+      RankingType: 1,
+      result: false
     };
   },
   mounted: function mounted() {
@@ -2062,6 +2063,11 @@ __webpack_require__.r(__webpack_exports__);
           Weekdatas[i].display = true;
         }
       }
+    }
+  },
+  watch: {
+    preview: function preview(newVal, oldVal) {
+      this.result = newVal;
     }
   }
 });

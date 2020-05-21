@@ -54,6 +54,7 @@
           Crypto_lists: [],
           preview: [],
           RankingType: 1,
+          result: false,
         }
       },
       mounted() {
@@ -98,6 +99,11 @@
           }
 
         }
+      },
+      watch:
+      {
+		preview: function(newVal, oldVal) {
+			this.result = newVal;
       }
-    }
+    },}
 </script>
