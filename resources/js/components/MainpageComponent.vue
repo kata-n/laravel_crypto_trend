@@ -54,6 +54,7 @@
           Crypto_lists: [],
           preview: [],
           RankingType: 1,
+          find_categories: false,
         }
       },
       mounted() {
@@ -73,7 +74,7 @@
         });
       },
       watch: {
-        find_categories: function(newVal, oldVal){
+        find_categories: function(){
           var Weekdatas = this.Weekdatas;
           var preview = this.preview;
 
