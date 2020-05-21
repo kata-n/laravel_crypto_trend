@@ -2038,7 +2038,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     });
   },
-  watch: {
+  methods: {
     find_categories: function find_categories() {
       var Weekdatas = this.Weekdatas;
       var preview = this.preview;

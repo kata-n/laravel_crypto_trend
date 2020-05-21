@@ -72,7 +72,7 @@
 
         });
       },
-      watch: {
+      methods: {
         find_categories: function(){
           var Weekdatas = this.Weekdatas;
           var preview = this.preview;
