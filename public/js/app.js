@@ -2018,7 +2018,8 @@ __webpack_require__.r(__webpack_exports__);
       Weekdatas: {},
       Crypto_lists: [],
       preview: [],
-      RankingType: 1
+      RankingType: 1,
+      find_categories: false
     };
   },
   mounted: function mounted() {
@@ -2039,7 +2040,7 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   watch: {
-    find_categories: function find_categories(newVal, oldVal) {
+    find_categories: function find_categories() {
       var Weekdatas = this.Weekdatas;
       var preview = this.preview;
 
