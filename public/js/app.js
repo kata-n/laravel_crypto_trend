@@ -2040,7 +2040,7 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   watch: {
-    find_categories: function find_categories() {
+    find_categories: function find_categories(crypto_check) {
       var Weekdatas = this.Weekdatas;
       var preview = this.preview;
 
@@ -2743,7 +2743,9 @@ var render = function() {
                       : _vm.preview
                   },
                   on: {
-                    click: _vm.find_categories,
+                    click: function($event) {
+                      return _vm.find_categories(_vm.crypto_check)
+                    },
                     change: function($event) {
                       var $$a = _vm.preview,
                         $$el = $event.target,

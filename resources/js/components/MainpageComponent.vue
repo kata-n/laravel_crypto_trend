@@ -18,7 +18,7 @@
           v-bind:id="Cryopto"
           v-bind:value="Cryopto"
           v-model="preview"
-          v-on:click="find_categories">
+          v-on:click="find_categories(crypto_check)">
         <label v-bind:for="Cryopto">{{ Cryopto }}</label>
       </li>
     </ul>
@@ -74,7 +74,7 @@
         });
       },
       watch: {
-        find_categories: function(){
+        find_categories: function(crypto_check){
           var Weekdatas = this.Weekdatas;
           var preview = this.preview;
 
