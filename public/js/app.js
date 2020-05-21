@@ -2009,7 +2009,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2019,8 +2018,7 @@ __webpack_require__.r(__webpack_exports__);
       Crypto_lists: [],
       preview: [],
       RankingType: 1,
-      find_categories: false,
-      crypto_check: false
+      checkboxModel: false
     };
   },
   mounted: function mounted() {
@@ -2041,7 +2039,7 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   watch: {
-    find_categories: function find_categories(crypto_check) {
+    checkboxModel: function checkboxModel(newVal, oldVal) {
       var Weekdatas = this.Weekdatas;
       var preview = this.preview;
 
@@ -2732,38 +2730,35 @@ var render = function() {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.preview,
-                      expression: "preview"
+                      value: _vm.checkboxModel,
+                      expression: "checkboxModel"
                     }
                   ],
                   attrs: { type: "checkbox", id: Cryopto },
                   domProps: {
                     value: Cryopto,
-                    checked: Array.isArray(_vm.preview)
-                      ? _vm._i(_vm.preview, Cryopto) > -1
-                      : _vm.preview
+                    checked: Array.isArray(_vm.checkboxModel)
+                      ? _vm._i(_vm.checkboxModel, Cryopto) > -1
+                      : _vm.checkboxModel
                   },
                   on: {
-                    click: function($event) {
-                      return _vm.find_categories(_vm.crypto_check)
-                    },
                     change: function($event) {
-                      var $$a = _vm.preview,
+                      var $$a = _vm.checkboxModel,
                         $$el = $event.target,
                         $$c = $$el.checked ? true : false
                       if (Array.isArray($$a)) {
                         var $$v = Cryopto,
                           $$i = _vm._i($$a, $$v)
                         if ($$el.checked) {
-                          $$i < 0 && (_vm.preview = $$a.concat([$$v]))
+                          $$i < 0 && (_vm.checkboxModel = $$a.concat([$$v]))
                         } else {
                           $$i > -1 &&
-                            (_vm.preview = $$a
+                            (_vm.checkboxModel = $$a
                               .slice(0, $$i)
                               .concat($$a.slice($$i + 1)))
                         }
                       } else {
-                        _vm.preview = $$c
+                        _vm.checkboxModel = $$c
                       }
                     }
                   }

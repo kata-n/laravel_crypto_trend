@@ -17,8 +17,7 @@
         <input type="checkbox"
           v-bind:id="Cryopto"
           v-bind:value="Cryopto"
-          v-model="preview"
-          v-on:click="find_categories(crypto_check)">
+          v-model="checkboxModel">
         <label v-bind:for="Cryopto">{{ Cryopto }}</label>
       </li>
     </ul>
@@ -54,8 +53,7 @@
           Crypto_lists: [],
           preview: [],
           RankingType: 1,
-          find_categories: false,
-          crypto_check: false,
+          checkboxModel: false,
         }
       },
       mounted() {
@@ -75,7 +73,7 @@
         });
       },
       watch: {
-        find_categories: function(crypto_check){
+        checkboxModel: function(newVal, oldVal){
           var Weekdatas = this.Weekdatas;
           var preview = this.preview;
 
