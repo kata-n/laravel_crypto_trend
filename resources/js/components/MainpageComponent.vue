@@ -55,6 +55,7 @@
           preview: [],
           RankingType: 1,
           find_categories: false,
+          crypto_check: false,
         }
       },
       mounted() {

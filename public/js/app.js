@@ -2019,7 +2019,8 @@ __webpack_require__.r(__webpack_exports__);
       Crypto_lists: [],
       preview: [],
       RankingType: 1,
-      find_categories: false
+      find_categories: false,
+      crypto_check: false
     };
   },
   mounted: function mounted() {
