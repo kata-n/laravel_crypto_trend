@@ -103,7 +103,9 @@
       watch:
       {
 		preview: function(newVal, oldVal) {
-			this.result = newVal;
+		this.result = newVal;
+          console.log(result);
       }
-    },}
+    },
+  }
 </script>

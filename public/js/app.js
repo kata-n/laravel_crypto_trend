@@ -2068,6 +2068,7 @@ __webpack_require__.r(__webpack_exports__);
   watch: {
     preview: function preview(newVal, oldVal) {
       this.result = newVal;
+      console.log(result);
     }
   }
 });
