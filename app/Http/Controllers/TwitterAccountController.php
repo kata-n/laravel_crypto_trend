@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Abraham\TwitterOAuth\TwitterOAuth;
 
@@ -48,4 +49,9 @@ class TwitterAccountController extends Controller
 
     }
 
+    public function Autofollow(Request $request){
+      //ログインしているユーザーのautofollowflgを取得
+      $user_flg = Auth::user()->aotofollow_flg;
+      return response()->json(['autoflgs' => $user_flg]);
+    }
 }

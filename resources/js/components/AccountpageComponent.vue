@@ -61,8 +61,8 @@
             this.$http.post("/twitterautofollow", {
               flag: Twitterautoflag
             }).then(e => {
-                    this.flag = e.data.res;
-                    console.log("フォロー成功");
+                    this.flag = e.data.user_flg;
+                    console.log("取得成功");
                 }).catch((error) => {
                     console.log("エラー");
                 })
