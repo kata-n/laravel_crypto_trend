@@ -4,6 +4,15 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Twitterアカウントのページです</div>
+
+                    <button v-if="flag" @click="addIine">
+                      自動フォロー中
+                    </button>
+                    <button @click="addIine" v-else>
+                      自動フォローをする
+                    </button>
+
+
                     <dl v-for="(account in accountdata.results">
                       <button type="submit" @click="changefollow(account.screen_name)">フォローする</button>
                       <dt>アカウント名：{{account.name}}</dt>
@@ -24,7 +33,8 @@
     export default {
         data() {
           return {
-            accountdata :[]
+            accountdata :[],
+            flag:false
           };
         },
         mounted() {

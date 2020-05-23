@@ -1930,10 +1930,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      accountdata: []
+      accountdata: [],
+      flag: false
     };
   },
   mounted: function mounted() {
@@ -2647,6 +2657,16 @@ var render = function() {
             _c("div", { staticClass: "card-header" }, [
               _vm._v("Twitterアカウントのページです")
             ]),
+            _vm._v(" "),
+            _vm.flag
+              ? _c("button", { on: { click: _vm.addIine } }, [
+                  _vm._v("\n                  自動フォロー中\n                ")
+                ])
+              : _c("button", { on: { click: _vm.addIine } }, [
+                  _vm._v(
+                    "\n                  自動フォローをする\n                "
+                  )
+                ]),
             _vm._v(" "),
             _vm._l(_vm.accountdata.results, function(account) {
               return _c("dl", [
