@@ -1953,6 +1953,9 @@ __webpack_require__.r(__webpack_exports__);
       _this.accountdata = response.data;
     });
   },
+  created: function created() {
+    this.getAutofollow();
+  },
   methods: {
     changefollow: function changefollow(twitter_name) {
       var data = twitter_name;
@@ -1960,18 +1963,24 @@ __webpack_require__.r(__webpack_exports__);
         name: data
       });
     },
-    addIine: function addIine() {
+    //自動フォローがONまたはOFFなのかDBへ確認する
+    getAutofollow: function getAutofollow() {
       var _this2 = this;
 
-      var dataform = new FormData();
-      dataform.append('foreign_key', this.foreign_key);
-      dataform.append('user_id', this.user_id);
-      dataform.append('model', this.model);
-      axios.post('/okws/addIine/', dataform).then(function (e) {
+      var Twitterautoflag = this.flag;
+      this.$http.post("/twitterautofollow", {
+        flag: Twitterautoflag
+      }).then(function (e) {
         _this2.flag = e.data.res;
-        console.log("いいね成功");
+        console.log("フォロー成功");
       })["catch"](function (error) {
         console.log("エラー");
+      });
+    },
+    autofollow: function autofollow() {
+      var Twitterautoflag = this.flag;
+      this.$http.post("/twitterautofollow", {
+        flag: Twitterautoflag
       });
     }
   }
@@ -2673,10 +2682,12 @@ var render = function() {
             ]),
             _vm._v(" "),
             _vm.flag
-              ? _c("button", { on: { click: _vm.addIine } }, [
-                  _vm._v("\n                  自動フォロー中\n                ")
+              ? _c("button", { on: { click: _vm.autofollow } }, [
+                  _vm._v(
+                    "\n                  自動フォローを解除\n                "
+                  )
                 ])
-              : _c("button", { on: { click: _vm.addIine } }, [
+              : _c("button", { on: { click: _vm.autofollow } }, [
                   _vm._v(
                     "\n                  自動フォローをする\n                "
                   )

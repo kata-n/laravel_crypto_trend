@@ -5,10 +5,10 @@
                 <div class="card">
                     <div class="card-header">Twitterアカウントのページです</div>
 
-                    <button v-if="flag" @click="addIine">
-                      自動フォロー中
+                    <button v-if="flag" @click="autofollow">
+                      自動フォローを解除
                     </button>
-                    <button @click="addIine" v-else>
+                    <button @click="autofollow" v-else>
                       自動フォローをする
                     </button>
 
@@ -42,6 +42,11 @@
           .then(response => {this.accountdata = response.data;
           });
         },
+
+        created () {
+          this.getAutofollow();
+        },
+
         methods: {
           changefollow: function(twitter_name){
             const data = twitter_name
@@ -49,18 +54,27 @@
               name: data
             })
           },
-            addIine(){
-                let dataform = new FormData();
-                dataform.append('foreign_key',this.foreign_key);
-                dataform.append('user_id',this.user_id);
-                dataform.append('model',this.model);
-                axios.post('/okws/addIine/', dataform).then(e => {
+
+          //自動フォローがONまたはOFFなのかDBへ確認する
+          getAutofollow: function(){
+            const Twitterautoflag = this.flag
+            this.$http.post("/twitterautofollow", {
+              flag: Twitterautoflag
+            }).then(e => {
                     this.flag = e.data.res;
-                    console.log("いいね成功");
+                    console.log("フォロー成功");
                 }).catch((error) => {
                     console.log("エラー");
-                });
-            },
+                })
+          },
+
+          autofollow: function(){
+            const Twitterautoflag = this.flag
+            this.$http.post("/twitterautofollow", {
+              flag: Twitterautoflag
+            })
+          },
+
         }
     }
 </script>
