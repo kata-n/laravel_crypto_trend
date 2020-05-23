@@ -58,9 +58,8 @@
           //自動フォローがONまたはOFFなのかDBへ確認する
           getAutofollow: function(){
             const Twitterautoflag = this.flag
-            this.$http.post("/twitterautofollow", {
-              flag: Twitterautoflag
-            }).then(e => {
+            console.log(Twitterautoflag);
+            this.$http.post("/twitterautofollow").then(e => {
                     this.flag = e.data.user_flg;
                     console.log("取得成功");
                 }).catch((error) => {

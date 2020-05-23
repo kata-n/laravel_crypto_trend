@@ -49,7 +49,7 @@ class TwitterAccountController extends Controller
 
     }
 
-    public function Autofollow(Request $request){
+    public function Autofollow(){
       //ログインしているユーザーのautofollowflgを取得
       $user_flg = Auth::user()->aotofollow_flg;
       return response()->json(['autoflgs' => $user_flg]);
