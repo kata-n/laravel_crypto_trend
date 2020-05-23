@@ -1959,6 +1959,20 @@ __webpack_require__.r(__webpack_exports__);
       this.$http.post("/twitteraccountfollow", {
         name: data
       });
+    },
+    addIine: function addIine() {
+      var _this2 = this;
+
+      var dataform = new FormData();
+      dataform.append('foreign_key', this.foreign_key);
+      dataform.append('user_id', this.user_id);
+      dataform.append('model', this.model);
+      axios.post('/okws/addIine/', dataform).then(function (e) {
+        _this2.flag = e.data.res;
+        console.log("いいね成功");
+      })["catch"](function (error) {
+        console.log("エラー");
+      });
     }
   }
 });

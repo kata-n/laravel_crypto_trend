@@ -48,7 +48,19 @@
             this.$http.post("/twitteraccountfollow", {
               name: data
             })
-          }
+          },
+            addIine(){
+                let dataform = new FormData();
+                dataform.append('foreign_key',this.foreign_key);
+                dataform.append('user_id',this.user_id);
+                dataform.append('model',this.model);
+                axios.post('/okws/addIine/', dataform).then(e => {
+                    this.flag = e.data.res;
+                    console.log("いいね成功");
+                }).catch((error) => {
+                    console.log("エラー");
+                });
+            },
         }
     }
 </script>
