@@ -1968,7 +1968,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       this.$http.get("/twitterautofollow").then(function (e) {
-        _this2.flag = e.data.auto_flg;
+        _this2.flag = e.data.autoflg;
         console.log(_this2.flag);
       })["catch"](function (error) {
         console.log("エラー");
