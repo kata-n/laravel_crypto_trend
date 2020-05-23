@@ -16,6 +16,9 @@
 
 @section('content')
   <section class="l-mainpage">
+   <div class="user_id">
+    {{ Auth::id() }}
+   </div>
     <div id="app">
       <accountpage-component></accountpage-component>
     </div>
