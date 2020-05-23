@@ -34,8 +34,8 @@ Route::get('/tweetcount', 'TweetcountController@counter');
 //TwitterAPI
 Route::get('/twitteraccount', 'TwitterAccountController@account');
 Route::post('/twitteraccountfollow', 'TwitterAccountController@follow');
-//自動フォロー
-Route::post('/twitterautofollow', 'TwitterAccountController@ Autofollow');
+//自動フォローしているか確認
+Route::get('/twitterautofollow', 'TwitterAccountController@ Autofollow');
 
 //CoincheckAPI
 Route::get('/ticker', 'CoincheckController@ticker');
