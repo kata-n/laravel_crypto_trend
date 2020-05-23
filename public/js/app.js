@@ -1967,9 +1967,7 @@ __webpack_require__.r(__webpack_exports__);
     getAutofollow: function getAutofollow() {
       var _this2 = this;
 
-      var Twitterautoflag = this.flag;
-      console.log(Twitterautoflag);
-      this.$http.post("/twitterautofollow").then(function (e) {
+      this.$http.get("/twitterautofollow").then(function (e) {
         _this2.flag = e.data.user_flg;
         console.log("取得成功");
       })["catch"](function (error) {
@@ -1978,6 +1976,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     autofollow: function autofollow() {
       var Twitterautoflag = this.flag;
+      console.log(Twitterautoflag);
       this.$http.post("/twitterautofollow", {
         flag: Twitterautoflag
       });
