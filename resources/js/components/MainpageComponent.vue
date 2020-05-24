@@ -12,15 +12,9 @@
             <div>
               <h2>仮想通貨Twitterランキング</h2>
 
-              <label>
-                <input type="radio" v-model="RankingType" value="1">過去1時間
-              </label>
-              <label>
-                <input type="radio" v-model="RankingType" value="2">過去24時間
-              </label>
-              <label>
-                <input type="radio" v-model="RankingType" value="3">過去一週間
-              </label>
+        <li v-on:click="change('A')" v-bind:class="{'active': RankingType === 'A'}">過去1時間</li>
+        <li v-on:click="change('B')" v-bind:class="{'active': RankingType === 'B'}">過去24時間</li>
+        <li v-on:click="change('C')" v-bind:class="{'active': RankingType === 'C'}">過去一週間</li>
             </div>
 
               <div>
@@ -35,15 +29,20 @@
                 </ul>
               </div>
               <p>選択している仮想通貨：{{ preview }}</p>
-              <ul class="entry_list">
-                <li v-for="Weekdata in displayWeekDatas">
+
+      <ul class="article">
+
+                <li v-for="Weekdata in displayWeekDatas"v-if="isActive === 'A'">
                   <a v-bind:href="'https://twitter.com/search?q=' + Weekdata.Crypto_name" target="_blank">
                     {{ Weekdata.Crypto_name }}
                   </a>
                   <p>ツイート数：{{ Weekdata.Tweet_count }}</p>
                 </li>
-              </ul>
 
+
+        <li v-else-if="isActive === 'B'">ダミーテキスト2</li>
+        <li v-else-if="isActive === 'C'">ダミーテキスト3</li>
+      </ul>
 
 
         </div>
@@ -54,12 +53,12 @@
     export default {
       data(){
         return {
-          Hourdatas: {},
-          Daydatas: {},
+          Hourdatas: [],
+          Daydatas: [],
           Weekdatas: [],
           Crypto_lists: [],
           preview: [],
-          RankingType: 1,
+          RankingType: 'A',
         }
       },
       mounted() {
@@ -83,34 +82,6 @@
         displayWeekDatas() {
           return this.Weekdatas.filter(weekData => this.preview.includes(weekData.Crypto_name));
         }
-      },
-//       methods: {
-//         find_categories: function(){
-//           console.log('find_categories');
-//           return false;
-//
-//           if(this.preview.length > 0) {
-//             for (var i = 0; i < this.Weekdatas.length; i++) {
-//               var cryptoname = this.Weekdatas[i].Crypto_name;
-//               for (var j = 0; j < this.preview.length; j++){
-//                 if(this.preview.indexOf(cryptoname) >= 0){
-//                   this.Weekdatas[i].display = true;
-//                   break;
-//                 } else {
-//                   this.Weekdatas[i].display = false;
-//                 }
-//               }
-//             }
-//
-//           } else {
-//             for (var i = 0; i < this.Weekdatas.length; i++) {
-//               var categories = this.Weekdatas[i].Crypto_name;
-//               this.Weekdatas[i].display = true;
-//             }
-//           }
-//
-//         }
-//       }
-
+      }
   }
 </script>

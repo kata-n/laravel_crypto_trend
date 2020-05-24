@@ -2048,16 +2048,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      Hourdatas: {},
-      Daydatas: {},
+      Hourdatas: [],
+      Daydatas: [],
       Weekdatas: [],
       Crypto_lists: [],
       preview: [],
-      RankingType: 1
+      RankingType: 'A'
     };
   },
   mounted: function mounted() {
@@ -2086,34 +2085,7 @@ __webpack_require__.r(__webpack_exports__);
         return _this2.preview.includes(weekData.Crypto_name);
       });
     }
-  } //       methods: {
-  //         find_categories: function(){
-  //           console.log('find_categories');
-  //           return false;
-  //
-  //           if(this.preview.length > 0) {
-  //             for (var i = 0; i < this.Weekdatas.length; i++) {
-  //               var cryptoname = this.Weekdatas[i].Crypto_name;
-  //               for (var j = 0; j < this.preview.length; j++){
-  //                 if(this.preview.indexOf(cryptoname) >= 0){
-  //                   this.Weekdatas[i].display = true;
-  //                   break;
-  //                 } else {
-  //                   this.Weekdatas[i].display = false;
-  //                 }
-  //               }
-  //             }
-  //
-  //           } else {
-  //             for (var i = 0; i < this.Weekdatas.length; i++) {
-  //               var categories = this.Weekdatas[i].Crypto_name;
-  //               this.Weekdatas[i].display = true;
-  //             }
-  //           }
-  //
-  //         }
-  //       }
-
+  }
 });
 
 /***/ }),
@@ -2781,68 +2753,44 @@ var render = function() {
       _c("div", [
         _c("h2", [_vm._v("仮想通貨Twitterランキング")]),
         _vm._v(" "),
-        _c("label", [
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.RankingType,
-                expression: "RankingType"
-              }
-            ],
-            attrs: { type: "radio", value: "1" },
-            domProps: { checked: _vm._q(_vm.RankingType, "1") },
+        _c(
+          "li",
+          {
+            class: { active: _vm.RankingType === "A" },
             on: {
-              change: function($event) {
-                _vm.RankingType = "1"
+              click: function($event) {
+                return _vm.change("A")
               }
             }
-          }),
-          _vm._v("過去1時間\n          ")
-        ]),
+          },
+          [_vm._v("過去1時間")]
+        ),
         _vm._v(" "),
-        _c("label", [
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.RankingType,
-                expression: "RankingType"
-              }
-            ],
-            attrs: { type: "radio", value: "2" },
-            domProps: { checked: _vm._q(_vm.RankingType, "2") },
+        _c(
+          "li",
+          {
+            class: { active: _vm.RankingType === "B" },
             on: {
-              change: function($event) {
-                _vm.RankingType = "2"
+              click: function($event) {
+                return _vm.change("B")
               }
             }
-          }),
-          _vm._v("過去24時間\n          ")
-        ]),
+          },
+          [_vm._v("過去24時間")]
+        ),
         _vm._v(" "),
-        _c("label", [
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.RankingType,
-                expression: "RankingType"
-              }
-            ],
-            attrs: { type: "radio", value: "3" },
-            domProps: { checked: _vm._q(_vm.RankingType, "3") },
+        _c(
+          "li",
+          {
+            class: { active: _vm.RankingType === "C" },
             on: {
-              change: function($event) {
-                _vm.RankingType = "3"
+              click: function($event) {
+                return _vm.change("C")
               }
             }
-          }),
-          _vm._v("過去一週間\n          ")
-        ])
+          },
+          [_vm._v("過去一週間")]
+        )
       ]),
       _vm._v(" "),
       _c("div", [
@@ -2903,28 +2851,35 @@ var render = function() {
       _vm._v(" "),
       _c(
         "ul",
-        { staticClass: "entry_list" },
+        { staticClass: "article" },
         _vm._l(_vm.displayWeekDatas, function(Weekdata) {
-          return _c("li", [
-            _c(
-              "a",
-              {
-                attrs: {
-                  href: "https://twitter.com/search?q=" + Weekdata.Crypto_name,
-                  target: "_blank"
-                }
-              },
-              [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(Weekdata.Crypto_name) +
-                    "\n              "
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c("p", [_vm._v("ツイート数：" + _vm._s(Weekdata.Tweet_count))])
-          ])
+          return _vm.isActive === "A"
+            ? _c("li", [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href:
+                        "https://twitter.com/search?q=" + Weekdata.Crypto_name,
+                      target: "_blank"
+                    }
+                  },
+                  [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(Weekdata.Crypto_name) +
+                        "\n              "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("p", [_vm._v("ツイート数：" + _vm._s(Weekdata.Tweet_count))])
+              ])
+            : _vm.isActive === "B"
+            ? _c("li", [_vm._v("ダミーテキスト2")])
+            : _vm.isActive === "C"
+            ? _c("li", [_vm._v("ダミーテキスト3")])
+            : _vm._e()
         }),
         0
       )
