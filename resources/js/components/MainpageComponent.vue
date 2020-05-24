@@ -87,8 +87,10 @@
       computed: {
         xxxx() {
           if (this.Weekdatas.length === 0) {
+            console.log('len===0');
             return [];
           }
+          console.log('len!==0');
           return this.Weekdatas.map(weekData => {
             // console.log('weekData===>', JSON.stringify(weekData));
             if (this.preview.includes(weekData.Crypto_name)) {

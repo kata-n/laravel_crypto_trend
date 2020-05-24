@@ -2088,9 +2088,11 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       if (this.Weekdatas.length === 0) {
+        console.log('len===0');
         return [];
       }
 
+      console.log('len!==0');
       return this.Weekdatas.map(function (weekData) {
         // console.log('weekData===>', JSON.stringify(weekData));
         if (_this2.preview.includes(weekData.Crypto_name)) {
