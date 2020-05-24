@@ -37,9 +37,10 @@
               <p>選択している仮想通貨：{{ preview }}</p>
               <ul class="entry_list">
                 <li v-for="Weekdata in displayWeekDatas">
-                  <a v-bind:href="'https://twitter.com/search?q=' + Weekdata.Crypto_name">
+                  <a v-bind:href="'https://twitter.com/search?q=' + Weekdata.Crypto_name" target="_blank">
                     {{ Weekdata.Crypto_name }}
                   </a>
+                  <p>ツイート数：{{ Weekdata.Tweet_count }}</p>
                 </li>
               </ul>
 

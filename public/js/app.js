@@ -2048,6 +2048,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2905,7 +2906,8 @@ var render = function() {
               "a",
               {
                 attrs: {
-                  href: "https://twitter.com/search?q=" + Weekdata.Crypto_name
+                  href: "https://twitter.com/search?q=" + Weekdata.Crypto_name,
+                  target: "_blank"
                 }
               },
               [
@@ -2915,7 +2917,9 @@ var render = function() {
                     "\n              "
                 )
               ]
-            )
+            ),
+            _vm._v(" "),
+            _c("p", [_vm._v("ツイート数：" + _vm._s(Weekdata.Tweet_count))])
           ])
         }),
         0
