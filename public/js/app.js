@@ -2078,12 +2078,12 @@ __webpack_require__.r(__webpack_exports__);
   },
   watch: {
     preview: function preview(val) {
-      console.elog('called watch', val);
+      console.log('called watch', val);
     }
   },
   methods: {
     find_categories: function find_categories() {
-      console.elog('find_categories'); // var Weekdatas = this.Weekdatas;
+      console.log('find_categories'); // var Weekdatas = this.Weekdatas;
       // var preview = this.preview;
 
       if (this.preview.length > 0) {

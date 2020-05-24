@@ -78,12 +78,12 @@
       },
       watch: {
         preview: function (val) {
-          console.elog('called watch', val);
+          console.log('called watch', val);
         },
       },
       methods: {
         find_categories: function(){
-          console.elog('find_categories');
+          console.log('find_categories');
           // var Weekdatas = this.Weekdatas;
           // var preview = this.preview;
 
