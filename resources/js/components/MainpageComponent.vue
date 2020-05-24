@@ -82,6 +82,11 @@
         displayWeekDatas() {
           return this.Weekdatas.filter(weekData => this.preview.includes(weekData.Crypto_name));
         }
-      }
+      },
+      methods: {
+        change: function(num){
+        this.isActive = num
+        }
+    }
   }
 </script>

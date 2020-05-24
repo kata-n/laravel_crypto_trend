@@ -2085,6 +2085,11 @@ __webpack_require__.r(__webpack_exports__);
         return _this2.preview.includes(weekData.Crypto_name);
       });
     }
+  },
+  methods: {
+    change: function change(num) {
+      this.isActive = num;
+    }
   }
 });
 
