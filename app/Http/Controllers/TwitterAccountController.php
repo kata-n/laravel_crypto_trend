@@ -63,7 +63,7 @@ class TwitterAccountController extends Controller
       $user = User::find(Auth::user()->id);
       $auto_flg = Auth::user()->aotofollow_flg;
 
-      if($auto_flg === 1){
+      if($auto_flg == 1){
           $user->aotofollow_flg = 0;
           $user->save();
           $auto_flg = 0;
