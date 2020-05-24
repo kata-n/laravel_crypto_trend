@@ -2048,6 +2048,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2081,9 +2084,19 @@ __webpack_require__.r(__webpack_exports__);
       console.log('called watch', val);
     }
   },
+  computed: {
+    xxxx: function xxxx() {
+      var _this2 = this;
+
+      return this.Weekdatas.filter(function (weekData) {
+        _this2.preview.includes(weekData.Crypto_name);
+      });
+    }
+  },
   methods: {
     find_categories: function find_categories() {
-      console.log('find_categories'); // var Weekdatas = this.Weekdatas;
+      console.log('find_categories');
+      return false; // var Weekdatas = this.Weekdatas;
       // var preview = this.preview;
 
       if (this.preview.length > 0) {
@@ -2898,21 +2911,8 @@ var render = function() {
       _c(
         "ul",
         { staticClass: "entry_list" },
-        _vm._l(_vm.Weekdatas, function(Weekdata) {
-          return _c(
-            "li",
-            {
-              directives: [
-                {
-                  name: "show",
-                  rawName: "v-show",
-                  value: Weekdata.display,
-                  expression: "Weekdata.display"
-                }
-              ]
-            },
-            [_c("p", [_vm._v(_vm._s(Weekdata.Crypto_name))])]
-          )
+        _vm._l(_vm.xxxx, function(Weekdata) {
+          return _c("li", [_c("p", [_vm._v(_vm._s(Weekdata.Crypto_name))])])
         }),
         0
       )

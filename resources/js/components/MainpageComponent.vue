@@ -37,9 +37,12 @@
               </div>
               <p>選択している仮想通貨：{{ preview }}</p>
               <ul class="entry_list">
-                <li v-for="Weekdata in Weekdatas"  v-show="Weekdata.display">
+                <li v-for="Weekdata in xxxx">
                   <p>{{ Weekdata.Crypto_name }}</p>
                 </li>
+                <!-- <li v-for="Weekdata in Weekdatas"  v-show="Weekdata.display">
+                  <p>{{ Weekdata.Crypto_name }}</p>
+                </li> -->
               </ul>
 
 
@@ -81,9 +84,17 @@
           console.log('called watch', val);
         },
       },
+      computed: {
+        xxxx() {
+          return this.Weekdatas.filter(weekData => {
+            this.preview.includes(weekData.Crypto_name);
+          });
+        }
+      },
       methods: {
         find_categories: function(){
           console.log('find_categories');
+          return false;
           // var Weekdatas = this.Weekdatas;
           // var preview = this.preview;
 
