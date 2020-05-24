@@ -2086,17 +2086,19 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     xxxx: function xxxx() {
+      var _this2 = this;
+
       if (this.Weekdatas.length === 0) {
         return [];
       }
 
       return this.Weekdatas.map(function (weekData) {
-        return weekData; // if (this.preview.includes(weekData.Crypto_name)) {
-        //   return weekData;
-        // }
-        // console.log(weekData.Crypto_name);
+        if (_this2.preview.includes(weekData.Crypto_name)) {
+          return weekData;
+        } // console.log(weekData.Crypto_name);
         // console.log('judge===>', this.preview.includes(weekData.Crypto_name))
         // this.preview.includes(weekData.Crypto_name);
+
       });
     }
   },
