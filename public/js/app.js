@@ -2074,6 +2074,7 @@ __webpack_require__.r(__webpack_exports__);
       for (var key in array) {
         var cryptoname = array[key].Crypto_name;
         self.Crypto_lists.push(cryptoname);
+        self.preview.push(cryptoname);
       }
     });
   },
@@ -2082,7 +2083,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       return this.Weekdatas.filter(function (weekData) {
-        return _this2.Crypto_lists.includes(weekData.Crypto_name);
+        return _this2.preview.includes(weekData.Crypto_name);
       });
     }
   } //       methods: {
@@ -2855,35 +2856,35 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.Crypto_lists,
-                    expression: "Crypto_lists"
+                    value: _vm.preview,
+                    expression: "preview"
                   }
                 ],
                 attrs: { type: "checkbox", id: Cryopto },
                 domProps: {
                   value: Cryopto,
-                  checked: Array.isArray(_vm.Crypto_lists)
-                    ? _vm._i(_vm.Crypto_lists, Cryopto) > -1
-                    : _vm.Crypto_lists
+                  checked: Array.isArray(_vm.preview)
+                    ? _vm._i(_vm.preview, Cryopto) > -1
+                    : _vm.preview
                 },
                 on: {
                   change: function($event) {
-                    var $$a = _vm.Crypto_lists,
+                    var $$a = _vm.preview,
                       $$el = $event.target,
                       $$c = $$el.checked ? true : false
                     if (Array.isArray($$a)) {
                       var $$v = Cryopto,
                         $$i = _vm._i($$a, $$v)
                       if ($$el.checked) {
-                        $$i < 0 && (_vm.Crypto_lists = $$a.concat([$$v]))
+                        $$i < 0 && (_vm.preview = $$a.concat([$$v]))
                       } else {
                         $$i > -1 &&
-                          (_vm.Crypto_lists = $$a
+                          (_vm.preview = $$a
                             .slice(0, $$i)
                             .concat($$a.slice($$i + 1)))
                       }
                     } else {
-                      _vm.Crypto_lists = $$c
+                      _vm.preview = $$c
                     }
                   }
                 }
@@ -2898,7 +2899,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("p", [_vm._v("選択している仮想通貨：" + _vm._s(_vm.Crypto_lists))]),
+      _c("p", [_vm._v("選択している仮想通貨：" + _vm._s(_vm.preview))]),
       _vm._v(" "),
       _c(
         "ul",
