@@ -55,7 +55,7 @@ class TwitterAccountController extends Controller
 
       $users = User::where('aotofollow_flg', 1)->get();
 
-      foreach($users as $user{
+      foreach($users as $user){
 
         //Twitter情報取得
         $twitter = new TwitterOAuth(
