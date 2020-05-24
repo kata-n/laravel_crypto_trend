@@ -47,7 +47,38 @@ class TwitterAccountController extends Controller
 
         $user_name = $request->input('name');
         $result = $twitter->post('friendships/create', ['screen_name'=> $user_name]);
+    }
 
+    //自動フォローを行う
+    public function autofollowing(Request $request)
+    {
+
+      $users = User::where('aotofollow_flg', 1)->get();
+
+      foreach($users as $user{
+
+        //Twitter情報取得
+        $twitter = new TwitterOAuth(
+            config('services.twitter.client_id'),
+            config('services.twitter.client_secret'),
+            config('services.twitter.access_token'),
+            config('services.twitter.access_token_secret')
+        );
+
+        //検索クエリ指定
+        $params = array(
+            "q" => "仮想通貨",
+            "lang" => "ja",
+            "locale" => "ja",
+            "count" => "1",
+            "include_entities" => "false",
+        );
+
+        $follower = $twitter->get('users/search', $params);
+
+        $result = $twitter->post('friendships/create', ['screen_name'=> $follower]);
+
+      }
     }
 
     //ログインユーザーの自動フォローONOFFを取得

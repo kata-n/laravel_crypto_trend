@@ -60,7 +60,7 @@
             this.$http.get("/twitterautofollow").then(e => {
                     this.flag = e.data.autoflg;
                 }).catch((error) => {
-                    console.log("エラー");
+                    console.log("error");
                 })
           },
 
@@ -68,9 +68,8 @@
           autofollow: function(){
             this.$http.get("/autofollowswitch").then(e => {
                     this.flag = e.data.autoflg;
-                    console.log(this.flag);
                 }).catch((error) => {
-                    console.log("エラー");
+                    console.log("error");
                 })
           },
 
