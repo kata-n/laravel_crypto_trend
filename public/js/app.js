@@ -2050,6 +2050,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2085,6 +2093,20 @@ __webpack_require__.r(__webpack_exports__);
 
       return this.Weekdatas.filter(function (weekData) {
         return _this2.preview.includes(weekData.Crypto_name);
+      });
+    },
+    displayDayDatas: function displayDayDatas() {
+      var _this3 = this;
+
+      return this.Hourdatas.filter(function (Daydata) {
+        return _this3.preview.includes(Daydata.Crypto_name);
+      });
+    },
+    displayHourDatas: function displayHourDatas() {
+      var _this4 = this;
+
+      return this.Hourdatas.filter(function (Hourdata) {
+        return _this4.preview.includes(Hourdata.Crypto_name);
       });
     }
   },
@@ -2921,12 +2943,56 @@ var render = function() {
             : _vm._e()
         }),
         _vm._v(" "),
-        _vm._l(_vm.displayWeekDatas, function(Weekdata) {
-          return _vm.isActive == "2" ? _c("div", [_vm._v("tesuto2")]) : _vm._e()
+        _vm._l(_vm.displayHourDatas, function(Hourdata) {
+          return _vm.isActive == "2"
+            ? _c("div", [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href:
+                        "https://twitter.com/search?q=" + Hourdata.Crypto_name,
+                      target: "_blank"
+                    }
+                  },
+                  [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(Hourdata.Crypto_name) +
+                        "\n              "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("p", [_vm._v("ツイート数：" + _vm._s(Hourdata.Tweet_count))])
+              ])
+            : _vm._e()
         }),
         _vm._v(" "),
-        _vm._l(_vm.displayWeekDatas, function(Weekdata) {
-          return _vm.isActive == "3" ? _c("div", [_vm._v("tesuto3")]) : _vm._e()
+        _vm._l(_vm.displayDayDatas, function(Daydata) {
+          return _vm.isActive == "3"
+            ? _c("div", [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href:
+                        "https://twitter.com/search?q=" + Daydata.Crypto_name,
+                      target: "_blank"
+                    }
+                  },
+                  [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(Daydata.Crypto_name) +
+                        "\n              "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("p", [_vm._v("ツイート数：" + _vm._s(Daydata.Tweet_count))])
+              ])
+            : _vm._e()
         })
       ],
       2

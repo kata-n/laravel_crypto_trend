@@ -42,10 +42,18 @@
               </a>
               <p>ツイート数：{{ Weekdata.Tweet_count }}</p>
               </div>
-          <div v-for="Weekdata in displayWeekDatas" v-if="isActive == '2'">tesuto2</div>
-          <div v-for="Weekdata in displayWeekDatas" v-if="isActive == '3'">tesuto3</div>
-
-
+              <div v-for="Hourdata in displayHourDatas" v-if="isActive == '2'">
+                <a v-bind:href="'https://twitter.com/search?q=' + Hourdata.Crypto_name" target="_blank">
+                {{ Hourdata.Crypto_name }}
+              </a>
+              <p>ツイート数：{{ Hourdata.Tweet_count }}</p>
+              </div>
+              <div v-for="Daydata in displayDayDatas" v-if="isActive == '3'">
+                <a v-bind:href="'https://twitter.com/search?q=' + Daydata.Crypto_name" target="_blank">
+                {{ Daydata.Crypto_name }}
+              </a>
+              <p>ツイート数：{{ Daydata.Tweet_count }}</p>
+              </div>
 
         </div>
     </div>
@@ -83,6 +91,12 @@
       computed: {
         displayWeekDatas() {
           return this.Weekdatas.filter(weekData => this.preview.includes(weekData.Crypto_name));
+        },
+        displayDayDatas() {
+          return this.Hourdatas.filter(Daydata => this.preview.includes(Daydata.Crypto_name));
+        },
+        displayHourDatas() {
+          return this.Hourdatas.filter(Hourdata => this.preview.includes(Hourdata.Crypto_name));
         }
       },
       methods: {
