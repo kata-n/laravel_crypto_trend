@@ -54,7 +54,7 @@
         return {
           Hourdatas: {},
           Daydatas: {},
-          Weekdatas: {},
+          Weekdatas: [],
           Crypto_lists: [],
           preview: [],
           RankingType: 1,
@@ -76,28 +76,34 @@
 
         });
       },
+      watch: {
+        preview: function (val) {
+          console.elog('called watch', val);
+        },
+      },
       methods: {
         find_categories: function(){
-          var Weekdatas = this.Weekdatas;
-          var preview = this.preview;
+          console.elog('find_categories');
+          // var Weekdatas = this.Weekdatas;
+          // var preview = this.preview;
 
-          if(preview.length > 0) {
-            for (var i = 0; i < Weekdatas.length; i++) {
-              var cryptoname = Weekdatas[i].Crypto_name;
-              for (var j = 0; j < preview.length; j++){
-                if(preview.indexOf(cryptoname) >= 0){
-                  Weekdatas[i].display = true;
+          if(this.preview.length > 0) {
+            for (var i = 0; i < this.Weekdatas.length; i++) {
+              var cryptoname = this.Weekdatas[i].Crypto_name;
+              for (var j = 0; j < this.preview.length; j++){
+                if(this.preview.indexOf(cryptoname) >= 0){
+                  this.Weekdatas[i].display = true;
                   break;
                 } else {
-                  Weekdatas[i].display = false;
+                  this.Weekdatas[i].display = false;
                 }
               }
             }
 
           } else {
-            for (var i = 0; i < Weekdatas.length; i++) {
-              var categories = Weekdatas[i].Crypto_name;
-              Weekdatas[i].display = true;
+            for (var i = 0; i < this.Weekdatas.length; i++) {
+              var categories = this.Weekdatas[i].Crypto_name;
+              this.Weekdatas[i].display = true;
             }
           }
 
