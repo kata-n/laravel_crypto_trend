@@ -12,6 +12,17 @@
               <h2>仮想通貨Twitterランキング</h2>
 
 
+              <label>
+                <input type="radio" v-model="RankingType" value="1">過去1時間
+              </label>
+              <label>
+                <input type="radio" v-model="RankingType" value="2">過去24時間
+              </label>
+              <label>
+                <input type="radio" v-model="RankingType" value="3">過去一週間
+              </label>
+            </div>
+
               <div>
                 <ul class="crypto_list">
                   <li v-for="Cryopto in Crypto_lists">
@@ -31,16 +42,6 @@
                 </li>
               </ul>
 
-              <label>
-                <input type="radio" v-model="RankingType" value="1">過去1時間
-              </label>
-              <label>
-                <input type="radio" v-model="RankingType" value="2">過去24時間
-              </label>
-              <label>
-                <input type="radio" v-model="RankingType" value="3">過去一週間
-              </label>
-            </div>
 
 
         </div>
@@ -57,7 +58,6 @@
           Crypto_lists: [],
           preview: [],
           RankingType: 1,
-          result: false,
         }
       },
       mounted() {
@@ -102,13 +102,7 @@
           }
 
         }
-      },
-      watch:
-      {
-            preview: function(newVal, oldVal) {
-            this.result = newVal;
-            console.log(result);
       }
-    },
+
   }
 </script>

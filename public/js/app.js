@@ -2047,6 +2047,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2055,8 +2056,7 @@ __webpack_require__.r(__webpack_exports__);
       Weekdatas: {},
       Crypto_lists: [],
       preview: [],
-      RankingType: 1,
-      result: false
+      RankingType: 1
     };
   },
   mounted: function mounted() {
@@ -2100,12 +2100,6 @@ __webpack_require__.r(__webpack_exports__);
           Weekdatas[i].display = true;
         }
       }
-    }
-  },
-  watch: {
-    preview: function preview(newVal, oldVal) {
-      this.result = newVal;
-      console.log(result);
     }
   }
 });
@@ -2775,85 +2769,6 @@ var render = function() {
       _c("div", [
         _c("h2", [_vm._v("仮想通貨Twitterランキング")]),
         _vm._v(" "),
-        _c("div", [
-          _c(
-            "ul",
-            { staticClass: "crypto_list" },
-            _vm._l(_vm.Crypto_lists, function(Cryopto) {
-              return _c("li", [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.preview,
-                      expression: "preview"
-                    }
-                  ],
-                  attrs: { type: "checkbox", id: Cryopto },
-                  domProps: {
-                    value: Cryopto,
-                    checked: Array.isArray(_vm.preview)
-                      ? _vm._i(_vm.preview, Cryopto) > -1
-                      : _vm.preview
-                  },
-                  on: {
-                    click: _vm.find_categories,
-                    change: function($event) {
-                      var $$a = _vm.preview,
-                        $$el = $event.target,
-                        $$c = $$el.checked ? true : false
-                      if (Array.isArray($$a)) {
-                        var $$v = Cryopto,
-                          $$i = _vm._i($$a, $$v)
-                        if ($$el.checked) {
-                          $$i < 0 && (_vm.preview = $$a.concat([$$v]))
-                        } else {
-                          $$i > -1 &&
-                            (_vm.preview = $$a
-                              .slice(0, $$i)
-                              .concat($$a.slice($$i + 1)))
-                        }
-                      } else {
-                        _vm.preview = $$c
-                      }
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("label", { attrs: { for: Cryopto } }, [
-                  _vm._v(_vm._s(Cryopto))
-                ])
-              ])
-            }),
-            0
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", [_vm._v("選択している仮想通貨：" + _vm._s(_vm.preview))]),
-        _vm._v(" "),
-        _c(
-          "ul",
-          { staticClass: "entry_list" },
-          _vm._l(_vm.Weekdatas, function(Weekdata) {
-            return _c(
-              "li",
-              {
-                directives: [
-                  {
-                    name: "show",
-                    rawName: "v-show",
-                    value: Weekdata.display,
-                    expression: "Weekdata.display"
-                  }
-                ]
-              },
-              [_c("p", [_vm._v(_vm._s(Weekdata.Crypto_name))])]
-            )
-          }),
-          0
-        ),
-        _vm._v(" "),
         _c("label", [
           _c("input", {
             directives: [
@@ -2916,7 +2831,86 @@ var render = function() {
           }),
           _vm._v("過去一週間\n          ")
         ])
-      ])
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c(
+          "ul",
+          { staticClass: "crypto_list" },
+          _vm._l(_vm.Crypto_lists, function(Cryopto) {
+            return _c("li", [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.preview,
+                    expression: "preview"
+                  }
+                ],
+                attrs: { type: "checkbox", id: Cryopto },
+                domProps: {
+                  value: Cryopto,
+                  checked: Array.isArray(_vm.preview)
+                    ? _vm._i(_vm.preview, Cryopto) > -1
+                    : _vm.preview
+                },
+                on: {
+                  click: _vm.find_categories,
+                  change: function($event) {
+                    var $$a = _vm.preview,
+                      $$el = $event.target,
+                      $$c = $$el.checked ? true : false
+                    if (Array.isArray($$a)) {
+                      var $$v = Cryopto,
+                        $$i = _vm._i($$a, $$v)
+                      if ($$el.checked) {
+                        $$i < 0 && (_vm.preview = $$a.concat([$$v]))
+                      } else {
+                        $$i > -1 &&
+                          (_vm.preview = $$a
+                            .slice(0, $$i)
+                            .concat($$a.slice($$i + 1)))
+                      }
+                    } else {
+                      _vm.preview = $$c
+                    }
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: Cryopto } }, [
+                _vm._v(_vm._s(Cryopto))
+              ])
+            ])
+          }),
+          0
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", [_vm._v("選択している仮想通貨：" + _vm._s(_vm.preview))]),
+      _vm._v(" "),
+      _c(
+        "ul",
+        { staticClass: "entry_list" },
+        _vm._l(_vm.Weekdatas, function(Weekdata) {
+          return _c(
+            "li",
+            {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: Weekdata.display,
+                  expression: "Weekdata.display"
+                }
+              ]
+            },
+            [_c("p", [_vm._v(_vm._s(Weekdata.Crypto_name))])]
+          )
+        }),
+        0
+      )
     ])
   ])
 }

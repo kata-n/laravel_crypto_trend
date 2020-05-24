@@ -64,10 +64,12 @@ class TwitterAccountController extends Controller
       $auto_flg = Auth::user()->aotofollow_flg;
 
       if($auto_flg == 1){
+          //自動フォローOFF
           $user->aotofollow_flg = 0;
           $user->save();
           $auto_flg = 0;
       } else {
+          //自動フォローON
           $user->aotofollow_flg = 1;
           $user->save();
           $auto_flg = 1;
