@@ -90,7 +90,7 @@
             return [];
           }
           return this.Weekdatas.map(weekData => {
-            weekData;
+            return weekData;
             // if (this.preview.includes(weekData.Crypto_name)) {
             //   return weekData;
             // }

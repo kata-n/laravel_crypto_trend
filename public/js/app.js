@@ -2091,7 +2091,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       return this.Weekdatas.map(function (weekData) {
-        weekData; // if (this.preview.includes(weekData.Crypto_name)) {
+        return weekData; // if (this.preview.includes(weekData.Crypto_name)) {
         //   return weekData;
         // }
         // console.log(weekData.Crypto_name);
