@@ -1974,11 +1974,18 @@ __webpack_require__.r(__webpack_exports__);
         console.log("エラー");
       });
     },
+    //自動フォロー切り替え
     autofollow: function autofollow() {
+      var _this3 = this;
+
       var Twitterautoflag = this.flag;
-      console.log(Twitterautoflag);
-      this.$http.post("/twitterautofollow", {
+      this.$http.post("/autofollowswitch", {
         flag: Twitterautoflag
+      }).then(function (e) {
+        _this3.flag = e.data.autoflg;
+        console.log(_this3.flag);
+      })["catch"](function (error) {
+        console.log("エラー");
       });
     }
   }
@@ -1995,6 +2002,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
 //
 //
 //
@@ -2866,7 +2876,7 @@ var render = function() {
               }
             }
           }),
-          _vm._v("過去1時間\n            ")
+          _vm._v("過去1時間\n          ")
         ]),
         _vm._v(" "),
         _c("label", [
@@ -2887,7 +2897,7 @@ var render = function() {
               }
             }
           }),
-          _vm._v("過去24時間\n            ")
+          _vm._v("過去24時間\n          ")
         ]),
         _vm._v(" "),
         _c("label", [
@@ -2908,7 +2918,7 @@ var render = function() {
               }
             }
           }),
-          _vm._v("過去一週間\n            ")
+          _vm._v("過去一週間\n          ")
         ])
       ])
     ])

@@ -11,24 +11,25 @@
             <div>
               <h2>仮想通貨Twitterランキング</h2>
 
-  <div>
-    <ul class="crypto_list">
-      <li v-for="Cryopto in Crypto_lists">
-        <input type="checkbox"
-          v-bind:id="Cryopto"
-          v-bind:value="Cryopto"
-          v-model="preview"
-          v-on:click="find_categories">
-        <label v-bind:for="Cryopto">{{ Cryopto }}</label>
-      </li>
-    </ul>
-  </div>
-  <p>選択している仮想通貨：{{ preview }}</p>
-  <ul class="entry_list">
-    <li v-for="Weekdata in Weekdatas"  v-show="Weekdata.display">
-      <p>{{ Weekdata.Crypto_name }}</p>
-    </li>
-  </ul>
+
+              <div>
+                <ul class="crypto_list">
+                  <li v-for="Cryopto in Crypto_lists">
+                    <input type="checkbox"
+                      v-bind:id="Cryopto"
+                      v-bind:value="Cryopto"
+                      v-model="preview"
+                      v-on:click="find_categories">
+                    <label v-bind:for="Cryopto">{{ Cryopto }}</label>
+                  </li>
+                </ul>
+              </div>
+              <p>選択している仮想通貨：{{ preview }}</p>
+              <ul class="entry_list">
+                <li v-for="Weekdata in Weekdatas"  v-show="Weekdata.display">
+                  <p>{{ Weekdata.Crypto_name }}</p>
+                </li>
+              </ul>
 
               <label>
                 <input type="radio" v-model="RankingType" value="1">過去1時間
@@ -40,6 +41,8 @@
                 <input type="radio" v-model="RankingType" value="3">過去一週間
               </label>
             </div>
+
+
         </div>
     </div>
 </template>
@@ -102,9 +105,9 @@
       },
       watch:
       {
-		preview: function(newVal, oldVal) {
-		this.result = newVal;
-          console.log(result);
+            preview: function(newVal, oldVal) {
+            this.result = newVal;
+            console.log(result);
       }
     },
   }

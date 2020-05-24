@@ -65,12 +65,17 @@
                 })
           },
 
+          //自動フォロー切り替え
           autofollow: function(){
             const Twitterautoflag = this.flag
-            console.log(Twitterautoflag);
-            this.$http.post("/twitterautofollow", {
+            this.$http.post("/autofollowswitch", {
               flag: Twitterautoflag
-            })
+            }).then(e => {
+                    this.flag = e.data.autoflg;
+                    console.log(this.flag);
+                }).catch((error) => {
+                    console.log("エラー");
+                })
           },
 
         }
