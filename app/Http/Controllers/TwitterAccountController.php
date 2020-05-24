@@ -64,10 +64,10 @@ class TwitterAccountController extends Controller
       $fllow_switch = $request->flag;
 
       if($auto_flg === 0){
-          $res = false;
+          $res = true;
           $auto_flg->fill($res)->save();
       } else {
-          $res = true;
+          $res = false;
           $auto_flg->fill($res)->save();
       }
 

@@ -59,7 +59,6 @@
           getAutofollow: function(){
             this.$http.get("/twitterautofollow").then(e => {
                     this.flag = e.data.autoflg;
-                    console.log(this.flag);
                 }).catch((error) => {
                     console.log("エラー");
                 })
