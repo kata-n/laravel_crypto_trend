@@ -29,12 +29,12 @@
                     <input type="checkbox"
                       v-bind:id="Cryopto"
                       v-bind:value="Cryopto"
-                      v-model="Crypto_lists">
+                      v-model="preview">
                     <label v-bind:for="Cryopto">{{ Cryopto }}</label>
                   </li>
                 </ul>
               </div>
-              <p>選択している仮想通貨：{{ Crypto_lists }}</p>
+              <p>選択している仮想通貨：{{ preview }}</p>
               <ul class="entry_list">
                 <li v-for="Weekdata in displayWeekDatas">
                   <a v-bind:href="'https://twitter.com/search?q=' + Weekdata.Crypto_name" target="_blank">
@@ -74,13 +74,14 @@
           for (var key in array) {
             var cryptoname = array[key].Crypto_name
             self.Crypto_lists.push(cryptoname)
+            self.preview.push(cryptoname)
           }
 
         });
       },
       computed: {
         displayWeekDatas() {
-          return this.Weekdatas.filter(weekData => this.Crypto_lists.includes(weekData.Crypto_name));
+          return this.Weekdatas.filter(weekData => this.preview.includes(weekData.Crypto_name));
         }
       },
 //       methods: {
