@@ -85,7 +85,7 @@
         },
       },
       computed: {
-        xxxx() {
+        xxxx: function() {
           if (this.Weekdatas.length === 0) {
             console.log('len===0');
             return [];
