@@ -12,7 +12,7 @@
     </div>
   <nav class="header-nav js-toggle-sp-menu-target" id="js-classtaget">
     <ul>
-      <li><a href="/mainpage">クイズに挑戦</a></li>
+      <li><a href="/mainpage">ユーザー情報</a></li>
     </ul>
   </nav>
 @endsection
