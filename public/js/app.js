@@ -2090,6 +2090,7 @@ __webpack_require__.r(__webpack_exports__);
 
       return this.Weekdatas.filter(function (weekData) {
         console.log(weekData.Crypto_name);
+        console.log('judge===>', _this2.preview.includes(weekData.Crypto_name));
 
         _this2.preview.includes(weekData.Crypto_name);
       });

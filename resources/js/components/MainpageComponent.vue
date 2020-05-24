@@ -88,6 +88,7 @@
         xxxx() {
           return this.Weekdatas.filter(weekData => {
             console.log(weekData.Crypto_name);
+            console.log('judge===>', this.preview.includes(weekData.Crypto_name))
             this.preview.includes(weekData.Crypto_name);
           });
         }
