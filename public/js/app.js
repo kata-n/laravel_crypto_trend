@@ -2089,6 +2089,8 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       return this.Weekdatas.filter(function (weekData) {
+        console.log(weekData.Crypto_name);
+
         _this2.preview.includes(weekData.Crypto_name);
       });
     }
