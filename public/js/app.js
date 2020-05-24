@@ -2088,11 +2088,13 @@ __webpack_require__.r(__webpack_exports__);
     xxxx: function xxxx() {
       var _this2 = this;
 
-      return this.Weekdatas.filter(function (weekData) {
-        console.log(weekData.Crypto_name);
-        console.log('judge===>', _this2.preview.includes(weekData.Crypto_name));
+      return this.Weekdatas.map(function (weekData) {
+        if (_this2.preview.includes(weekData.Crypto_name)) {
+          return weekData;
+        } // console.log(weekData.Crypto_name);
+        // console.log('judge===>', this.preview.includes(weekData.Crypto_name))
+        // this.preview.includes(weekData.Crypto_name);
 
-        _this2.preview.includes(weekData.Crypto_name);
       });
     }
   },
