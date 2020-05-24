@@ -32,7 +32,7 @@
 
       <ul class="article">
 
-                <li v-for="Weekdata in displayWeekDatas"v-if="isActive === 'A'">
+                <li v-for="Weekdata in displayWeekDatas"v-if="RankingType === 'A'">
                   <a v-bind:href="'https://twitter.com/search?q=' + Weekdata.Crypto_name" target="_blank">
                     {{ Weekdata.Crypto_name }}
                   </a>
@@ -40,8 +40,8 @@
                 </li>
 
 
-        <li v-else-if="isActive === 'B'">ダミーテキスト2</li>
-        <li v-else-if="isActive === 'C'">ダミーテキスト3</li>
+        <li v-else-if="RankingType === 'B'">ダミーテキスト2</li>
+        <li v-else-if="RankingType === 'C'">ダミーテキスト3</li>
       </ul>
 
 

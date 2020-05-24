@@ -2853,7 +2853,7 @@ var render = function() {
         "ul",
         { staticClass: "article" },
         _vm._l(_vm.displayWeekDatas, function(Weekdata) {
-          return _vm.isActive === "A"
+          return _vm.RankingType === "A"
             ? _c("li", [
                 _c(
                   "a",
@@ -2875,9 +2875,9 @@ var render = function() {
                 _vm._v(" "),
                 _c("p", [_vm._v("ツイート数：" + _vm._s(Weekdata.Tweet_count))])
               ])
-            : _vm.isActive === "B"
+            : _vm.RankingType === "B"
             ? _c("li", [_vm._v("ダミーテキスト2")])
-            : _vm.isActive === "C"
+            : _vm.RankingType === "C"
             ? _c("li", [_vm._v("ダミーテキスト3")])
             : _vm._e()
         }),
