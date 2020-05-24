@@ -8,9 +8,9 @@
                     <a href="/newspage" class="">仮想通貨ニュース一覧</a>
                 </div>
             </div>
+
             <div>
               <h2>仮想通貨Twitterランキング</h2>
-
 
               <label>
                 <input type="radio" v-model="RankingType" value="1">過去1時間
@@ -63,7 +63,7 @@
         }
       },
       mounted() {
-        var self = this
+
         this.$http.get(`/ranking`).then(response => {
         this.Hourdatas = response.data.HourRankingData;
         this.Daydatas = response.data.DayRankingData;
