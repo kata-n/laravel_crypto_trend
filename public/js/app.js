@@ -2094,7 +2094,8 @@ __webpack_require__.r(__webpack_exports__);
 
       console.log('len!==0');
       return this.Weekdatas.map(function (weekData) {
-        // console.log('weekData===>', JSON.stringify(weekData));
+        console.log('weekData===>', JSON.stringify(weekData));
+
         if (_this2.preview.includes(weekData.Crypto_name)) {
           console.log('weekData===>', JSON.stringify(weekData));
           return weekData;

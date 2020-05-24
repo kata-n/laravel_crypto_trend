@@ -92,7 +92,7 @@
           }
           console.log('len!==0');
           return this.Weekdatas.map(weekData => {
-            // console.log('weekData===>', JSON.stringify(weekData));
+            console.log('weekData===>', JSON.stringify(weekData));
             if (this.preview.includes(weekData.Crypto_name)) {
               console.log('weekData===>', JSON.stringify(weekData));
               return weekData;
