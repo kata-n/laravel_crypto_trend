@@ -86,21 +86,14 @@
       },
       computed: {
         xxxx: function() {
-          if (this.Weekdatas.length === 0) {
-            console.log('len===0');
-            return [];
-          }
-          console.log('len!==0');
+          // if (this.Weekdatas.length === 0) {
+          //   console.log('len===0');
+          //   return [];
+          // }
+          return this.Weekdatas.filter(weekData => this.preview.includes(weekData.Crypto_name));
 
-          this.Weekdatas.forEach(weekData => {
-            console.log('weekData===>', JSON.stringify(weekData));
-            console.log('judge===>', this.preview.includes(weekData.Crypto_name))
-          });
-
-          const ar = this.Weekdatas.filter(weekData => this.preview.includes(weekData.Crypto_name));
-
-          console.log(ar);
-          return ar;
+          // console.log(ar);
+          // return ar;
             // console.log(weekData.Crypto_name);
             // console.log('judge===>', this.preview.includes(weekData.Crypto_name))
             // this.preview.includes(weekData.Crypto_name);
