@@ -29,12 +29,12 @@
                     <input type="checkbox"
                       v-bind:id="Cryopto"
                       v-bind:value="Cryopto"
-                      v-model="preview">
+                      v-model="Crypto_lists">
                     <label v-bind:for="Cryopto">{{ Cryopto }}</label>
                   </li>
                 </ul>
               </div>
-              <p>選択している仮想通貨：{{ preview }}</p>
+              <p>選択している仮想通貨：{{ Crypto_lists }}</p>
               <ul class="entry_list">
                 <li v-for="Weekdata in displayWeekDatas">
                   <a v-bind:href="'https://twitter.com/search?q=' + Weekdata.Crypto_name" target="_blank">
@@ -80,36 +80,36 @@
       },
       computed: {
         displayWeekDatas() {
-          return this.Weekdatas.filter(weekData => this.preview.includes(weekData.Crypto_name));
+          return this.Weekdatas.filter(weekData => this.Crypto_lists.includes(weekData.Crypto_name));
         }
       },
-      // methods: {
-      //   find_categories: function(){
-      //     console.log('find_categories');
-      //     return false;
-
-      //     if(this.preview.length > 0) {
-      //       for (var i = 0; i < this.Weekdatas.length; i++) {
-      //         var cryptoname = this.Weekdatas[i].Crypto_name;
-      //         for (var j = 0; j < this.preview.length; j++){
-      //           if(this.preview.indexOf(cryptoname) >= 0){
-      //             this.Weekdatas[i].display = true;
-      //             break;
-      //           } else {
-      //             this.Weekdatas[i].display = false;
-      //           }
-      //         }
-      //       }
-
-      //     } else {
-      //       for (var i = 0; i < this.Weekdatas.length; i++) {
-      //         var categories = this.Weekdatas[i].Crypto_name;
-      //         this.Weekdatas[i].display = true;
-      //       }
-      //     }
-
-      //   }
-      // }
+//       methods: {
+//         find_categories: function(){
+//           console.log('find_categories');
+//           return false;
+//
+//           if(this.preview.length > 0) {
+//             for (var i = 0; i < this.Weekdatas.length; i++) {
+//               var cryptoname = this.Weekdatas[i].Crypto_name;
+//               for (var j = 0; j < this.preview.length; j++){
+//                 if(this.preview.indexOf(cryptoname) >= 0){
+//                   this.Weekdatas[i].display = true;
+//                   break;
+//                 } else {
+//                   this.Weekdatas[i].display = false;
+//                 }
+//               }
+//             }
+//
+//           } else {
+//             for (var i = 0; i < this.Weekdatas.length; i++) {
+//               var categories = this.Weekdatas[i].Crypto_name;
+//               this.Weekdatas[i].display = true;
+//             }
+//           }
+//
+//         }
+//       }
 
   }
 </script>
