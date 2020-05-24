@@ -2045,6 +2045,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2053,7 +2058,7 @@ __webpack_require__.r(__webpack_exports__);
       Weekdatas: [],
       Crypto_lists: [],
       preview: [],
-      RankingType: 'A'
+      isActive: '1'
     };
   },
   mounted: function mounted() {
@@ -2749,114 +2754,150 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "l-container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", [
-        _c("h2", [_vm._v("仮想通貨Twitterランキング")]),
+    _c(
+      "div",
+      { staticClass: "row justify-content-center" },
+      [
+        _vm._m(0),
         _vm._v(" "),
-        _c(
-          "li",
-          {
-            class: { active: _vm.RankingType === "A" },
+        _c("div", [
+          _c("h2", [_vm._v("仮想通貨Twitterランキング")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.isActive,
+                expression: "isActive"
+              }
+            ],
+            staticClass: "Tab-Btn-Radio",
+            attrs: { type: "radio", value: "1", id: "Tab1" },
+            domProps: { checked: _vm._q(_vm.isActive, "1") },
             on: {
-              click: function($event) {
-                return _vm.change("A")
+              change: function($event) {
+                _vm.isActive = "1"
               }
             }
-          },
-          [_vm._v("過去1時間")]
-        ),
-        _vm._v(" "),
-        _c(
-          "li",
-          {
-            class: { active: _vm.RankingType === "B" },
+          }),
+          _vm._v(" "),
+          _c(
+            "label",
+            { staticClass: "Tab-Btn-Label", attrs: { for: "Tab1" } },
+            [_vm._v("過去1時間")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.isActive,
+                expression: "isActive"
+              }
+            ],
+            staticClass: "Tab-Btn-Radio",
+            attrs: { type: "radio", value: "2", id: "Tab2" },
+            domProps: { checked: _vm._q(_vm.isActive, "2") },
             on: {
-              click: function($event) {
-                return _vm.change("B")
+              change: function($event) {
+                _vm.isActive = "2"
               }
             }
-          },
-          [_vm._v("過去24時間")]
-        ),
-        _vm._v(" "),
-        _c(
-          "li",
-          {
-            class: { active: _vm.RankingType === "C" },
+          }),
+          _vm._v(" "),
+          _c(
+            "label",
+            { staticClass: "Tab-Btn-Label", attrs: { for: "Tab2" } },
+            [_vm._v("過去24時間")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.isActive,
+                expression: "isActive"
+              }
+            ],
+            staticClass: "Tab-Btn-Radio",
+            attrs: { type: "radio", value: "3", id: "Tab3" },
+            domProps: { checked: _vm._q(_vm.isActive, "3") },
             on: {
-              click: function($event) {
-                return _vm.change("C")
+              change: function($event) {
+                _vm.isActive = "3"
               }
             }
-          },
-          [_vm._v("過去一週間")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c(
-          "ul",
-          { staticClass: "crypto_list" },
-          _vm._l(_vm.Crypto_lists, function(Cryopto) {
-            return _c("li", [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.preview,
-                    expression: "preview"
-                  }
-                ],
-                attrs: { type: "checkbox", id: Cryopto },
-                domProps: {
-                  value: Cryopto,
-                  checked: Array.isArray(_vm.preview)
-                    ? _vm._i(_vm.preview, Cryopto) > -1
-                    : _vm.preview
-                },
-                on: {
-                  change: function($event) {
-                    var $$a = _vm.preview,
-                      $$el = $event.target,
-                      $$c = $$el.checked ? true : false
-                    if (Array.isArray($$a)) {
-                      var $$v = Cryopto,
-                        $$i = _vm._i($$a, $$v)
-                      if ($$el.checked) {
-                        $$i < 0 && (_vm.preview = $$a.concat([$$v]))
+          }),
+          _vm._v(" "),
+          _c(
+            "label",
+            { staticClass: "Tab-Btn-Label", attrs: { for: "Tab3" } },
+            [_vm._v("過去一週間")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "ul",
+            { staticClass: "crypto_list" },
+            _vm._l(_vm.Crypto_lists, function(Cryopto) {
+              return _c("li", [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.preview,
+                      expression: "preview"
+                    }
+                  ],
+                  attrs: { type: "checkbox", id: Cryopto },
+                  domProps: {
+                    value: Cryopto,
+                    checked: Array.isArray(_vm.preview)
+                      ? _vm._i(_vm.preview, Cryopto) > -1
+                      : _vm.preview
+                  },
+                  on: {
+                    change: function($event) {
+                      var $$a = _vm.preview,
+                        $$el = $event.target,
+                        $$c = $$el.checked ? true : false
+                      if (Array.isArray($$a)) {
+                        var $$v = Cryopto,
+                          $$i = _vm._i($$a, $$v)
+                        if ($$el.checked) {
+                          $$i < 0 && (_vm.preview = $$a.concat([$$v]))
+                        } else {
+                          $$i > -1 &&
+                            (_vm.preview = $$a
+                              .slice(0, $$i)
+                              .concat($$a.slice($$i + 1)))
+                        }
                       } else {
-                        $$i > -1 &&
-                          (_vm.preview = $$a
-                            .slice(0, $$i)
-                            .concat($$a.slice($$i + 1)))
+                        _vm.preview = $$c
                       }
-                    } else {
-                      _vm.preview = $$c
                     }
                   }
-                }
-              }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: Cryopto } }, [
-                _vm._v(_vm._s(Cryopto))
+                }),
+                _vm._v(" "),
+                _c("label", { attrs: { for: Cryopto } }, [
+                  _vm._v(_vm._s(Cryopto))
+                ])
               ])
-            ])
-          }),
-          0
-        )
-      ]),
-      _vm._v(" "),
-      _c("p", [_vm._v("選択している仮想通貨：" + _vm._s(_vm.preview))]),
-      _vm._v(" "),
-      _c(
-        "ul",
-        { staticClass: "article" },
+            }),
+            0
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", [_vm._v("選択している仮想通貨：" + _vm._s(_vm.preview))]),
+        _vm._v(" "),
         _vm._l(_vm.displayWeekDatas, function(Weekdata) {
-          return _vm.RankingType === "A"
-            ? _c("li", [
+          return _vm.isActive == "1"
+            ? _c("div", [
                 _c(
                   "a",
                   {
@@ -2877,15 +2918,19 @@ var render = function() {
                 _vm._v(" "),
                 _c("p", [_vm._v("ツイート数：" + _vm._s(Weekdata.Tweet_count))])
               ])
-            : _vm.RankingType === "B"
-            ? _c("li", [_vm._v("ダミーテキスト2")])
-            : _vm.RankingType === "C"
-            ? _c("li", [_vm._v("ダミーテキスト3")])
             : _vm._e()
         }),
-        0
-      )
-    ])
+        _vm._v(" "),
+        _vm._l(_vm.displayWeekDatas, function(Weekdata) {
+          return _vm.isActive == "2" ? _c("div", [_vm._v("tesuto2")]) : _vm._e()
+        }),
+        _vm._v(" "),
+        _vm._l(_vm.displayWeekDatas, function(Weekdata) {
+          return _vm.isActive == "3" ? _c("div", [_vm._v("tesuto3")]) : _vm._e()
+        })
+      ],
+      2
+    )
   ])
 }
 var staticRenderFns = [

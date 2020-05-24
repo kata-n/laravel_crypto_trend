@@ -12,9 +12,15 @@
             <div>
               <h2>仮想通貨Twitterランキング</h2>
 
-        <li v-on:click="change('A')" v-bind:class="{'active': RankingType === 'A'}">過去1時間</li>
-        <li v-on:click="change('B')" v-bind:class="{'active': RankingType === 'B'}">過去24時間</li>
-        <li v-on:click="change('C')" v-bind:class="{'active': RankingType === 'C'}">過去一週間</li>
+<input type="radio" value="1" id="Tab1" class="Tab-Btn-Radio" v-model="isActive">
+<label for="Tab1" class="Tab-Btn-Label">過去1時間</label>
+
+<input type="radio" value="2" id="Tab2" class="Tab-Btn-Radio" v-model="isActive">
+<label for="Tab2" class="Tab-Btn-Label">過去24時間</label>
+
+<input type="radio" value="3" id="Tab3" class="Tab-Btn-Radio" v-model="isActive">
+<label for="Tab3" class="Tab-Btn-Label">過去一週間</label>
+
             </div>
 
               <div>
@@ -30,16 +36,15 @@
               </div>
               <p>選択している仮想通貨：{{ preview }}</p>
 
-              <ul class="article">
-                <li v-for="Weekdata in displayWeekDatas"v-if="RankingType === 'A'">
-                  <a v-bind:href="'https://twitter.com/search?q=' + Weekdata.Crypto_name" target="_blank">
-                    {{ Weekdata.Crypto_name }}
-                  </a>
-                  <p>ツイート数：{{ Weekdata.Tweet_count }}</p>
-                </li>
-                <li v-else-if="RankingType === 'B'">ダミーテキスト2</li>
-                <li v-else-if="RankingType === 'C'">ダミーテキスト3</li>
-              </ul>
+              <div v-for="Weekdata in displayWeekDatas" v-if="isActive == '1'">
+                <a v-bind:href="'https://twitter.com/search?q=' + Weekdata.Crypto_name" target="_blank">
+                {{ Weekdata.Crypto_name }}
+              </a>
+              <p>ツイート数：{{ Weekdata.Tweet_count }}</p>
+              </div>
+          <div v-for="Weekdata in displayWeekDatas" v-if="isActive == '2'">tesuto2</div>
+          <div v-for="Weekdata in displayWeekDatas" v-if="isActive == '3'">tesuto3</div>
+
 
 
         </div>
@@ -55,7 +60,7 @@
           Weekdatas: [],
           Crypto_lists: [],
           preview: [],
-          RankingType: 'A',
+          isActive: '1',
         }
       },
       mounted() {
