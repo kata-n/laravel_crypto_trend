@@ -2057,7 +2057,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2098,7 +2097,7 @@ __webpack_require__.r(__webpack_exports__);
     displayDayDatas: function displayDayDatas() {
       var _this3 = this;
 
-      return this.Hourdatas.filter(function (Daydata) {
+      return this.Daydatas.filter(function (Daydata) {
         return _this3.preview.includes(Daydata.Crypto_name);
       });
     },
@@ -2917,34 +2916,8 @@ var render = function() {
         _vm._v(" "),
         _c("p", [_vm._v("選択している仮想通貨：" + _vm._s(_vm.preview))]),
         _vm._v(" "),
-        _vm._l(_vm.displayWeekDatas, function(Weekdata) {
-          return _vm.isActive == "1"
-            ? _c("div", [
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href:
-                        "https://twitter.com/search?q=" + Weekdata.Crypto_name,
-                      target: "_blank"
-                    }
-                  },
-                  [
-                    _vm._v(
-                      "\n                " +
-                        _vm._s(Weekdata.Crypto_name) +
-                        "\n              "
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c("p", [_vm._v("ツイート数：" + _vm._s(Weekdata.Tweet_count))])
-              ])
-            : _vm._e()
-        }),
-        _vm._v(" "),
         _vm._l(_vm.displayHourDatas, function(Hourdata) {
-          return _vm.isActive == "2"
+          return _vm.isActive == "1"
             ? _c("div", [
                 _c(
                   "a",
@@ -2957,9 +2930,9 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      "\n                " +
+                      "\n            " +
                         _vm._s(Hourdata.Crypto_name) +
-                        "\n              "
+                        "\n          "
                     )
                   ]
                 ),
@@ -2970,7 +2943,7 @@ var render = function() {
         }),
         _vm._v(" "),
         _vm._l(_vm.displayDayDatas, function(Daydata) {
-          return _vm.isActive == "3"
+          return _vm.isActive == "2"
             ? _c("div", [
                 _c(
                   "a",
@@ -2983,14 +2956,40 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      "\n                " +
+                      "\n            " +
                         _vm._s(Daydata.Crypto_name) +
-                        "\n              "
+                        "\n          "
                     )
                   ]
                 ),
                 _vm._v(" "),
                 _c("p", [_vm._v("ツイート数：" + _vm._s(Daydata.Tweet_count))])
+              ])
+            : _vm._e()
+        }),
+        _vm._v(" "),
+        _vm._l(_vm.displayWeekDatas, function(Weekdata) {
+          return _vm.isActive == "3"
+            ? _c("div", [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href:
+                        "https://twitter.com/search?q=" + Weekdata.Crypto_name,
+                      target: "_blank"
+                    }
+                  },
+                  [
+                    _vm._v(
+                      "\n            " +
+                        _vm._s(Weekdata.Crypto_name) +
+                        "\n          "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("p", [_vm._v("ツイート数：" + _vm._s(Weekdata.Tweet_count))])
               ])
             : _vm._e()
         })
