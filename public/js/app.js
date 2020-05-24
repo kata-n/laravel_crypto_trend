@@ -2057,6 +2057,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2914,8 +2921,6 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("p", [_vm._v("選択している仮想通貨：" + _vm._s(_vm.preview))]),
-        _vm._v(" "),
         _vm._l(_vm.displayHourDatas, function(Hourdata) {
           return _vm.isActive == "1"
             ? _c("div", [
@@ -2930,14 +2935,26 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      "\n            " +
+                      "\n          " +
                         _vm._s(Hourdata.Crypto_name) +
                         "\n          "
                     )
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", [_vm._v("ツイート数：" + _vm._s(Hourdata.Tweet_count))])
+                _c("p", [
+                  _vm._v("ツイート数：" + _vm._s(Hourdata.Tweet_count))
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v("最高取引価格：" + _vm._s(Hourdata.Crypto_high))
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v("最安取引価格：" + _vm._s(Hourdata.Crypto_low))
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("取得日時：" + _vm._s(Hourdata.Tweet_time))])
               ])
             : _vm._e()
         }),
@@ -2956,14 +2973,24 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      "\n            " +
+                      "\n          " +
                         _vm._s(Daydata.Crypto_name) +
                         "\n          "
                     )
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", [_vm._v("ツイート数：" + _vm._s(Daydata.Tweet_count))])
+                _c("p", [_vm._v("ツイート数：" + _vm._s(Daydata.Tweet_count))]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v("最高取引価格：" + _vm._s(Daydata.Crypto_high))
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v("最安取引価格：" + _vm._s(Daydata.Crypto_low))
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("取得日時：" + _vm._s(Daydata.Tweet_time))])
               ])
             : _vm._e()
         }),
@@ -2982,14 +3009,26 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      "\n            " +
+                      "\n          " +
                         _vm._s(Weekdata.Crypto_name) +
                         "\n          "
                     )
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", [_vm._v("ツイート数：" + _vm._s(Weekdata.Tweet_count))])
+                _c("p", [
+                  _vm._v("ツイート数：" + _vm._s(Weekdata.Tweet_count))
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v("最高取引価格：" + _vm._s(Weekdata.Crypto_high))
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v("最安取引価格：" + _vm._s(Weekdata.Crypto_low))
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("取得日時：" + _vm._s(Weekdata.Tweet_time))])
               ])
             : _vm._e()
         })

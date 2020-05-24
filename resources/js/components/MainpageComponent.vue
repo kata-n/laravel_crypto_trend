@@ -22,38 +22,45 @@
               <label for="Tab3" class="Tab-Btn-Label">過去一週間</label>
             </div>
 
-              <div>
-                <ul class="crypto_list">
-                  <li v-for="Cryopto in Crypto_lists">
-                    <input type="checkbox"
-                      v-bind:id="Cryopto"
-                      v-bind:value="Cryopto"
-                      v-model="preview">
-                    <label v-bind:for="Cryopto">{{ Cryopto }}</label>
-                  </li>
-                </ul>
-              </div>
-              <p>選択している仮想通貨：{{ preview }}</p>
+            <div>
+              <ul class="crypto_list">
+                <li v-for="Cryopto in Crypto_lists">
+                  <input type="checkbox"
+                    v-bind:id="Cryopto"
+                    v-bind:value="Cryopto"
+                    v-model="preview">
+                  <label v-bind:for="Cryopto">{{ Cryopto }}</label>
+                </li>
+              </ul>
+            </div>
 
-              <div v-for="Hourdata in displayHourDatas" v-if="isActive == '1'">
-                <a v-bind:href="'https://twitter.com/search?q=' + Hourdata.Crypto_name" target="_blank">
-                {{ Hourdata.Crypto_name }}
+            <div v-for="Hourdata in displayHourDatas" v-if="isActive == '1'">
+              <a v-bind:href="'https://twitter.com/search?q=' + Hourdata.Crypto_name" target="_blank">
+              {{ Hourdata.Crypto_name }}
               </a>
               <p>ツイート数：{{ Hourdata.Tweet_count }}</p>
-              </div>
-              <div v-for="Daydata in displayDayDatas" v-if="isActive == '2'">
-                <a v-bind:href="'https://twitter.com/search?q=' + Daydata.Crypto_name" target="_blank">
-                {{ Daydata.Crypto_name }}
+              <p>最高取引価格：{{ Hourdata.Crypto_high }}</p>
+              <p>最安取引価格：{{ Hourdata.Crypto_low }}</p>
+              <p>取得日時：{{ Hourdata.Tweet_time }}</p>
+            </div>
+            <div v-for="Daydata in displayDayDatas" v-if="isActive == '2'">
+              <a v-bind:href="'https://twitter.com/search?q=' + Daydata.Crypto_name" target="_blank">
+              {{ Daydata.Crypto_name }}
               </a>
               <p>ツイート数：{{ Daydata.Tweet_count }}</p>
-              </div>
-              <div v-for="Weekdata in displayWeekDatas" v-if="isActive == '3'">
-                <a v-bind:href="'https://twitter.com/search?q=' + Weekdata.Crypto_name" target="_blank">
-                {{ Weekdata.Crypto_name }}
+              <p>最高取引価格：{{ Daydata.Crypto_high }}</p>
+              <p>最安取引価格：{{ Daydata.Crypto_low }}</p>
+              <p>取得日時：{{ Daydata.Tweet_time }}</p>
+            </div>
+            <div v-for="Weekdata in displayWeekDatas" v-if="isActive == '3'">
+              <a v-bind:href="'https://twitter.com/search?q=' + Weekdata.Crypto_name" target="_blank">
+              {{ Weekdata.Crypto_name }}
               </a>
               <p>ツイート数：{{ Weekdata.Tweet_count }}</p>
-              </div>
-
+              <p>最高取引価格：{{ Weekdata.Crypto_high }}</p>
+              <p>最安取引価格：{{ Weekdata.Crypto_low }}</p>
+              <p>取得日時：{{ Weekdata.Tweet_time }}</p>
+            </div>
         </div>
     </div>
 </template>
