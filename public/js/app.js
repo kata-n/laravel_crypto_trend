@@ -2086,6 +2086,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     xxxx: function xxxx() {
+      if (this.Weekdatas.length === 0) {
+        return [];
+      }
+
       return this.Weekdatas.map(function (weekData) {
         weekData; // if (this.preview.includes(weekData.Crypto_name)) {
         //   return weekData;
