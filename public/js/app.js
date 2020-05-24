@@ -2047,9 +2047,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2078,56 +2075,41 @@ __webpack_require__.r(__webpack_exports__);
       }
     });
   },
-  watch: {
-    preview: function preview(val) {
-      console.log('called watch', val);
-    }
-  },
   computed: {
-    xxxx: function xxxx() {
+    displayWeekDatas: function displayWeekDatas() {
       var _this2 = this;
 
-      // if (this.Weekdatas.length === 0) {
-      //   console.log('len===0');
-      //   return [];
-      // }
       return this.Weekdatas.filter(function (weekData) {
         return _this2.preview.includes(weekData.Crypto_name);
-      }); // console.log(ar);
-      // return ar;
-      // console.log(weekData.Crypto_name);
-      // console.log('judge===>', this.preview.includes(weekData.Crypto_name))
-      // this.preview.includes(weekData.Crypto_name);
-      // });
+      });
     }
-  },
-  methods: {
-    find_categories: function find_categories() {
-      console.log('find_categories');
-      return false; // var Weekdatas = this.Weekdatas;
-      // var preview = this.preview;
+  } // methods: {
+  //   find_categories: function(){
+  //     console.log('find_categories');
+  //     return false;
+  //     // var Weekdatas = this.Weekdatas;
+  //     // var preview = this.preview;
+  //     if(this.preview.length > 0) {
+  //       for (var i = 0; i < this.Weekdatas.length; i++) {
+  //         var cryptoname = this.Weekdatas[i].Crypto_name;
+  //         for (var j = 0; j < this.preview.length; j++){
+  //           if(this.preview.indexOf(cryptoname) >= 0){
+  //             this.Weekdatas[i].display = true;
+  //             break;
+  //           } else {
+  //             this.Weekdatas[i].display = false;
+  //           }
+  //         }
+  //       }
+  //     } else {
+  //       for (var i = 0; i < this.Weekdatas.length; i++) {
+  //         var categories = this.Weekdatas[i].Crypto_name;
+  //         this.Weekdatas[i].display = true;
+  //       }
+  //     }
+  //   }
+  // }
 
-      if (this.preview.length > 0) {
-        for (var i = 0; i < this.Weekdatas.length; i++) {
-          var cryptoname = this.Weekdatas[i].Crypto_name;
-
-          for (var j = 0; j < this.preview.length; j++) {
-            if (this.preview.indexOf(cryptoname) >= 0) {
-              this.Weekdatas[i].display = true;
-              break;
-            } else {
-              this.Weekdatas[i].display = false;
-            }
-          }
-        }
-      } else {
-        for (var i = 0; i < this.Weekdatas.length; i++) {
-          var categories = this.Weekdatas[i].Crypto_name;
-          this.Weekdatas[i].display = true;
-        }
-      }
-    }
-  }
 });
 
 /***/ }),
@@ -2919,7 +2901,7 @@ var render = function() {
       _c(
         "ul",
         { staticClass: "entry_list" },
-        _vm._l(_vm.xxxx, function(Weekdata) {
+        _vm._l(_vm.displayWeekDatas, function(Weekdata) {
           return _c("li", [_c("p", [_vm._v(_vm._s(Weekdata.Crypto_name))])])
         }),
         0

@@ -37,12 +37,9 @@
               </div>
               <p>選択している仮想通貨：{{ preview }}</p>
               <ul class="entry_list">
-                <li v-for="Weekdata in xxxx">
+                <li v-for="Weekdata in displayWeekDatas">
                   <p>{{ Weekdata.Crypto_name }}</p>
                 </li>
-                <!-- <li v-for="Weekdata in Weekdatas"  v-show="Weekdata.display">
-                  <p>{{ Weekdata.Crypto_name }}</p>
-                </li> -->
               </ul>
 
 
@@ -79,56 +76,40 @@
 
         });
       },
-      watch: {
-        preview: function (val) {
-          console.log('called watch', val);
-        },
-      },
       computed: {
-        xxxx: function() {
-          // if (this.Weekdatas.length === 0) {
-          //   console.log('len===0');
-          //   return [];
-          // }
+        displayWeekDatas() {
           return this.Weekdatas.filter(weekData => this.preview.includes(weekData.Crypto_name));
-
-          // console.log(ar);
-          // return ar;
-            // console.log(weekData.Crypto_name);
-            // console.log('judge===>', this.preview.includes(weekData.Crypto_name))
-            // this.preview.includes(weekData.Crypto_name);
-          // });
-        }
-      },
-      methods: {
-        find_categories: function(){
-          console.log('find_categories');
-          return false;
-          // var Weekdatas = this.Weekdatas;
-          // var preview = this.preview;
-
-          if(this.preview.length > 0) {
-            for (var i = 0; i < this.Weekdatas.length; i++) {
-              var cryptoname = this.Weekdatas[i].Crypto_name;
-              for (var j = 0; j < this.preview.length; j++){
-                if(this.preview.indexOf(cryptoname) >= 0){
-                  this.Weekdatas[i].display = true;
-                  break;
-                } else {
-                  this.Weekdatas[i].display = false;
-                }
-              }
-            }
-
-          } else {
-            for (var i = 0; i < this.Weekdatas.length; i++) {
-              var categories = this.Weekdatas[i].Crypto_name;
-              this.Weekdatas[i].display = true;
-            }
-          }
-
         }
       }
+      // methods: {
+      //   find_categories: function(){
+      //     console.log('find_categories');
+      //     return false;
+      //     // var Weekdatas = this.Weekdatas;
+      //     // var preview = this.preview;
+
+      //     if(this.preview.length > 0) {
+      //       for (var i = 0; i < this.Weekdatas.length; i++) {
+      //         var cryptoname = this.Weekdatas[i].Crypto_name;
+      //         for (var j = 0; j < this.preview.length; j++){
+      //           if(this.preview.indexOf(cryptoname) >= 0){
+      //             this.Weekdatas[i].display = true;
+      //             break;
+      //           } else {
+      //             this.Weekdatas[i].display = false;
+      //           }
+      //         }
+      //       }
+
+      //     } else {
+      //       for (var i = 0; i < this.Weekdatas.length; i++) {
+      //         var categories = this.Weekdatas[i].Crypto_name;
+      //         this.Weekdatas[i].display = true;
+      //       }
+      //     }
+
+      //   }
+      // }
 
   }
 </script>
