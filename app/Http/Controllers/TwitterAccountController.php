@@ -59,15 +59,14 @@ class TwitterAccountController extends Controller
     //ログインユーザーの自動フォローONOFF切り替え
     public function followswitch(Request $request)
     {
-      $user = Auth::user();
       $auto_flg = Auth::user()->aotofollow_flg;
 
       if($auto_flg === true){
           $res = false;
-          $user->fill($res)->save();
+          $auto_flg->$res->save();
       } else {
           $res = true;
-          $user->fill($res)->save();
+          $auto_flg->$res->save();
       }
 
       return response()->json(['autoflg' => $res], 200, [], JSON_NUMERIC_CHECK);
