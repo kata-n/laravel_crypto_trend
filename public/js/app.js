@@ -2063,6 +2063,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
+    var self = this;
     this.$http.get("/ranking").then(function (response) {
       _this.Hourdatas = response.data.HourRankingData;
       _this.Daydatas = response.data.DayRankingData;

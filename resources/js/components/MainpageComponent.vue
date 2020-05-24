@@ -63,7 +63,7 @@
         }
       },
       mounted() {
-
+        var self = this
         this.$http.get(`/ranking`).then(response => {
         this.Hourdatas = response.data.HourRankingData;
         this.Daydatas = response.data.DayRankingData;
