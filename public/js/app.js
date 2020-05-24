@@ -1978,7 +1978,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this3 = this;
 
       this.$http.get("/autofollowswitch").then(function (e) {
-        _this3.flag = e.data.res;
+        _this3.flag = e.data.autoflg;
         console.log(_this3.flag);
       })["catch"](function (error) {
         console.log("エラー");

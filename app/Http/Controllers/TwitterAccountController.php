@@ -66,12 +66,14 @@ class TwitterAccountController extends Controller
       if($auto_flg === false){
           $user->aotofollow_flg = true;
           $user->save();
+          $auto_flg = true;
       } else {
           $user->aotofollow_flg = false;
           $user->save();
+          $auto_flg = false;
       }
 
-      return response()->json(['autoflg' => $res], 200, [], JSON_NUMERIC_CHECK);
+      return response()->json(['autoflg' => $auto_flg], 200, [], JSON_NUMERIC_CHECK);
     }
 
 }

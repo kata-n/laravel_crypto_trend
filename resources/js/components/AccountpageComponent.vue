@@ -67,7 +67,7 @@
           //自動フォロー切り替え
           autofollow: function(){
             this.$http.get("/autofollowswitch").then(e => {
-                    this.flag = e.data.res;
+                    this.flag = e.data.autoflg;
                     console.log(this.flag);
                 }).catch((error) => {
                     console.log("エラー");
