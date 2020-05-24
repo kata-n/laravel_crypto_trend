@@ -30,19 +30,16 @@
               </div>
               <p>選択している仮想通貨：{{ preview }}</p>
 
-      <ul class="article">
-
+              <ul class="article">
                 <li v-for="Weekdata in displayWeekDatas"v-if="RankingType === 'A'">
                   <a v-bind:href="'https://twitter.com/search?q=' + Weekdata.Crypto_name" target="_blank">
                     {{ Weekdata.Crypto_name }}
                   </a>
                   <p>ツイート数：{{ Weekdata.Tweet_count }}</p>
                 </li>
-
-
-        <li v-else-if="RankingType === 'B'">ダミーテキスト2</li>
-        <li v-else-if="RankingType === 'C'">ダミーテキスト3</li>
-      </ul>
+                <li v-else-if="RankingType === 'B'">ダミーテキスト2</li>
+                <li v-else-if="RankingType === 'C'">ダミーテキスト3</li>
+              </ul>
 
 
         </div>
