@@ -1977,11 +1977,8 @@ __webpack_require__.r(__webpack_exports__);
     autofollow: function autofollow() {
       var _this3 = this;
 
-      var Twitterautoflag = this.flag;
-      this.$http.post("/autofollowswitch", {
-        flag: Twitterautoflag
-      }).then(function (e) {
-        _this3.flag = e.data.autoflg;
+      this.$http.get("/autofollowswitch").then(function (e) {
+        _this3.flag = e.data.res;
         console.log(_this3.flag);
       })["catch"](function (error) {
         console.log("エラー");

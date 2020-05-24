@@ -66,11 +66,8 @@
 
           //自動フォロー切り替え
           autofollow: function(){
-            const Twitterautoflag = this.flag
-            this.$http.post("/autofollowswitch", {
-              flag: Twitterautoflag
-            }).then(e => {
-                    this.flag = e.data.autoflg;
+            this.$http.get("/autofollowswitch").then(e => {
+                    this.flag = e.data.res;
                     console.log(this.flag);
                 }).catch((error) => {
                     console.log("エラー");

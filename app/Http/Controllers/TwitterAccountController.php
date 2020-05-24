@@ -49,9 +49,9 @@ class TwitterAccountController extends Controller
 
     }
 
+    //ログインユーザーの自動フォローONOFFを取得
     public function autofollow(Request $request)
     {
-      //ログインユーザーの自動フォローONOFFを取得
       $user_flg = Auth::user()->aotofollow_flg;
       return response()->json(['autoflg' => $user_flg], 200, [], JSON_NUMERIC_CHECK);
     }
@@ -61,13 +61,11 @@ class TwitterAccountController extends Controller
     {
       $auto_flg = Auth::user()->aotofollow_flg;
 
-      $fllow_switch = $request->flag;
-
-      if($auto_flg === 0){
-          $res = true;
+      if($auto_flg === true){
+          $res = false;
           $auto_flg->fill($res)->save();
       } else {
-          $res = false;
+          $res = true;
           $auto_flg->fill($res)->save();
       }
 
