@@ -2097,9 +2097,12 @@ __webpack_require__.r(__webpack_exports__);
         console.log('weekData===>', JSON.stringify(weekData));
         console.log('judge===>', _this2.preview.includes(weekData.Crypto_name));
       });
-      return this.Weekdatas.filter(function (weekData) {
+      var ar = this.Weekdatas.filter(function (weekData) {
+        console.log('fil data ===>', weekData);
+
         _this2.preview.includes(weekData.Crypto_name);
-      }); // console.log(weekData.Crypto_name);
+      });
+      console.log(ar); // console.log(weekData.Crypto_name);
       // console.log('judge===>', this.preview.includes(weekData.Crypto_name))
       // this.preview.includes(weekData.Crypto_name);
       // });
