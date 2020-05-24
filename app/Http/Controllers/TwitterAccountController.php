@@ -70,13 +70,14 @@ class TwitterAccountController extends Controller
             "q" => "仮想通貨",
             "lang" => "ja",
             "locale" => "ja",
-            "count" => "1",
+            "count" => "3",
             "include_entities" => "false",
         );
 
         $follower = $twitter->get('users/search', $params);
+        $user_id = array_rand($follower);
 
-        $result = $twitter->post('friendships/create', ['screen_name'=> $follower]);
+        $result = $twitter->post('friendships/create', ['screen_name'=> $user_id]);
 
       }
     }

@@ -1970,7 +1970,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$http.get("/twitterautofollow").then(function (e) {
         _this2.flag = e.data.autoflg;
       })["catch"](function (error) {
-        console.log("エラー");
+        console.log("error");
       });
     },
     //自動フォロー切り替え
@@ -1979,9 +1979,8 @@ __webpack_require__.r(__webpack_exports__);
 
       this.$http.get("/autofollowswitch").then(function (e) {
         _this3.flag = e.data.autoflg;
-        console.log(_this3.flag);
       })["catch"](function (error) {
-        console.log("エラー");
+        console.log("error");
       });
     }
   }
@@ -2093,9 +2092,9 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       return this.Weekdatas.map(function (weekData) {
-        console.log('weekData===>', JSON.stringify(weekData));
-
+        // console.log('weekData===>', JSON.stringify(weekData));
         if (_this2.preview.includes(weekData.Crypto_name)) {
+          console.log('weekData===>', JSON.stringify(weekData));
           return weekData;
         } // console.log(weekData.Crypto_name);
         // console.log('judge===>', this.preview.includes(weekData.Crypto_name))

@@ -37,6 +37,7 @@
             flag:false
           };
         },
+
         mounted() {
           this.$http.get("/twitteraccount")
           .then(response => {this.accountdata = response.data;
