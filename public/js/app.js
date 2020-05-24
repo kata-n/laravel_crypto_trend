@@ -2093,6 +2093,8 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       return this.Weekdatas.map(function (weekData) {
+        console.log('weekData===>', JSON.stringify(weekData));
+
         if (_this2.preview.includes(weekData.Crypto_name)) {
           return weekData;
         } // console.log(weekData.Crypto_name);
