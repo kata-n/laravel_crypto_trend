@@ -57,7 +57,7 @@
         return {
           Hourdatas: {},
           Daydatas: {},
-          Weekdatas: {},
+          Weekdatas: [],
           Crypto_lists: [],
           preview: [],
           RankingType: 1,
