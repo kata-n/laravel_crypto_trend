@@ -452,7 +452,9 @@ th {
 
 .l-footer {
   background-color: #179191;
-  height: 64px;
+  height: 46px;
+  position: -webkit-sticky;
+  position: sticky;
   width: 100%;
   padding: 18px;
   z-index: 9999;

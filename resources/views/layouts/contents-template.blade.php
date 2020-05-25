@@ -14,7 +14,6 @@
     <meta property="og:description" content=""/>
     <meta property="og:image" content="{{ asset('images/top_view2.png') }}"/>
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script type="text/javascript" src="./footerFixed.js"></script>
     <title>Crypto Trend | @yield ('title','')</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   </head>
@@ -36,7 +35,7 @@
       @yield('content')
     </div>
 
-    <footer id="footer" class="l-footer">
+    <footer class="l-footer">
       @yield('footer')
     </footer>
   </body>
