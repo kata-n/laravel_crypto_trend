@@ -453,10 +453,8 @@ th {
 .l-footer {
   background-color: #179191;
   height: 64px;
-  position: -webkit-sticky;
-  position: sticky;
   width: 100%;
-  padding: 16px;
+  padding: 18px;
   z-index: 9999;
   text-align: center;
   justify-content: space-around;
