@@ -440,7 +440,7 @@ th {
 }
 
 .l-header {
-  background-color: #e1fff5;
+  background-color: #f8f8f7;
   height: 64px;
   width: 100%;
   position: fixed;
@@ -451,7 +451,7 @@ th {
 }
 
 .l-footer {
-  background-color: #7ba899;
+  background-color: #64efef;
   height: 82px;
   width: 100%;
   padding: 8px;
