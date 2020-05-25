@@ -440,13 +440,23 @@ th {
 }
 
 .l-header {
-  background-color: #FFF4E1;
+  background-color: #e1fff5;
   height: 64px;
   width: 100%;
   position: fixed;
   z-index: 9999;
   display: -webkit-box;
   display: flex;
+  justify-content: space-around;
+}
+
+.l-footer {
+  background-color: #7ba899;
+  height: 82px;
+  width: 100%;
+  padding: 8px;
+  z-index: 9999;
+  text-align: center;
   justify-content: space-around;
 }
 
