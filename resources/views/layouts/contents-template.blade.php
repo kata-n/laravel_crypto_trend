@@ -14,6 +14,7 @@
     <meta property="og:description" content=""/>
     <meta property="og:image" content="{{ asset('images/top_view2.png') }}"/>
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <title>Crypto Trend | @yield ('title','')</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   </head>

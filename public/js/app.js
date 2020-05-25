@@ -15627,7 +15627,7 @@ __webpack_require__.r(__webpack_exports__);
 
 $(function () {
   //フッターを最下部に固定
-  var $ftr = $('#footer');
+  var $ftr = $('.l-footer');
 
   if (window.innerHeight > $ftr.offset().top + $ftr.outerHeight()) {
     $ftr.attr({
