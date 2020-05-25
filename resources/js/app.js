@@ -4,8 +4,6 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require("./script");
-
 window.Vue = require('vue');
 import axios from 'axios'
 Vue.prototype.$http = axios;
@@ -42,3 +40,5 @@ Vue.component('accountpage-component', require('./components/AccountpageComponen
 const app = new Vue({
     el: '#app',
 });
+
+require("./script");
