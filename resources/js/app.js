@@ -4,6 +4,8 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+require("./script");
+
 window.Vue = require('vue');
 import axios from 'axios'
 Vue.prototype.$http = axios;

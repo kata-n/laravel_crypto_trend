@@ -451,10 +451,10 @@ th {
 }
 
 .l-footer {
-  background-color: #64efef;
+  background-color: #0c4d4d;
   height: 82px;
   width: 100%;
-  padding: 8px;
+  padding: 16px;
   z-index: 9999;
   text-align: center;
   justify-content: space-around;
