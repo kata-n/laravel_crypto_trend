@@ -467,6 +467,10 @@ th {
   margin: 0 auto;
 }
 
+.l-tooppage {
+  height: 100vh;
+}
+
 .l-toppage,
 .l-mainpage {
   padding-top: 64px;
