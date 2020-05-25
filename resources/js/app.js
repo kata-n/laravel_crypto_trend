@@ -40,5 +40,3 @@ Vue.component('accountpage-component', require('./components/AccountpageComponen
 const app = new Vue({
     el: '#app',
 });
-
-require("./script");
