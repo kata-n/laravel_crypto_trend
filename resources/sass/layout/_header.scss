@@ -1,9 +1,13 @@
-.l-header {
-  background-color: $headerBgColor;
-  height: $headerHeight;
-  width: 100%;
-  position: fixed;
-  z-index: 9999;
-  display: flex;
-  justify-content: space-around;
+.l {
+  &-header {
+    background-color: $headerBgColor;
+    height: $headerHeight;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+  }
+  &-headerlogo {
+    margin: $space_m $space_l;
+  }
 }

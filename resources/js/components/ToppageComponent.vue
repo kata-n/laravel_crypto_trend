@@ -1,20 +1,14 @@
 <template>
-    <div class="l-container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
-
-                    <div class="card-body">
-                        I'm an example component.
-                    </div>
-                    <a href="/login" class="quiz__startbtn">ログインする</a>
-                    <a href="/register" class="quiz__startbtn">登録する</a>
-                    <a href="/twitter/login" class="quiz__startbtn">Twitterでログインする</a>
-                </div>
-            </div>
+    <div class="l-toppage">
+        <div class="l-toparea">
+            <a href="/login" class="c-atagbtn c-topbtn">ログインする</a>
+            <a href="/register" class="c-atagbtn c-topbtn">登録する</a>
+        </div>
+        <div class="l-toptwitterarea">
+            <a href="/twitter/login" class="c-atagbtn c-twitterbtn">Twitterでログインする</a>
         </div>
     </div>
+
 </template>
 
 <script>

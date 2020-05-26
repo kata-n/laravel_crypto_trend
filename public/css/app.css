@@ -440,18 +440,21 @@ th {
 }
 
 .l-header {
-  background-color: #f8f8f7;
+  background-color: #9593d1;
   height: 64px;
   width: 100%;
   position: fixed;
   z-index: 9999;
   display: -webkit-box;
   display: flex;
-  justify-content: space-around;
+}
+
+.l-headerlogo {
+  margin: 1rem 1.5rem;
 }
 
 .l-footer {
-  background-color: #179191;
+  background-color: #93d1d1;
   height: 46px;
   position: -webkit-sticky;
   position: sticky;
@@ -463,31 +466,75 @@ th {
 }
 
 .l-container {
+  width: 100%;
+}
+
+.l-toppage,
+.l-loginpage {
+  height: 90vh;
   max-width: 980px;
   margin: 0 auto;
 }
 
-.l-toppage {
-  height: 100vh;
-}
-
 .l-toppage,
+.l-loginpage,
 .l-mainpage {
   padding-top: 64px;
 }
 
-footer {
-  padding: 30px 0;
-  position: absolute;
-  bottom: 0;
-  width: 90%;
+.l-toparea {
+  padding: 3rem 1rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
-footer {
-  padding: 30px 0;
-  position: absolute;
-  bottom: 0;
-  width: 90%;
+.l-toptwitterarea {
+  text-align: center;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.l-loginwrapper {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+}
+
+.l-loginform {
+  width: 100%;
+}
+
+.c-atagbtn {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.c-topbtn {
+  background-color: #93d1d1;
+  color: #fff;
+  width: 30%;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+}
+
+.c-twitterbtn {
+  background-color: #00acee;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.c-headerlogobtn {
+  color: #fff;
+}
+
+.p-container {
+  background-color: #fdfbf2;
 }
 
 footer {

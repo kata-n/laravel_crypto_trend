@@ -2190,12 +2190,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -3142,42 +3136,30 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "l-container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    I'm an example component.\n                "
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              { staticClass: "quiz__startbtn", attrs: { href: "/login" } },
-              [_vm._v("ログインする")]
-            ),
-            _vm._v(" "),
-            _c(
-              "a",
-              { staticClass: "quiz__startbtn", attrs: { href: "/register" } },
-              [_vm._v("登録する")]
-            ),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "quiz__startbtn",
-                attrs: { href: "/twitter/login" }
-              },
-              [_vm._v("Twitterでログインする")]
-            )
-          ])
-        ])
+    return _c("div", { staticClass: "l-toppage" }, [
+      _c("div", { staticClass: "l-toparea" }, [
+        _c(
+          "a",
+          { staticClass: "c-atagbtn c-topbtn", attrs: { href: "/login" } },
+          [_vm._v("ログインする")]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          { staticClass: "c-atagbtn c-topbtn", attrs: { href: "/register" } },
+          [_vm._v("登録する")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "l-toptwitterarea" }, [
+        _c(
+          "a",
+          {
+            staticClass: "c-atagbtn c-twitterbtn",
+            attrs: { href: "/twitter/login" }
+          },
+          [_vm._v("Twitterでログインする")]
+        )
       ])
     ])
   }

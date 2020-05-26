@@ -1,9 +1,31 @@
 .l{
-  &-toppage{
-    height: 100vh;
+  &-toppage,
+  &-loginpage{
+    height: 90vh;
+    max-width: $site-width;
+    margin: 0 auto;
   }
   &-toppage,
-  &-mainpage{
+  &-loginpage,
+  &-mainpage {
     padding-top: $headerHeight;
+  }
+  &-toparea {
+    padding: $space_3l $space_m;
+    display: flex;
+    justify-content: center;
+  }
+  &-toptwitterarea {
+    text-align: center;
+    margin: 0 auto;
+    padding: $space_3l $space_m;
+  }
+  &-loginwrapper {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: $space_l;
+  }
+  &-loginform {
+    width: 100%;
   }
 }

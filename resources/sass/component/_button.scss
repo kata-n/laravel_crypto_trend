@@ -1,0 +1,25 @@
+.c {
+  &-atagbtn {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: $letter-spacing;
+  }
+  &-topbtn {
+    background-color: $btnBaseColor;
+    color: $White;
+    width: 30%;
+    padding: $space_s $space_m;
+    margin: $space_m;
+  }
+  &-twitterbtn {
+    background-color: $twitterColor;
+    color: $White;
+    padding: $space_s $space_m;
+    width: 40%;
+    margin: 0 auto;
+  }
+  &-headerlogobtn {
+    color: $White;
+  }
+}

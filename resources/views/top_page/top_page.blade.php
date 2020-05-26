@@ -4,21 +4,11 @@
 
 @section('header')
   @parent
-  <nav class="nav">
-    <div class="menu-trigger js-toggle-sp-menu" id="js-sp-nav-menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  <nav class="header-nav js-toggle-sp-menu-target" id="js-classtaget">
-    <ul>
-      <li><a href="/mainpage">TEST!</a></li>
-    </ul>
-  </nav>
+    <div class="l-headerlogo"><a href="/" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>
 @endsection
 
 @section('content')
-  <section class="l-toppage">
+  <section class="l-container p-container">
     <div id="app">
       <toppage-component></toppage-component>
     </div>

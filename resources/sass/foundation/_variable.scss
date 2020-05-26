@@ -5,12 +5,20 @@ $headerHeight: 64px;
 $footerHeight: 46px;
 
 //color
-$headerBgColor: #f8f8f7;
+$headerBgColor: #9593d1;
 $toppageBgColor: #9DDCDC;
-$footerBgColor: #179191;
+$containerBgColor: #fdfbf2;
+$footerBgColor: #93d1d1;
+$btnBaseColor: #93d1d1;
+$atagFontColor: #464c96;
+$twitterColor: #00acee;
+$White: #fff;
 
 //サイト幅
 $site-width: 980px;
+
+//文字間隔
+$letter-spacing: 2px;
 
 //マップ型変数
 $breakpoints: (
@@ -19,3 +27,22 @@ $breakpoints: (
   'lg': 'screen and (max-width: 1000px)',
   'xl': 'screen and (max-width: 1200px)',
 ) !default;
+
+//文字サイズ
+$font-size_10px: 1.0rem;
+$font-size_14px: 1.4rem;
+$font-size_16px: 1.6rem;
+$font-size_18px: 1.8rem;
+$font-size_24px: 2.4rem;
+$font-size_30px: 3.0rem;
+$font-size_38px: 3.8rem;
+//余白
+$space_s: 0.5rem; //8px
+$space_m: 1.0rem; //18px
+$space_l: 1.5rem; //24px
+$space_xl: 2.0rem;
+$space_2l: 2.5rem;
+$space_3l: 3.0rem;
+$space_4l: 4.0rem;
+$space_5l: 5.0rem;
+$space_section: 15vh;
