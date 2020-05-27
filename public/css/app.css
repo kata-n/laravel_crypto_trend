@@ -21,6 +21,7 @@ html {
 
 body {
   margin: 0;
+  color: #555;
 }
 
 /* HTML5 display definitions
@@ -504,6 +505,7 @@ th {
 
 .l-loginform {
   width: 100%;
+  padding: 2.5rem 2rem;
 }
 
 .c-atagbtn {
@@ -531,6 +533,17 @@ th {
 
 .c-headerlogobtn {
   color: #fff;
+}
+
+.c-form {
+  background-color: #fff;
+  box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
+}
+
+.c-heading {
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+  margin: 0.8rem 0;
 }
 
 .p-container {
