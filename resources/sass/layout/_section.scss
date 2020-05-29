@@ -1,13 +1,11 @@
 .l{
   &-toppage,
-  &-loginpage{
+  &-loginpage,
+  &-registpage,
+  &-mainpage {
     height: 90vh;
     max-width: $site-width;
     margin: 0 auto;
-  }
-  &-toppage,
-  &-loginpage,
-  &-mainpage {
     padding-top: $headerHeight;
   }
   &-toparea {
@@ -20,7 +18,9 @@
     margin: 0 auto;
     padding: $space_3l $space_m;
   }
-  &-loginwrapper {
+  &-loginwrapper,
+  &-regitwrapper,
+  &-mainwrapper {
     width: 95%;
     margin: 0 auto;
     margin-top: $space_l;

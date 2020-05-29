@@ -1,17 +1,27 @@
-@extends('layouts.app')
+@extends('layouts.contents-template')
+
+@section('title','新規登録する')
+
+@section('header')
+  @parent
+    <div class="l-headerlogo"><a href="/" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>
+    <ul>
+      <li><a href="/login">ログイン</a></li>
+    </ul>
+@endsection
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+<section class="l-container p-container">
+    <div class="l-registpage">
+        <div class="l-regitwrapper">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="c-heading">{{ __('Register') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
-                        <div class="form-group row">
+                        <div class="l-formgroup">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
@@ -25,7 +35,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="l-formgroup">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
@@ -39,7 +49,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="l-formgroup">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
@@ -53,7 +63,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="fl-formgroup">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
                             <div class="col-md-6">
@@ -61,17 +71,14 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
+                        <div class="l-formgroup">
+                          <input type="submit" class="c-authbtn" value="登録する">
                         </div>
+
                     </form>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 @endsection

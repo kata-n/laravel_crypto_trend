@@ -2055,15 +2055,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2775,13 +2766,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "l-container" }, [
+  return _c("div", { staticClass: "l-mainpage" }, [
     _c(
       "div",
-      { staticClass: "row justify-content-center" },
+      { staticClass: "l-mainwrapper" },
       [
-        _vm._m(0),
-        _vm._v(" "),
         _c("div", [
           _c("h2", [_vm._v("仮想通貨Twitterランキング")]),
           _vm._v(" "),
@@ -2861,59 +2850,60 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("div", [
-          _c(
-            "ul",
-            { staticClass: "crypto_list" },
-            _vm._l(_vm.Crypto_lists, function(Cryopto) {
-              return _c("li", [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.preview,
-                      expression: "preview"
-                    }
-                  ],
-                  attrs: { type: "checkbox", id: Cryopto },
-                  domProps: {
-                    value: Cryopto,
-                    checked: Array.isArray(_vm.preview)
-                      ? _vm._i(_vm.preview, Cryopto) > -1
-                      : _vm.preview
-                  },
-                  on: {
-                    change: function($event) {
-                      var $$a = _vm.preview,
-                        $$el = $event.target,
-                        $$c = $$el.checked ? true : false
-                      if (Array.isArray($$a)) {
-                        var $$v = Cryopto,
-                          $$i = _vm._i($$a, $$v)
-                        if ($$el.checked) {
-                          $$i < 0 && (_vm.preview = $$a.concat([$$v]))
-                        } else {
-                          $$i > -1 &&
-                            (_vm.preview = $$a
-                              .slice(0, $$i)
-                              .concat($$a.slice($$i + 1)))
-                        }
+        _c(
+          "div",
+          { staticClass: "crypto_list" },
+          _vm._l(_vm.Crypto_lists, function(Cryopto) {
+            return _c("div", { staticClass: "p-cryptolist" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.preview,
+                    expression: "preview"
+                  }
+                ],
+                staticClass: "p-cryptochkbtn",
+                attrs: { type: "checkbox", id: Cryopto },
+                domProps: {
+                  value: Cryopto,
+                  checked: Array.isArray(_vm.preview)
+                    ? _vm._i(_vm.preview, Cryopto) > -1
+                    : _vm.preview
+                },
+                on: {
+                  change: function($event) {
+                    var $$a = _vm.preview,
+                      $$el = $event.target,
+                      $$c = $$el.checked ? true : false
+                    if (Array.isArray($$a)) {
+                      var $$v = Cryopto,
+                        $$i = _vm._i($$a, $$v)
+                      if ($$el.checked) {
+                        $$i < 0 && (_vm.preview = $$a.concat([$$v]))
                       } else {
-                        _vm.preview = $$c
+                        $$i > -1 &&
+                          (_vm.preview = $$a
+                            .slice(0, $$i)
+                            .concat($$a.slice($$i + 1)))
                       }
+                    } else {
+                      _vm.preview = $$c
                     }
                   }
-                }),
-                _vm._v(" "),
-                _c("label", { attrs: { for: Cryopto } }, [
-                  _vm._v(_vm._s(Cryopto))
-                ])
-              ])
-            }),
-            0
-          )
-        ]),
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "label",
+                { staticClass: "p-cryptoname", attrs: { for: Cryopto } },
+                [_vm._v(_vm._s(Cryopto))]
+              )
+            ])
+          }),
+          0
+        ),
         _vm._v(" "),
         _vm._l(_vm.displayHourDatas, function(Hourdata) {
           return _vm.isActive == "1"
@@ -3031,28 +3021,7 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-8" }, [
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-header" }, [
-          _vm._v("Example Componentメインのページです")
-        ]),
-        _vm._v(" "),
-        _c("a", { attrs: { href: "/accountpage" } }, [
-          _vm._v("アカウントページ")
-        ]),
-        _vm._v(" "),
-        _c("a", { attrs: { href: "/newspage" } }, [
-          _vm._v("仮想通貨ニュース一覧")
-        ])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

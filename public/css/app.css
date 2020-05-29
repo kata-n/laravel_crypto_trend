@@ -94,6 +94,7 @@ template {
 
 a {
   background-color: transparent;
+  text-decoration: none;
 }
 
 /**
@@ -440,6 +441,10 @@ th {
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+
 .l-header {
   background-color: #9593d1;
   height: 64px;
@@ -452,6 +457,17 @@ th {
 
 .l-headerlogo {
   margin: 1rem 1.5rem;
+}
+
+.l-nav {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+}
+
+.l-list {
+  display: inline-block;
 }
 
 .l-footer {
@@ -471,15 +487,12 @@ th {
 }
 
 .l-toppage,
-.l-loginpage {
+.l-loginpage,
+.l-registpage,
+.l-mainpage {
   height: 90vh;
   max-width: 980px;
   margin: 0 auto;
-}
-
-.l-toppage,
-.l-loginpage,
-.l-mainpage {
   padding-top: 64px;
 }
 
@@ -497,7 +510,9 @@ th {
   padding: 3rem 1rem;
 }
 
-.l-loginwrapper {
+.l-loginwrapper,
+.l-regitwrapper,
+.l-mainwrapper {
   width: 95%;
   margin: 0 auto;
   margin-top: 1.5rem;
@@ -508,9 +523,12 @@ th {
   padding: 2.5rem 2rem;
 }
 
+.l-formgroup {
+  margin: 1rem 0;
+}
+
 .c-atagbtn {
   display: block;
-  text-decoration: none;
   text-align: center;
   letter-spacing: 2px;
 }
@@ -535,6 +553,24 @@ th {
   color: #fff;
 }
 
+.c-authbtn {
+  width: 70%;
+  border: none;
+  display: block;
+  margin: 1rem auto;
+  padding: 0.8rem 2.5rem;
+  background: #93d1d1;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+}
+
+.c-authbtn:hover {
+  background: #464c96;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .c-form {
   background-color: #fff;
   box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
@@ -548,6 +584,29 @@ th {
 
 .p-container {
   background-color: #fdfbf2;
+}
+
+.p-cryptochkbtn {
+  width: 18px;
+  height: 15px;
+  padding: 16px 8px;
+  background: #f6f5f5;
+}
+
+.p-cryptoname {
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+  width: 85px;
+  margin: 0;
+  padding: 12px 5px;
+  background: #e7eaeb;
+  color: #cbcaca;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 footer {

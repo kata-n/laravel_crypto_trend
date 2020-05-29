@@ -10,4 +10,11 @@
   &-headerlogo {
     margin: $space_m $space_l;
   }
+  &-nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &-list {
+    display: inline-block;
+  }
 }

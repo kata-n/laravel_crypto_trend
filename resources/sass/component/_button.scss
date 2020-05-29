@@ -1,7 +1,6 @@
 .c {
   &-atagbtn {
     display: block;
-    text-decoration: none;
     text-align: center;
     letter-spacing: $letter-spacing;
   }
@@ -21,5 +20,20 @@
   }
   &-headerlogobtn {
     color: $White;
+  }
+  &-authbtn{
+    width: 70%;
+    border: none;
+    display: block;
+    margin: $space_m auto;
+    padding: $space_xs $space_2l;
+    background: $btnBaseColor;
+    color: $White;
+    letter-spacing: $letter-spacing;
+    font-size: $font-size_14px;
+  }
+  &-authbtn:hover {
+    background: $btnHoverColor;
+    transition: .5s;
   }
 }

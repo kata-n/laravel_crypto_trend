@@ -89,6 +89,7 @@ template {
 
 a {
   background-color: transparent;
+  text-decoration: none;
 }
 
 /**
@@ -425,4 +426,8 @@ table {
 td,
 th {
   padding: 0;
+}
+
+li {
+  list-style: none;
 }

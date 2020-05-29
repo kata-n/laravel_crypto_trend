@@ -1,0 +1,25 @@
+.p {
+  &-cryptolist {
+    
+  }
+  &-cryptochkbtn {
+    width: 18px;
+    height: 15px;
+    padding: 16px 8px;
+    background: #f6f5f5;
+  }
+  &-cryptoname {
+    display: inline-block;
+    float: left;
+    cursor: pointer;
+    width: 85px;
+    margin: 0;
+    padding: 12px 5px;
+    background: #e7eaeb;
+    color: #cbcaca;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1;
+    transition: .2s;
+  }
+}

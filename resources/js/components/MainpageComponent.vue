@@ -1,14 +1,6 @@
 <template>
-    <div class="l-container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Componentメインのページです</div>
-                    <a href="/accountpage" class="">アカウントページ</a>
-                    <a href="/newspage" class="">仮想通貨ニュース一覧</a>
-                </div>
-            </div>
-
+    <div class="l-mainpage">
+        <div class="l-mainwrapper">
             <div>
               <h2>仮想通貨Twitterランキング</h2>
 
@@ -22,16 +14,15 @@
               <label for="Tab3" class="Tab-Btn-Label">過去一週間</label>
             </div>
 
-            <div>
-              <ul class="crypto_list">
-                <li v-for="Cryopto in Crypto_lists">
-                  <input type="checkbox"
-                    v-bind:id="Cryopto"
-                    v-bind:value="Cryopto"
-                    v-model="preview">
-                  <label v-bind:for="Cryopto">{{ Cryopto }}</label>
-                </li>
-              </ul>
+            <div class="crypto_list">
+              <div v-for="Cryopto in Crypto_lists" class="p-cryptolist">
+                <input type="checkbox"
+                  v-bind:id="Cryopto"
+                  v-bind:value="Cryopto"
+                  v-model="preview"
+                  class="p-cryptochkbtn">
+                <label class="p-cryptoname" v-bind:for="Cryopto">{{ Cryopto }}</label>
+              </div>
             </div>
 
             <div v-for="Hourdata in displayHourDatas" v-if="isActive == '1'">
