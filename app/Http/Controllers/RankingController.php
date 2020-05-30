@@ -22,7 +22,6 @@ class RankingController extends Controller
          $results['Tweet_time'] = date("Y-m-d H:i:s", strtotime("-1 hour"));
          $results['Crypto_high'] = $value['crypto_high'];
          $results['Crypto_low'] = $value['crypto_low'];
-         $results['display'] = true;
          $HourCountresults[] = $results;
       }
 
@@ -43,7 +42,6 @@ class RankingController extends Controller
          $results['Tweet_time'] = date("Y-m-d", strtotime("-1 day"));
          $results['Crypto_high'] = $value['crypto_high'];
          $results['Crypto_low'] = $value['crypto_low'];
-         $results['display'] = true;
          $DayCountresults[] = $results;
       }
 
@@ -65,7 +63,6 @@ $q->where('created_at', '>', date("Y-m-d", strtotime("-7 day")));
          $results['Tweet_time'] = date("Y-m-d", strtotime("-7 day"));
          $results['Crypto_high'] = $value['crypto_high'];
          $results['Crypto_low'] = $value['crypto_low'];
-         $results['display'] = true;
          $WeekCountresults[] = $results;
       }
 

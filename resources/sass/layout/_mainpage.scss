@@ -1,0 +1,17 @@
+.l{
+  &-maintitle {
+    margin: $space_m 0;
+  }
+  &-cryptolist {
+    width: 100%;
+    margin-bottom: $space_m;
+    padding-bottom: $space_10l;
+  }
+  &-cryptoarea {
+    margin: $space_m 0;
+    padding: $space_m;
+  }
+  &-cryptoranking {
+    height: 8vh;
+  }
+}

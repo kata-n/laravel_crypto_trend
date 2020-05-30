@@ -1,25 +1,30 @@
 .p {
-  &-cryptolist {
-    
-  }
-  &-cryptochkbtn {
-    width: 18px;
-    height: 15px;
-    padding: 16px 8px;
-    background: #f6f5f5;
+  &-cryptolist input {
+    display: none;
   }
   &-cryptoname {
     display: inline-block;
     float: left;
     cursor: pointer;
-    width: 85px;
-    margin: 0;
+    width: 165px;
+    margin: 1;
     padding: 12px 5px;
-    background: #e7eaeb;
-    color: #cbcaca;
-    font-size: 14px;
+    background: $noCheckBgColor;
+    color: $noCheckColor;
+    font-size: $font-size_7px;
     text-align: center;
     line-height: 1;
     transition: .2s;
+  }
+  &-cryptolist input[type="checkbox"]:checked + label {
+    background-color: $CheckBgColor;
+    color: $White;
+  }
+  &-cryptoarea {
+    background: $White;
+    box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
+  }
+  &-RnkingSlect {
+    margin: $space_m $space_m $space_m 0;
   }
 }

@@ -4,15 +4,26 @@
 
 @section('header')
   @parent
-  <nav class="nav">
+  <div class="l-headerlogo"><a href="/mainpage" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>
+  <nav class="l-nav">
     <div class="menu-trigger js-toggle-sp-menu" id="js-sp-nav-menu">
       <span></span>
       <span></span>
       <span></span>
     </div>
   <nav class="header-nav js-toggle-sp-menu-target" id="js-classtaget">
-    <ul>
-      <li><a href="/mainpage">ニュース画面です!</a></li>
+    <ul class="l-listwrapper">
+      <li class="l-list"><a href="/mainpage">Twitterランキング</a></li>
+      <li class="l-list"><a href="/accountpage">Twitterアカウント</a></li>
+      <li class="l-list"><a class="dropdown-item" href="{{ route('logout') }}"
+        onclick="event.preventDefault();
+        document.getElementById('logout-form').submit();">
+        {{ __('Logout') }}
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+          @csrf
+        </form>
+      </li>
     </ul>
   </nav>
 @endsection

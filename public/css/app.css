@@ -456,18 +456,23 @@ li {
 }
 
 .l-headerlogo {
-  margin: 1rem 1.5rem;
+  margin: 1.1rem 1.5rem;
 }
 
 .l-nav {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: end;
-          justify-content: flex-end;
+  margin-left: auto;
+  margin-top: 1.1rem;
+  margin-bottom: 1.1rem;
+  margin-right: 1rem;
 }
 
 .l-list {
   display: inline-block;
+  margin: 0 1rem;
+}
+
+.l-listwrapper {
+  margin: 0;
 }
 
 .l-footer {
@@ -527,6 +532,25 @@ li {
   margin: 1rem 0;
 }
 
+.l-maintitle {
+  margin: 1rem 0;
+}
+
+.l-cryptolist {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-bottom: 10rem;
+}
+
+.l-cryptoarea {
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.l-cryptoranking {
+  height: 8vh;
+}
+
 .c-atagbtn {
   display: block;
   text-align: center;
@@ -571,6 +595,11 @@ li {
   transition: 0.5s;
 }
 
+.c-rankingtitlebtn {
+  font-size: 1.4rem;
+  color: #fd166f;
+}
+
 .c-form {
   background-color: #fff;
   box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
@@ -586,27 +615,43 @@ li {
   background-color: #fdfbf2;
 }
 
-.p-cryptochkbtn {
-  width: 18px;
-  height: 15px;
-  padding: 16px 8px;
-  background: #f6f5f5;
+.p-list a {
+  color: #c7fafa;
+  letter-spacing: 2px;
+}
+
+.p-cryptolist input {
+  display: none;
 }
 
 .p-cryptoname {
   display: inline-block;
   float: left;
   cursor: pointer;
-  width: 85px;
-  margin: 0;
+  width: 165px;
+  margin: 1;
   padding: 12px 5px;
   background: #e7eaeb;
   color: #cbcaca;
-  font-size: 14px;
+  font-size: 0.7rem;
   text-align: center;
   line-height: 1;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+.p-cryptolist input[type=checkbox]:checked + label {
+  background-color: #fd166f;
+  color: #fff;
+}
+
+.p-cryptoarea {
+  background: #fff;
+  box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
+}
+
+.p-RnkingSlect {
+  margin: 1rem 1rem 1rem 0;
 }
 
 footer {

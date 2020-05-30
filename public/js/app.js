@@ -2055,6 +2055,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2771,9 +2783,9 @@ var render = function() {
       "div",
       { staticClass: "l-mainwrapper" },
       [
-        _c("div", [
-          _c("h2", [_vm._v("仮想通貨Twitterランキング")]),
-          _vm._v(" "),
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "l-cryptoranking p-cryptoranking" }, [
           _c("input", {
             directives: [
               {
@@ -2783,7 +2795,6 @@ var render = function() {
                 expression: "isActive"
               }
             ],
-            staticClass: "Tab-Btn-Radio",
             attrs: { type: "radio", value: "1", id: "Tab1" },
             domProps: { checked: _vm._q(_vm.isActive, "1") },
             on: {
@@ -2795,7 +2806,7 @@ var render = function() {
           _vm._v(" "),
           _c(
             "label",
-            { staticClass: "Tab-Btn-Label", attrs: { for: "Tab1" } },
+            { staticClass: "p-RnkingSlect", attrs: { for: "Tab1" } },
             [_vm._v("過去1時間")]
           ),
           _vm._v(" "),
@@ -2808,7 +2819,6 @@ var render = function() {
                 expression: "isActive"
               }
             ],
-            staticClass: "Tab-Btn-Radio",
             attrs: { type: "radio", value: "2", id: "Tab2" },
             domProps: { checked: _vm._q(_vm.isActive, "2") },
             on: {
@@ -2820,7 +2830,7 @@ var render = function() {
           _vm._v(" "),
           _c(
             "label",
-            { staticClass: "Tab-Btn-Label", attrs: { for: "Tab2" } },
+            { staticClass: "p-RnkingSlect", attrs: { for: "Tab2" } },
             [_vm._v("過去24時間")]
           ),
           _vm._v(" "),
@@ -2833,7 +2843,6 @@ var render = function() {
                 expression: "isActive"
               }
             ],
-            staticClass: "Tab-Btn-Radio",
             attrs: { type: "radio", value: "3", id: "Tab3" },
             domProps: { checked: _vm._q(_vm.isActive, "3") },
             on: {
@@ -2845,14 +2854,14 @@ var render = function() {
           _vm._v(" "),
           _c(
             "label",
-            { staticClass: "Tab-Btn-Label", attrs: { for: "Tab3" } },
+            { staticClass: "p-RnkingSlect", attrs: { for: "Tab3" } },
             [_vm._v("過去一週間")]
           )
         ]),
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "crypto_list" },
+          { staticClass: "crypto_list l-cryptolist" },
           _vm._l(_vm.Crypto_lists, function(Cryopto) {
             return _c("div", { staticClass: "p-cryptolist" }, [
               _c("input", {
@@ -2864,7 +2873,6 @@ var render = function() {
                     expression: "preview"
                   }
                 ],
-                staticClass: "p-cryptochkbtn",
                 attrs: { type: "checkbox", id: Cryopto },
                 domProps: {
                   value: Cryopto,
@@ -2907,10 +2915,11 @@ var render = function() {
         _vm._v(" "),
         _vm._l(_vm.displayHourDatas, function(Hourdata) {
           return _vm.isActive == "1"
-            ? _c("div", [
+            ? _c("div", { staticClass: "l-cryptoarea p-cryptoarea" }, [
                 _c(
                   "a",
                   {
+                    staticClass: "c-rankingtitlebtn",
                     attrs: {
                       href:
                         "https://twitter.com/search?q=" + Hourdata.Crypto_name,
@@ -2945,10 +2954,11 @@ var render = function() {
         _vm._v(" "),
         _vm._l(_vm.displayDayDatas, function(Daydata) {
           return _vm.isActive == "2"
-            ? _c("div", [
+            ? _c("div", { staticClass: "l-cryptoarea p-cryptoarea" }, [
                 _c(
                   "a",
                   {
+                    staticClass: "c-rankingtitlebtn",
                     attrs: {
                       href:
                         "https://twitter.com/search?q=" + Daydata.Crypto_name,
@@ -2981,10 +2991,11 @@ var render = function() {
         _vm._v(" "),
         _vm._l(_vm.displayWeekDatas, function(Weekdata) {
           return _vm.isActive == "3"
-            ? _c("div", [
+            ? _c("div", { staticClass: "l-cryptoarea p-cryptoarea" }, [
                 _c(
                   "a",
                   {
+                    staticClass: "c-rankingtitlebtn",
                     attrs: {
                       href:
                         "https://twitter.com/search?q=" + Weekdata.Crypto_name,
@@ -3021,7 +3032,16 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "l-maintitle" }, [
+      _c("h2", [_vm._v("仮想通貨Twitterランキング")])
+    ])
+  }
+]
 render._withStripped = true
 
 

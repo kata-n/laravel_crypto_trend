@@ -36,4 +36,8 @@
     background: $btnHoverColor;
     transition: .5s;
   }
+  &-rankingtitlebtn {
+    font-size: $font-size_14px;
+    color: $RnkingColor;
+  }
 }

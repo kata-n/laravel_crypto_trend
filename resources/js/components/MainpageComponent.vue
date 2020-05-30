@@ -1,32 +1,36 @@
 <template>
     <div class="l-mainpage">
         <div class="l-mainwrapper">
-            <div>
+            <div class="l-maintitle">
               <h2>仮想通貨Twitterランキング</h2>
-
-              <input type="radio" value="1" id="Tab1" class="Tab-Btn-Radio" v-model="isActive">
-              <label for="Tab1" class="Tab-Btn-Label">過去1時間</label>
-
-              <input type="radio" value="2" id="Tab2" class="Tab-Btn-Radio" v-model="isActive">
-              <label for="Tab2" class="Tab-Btn-Label">過去24時間</label>
-
-              <input type="radio" value="3" id="Tab3" class="Tab-Btn-Radio" v-model="isActive">
-              <label for="Tab3" class="Tab-Btn-Label">過去一週間</label>
             </div>
 
-            <div class="crypto_list">
+            <div class="l-cryptoranking p-cryptoranking">
+              <input type="radio" value="1" id="Tab1" v-model="isActive">
+              <label for="Tab1" class="p-RnkingSlect">過去1時間</label>
+
+              <input type="radio" value="2" id="Tab2" v-model="isActive">
+              <label for="Tab2" class="p-RnkingSlect">過去24時間</label>
+
+              <input type="radio" value="3" id="Tab3" v-model="isActive">
+              <label for="Tab3" class="p-RnkingSlect">過去一週間</label>
+            </div>
+
+            <div class="crypto_list l-cryptolist">
               <div v-for="Cryopto in Crypto_lists" class="p-cryptolist">
                 <input type="checkbox"
                   v-bind:id="Cryopto"
                   v-bind:value="Cryopto"
-                  v-model="preview"
-                  class="p-cryptochkbtn">
+                  v-model="preview">
                 <label class="p-cryptoname" v-bind:for="Cryopto">{{ Cryopto }}</label>
               </div>
             </div>
 
-            <div v-for="Hourdata in displayHourDatas" v-if="isActive == '1'">
-              <a v-bind:href="'https://twitter.com/search?q=' + Hourdata.Crypto_name" target="_blank">
+            <div v-for="Hourdata in displayHourDatas" 
+                 v-if="isActive == '1'"
+                 class="l-cryptoarea p-cryptoarea">
+              <a v-bind:href="'https://twitter.com/search?q=' + Hourdata.Crypto_name" target="_blank"
+              class="c-rankingtitlebtn">
               {{ Hourdata.Crypto_name }}
               </a>
               <p>ツイート数：{{ Hourdata.Tweet_count }}</p>
@@ -34,8 +38,12 @@
               <p>最安取引価格：{{ Hourdata.Crypto_low }}</p>
               <p>取得日時：{{ Hourdata.Tweet_time }}</p>
             </div>
-            <div v-for="Daydata in displayDayDatas" v-if="isActive == '2'">
-              <a v-bind:href="'https://twitter.com/search?q=' + Daydata.Crypto_name" target="_blank">
+
+            <div v-for="Daydata in displayDayDatas"
+                 v-if="isActive == '2'"
+                 class="l-cryptoarea p-cryptoarea">
+              <a v-bind:href="'https://twitter.com/search?q=' + Daydata.Crypto_name" target="_blank"
+              class="c-rankingtitlebtn">
               {{ Daydata.Crypto_name }}
               </a>
               <p>ツイート数：{{ Daydata.Tweet_count }}</p>
@@ -43,8 +51,12 @@
               <p>最安取引価格：{{ Daydata.Crypto_low }}</p>
               <p>取得日時：{{ Daydata.Tweet_time }}</p>
             </div>
-            <div v-for="Weekdata in displayWeekDatas" v-if="isActive == '3'">
-              <a v-bind:href="'https://twitter.com/search?q=' + Weekdata.Crypto_name" target="_blank">
+
+            <div v-for="Weekdata in displayWeekDatas" 
+                 v-if="isActive == '3'"
+                 class="l-cryptoarea p-cryptoarea">
+              <a v-bind:href="'https://twitter.com/search?q=' + Weekdata.Crypto_name" target="_blank"
+              class="c-rankingtitlebtn">
               {{ Weekdata.Crypto_name }}
               </a>
               <p>ツイート数：{{ Weekdata.Tweet_count }}</p>

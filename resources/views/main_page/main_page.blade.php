@@ -12,10 +12,10 @@
       <span></span>
     </div>
   <nav class="header-nav js-toggle-sp-menu-target" id="js-classtaget">
-    <ul class="l-listwrapper">
-      <li class="l-list"><a href="/accountpage">Twitterアカウント</a></li>
-      <li class="l-list"><a href="/newspage">仮想通貨関連ニュース</a></li>
-      <li class="l-list"><a class="dropdown-item" href="{{ route('logout') }}"
+    <ul class="l-listwrapper p-listwrapper">
+      <li class="l-list p-list"><a href="/accountpage">Twitterアカウント</a></li>
+      <li class="l-list p-list"><a href="/newspage">仮想通貨関連ニュース</a></li>
+      <li class="l-list p-list"><a class="dropdown-item" href="{{ route('logout') }}"
         onclick="event.preventDefault();
         document.getElementById('logout-form').submit();">
         {{ __('Logout') }}

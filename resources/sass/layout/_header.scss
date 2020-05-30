@@ -5,16 +5,21 @@
     width: 100%;
     position: fixed;
     z-index: 9999;
-    display: flex;
   }
   &-headerlogo {
-    margin: $space_m $space_l;
+    margin: $space_xm $space_l;
   }
   &-nav {
-    display: flex;
-    justify-content: flex-end;
+    margin-left: auto;
+    margin-top: $space_xm;
+    margin-bottom: $space_xm;
+    margin-right: $space_m;
   }
   &-list {
     display: inline-block;
+    margin: 0 $space_m;
+  }
+  &-listwrapper {
+    margin: 0;
   }
 }

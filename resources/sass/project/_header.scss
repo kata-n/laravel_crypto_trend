@@ -1,0 +1,6 @@
+.p {
+  &-list a {
+    color: $headerListColor;
+    letter-spacing: $letter-spacing;
+  }
+}
