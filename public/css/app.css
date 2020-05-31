@@ -448,10 +448,9 @@ li {
 }
 
 .l-header {
-  background-color: #9593d1;
+  background-color: #464c96;
   height: 64px;
   width: 100%;
-  position: fixed;
   z-index: 9999;
   display: -webkit-box;
   display: flex;
@@ -479,8 +478,7 @@ li {
 
 .l-footer {
   background-color: #93d1d1;
-  height: 46px;
-  width: 100%;
+  height: 25px;
   padding: 18px;
   z-index: 9999;
   text-align: center;
@@ -488,7 +486,6 @@ li {
 }
 
 .l-contain {
-  position: relative;
   min-height: 100%;
   height: auto !important;
   height: 100%;
@@ -516,9 +513,12 @@ li {
 
 .l-toppage,
 .l-loginpage,
-.l-registpage,
 .l-authpage {
   height: 90vh;
+}
+
+.l-registpage {
+  height: 110vh;
 }
 
 .l-newspage {
@@ -551,9 +551,17 @@ li {
   margin-top: 1.5rem;
 }
 
-.l-loginform {
+.l-loginform,
+.l-registform {
   width: 100%;
   padding: 2.5rem 2rem;
+}
+
+@media screen and (max-width: 476px) {
+  .l-loginform,
+  .l-registform {
+    padding: 2.5rem 0.8rem;
+  }
 }
 
 .l-formgroup {
@@ -610,6 +618,12 @@ li {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 476px) {
+  .c-twitterbtn {
+    width: 80%;
+  }
+}
+
 .c-headerlogobtn {
   color: #fff;
 }
@@ -648,6 +662,12 @@ li {
 .c-form {
   background-color: #fff;
   box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 476px) {
+  .c-form {
+    width: 95%;
+  }
 }
 
 .c-inputtext {
@@ -700,7 +720,7 @@ li {
 }
 
 .p-list a {
-  color: #c6f0e2;
+  color: #f4f3f3;
   letter-spacing: 2px;
 }
 
@@ -746,11 +766,10 @@ li {
 .p-profilecount {
   display: -webkit-box;
   display: flex;
-  font-size: 0.5rem;
 }
 
 .p-profilecount p {
-  margin: 0.5rem 0.8rem;
+  margin: 0.5rem 0.8rem 0;
 }
 
 .p-newstitle {
@@ -765,10 +784,8 @@ li {
   box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
 }
 
-footer {
-  padding: 30px 0;
-  position: absolute;
-  bottom: 0;
-  width: 90%;
+.p-footerabout,
+.p-footername {
+  font-size: 0.5rem;
 }
 

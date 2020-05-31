@@ -15,9 +15,11 @@
   }
   &-toppage,
   &-loginpage,
-  &-registpage,
   &-authpage {
     height: 90vh;
+  }
+  &-registpage {
+    height: 110vh;
   }
   &-newspage{
     height: 260vh;
@@ -42,8 +44,12 @@
     margin: 0 auto;
     margin-top: $space_l;
   }
-  &-loginform {
+  &-loginform,
+  &-registform {
     width: 100%;
     padding: $space_2l $space_xl;
+    @include mq(){
+          padding: $space_2l $space_xs;
+    }
   }
 }

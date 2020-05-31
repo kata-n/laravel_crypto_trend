@@ -25,23 +25,22 @@
           <div class="l-loginform c-form">
               <h2 class="c-heading">{{ __('Login') }}</h2>
 
-              <div class="card-body">
+              <div class="c-content">
                   <form method="POST" action="{{ route('login') }}">
                       @csrf
 
                       <div class="l-formgroup">
-                          <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                          <label for="email">{{ __('E-Mail Address') }}</label>
 
-                          <div class="col-md-6">
-                              <input id="email" type="email" class="c-inputtext @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                              <div class="c-text_underline"></div>
+                            <input id="email" type="email" class="c-inputtext @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            <div class="c-text_underline"></div>
 
-                              @error('email')
-                                  <span class="invalid-feedback" role="alert">
-                                      <strong>{{ $message }}</strong>
-                                  </span>
-                              @enderror
-                          </div>
+                            @error('email')
+                              <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                              </span>
+                            @enderror
+
                       </div>
 
                       <div class="l-formgroup">
@@ -89,12 +88,10 @@
 @endsection
 
 @section('footer')
-   <div class="footer__content">
-    <div class="footer__siteabout">
-      <a href="{{ url('/policy')}}">このサイトについて</a>
+    <div class="p-footerabout">
+      Copyright kata. AlL Rights Reserved.
     </div>
-    <div class="footer__copyright">
-      Copyright© <a href="{{ url('/login')}}">kata</a>
+    <div class="p-footername">
+      My Twitter Account: <a href="{{ url('https://twitter.com/denknit')}}" target="_blank">kata</a>
     </div>
-   </div>
 @endsection

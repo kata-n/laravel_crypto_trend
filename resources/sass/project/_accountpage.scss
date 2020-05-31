@@ -5,9 +5,8 @@
   }
   &-profilecount {
     display: flex;
-    font-size: $font-size_8px;
   }
   &-profilecount p {
-    margin: $space_s $space_xs;
+    margin: $space_s $space_xs 0;
   }
 }

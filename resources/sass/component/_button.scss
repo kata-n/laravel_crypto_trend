@@ -17,6 +17,9 @@
     padding: $space_s $space_m;
     width: 40%;
     margin: 0 auto;
+    @include mq(){
+      width: 80%;
+    }
   }
   &-headerlogobtn {
     color: $White;

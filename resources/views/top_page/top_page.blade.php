@@ -16,12 +16,10 @@
 @endsection
 
 @section('footer')
-   <div class="footer__content">
-    <div class="footer__siteabout">
-      <a href="{{ url('/policy')}}">このサイトについて</a>
+    <div class="p-footerabout">
+      Copyright kata. AlL Rights Reserved.
     </div>
-    <div class="footer__copyright">
-      Copyright© <a href="{{ url('/login')}}">kata</a>
+    <div class="p-footername">
+      My Twitter Account: <a href="{{ url('https://twitter.com/denknit')}}" target="_blank">kata</a>
     </div>
-   </div>
 @endsection
