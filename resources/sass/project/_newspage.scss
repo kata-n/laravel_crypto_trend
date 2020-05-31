@@ -1,0 +1,12 @@
+.p {
+  &-newstitle {
+    margin-bottom: $space_m;
+  }
+  &-newsbox {
+    padding: $space_m;
+    background: $White;
+    margin: $space_l;
+    border-radius: 10px;
+    box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
+  }
+}

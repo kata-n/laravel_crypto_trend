@@ -502,7 +502,9 @@ li {
 .l-loginpage,
 .l-registpage,
 .l-mainpage,
-.l-accountpage {
+.l-accountpage,
+.l-newspage,
+.l-authpage {
   max-width: 980px;
   margin: 0 auto;
   padding-top: 64px;
@@ -514,12 +516,14 @@ li {
 
 .l-toppage,
 .l-loginpage,
-.l-registpage {
+.l-registpage,
+.l-authpage {
   height: 90vh;
 }
 
-.l-accountpage {
-  height: 180vh;
+.l-accountpage,
+.l-newspage {
+  height: 260vh;
 }
 
 .l-toparea {
@@ -577,8 +581,8 @@ li {
 }
 
 .l-accountarea {
-  margin-bottom: 1.5rem;
-  padding: 0.5rem;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
 }
 
 .c-atagbtn {
@@ -630,9 +634,56 @@ li {
   color: #fd166f;
 }
 
+.c-autofollowbtn {
+  padding: 0.5rem;
+  background-color: #00acee;
+  color: #fff;
+  border-style: none;
+  margin-bottom: 1rem;
+}
+
 .c-form {
   background-color: #fff;
   box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
+}
+
+.c-inputtext {
+  font-size: 1.4rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-bottom: 0.2rem;
+  box-sizing: border-box;
+}
+
+.c-text_underline {
+  position: relative;
+  border-top: 1px solid #c2c2c2;
+}
+
+.c-text_underline::before,
+.c-text_underline::after {
+  position: absolute;
+  bottom: 0px;
+  width: 0px;
+  height: 1px;
+  content: "";
+  background-color: #3be5ae;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.c-text_underline::before {
+  left: 50%;
+}
+
+.c-ttext_underline::after {
+  right: 50%;
+}
+
+.c-inputtext:focus + .c-text_underline::before,
+.c-inputtext:focus + .c-text_underline::after {
+  width: 50%;
 }
 
 .c-heading {
@@ -646,7 +697,7 @@ li {
 }
 
 .p-list a {
-  color: #c7fafa;
+  color: #c6f0e2;
   letter-spacing: 2px;
 }
 
@@ -686,6 +737,18 @@ li {
 
 .p-accountarea {
   background: #fff;
+  box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
+}
+
+.p-newstitle {
+  margin-bottom: 1rem;
+}
+
+.p-newsbox {
+  padding: 1rem;
+  background: #fff;
+  margin: 1.5rem;
+  border-radius: 10px;
   box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
 }
 

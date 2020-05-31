@@ -5,10 +5,10 @@
           <h2>Twitterアカウント一覧</h2>
         </div>
 
-        <button v-if="flag" @click="autofollow">
+        <button v-if="flag" @click="autofollow" class="c-autofollowbtn">
           自動フォローを解除
         </button>
-        <button @click="autofollow" v-else>
+        <button @click="autofollow" v-else class="c-autofollowbtn">
           自動フォローをする
         </button>
 

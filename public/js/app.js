@@ -2151,6 +2151,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2689,12 +2691,16 @@ var render = function() {
         _vm._m(0),
         _vm._v(" "),
         _vm.flag
-          ? _c("button", { on: { click: _vm.autofollow } }, [
-              _vm._v("\n      自動フォローを解除\n    ")
-            ])
-          : _c("button", { on: { click: _vm.autofollow } }, [
-              _vm._v("\n      自動フォローをする\n    ")
-            ]),
+          ? _c(
+              "button",
+              { staticClass: "c-autofollowbtn", on: { click: _vm.autofollow } },
+              [_vm._v("\n      自動フォローを解除\n    ")]
+            )
+          : _c(
+              "button",
+              { staticClass: "c-autofollowbtn", on: { click: _vm.autofollow } },
+              [_vm._v("\n      自動フォローをする\n    ")]
+            ),
         _vm._v(" "),
         _vm._l(_vm.accountdata.results, function(account) {
           return _c("div", { staticClass: "l-accountarea p-accountarea" }, [
@@ -3047,40 +3053,45 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "l-container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-8" }, [
-        _c(
-          "div",
-          { staticClass: "card" },
-          [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Google Newsから取得したニュース一覧です")
-            ]),
-            _vm._v(" "),
-            _vm._l(_vm.NewsData.results, function(news) {
-              return _c("dl", [
-                _c("dt", [_vm._v(_vm._s(news.title))]),
-                _vm._v(" "),
-                _c("dt", [
-                  _c("a", { attrs: { href: news.url, target: "_blank" } }, [
-                    _vm._v("詳細(外部ページへ)")
-                  ])
+  return _c("div", { staticClass: "l-newspage" }, [
+    _c("div", { staticClass: "mainwrapper" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "l-newslist p-newslist" },
+        [
+          _c("div", { staticClass: "p-newstitle" }, [
+            _vm._v("Google Newsから取得したニュース一覧を表示しています。")
+          ]),
+          _vm._v(" "),
+          _vm._l(_vm.NewsData.results, function(news) {
+            return _c("div", { staticClass: "p-newsbox" }, [
+              _c("p", [_vm._v(_vm._s(news.title))]),
+              _vm._v(" "),
+              _c("p", [
+                _c("a", { attrs: { href: news.url, target: "_blank" } }, [
+                  _vm._v("詳細(外部ページへ)")
                 ])
               ])
-            }),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "/mainpage" } }, [
-              _vm._v("メインページへ")
             ])
-          ],
-          2
-        )
-      ])
+          })
+        ],
+        2
+      )
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "l-maintitle" }, [
+      _c("h2", [_vm._v("仮想通貨News一覧")])
+    ])
+  }
+]
 render._withStripped = true
 
 

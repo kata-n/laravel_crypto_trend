@@ -40,4 +40,11 @@
     font-size: $font-size_14px;
     color: $RnkingColor;
   }
+  &-autofollowbtn {
+    padding: $space_s;
+    background-color: $twitterColor;
+    color: $White;
+    border-style: none;
+    margin-bottom: $space_m;
+  }
 }

@@ -1,6 +1,41 @@
 .c {
-  &-form{
+  &-form {
     background-color: $White;
     box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
+  }
+  &-inputtext {
+    font-size: $font-size_14px;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-bottom: 0.2rem;
+    box-sizing: border-box;
+  }
+  &-text_underline {
+    position: relative;
+    border-top: 1px solid #c2c2c2;
+    }
+  &-text_underline::before,
+  &-text_underline::after{
+      position: absolute;
+      bottom: 0px;
+      width: 0px;
+      height: 1px;
+      content: '';
+      background-color: $boxunderColor;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+  }
+
+  &-text_underline::before{
+      left: 50%;
+  }
+  &-ttext_underline::after{
+      right: 50%;
+  }
+
+  &-inputtext:focus + &-text_underline::before,
+  &-inputtext:focus + &-text_underline::after{
+      width: 50%;
   }
 }

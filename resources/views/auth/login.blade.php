@@ -4,7 +4,7 @@
 
 @section('header')
   @parent
-  <div class="l-headerlogo"><a href="/mainpage" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>
+  <div class="l-headerlogo"><a href="/" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>
   <nav class="l-nav">
     <div class="menu-trigger js-toggle-sp-menu" id="js-sp-nav-menu">
       <span></span>
@@ -33,7 +33,8 @@
                           <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                           <div class="col-md-6">
-                              <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                              <input id="email" type="email" class="c-inputtext @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                              <div class="c-text_underline"></div>
 
                               @error('email')
                                   <span class="invalid-feedback" role="alert">
@@ -47,7 +48,8 @@
                           <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                           <div class="col-md-6">
-                              <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                              <input id="password" type="password" class="c-inputtext @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                              <div class="c-text_underline"></div>
 
                               @error('password')
                                   <span class="invalid-feedback" role="alert">

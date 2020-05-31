@@ -3,7 +3,9 @@
   &-loginpage,
   &-registpage,
   &-mainpage,
-  &-accountpage {
+  &-accountpage,
+  &-newspage,
+  &-authpage {
     max-width: $site-width;
     margin: 0 auto;
     padding-top: $headerHeight;
@@ -13,11 +15,13 @@
   }
   &-toppage,
   &-loginpage,
-  &-registpage {
+  &-registpage,
+  &-authpage {
     height: 90vh;
   }
-  &-accountpage {
-    height: 180vh;
+  &-accountpage,
+  &-newspage{
+    height: 260vh;
   }
   &-toparea {
     padding: $space_3l $space_m;

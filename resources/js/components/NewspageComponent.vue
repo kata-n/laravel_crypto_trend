@@ -1,16 +1,18 @@
 <template>
-    <div class="l-container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Google Newsから取得したニュース一覧です</div>
-                    <dl v-for="(news in NewsData.results">
-                      <dt>{{news.title}}</dt>
-                      <dt><a v-bind:href="news.url" target="_blank">詳細(外部ページへ)</a></dt>
-                    </dl>
-                    <a href="/mainpage" class="">メインページへ</a>
+    <div class="l-newspage">
+        <div class="mainwrapper">
+            <div class="l-maintitle">
+              <h2>仮想通貨News一覧</h2>
+            </div>
+
+            <div class="l-newslist p-newslist">
+                <div class="p-newstitle">Google Newsから取得したニュース一覧を表示しています。</div>
+                <div v-for="news in NewsData.results" class="p-newsbox">
+                  <p>{{news.title}}</p>
+                  <p><a v-bind:href="news.url" target="_blank">詳細(外部ページへ)</a></p>
                 </div>
             </div>
+
         </div>
     </div>
 </template>
