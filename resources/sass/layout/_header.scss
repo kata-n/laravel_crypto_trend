@@ -5,13 +5,14 @@
     width: 100%;
     position: fixed;
     z-index: 9999;
+    display: flex;
   }
   &-headerlogo {
     margin: $space_xm $space_l;
   }
   &-nav {
     margin-left: auto;
-    margin-top: $space_xm;
+    margin-top: $space_xxm;
     margin-bottom: $space_xm;
     margin-right: $space_m;
   }

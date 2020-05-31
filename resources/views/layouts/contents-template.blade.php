@@ -13,28 +13,30 @@
     <meta property="og:title" content="Crypto Trend"/>
     <meta property="og:description" content=""/>
     <meta property="og:image" content="{{ asset('images/top_view2.png') }}"/>
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <title>Crypto Trend | @yield ('title','')</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   </head>
 
   <body>
-    <header class="l-header">
-    @section('header')
+     <div class="l-contain">
+        <header class="l-header">
+        @section('header')
+        @show
+        </header>
 
-    @show
-    </header>
+        @if (session('flash_message'))
+          <div class="alert alert-primary text-center" role="alert">
+            {{ session('flash_message') }}
+          </div>
+        @endif
 
-    @if (session('flash_message'))
-      <div class="alert alert-primary text-center" role="alert">
-        {{ session('flash_message') }}
+        @yield('content')
+
+        <footer class="l-footer">
+          @yield('footer')
+        </footer>
       </div>
-    @endif
-
-    @yield('content')
-
-    <footer class="l-footer">
-      @yield('footer')
-    </footer>
   </body>
 </html>
