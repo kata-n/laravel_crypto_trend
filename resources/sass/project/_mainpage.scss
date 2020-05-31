@@ -15,6 +15,11 @@
     text-align: center;
     line-height: 1;
     transition: .2s;
+    @include mq() {
+      display: block;
+      float: none;
+      width: 20vh;
+    }
   }
   &-cryptolist input[type="checkbox"]:checked + label {
     background-color: $CheckBgColor;

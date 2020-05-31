@@ -507,6 +507,18 @@ li {
   padding-top: 64px;
 }
 
+@media screen and (max-width: 476px) {
+  .l-toppage,
+  .l-loginpage,
+  .l-registpage,
+  .l-mainpage,
+  .l-accountpage,
+  .l-newspage,
+  .l-authpage {
+    padding-top: 1rem;
+  }
+}
+
 .l-mainpage {
   height: 4600px;
 }
@@ -578,13 +590,22 @@ li {
   padding-bottom: 10rem;
 }
 
+@media screen and (max-width: 476px) {
+  .l-cryptolist {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.1rem;
+  }
+}
+
 .l-cryptoarea {
   margin: 1rem 0;
   padding: 1rem;
 }
 
 .l-cryptoranking {
-  height: 8vh;
+  margin: 1rem;
 }
 
 .l-maintitle {
@@ -744,6 +765,14 @@ li {
   transition: 0.2s;
 }
 
+@media screen and (max-width: 476px) {
+  .p-cryptoname {
+    display: block;
+    float: none;
+    width: 20vh;
+  }
+}
+
 .p-cryptolist input[type=checkbox]:checked + label {
   background-color: #fd166f;
   color: #fff;
@@ -782,6 +811,12 @@ li {
   margin: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 476px) {
+  .p-newsbox {
+    margin: 0.8rem 0.5rem;
+  }
 }
 
 .p-footerabout,

@@ -8,5 +8,8 @@
     margin: $space_l;
     border-radius: 10px;
     box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
+    @include mq() {
+      margin: $space_xs $space_s;
+    }
   }
 }

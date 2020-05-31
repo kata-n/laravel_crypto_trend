@@ -9,6 +9,9 @@
     max-width: $site-width;
     margin: 0 auto;
     padding-top: $headerHeight;
+    @include mq(){
+      padding-top: $space_m;
+    }
   }
   &-mainpage {
     height: $mainpageheight;

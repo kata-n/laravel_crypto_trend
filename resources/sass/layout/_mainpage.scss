@@ -6,12 +6,17 @@
     width: 100%;
     margin-bottom: $space_m;
     padding-bottom: $space_10l;
+    @include mq() {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0.1rem;
+    }
   }
   &-cryptoarea {
     margin: $space_m 0;
     padding: $space_m;
   }
   &-cryptoranking {
-    height: 8vh;
+    margin: $space_m;
   }
 }
