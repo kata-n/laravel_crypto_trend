@@ -2,11 +2,22 @@
   &-toppage,
   &-loginpage,
   &-registpage,
-  &-mainpage {
-    height: 90vh;
+  &-mainpage,
+  &-accountpage {
     max-width: $site-width;
     margin: 0 auto;
     padding-top: $headerHeight;
+  }
+  &-mainpage {
+    height: $mainpageheight;
+  }
+  &-toppage,
+  &-loginpage,
+  &-registpage {
+    height: 90vh;
+  }
+  &-accountpage {
+    height: 180vh;
   }
   &-toparea {
     padding: $space_3l $space_m;

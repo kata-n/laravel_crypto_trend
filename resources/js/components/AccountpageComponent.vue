@@ -1,32 +1,29 @@
 <template>
-    <div class="l-container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Twitterアカウントのページです</div>
-
-                    <button v-if="flag" @click="autofollow">
-                      自動フォローを解除
-                    </button>
-                    <button @click="autofollow" v-else>
-                      自動フォローをする
-                    </button>
-
-
-                    <dl v-for="(account in accountdata.results">
-                      <button type="submit" @click="changefollow(account.screen_name)">フォローする</button>
-                      <dt>アカウント名：{{account.name}}</dt>
-                      <dt>ユーザー名：{{account.screen_name}}</dt>
-                      <dt>フォロー数：{{account.friends_count}}</dt>
-                      <dt>フォロワー数：{{account.followers_count}}</dt>
-                      <dt>プロフィール：{{account.description}}</dt>
-                      <dt>最新ツイート：{{account.status.text}}</dt>
-                    </dl>
-                    <a href="/mainpage" class="">メインページへ</a>
-                </div>
-            </div>
+    <div class="l-accountpage">
+      <div class="l-mainwrapper">
+        <div class="l-maintitle">
+          <h2>Twitterアカウント一覧</h2>
         </div>
+
+        <button v-if="flag" @click="autofollow">
+          自動フォローを解除
+        </button>
+        <button @click="autofollow" v-else>
+          自動フォローをする
+        </button>
+
+        <dl v-for="(account in accountdata.results">
+          <button type="submit" @click="changefollow(account.screen_name)">フォローする</button>
+          <dt>アカウント名：{{account.name}}</dt>
+          <dt>ユーザー名：{{account.screen_name}}</dt>
+          <dt>フォロー数：{{account.friends_count}}</dt>
+          <dt>フォロワー数：{{account.followers_count}}</dt>
+          <dt>プロフィール：{{account.description}}</dt>
+          <dt>最新ツイート：{{account.status.text}}</dt>
+        </dl>
+      </div>
     </div>
+
 </template>
 
 <script>

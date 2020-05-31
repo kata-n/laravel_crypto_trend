@@ -1936,9 +1936,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2684,79 +2681,66 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "l-container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-8" }, [
-        _c(
-          "div",
-          { staticClass: "card" },
-          [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Twitterアカウントのページです")
+  return _c("div", { staticClass: "l-accountpage" }, [
+    _c(
+      "div",
+      { staticClass: "l-mainwrapper" },
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _vm.flag
+          ? _c("button", { on: { click: _vm.autofollow } }, [
+              _vm._v("\n      自動フォローを解除\n    ")
+            ])
+          : _c("button", { on: { click: _vm.autofollow } }, [
+              _vm._v("\n      自動フォローをする\n    ")
+            ]),
+        _vm._v(" "),
+        _vm._l(_vm.accountdata.results, function(account) {
+          return _c("dl", [
+            _c(
+              "button",
+              {
+                attrs: { type: "submit" },
+                on: {
+                  click: function($event) {
+                    return _vm.changefollow(account.screen_name)
+                  }
+                }
+              },
+              [_vm._v("フォローする")]
+            ),
+            _vm._v(" "),
+            _c("dt", [_vm._v("アカウント名：" + _vm._s(account.name))]),
+            _vm._v(" "),
+            _c("dt", [_vm._v("ユーザー名：" + _vm._s(account.screen_name))]),
+            _vm._v(" "),
+            _c("dt", [_vm._v("フォロー数：" + _vm._s(account.friends_count))]),
+            _vm._v(" "),
+            _c("dt", [
+              _vm._v("フォロワー数：" + _vm._s(account.followers_count))
             ]),
             _vm._v(" "),
-            _vm.flag
-              ? _c("button", { on: { click: _vm.autofollow } }, [
-                  _vm._v(
-                    "\n                  自動フォローを解除\n                "
-                  )
-                ])
-              : _c("button", { on: { click: _vm.autofollow } }, [
-                  _vm._v(
-                    "\n                  自動フォローをする\n                "
-                  )
-                ]),
+            _c("dt", [_vm._v("プロフィール：" + _vm._s(account.description))]),
             _vm._v(" "),
-            _vm._l(_vm.accountdata.results, function(account) {
-              return _c("dl", [
-                _c(
-                  "button",
-                  {
-                    attrs: { type: "submit" },
-                    on: {
-                      click: function($event) {
-                        return _vm.changefollow(account.screen_name)
-                      }
-                    }
-                  },
-                  [_vm._v("フォローする")]
-                ),
-                _vm._v(" "),
-                _c("dt", [_vm._v("アカウント名：" + _vm._s(account.name))]),
-                _vm._v(" "),
-                _c("dt", [
-                  _vm._v("ユーザー名：" + _vm._s(account.screen_name))
-                ]),
-                _vm._v(" "),
-                _c("dt", [
-                  _vm._v("フォロー数：" + _vm._s(account.friends_count))
-                ]),
-                _vm._v(" "),
-                _c("dt", [
-                  _vm._v("フォロワー数：" + _vm._s(account.followers_count))
-                ]),
-                _vm._v(" "),
-                _c("dt", [
-                  _vm._v("プロフィール：" + _vm._s(account.description))
-                ]),
-                _vm._v(" "),
-                _c("dt", [
-                  _vm._v("最新ツイート：" + _vm._s(account.status.text))
-                ])
-              ])
-            }),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "/mainpage" } }, [
-              _vm._v("メインページへ")
-            ])
-          ],
-          2
-        )
-      ])
-    ])
+            _c("dt", [_vm._v("最新ツイート：" + _vm._s(account.status.text))])
+          ])
+        })
+      ],
+      2
+    )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "l-maintitle" }, [
+      _c("h2", [_vm._v("Twitterアカウント一覧")])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -15587,22 +15571,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/script.js":
-/*!********************************!*\
-  !*** ./resources/js/script.js ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-$(function () {
-  //フッターを最下部に固定
-  var mainContents = $('.l-mainwrapper');
-  console.log(mainContents);
-  $(".l-footer").css("padding-bottom", mainContents + "px");
-});
-
-/***/ }),
-
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -15615,14 +15583,13 @@ $(function () {
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/js/script.js ./resources/sass/app.scss ***!
-  \**************************************************************************************/
+/*!*************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Applications/MAMP/htdocs/laravel_crypto_trend/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /Applications/MAMP/htdocs/laravel_crypto_trend/resources/js/script.js */"./resources/js/script.js");
 module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/laravel_crypto_trend/resources/sass/app.scss */"./resources/sass/app.scss");
 
 

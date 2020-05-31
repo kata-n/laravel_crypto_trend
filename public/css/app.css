@@ -501,11 +501,25 @@ li {
 .l-toppage,
 .l-loginpage,
 .l-registpage,
-.l-mainpage {
-  height: 90vh;
+.l-mainpage,
+.l-accountpage {
   max-width: 980px;
   margin: 0 auto;
   padding-top: 64px;
+}
+
+.l-mainpage {
+  height: 4600px;
+}
+
+.l-toppage,
+.l-loginpage,
+.l-registpage {
+  height: 90vh;
+}
+
+.l-accountpage {
+  height: 180vh;
 }
 
 .l-toparea {
@@ -556,6 +570,10 @@ li {
 
 .l-cryptoranking {
   height: 8vh;
+}
+
+.l-maintitle {
+  margin: 1rem 0;
 }
 
 .c-atagbtn {
