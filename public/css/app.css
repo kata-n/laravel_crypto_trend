@@ -744,8 +744,13 @@ li {
 }
 
 .p-profilecount {
-  display: inline-block;
-  font-size: 1.4rem;
+  display: -webkit-box;
+  display: flex;
+  font-size: 0.5rem;
+}
+
+.p-profilecount p {
+  margin: 0.5rem 0.8rem;
 }
 
 .p-newstitle {
