@@ -11,7 +11,6 @@
       <span></span>
       <span></span>
     </div>
-  </nav>
   <nav class="header-nav js-toggle-sp-menu-target" id="js-classtaget">
     <ul class="l-listwrapper p-listwrapper">
       <li class="l-list p-list"><a href="/mainpage">Twitterランキング</a></li>
