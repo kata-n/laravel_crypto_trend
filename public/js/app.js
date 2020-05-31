@@ -2697,7 +2697,7 @@ var render = function() {
             ]),
         _vm._v(" "),
         _vm._l(_vm.accountdata.results, function(account) {
-          return _c("dl", [
+          return _c("div", { staticClass: "l-accountarea p-accountarea" }, [
             _c(
               "button",
               {
@@ -2711,19 +2711,19 @@ var render = function() {
               [_vm._v("フォローする")]
             ),
             _vm._v(" "),
-            _c("dt", [_vm._v("アカウント名：" + _vm._s(account.name))]),
+            _c("p", [_vm._v("アカウント名：" + _vm._s(account.name))]),
             _vm._v(" "),
-            _c("dt", [_vm._v("ユーザー名：" + _vm._s(account.screen_name))]),
+            _c("p", [_vm._v("ユーザー名：" + _vm._s(account.screen_name))]),
             _vm._v(" "),
-            _c("dt", [_vm._v("フォロー数：" + _vm._s(account.friends_count))]),
+            _c("p", [_vm._v("フォロー数：" + _vm._s(account.friends_count))]),
             _vm._v(" "),
-            _c("dt", [
+            _c("p", [
               _vm._v("フォロワー数：" + _vm._s(account.followers_count))
             ]),
             _vm._v(" "),
-            _c("dt", [_vm._v("プロフィール：" + _vm._s(account.description))]),
+            _c("p", [_vm._v("プロフィール：" + _vm._s(account.description))]),
             _vm._v(" "),
-            _c("dt", [_vm._v("最新ツイート：" + _vm._s(account.status.text))])
+            _c("p", [_vm._v("最新ツイート：" + _vm._s(account.status.text))])
           ])
         })
       ],

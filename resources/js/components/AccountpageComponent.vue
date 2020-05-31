@@ -12,15 +12,15 @@
           自動フォローをする
         </button>
 
-        <dl v-for="(account in accountdata.results">
+        <div v-for="(account in accountdata.results" class="l-accountarea p-accountarea">
           <button type="submit" @click="changefollow(account.screen_name)">フォローする</button>
-          <dt>アカウント名：{{account.name}}</dt>
-          <dt>ユーザー名：{{account.screen_name}}</dt>
-          <dt>フォロー数：{{account.friends_count}}</dt>
-          <dt>フォロワー数：{{account.followers_count}}</dt>
-          <dt>プロフィール：{{account.description}}</dt>
-          <dt>最新ツイート：{{account.status.text}}</dt>
-        </dl>
+          <p>アカウント名：{{account.name}}</p>
+          <p>ユーザー名：{{account.screen_name}}</p>
+          <p>フォロー数：{{account.friends_count}}</p>
+          <p>フォロワー数：{{account.followers_count}}</p>
+          <p>プロフィール：{{account.description}}</p>
+          <p>最新ツイート：{{account.status.text}}</p>
+        </div>
       </div>
     </div>
 

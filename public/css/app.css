@@ -576,6 +576,10 @@ li {
   margin: 1rem 0;
 }
 
+.l-accountarea {
+  margin-bottom: 1rem;
+}
+
 .c-atagbtn {
   display: block;
   text-align: center;
@@ -677,6 +681,11 @@ li {
 
 .p-RnkingSlect {
   margin: 1rem 1rem 1rem 0;
+}
+
+.p-accountarea {
+  background: #fff;
+  box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
 }
 
 footer {
