@@ -521,9 +521,12 @@ li {
   height: 90vh;
 }
 
-.l-accountpage,
 .l-newspage {
   height: 260vh;
+}
+
+.l-accountpage {
+  height: 1800px;
 }
 
 .l-toparea {
@@ -738,6 +741,11 @@ li {
 .p-accountarea {
   background: #fff;
   box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
+}
+
+.p-profilecount {
+  display: inline-block;
+  font-size: 1.4rem;
 }
 
 .p-newstitle {

@@ -19,9 +19,11 @@
   &-authpage {
     height: 90vh;
   }
-  &-accountpage,
   &-newspage{
     height: 260vh;
+  }
+  &-accountpage {
+    height: 1800px;
   }
   &-toparea {
     padding: $space_3l $space_m;

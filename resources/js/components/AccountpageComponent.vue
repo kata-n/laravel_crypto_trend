@@ -16,8 +16,10 @@
           <button type="submit" @click="changefollow(account.screen_name)">フォローする</button>
           <p>アカウント名：{{account.name}}</p>
           <p>ユーザー名：{{account.screen_name}}</p>
-          <p>フォロー数：{{account.friends_count}}</p>
-          <p>フォロワー数：{{account.followers_count}}</p>
+          <div class="p-profilecount">
+            <p>フォロー数：{{account.friends_count}}</p>
+            <p>フォロワー数：{{account.followers_count}}</p>
+          </div>
           <p>プロフィール：{{account.description}}</p>
           <p>最新ツイート：{{account.status.text}}</p>
         </div>
