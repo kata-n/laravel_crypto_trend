@@ -28,7 +28,7 @@
 
         <div class="l-authbody">
             @if (session('status'))
-                <div class="alert alert-success" role="alert">
+                <div class="p-alert_success" role="alert">
                     {{ session('status') }}
                 </div>
             @endif

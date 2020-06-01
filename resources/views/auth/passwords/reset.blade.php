@@ -4,23 +4,12 @@
 
 @section('header')
   @parent
-  <div class="l-headerlogo"><a href="/mainpage" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>
-  <nav class="l-nav">
-    <div class="menu-trigger js-toggle-sp-menu" id="js-sp-nav-menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  <nav class="header-nav js-toggle-sp-menu-target" id="js-classtaget">
-    <ul class="l-listwrapper p-listwrapper">
-      <li class="l-list p-list"><a href="/login">ログインする</a></li>
-    </ul>
-  </nav>
+  <div class="l-headerlogo">Crypto Trend</div>
 @endsection
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+<div class="l-container p-container">
+    <div class="l-authpage">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Reset Password') }}</div>
