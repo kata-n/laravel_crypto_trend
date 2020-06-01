@@ -6,12 +6,12 @@
   @parent
   <div class="l-headerlogo"><a href="/mainpage" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>
   <nav class="l-nav">
-    <div class="menu-trigger js-toggle-sp-menu" id="js-sp-nav-menu">
+    <div class="c-menu-trigger js-toggle-sp-menu" id="js-sp-nav-menu">
       <span></span>
       <span></span>
       <span></span>
     </div>
-  <nav class="header-nav js-toggle-sp-menu-target" id="js-classtaget">
+  <nav class="c-header-nav js-toggle-sp-menu-target" id="js-classtaget">
     <ul class="l-listwrapper p-listwrapper">
       <li class="l-list p-list"><a href="/login">ログインする</a></li>
     </ul>
@@ -31,7 +31,7 @@
                         <input id="name" type="text" class="c-inputtext @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                         <div class="c-text_underline"></div>
                         @error('name')
-                            <span class="invalid-feedback" role="alert">
+                            <span role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
@@ -43,7 +43,7 @@
                           <input id="email" type="email" class="c-inputtext @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                           <div class="c-text_underline"></div>
                           @error('email')
-                              <span class="invalid-feedback" role="alert">
+                              <span role="alert">
                                   <strong>{{ $message }}</strong>
                               </span>
                           @enderror
@@ -56,7 +56,7 @@
                           <input id="password" type="password" class="c-inputtext @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                           <div class="c-text_underline"></div>
                           @error('password')
-                              <span class="invalid-feedback" role="alert">
+                              <span role="alert">
                                   <strong>{{ $message }}</strong>
                               </span>
                           @enderror

@@ -468,17 +468,6 @@ li {
   margin-right: 1rem;
 }
 
-@media screen and (max-width: 476px) {
-  .l-nav {
-    display: -webkit-box;
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-  }
-}
-
 .l-list {
   display: inline-block;
   margin: 0 1rem;
@@ -595,6 +584,8 @@ li {
     display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+            justify-content: center;
     padding: 0.1rem;
   }
 }
@@ -763,7 +754,7 @@ li {
 .c-menu_trigger.active span:nth-of-type(1) {
   -webkit-transform: translateY(12px) rotate(-45deg);
           transform: translateY(12px) rotate(-45deg);
-  background-color: black;
+  background-color: #333;
 }
 
 .c-menu_trigger.active span:nth-of-type(2) {
@@ -773,7 +764,7 @@ li {
 .c-menu_trigger.active span:nth-of-type(3) {
   -webkit-transform: translateY(-16px) rotate(45deg);
           transform: translateY(-16px) rotate(45deg);
-  background-color: black;
+  background-color: #333;
 }
 
 @media screen and (max-width: 476px) {
@@ -838,6 +829,12 @@ li {
 .p-list a {
   color: #f4f3f3;
   letter-spacing: 2px;
+}
+
+@media screen and (max-width: 476px) {
+  .p-list a {
+    color: #942525;
+  }
 }
 
 .p-cryptolist input {

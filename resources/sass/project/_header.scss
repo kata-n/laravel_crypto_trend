@@ -2,5 +2,8 @@
   &-list a {
     color: $headerListColor;
     letter-spacing: $letter-spacing;
+    @include mq() {
+      color: $headerspListColor;
+    }
   }
 }

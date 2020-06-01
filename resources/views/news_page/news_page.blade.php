@@ -6,12 +6,12 @@
   @parent
   <div class="l-headerlogo"><a href="/mainpage" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>
   <nav class="l-nav">
-    <div class="menu-trigger js-toggle-sp-menu" id="js-sp-nav-menu">
+    <div class="c-menu-trigger js-toggle-sp-menu" id="js-sp-nav-menu">
       <span></span>
       <span></span>
       <span></span>
     </div>
-  <nav class="header-nav js-toggle-sp-menu-target" id="js-classtaget">
+  <nav class="c-header-nav js-toggle-sp-menu-target" id="js-classtaget">
     <ul class="l-listwrapper p-listwrapper">
       <li class="l-list p-list"><a href="/mainpage">Twitterランキング</a></li>
       <li class="l-list p-list"><a href="/accountpage">Twitterアカウント</a></li>

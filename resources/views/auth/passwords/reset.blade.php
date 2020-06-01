@@ -1,6 +1,6 @@
 @extends('layouts.contents-template')
 
-@section('title','パスワードの認証')
+@section('title','パスワードの確認')
 
 @section('header')
   @parent
