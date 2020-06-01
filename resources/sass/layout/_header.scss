@@ -3,6 +3,7 @@
     background-color: $headerBgColor;
     height: $headerHeight;
     width: 100%;
+    position: fixed;
     z-index: 9999;
     display: flex;
   }
@@ -14,6 +15,14 @@
     margin-top: $space_xm;
     margin-bottom: $space_xm;
     margin-right: $space_m;
+    @include mq(){
+      display: -webkit-box;
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+    }
   }
   &-list {
     display: inline-block;

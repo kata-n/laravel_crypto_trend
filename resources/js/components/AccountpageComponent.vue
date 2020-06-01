@@ -2,7 +2,7 @@
     <div class="l-accountpage">
       <div class="l-mainwrapper">
         <div class="l-maintitle">
-          <h2>Twitterアカウント一覧</h2>
+          <h2 class="c-heading">Twitterアカウント一覧</h2>
         </div>
 
         <button v-if="flag" @click="autofollow" class="c-autofollowbtn">

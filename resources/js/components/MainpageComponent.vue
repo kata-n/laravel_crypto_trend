@@ -2,7 +2,7 @@
     <div class="l-mainpage">
         <div class="l-mainwrapper">
             <div class="l-maintitle">
-              <h2>仮想通貨Twitterランキング</h2>
+              <h2 class="c-heading">仮想通貨Twitterランキング</h2>
             </div>
 
             <div class="l-cryptoranking p-cryptoranking">

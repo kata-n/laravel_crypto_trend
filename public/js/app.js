@@ -2747,7 +2747,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "l-maintitle" }, [
-      _c("h2", [_vm._v("Twitterアカウント一覧")])
+      _c("h2", { staticClass: "c-heading" }, [_vm._v("Twitterアカウント一覧")])
     ])
   }
 ]
@@ -3032,7 +3032,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "l-maintitle" }, [
-      _c("h2", [_vm._v("仮想通貨Twitterランキング")])
+      _c("h2", { staticClass: "c-heading" }, [
+        _vm._v("仮想通貨Twitterランキング")
+      ])
     ])
   }
 ]
@@ -3092,7 +3094,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "l-maintitle" }, [
-      _c("h2", [_vm._v("仮想通貨News一覧")])
+      _c("h2", { staticClass: "c-heading" }, [_vm._v("仮想通貨News一覧")])
     ])
   }
 ]
@@ -15277,6 +15279,8 @@ __webpack_require__.r(__webpack_exports__);
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+__webpack_require__(/*! ./jQuery/script */ "./resources/js/jQuery/script.js");
+
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 
 Vue.prototype.$http = axios__WEBPACK_IMPORTED_MODULE_0___default.a;
@@ -15583,6 +15587,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ToppageComponent_vue_vue_type_template_id_025dec38___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/jQuery/script.js":
+/*!***************************************!*\
+  !*** ./resources/js/jQuery/script.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(function () {
+  //spメニュー
+  $('.js-toggle-sp-menu').click(function () {
+    $(this).toggleClass('active');
+    $('.js-toggle-sp-menu-target').toggleClass('active');
+  });
+  $(window).outerWidth(function () {
+    var x = $(window).outerWidth();
+    var y = 767;
+
+    if (x <= y) {
+      $('#js-classtaget').addClass('js-toggle-sp-menu-target');
+    } else {
+      $('#js-classtaget').removeClass('js-toggle-sp-menu-target');
+    }
+  });
+});
 
 /***/ }),
 

@@ -3,7 +3,7 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-
+require("./jQuery/script");
 window.Vue = require('vue');
 import axios from 'axios'
 Vue.prototype.$http = axios;
