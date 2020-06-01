@@ -652,6 +652,12 @@ li {
   font-size: 1.4rem;
 }
 
+@media screen and (max-width: 476px) {
+  .c-authbtn {
+    font-size: 0.7rem;
+  }
+}
+
 .c-authbtn:hover {
   background: #464c96;
   -webkit-transition: 0.5s;

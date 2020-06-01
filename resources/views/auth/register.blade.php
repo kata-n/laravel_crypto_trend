@@ -6,12 +6,12 @@
   @parent
   <div class="l-headerlogo"><a href="/mainpage" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>
   <nav class="l-nav">
-    <div class="c-menu-trigger js-toggle-sp-menu" id="js-sp-nav-menu">
+    <div class="c-menu_trigger js-toggle-sp-menu" id="js-sp-nav-menu">
       <span></span>
       <span></span>
       <span></span>
     </div>
-  <nav class="c-header-nav js-toggle-sp-menu-target" id="js-classtaget">
+  <nav class="c-header_nav js-toggle-sp-menu-target" id="js-classtaget">
     <ul class="l-listwrapper p-listwrapper">
       <li class="l-list p-list"><a href="/login">ログインする</a></li>
     </ul>
