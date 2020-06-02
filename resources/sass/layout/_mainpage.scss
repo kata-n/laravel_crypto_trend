@@ -18,6 +18,10 @@
     padding: $space_m;
   }
   &-cryptoranking {
-    margin: $space_m;
+    display: flex;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: $space_s;
+    margin-bottom: $space_xs;
   }
 }

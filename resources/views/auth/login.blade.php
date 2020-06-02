@@ -23,7 +23,7 @@
    <div class="l-loginpage">
     <div class="l-loginwrapper">
           <div class="l-loginform c-form">
-              <h2 class="c-heading">{{ __('Login') }}</h2>
+              <div class="c-heading">{{ __('Login') }}</div>
 
               <div class="c-content">
                   <form method="POST" action="{{ route('login') }}">

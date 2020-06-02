@@ -2066,6 +2066,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2779,7 +2780,7 @@ var render = function() {
       [
         _vm._m(0),
         _vm._v(" "),
-        _c("div", { staticClass: "l-cryptoranking p-cryptoranking" }, [
+        _c("group", { staticClass: "l-cryptoranking p-cryptoranking" }, [
           _c("input", {
             directives: [
               {
@@ -3034,7 +3035,9 @@ var staticRenderFns = [
     return _c("div", { staticClass: "l-maintitle" }, [
       _c("h2", { staticClass: "c-heading" }, [
         _vm._v("仮想通貨Twitterランキング")
-      ])
+      ]),
+      _vm._v(" "),
+      _c("div", [_vm._v("各銘柄毎でツイート数が多い順に表示しています。")])
     ])
   }
 ]

@@ -4,9 +4,7 @@
 
 @section('header')
   @parent
-  <div class="l-headerlogo">
-    <p>Crypto Trend</p>
-  </div>
+  <div class="l-headerlogo"><a href="" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>
 @endsection
 
 @section('content')
