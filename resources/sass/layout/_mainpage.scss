@@ -23,5 +23,8 @@
     overflow: hidden;
     margin-top: $space_s;
     margin-bottom: $space_xs;
+    @include mq() {
+      justify-content: center;
+    }
   }
 }

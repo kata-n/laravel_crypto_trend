@@ -604,6 +604,13 @@ li {
   margin-bottom: 0.8rem;
 }
 
+@media screen and (max-width: 476px) {
+  .l-cryptoranking {
+    -webkit-box-pack: center;
+            justify-content: center;
+  }
+}
+
 .l-maintitle {
   margin: 1rem 0;
 }

@@ -6,7 +6,7 @@
               <div>各銘柄毎でツイート数が多い順に表示しています。</div>
             </div>
 
-            <group class="l-cryptoranking p-cryptoranking">
+            <div class="l-cryptoranking p-cryptoranking">
               <input type="radio" value="1" id="Tab1" v-model="isActive">
               <label for="Tab1" class="p-RnkingSlect">過去1時間</label>
 
@@ -15,7 +15,7 @@
 
               <input type="radio" value="3" id="Tab3" v-model="isActive">
               <label for="Tab3" class="p-RnkingSlect">過去一週間</label>
-            </group>
+            </div>
 
             <div class="crypto_list l-cryptolist">
               <div v-for="Cryopto in Crypto_lists" class="p-cryptolist">
@@ -35,8 +35,10 @@
               {{ Hourdata.Crypto_name }}
               </a>
               <p>ツイート数：{{ Hourdata.Tweet_count }}</p>
-              <p>最高取引価格：{{ Hourdata.Crypto_high }}</p>
-              <p>最安取引価格：{{ Hourdata.Crypto_low }}</p>
+              <p v-if="Hourdata.Crypto_high == 0">最高取引価格：不明</p>
+              <p v-else>最高取引価格：{{ Hourdata.Crypto_high }}</p>
+              <p v-if="Hourdata.Crypto_low == 0">最安取引価格：不明</p>
+              <p v-else>最安取引価格：{{ Hourdata.Crypto_low }}</p>
               <p>取得日時：{{ Hourdata.Tweet_time }}</p>
             </div>
 
@@ -48,8 +50,10 @@
               {{ Daydata.Crypto_name }}
               </a>
               <p>ツイート数：{{ Daydata.Tweet_count }}</p>
-              <p>最高取引価格：{{ Daydata.Crypto_high }}</p>
-              <p>最安取引価格：{{ Daydata.Crypto_low }}</p>
+              <p v-if="Daydata.Crypto_high == 0">最高取引価格：不明</p>
+              <p v-else>最高取引価格：{{ Daydata.Crypto_high }}</p>
+              <p v-if="Daydata.Crypto_low == 0">最安取引価格：不明</p>
+              <p v-else>最安取引価格：{{ Daydata.Crypto_low }}</p>
               <p>取得日時：{{ Daydata.Tweet_time }}</p>
             </div>
 
@@ -61,8 +65,10 @@
               {{ Weekdata.Crypto_name }}
               </a>
               <p>ツイート数：{{ Weekdata.Tweet_count }}</p>
-              <p>最高取引価格：{{ Weekdata.Crypto_high }}</p>
-              <p>最安取引価格：{{ Weekdata.Crypto_low }}</p>
+              <p v-if="Weekdata.Crypto_high == 0">最高取引価格：不明</p>
+              <p v-else>最高取引価格：{{ Weekdata.Crypto_high }}</p>
+              <p v-if="Weekdata.Crypto_low == 0">最安取引価格：不明</p>
+              <p v-else>最安取引価格：{{ Weekdata.Crypto_low }}</p>
               <p>取得日時：{{ Weekdata.Tweet_time }}</p>
             </div>
         </div>

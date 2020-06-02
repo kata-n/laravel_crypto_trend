@@ -12,6 +12,7 @@ class CoincheckController extends Controller
   public static function ticker()
   {
 
+    //CoinCheckApiはビットコインの価格のみ取得可能
     $strUrl = "https://coincheck.com/api/ticker";
     $file = file_get_contents($strUrl);
     $file = mb_convert_encoding($file, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
