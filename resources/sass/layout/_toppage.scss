@@ -1,0 +1,23 @@
+.l{
+  &-toppagecontent {
+    padding-top: $headerHeight;
+    width: 80%;
+    margin: 0 auto;
+  }
+  &-firstview,
+  &-secondview {
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &-toparea {
+    padding: $space_4l $space_m;
+    display: flex;
+    justify-content: center;
+  }
+  &-toptwitterarea {
+    text-align: center;
+    margin: 0 auto;
+    padding: $space_3l $space_m;
+  }
+}

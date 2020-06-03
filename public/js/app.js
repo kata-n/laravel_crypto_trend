@@ -2201,6 +2201,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -3148,29 +3158,46 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "l-toppage" }, [
-      _c("div", { staticClass: "l-toparea" }, [
-        _c(
-          "a",
-          { staticClass: "c-atagbtn c-topbtn", attrs: { href: "/login" } },
-          [_vm._v("ログインする")]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          { staticClass: "c-atagbtn c-topbtn", attrs: { href: "/register" } },
-          [_vm._v("登録する")]
-        )
+      _c("div", { staticClass: "l-firstview p-firstview" }, [
+        _c("div", { staticClass: "l-toppagecontent" }, [
+          _c("p", { staticClass: "p-toppagetilte" }, [
+            _vm._v("仮想通貨のトレンドをTwitterから")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "l-toparea" }, [
+            _c(
+              "a",
+              { staticClass: "c-atagbtn c-topbtn", attrs: { href: "/login" } },
+              [_vm._v("ログインする")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "c-atagbtn c-topbtn",
+                attrs: { href: "/register" }
+              },
+              [_vm._v("登録する")]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "l-toptwitterarea" }, [
+            _c(
+              "a",
+              {
+                staticClass: "c-atagbtn c-twitterbtn",
+                attrs: { href: "/twitter/login" }
+              },
+              [_vm._v("Twitterでログインする")]
+            )
+          ])
+        ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "l-toptwitterarea" }, [
-        _c(
-          "a",
-          {
-            staticClass: "c-atagbtn c-twitterbtn",
-            attrs: { href: "/twitter/login" }
-          },
-          [_vm._v("Twitterでログインする")]
-        )
+      _c("div", { staticClass: "l-secondview" }, [
+        _c("div", { staticClass: "l-toppagecontent" }, [
+          _c("p", [_vm._v("このサービスでできること")])
+        ])
       ])
     ])
   }

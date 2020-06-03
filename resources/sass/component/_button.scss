@@ -8,13 +8,13 @@
     background-color: $btnBaseColor;
     color: $White;
     width: 30%;
-    padding: $space_s $space_m;
-    margin: $space_m;
+    padding: $space_xs $space_l;
+    margin: $space_m $space_xm;
   }
   &-twitterbtn {
     background-color: $twitterColor;
     color: $White;
-    padding: $space_s $space_m;
+    padding: $space_m $space_xm;
     width: 40%;
     margin: 0 auto;
     @include mq(){

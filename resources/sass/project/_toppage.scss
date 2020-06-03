@@ -1,0 +1,14 @@
+.p {
+  &-toppagetilte {
+    color: $White;
+    font-weight: 800;
+    font-size: $font-size_24px;
+    letter-spacing: $letter-spacing;
+  }
+  &-firstview {
+    position: relative;
+    background: url('images/toppage/firstview_backgtound.png') no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}

@@ -478,7 +478,7 @@ li {
 }
 
 .l-footer {
-  background-color: #93d1d1;
+  background-color: #dce4e4;
   height: 25px;
   padding: 18px;
   z-index: 9999;
@@ -496,7 +496,6 @@ li {
   width: 100%;
 }
 
-.l-toppage,
 .l-loginpage,
 .l-registpage,
 .l-mainpage,
@@ -512,7 +511,6 @@ li {
   height: 4600px;
 }
 
-.l-toppage,
 .l-loginpage,
 .l-authpage {
   height: 90vh;
@@ -528,20 +526,6 @@ li {
 
 .l-accountpage {
   height: 1800px;
-}
-
-.l-toparea {
-  padding: 3rem 1rem;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-}
-
-.l-toptwitterarea {
-  text-align: center;
-  margin: 0 auto;
-  padding: 3rem 1rem;
 }
 
 .l-loginwrapper,
@@ -620,6 +604,33 @@ li {
   padding: 1.5rem;
 }
 
+.l-toppagecontent {
+  padding-top: 64px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.l-firstview,
+.l-secondview {
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.l-toparea {
+  padding: 4rem 1rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.l-toptwitterarea {
+  text-align: center;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
 .c-atagbtn {
   display: block;
   text-align: center;
@@ -627,17 +638,17 @@ li {
 }
 
 .c-topbtn {
-  background-color: #93d1d1;
+  background-color: #43ded0;
   color: #fff;
   width: 30%;
-  padding: 0.5rem 1rem;
-  margin: 1rem;
+  padding: 0.8rem 1.5rem;
+  margin: 1rem 1.1rem;
 }
 
 .c-twitterbtn {
   background-color: #00acee;
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.1rem;
   width: 40%;
   margin: 0 auto;
 }
@@ -658,7 +669,7 @@ li {
   display: block;
   margin: 1rem auto;
   padding: 0.8rem 2.5rem;
-  background: #93d1d1;
+  background: #43ded0;
   color: #fff;
   letter-spacing: 2px;
   font-size: 1.4rem;
@@ -926,6 +937,20 @@ li {
 .p-cryptoranking label:last-of-type {
   border-right: 0px;
   border-radius: 0 3px 3px 0;
+}
+
+.p-toppagetilte {
+  color: #fff;
+  font-weight: 800;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+}
+
+.p-firstview {
+  position: relative;
+  background: url(/images/firstview_backgtound.png?aa7067afcc0c8c9bae081df7b7eff490) no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .p-accountarea {
