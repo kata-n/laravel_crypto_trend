@@ -20,4 +20,16 @@
     margin: 0 auto;
     padding: $space_3l $space_m;
   }
+  &-introduction {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: $space_2l;
+    &__column {
+      width: 30%;
+      margin-bottom: $space_xxs;
+      margin: $space_m;
+    }
+  }
 }

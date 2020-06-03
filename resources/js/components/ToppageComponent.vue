@@ -2,7 +2,7 @@
     <div class="l-toppage">
        <div class="l-firstview p-firstview">
          <div class="l-toppagecontent">
-            <p class="p-toppagetilte">仮想通貨のトレンドをTwitterから</p>
+            <p class="p-toppagetitle">仮想通貨のトレンドをTwitterから</p>
             <div class="l-toparea">
                 <a href="/login" class="c-atagbtn c-topbtn">ログインする</a>
                 <a href="/register" class="c-atagbtn c-topbtn">登録する</a>
@@ -14,7 +14,57 @@
        </div>
        <div class="l-secondview">
          <div class="l-toppagecontent">
-           <p>このサービスでできること</p>
+           <p class="p-toppageintoroduce">特徴と機能</p>
+            <div class="l-introduction">
+              <div class="l-introduction__column">
+                <div class="p-introduction__title">
+                  <p>つぶやき数をランキングで表示</p>
+                </div>
+                <div class="introduction__img">
+                  <img src="/images/toppage/introduction1.png" alt />
+                </div>
+                <div class="introduction__comment">
+                  <p>
+                    仮想通貨の各銘柄をキーワードに
+                    <br />集計結果をランキング形式で表示。
+                    <br />1時間、1日、1週間ごとで表示が可能。
+                    <br />話題の仮想通貨を知るきっかけになります。
+                  </p>
+                </div>
+              </div>
+              <div class="l-introduction__column">
+                <div class="p-introduction__title">
+                  <p>Twitterユーザー表示</p>
+                </div>
+                <div class="introduction__img">
+                  <img src="/images/toppage/introduction2.png" alt />
+                </div>
+                <div class="introduction__comment">
+                  <p>
+                    仮想通貨に関連したTwitterユーザーを表示。
+                    <br />Twitterアカウントを登録すれば
+                    <br />画面上からフォローする事が可能。
+                    <br />ユーザーを見つけるきっかけになります。
+                  </p>
+                </div>
+              </div>
+              <div class="l-introduction__column">
+                <div class="p-introduction__title">
+                  <p>仮想通貨関連ニュース</p>
+                </div>
+                <div class="introduction__img">
+                  <img src="/images/toppage/introduction3.png" alt />
+                </div>
+                <div class="introduction__comment">
+                  <p>
+                    仮想通貨に関連したニュースを表示。
+                    <br />仮想通貨のニュースを一覧で表示。
+                    <br />詳細への外部ページへのリンクも設置。
+                    <br />話題の仮想通貨を知るきっかけになります。
+                  </p>
+                </div>
+              </div>
+            </div>
          </div>
        </div>
     </div>
@@ -24,7 +74,7 @@
 <script>
     export default {
         mounted() {
-            console.log('Component mounted.')
+
         }
     }
 </script>

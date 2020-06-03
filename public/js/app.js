@@ -2211,10 +2211,58 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  }
+  mounted: function mounted() {}
 });
 
 /***/ }),
@@ -3160,7 +3208,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "l-toppage" }, [
       _c("div", { staticClass: "l-firstview p-firstview" }, [
         _c("div", { staticClass: "l-toppagecontent" }, [
-          _c("p", { staticClass: "p-toppagetilte" }, [
+          _c("p", { staticClass: "p-toppagetitle" }, [
             _vm._v("仮想通貨のトレンドをTwitterから")
           ]),
           _vm._v(" "),
@@ -3196,7 +3244,99 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "l-secondview" }, [
         _c("div", { staticClass: "l-toppagecontent" }, [
-          _c("p", [_vm._v("このサービスでできること")])
+          _c("p", { staticClass: "p-toppageintoroduce" }, [
+            _vm._v("特徴と機能")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "l-introduction" }, [
+            _c("div", { staticClass: "l-introduction__column" }, [
+              _c("div", { staticClass: "p-introduction__title" }, [
+                _c("p", [_vm._v("つぶやき数をランキングで表示")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "introduction__img" }, [
+                _c("img", {
+                  attrs: { src: "/images/toppage/introduction1.png", alt: "" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "introduction__comment" }, [
+                _c("p", [
+                  _vm._v(
+                    "\n                仮想通貨の各銘柄をキーワードに\n                "
+                  ),
+                  _c("br"),
+                  _vm._v("集計結果をランキング形式で表示。\n                "),
+                  _c("br"),
+                  _vm._v(
+                    "1時間、1日、1週間ごとで表示が可能。\n                "
+                  ),
+                  _c("br"),
+                  _vm._v(
+                    "話題の仮想通貨を知るきっかけになります。\n              "
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "l-introduction__column" }, [
+              _c("div", { staticClass: "p-introduction__title" }, [
+                _c("p", [_vm._v("Twitterユーザー表示")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "introduction__img" }, [
+                _c("img", {
+                  attrs: { src: "/images/toppage/introduction2.png", alt: "" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "introduction__comment" }, [
+                _c("p", [
+                  _vm._v(
+                    "\n                仮想通貨に関連したTwitterユーザーを表示。\n                "
+                  ),
+                  _c("br"),
+                  _vm._v("Twitterアカウントを登録すれば\n                "),
+                  _c("br"),
+                  _vm._v("画面上からフォローする事が可能。\n                "),
+                  _c("br"),
+                  _vm._v(
+                    "ユーザーを見つけるきっかけになります。\n              "
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "l-introduction__column" }, [
+              _c("div", { staticClass: "p-introduction__title" }, [
+                _c("p", [_vm._v("仮想通貨関連ニュース")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "introduction__img" }, [
+                _c("img", {
+                  attrs: { src: "/images/toppage/introduction3.png", alt: "" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "introduction__comment" }, [
+                _c("p", [
+                  _vm._v(
+                    "\n                仮想通貨に関連したニュースを表示。\n                "
+                  ),
+                  _c("br"),
+                  _vm._v("仮想通貨のニュースを一覧で表示。\n                "),
+                  _c("br"),
+                  _vm._v(
+                    "詳細への外部ページへのリンクも設置。\n                "
+                  ),
+                  _c("br"),
+                  _vm._v(
+                    "話題の仮想通貨を知るきっかけになります。\n              "
+                  )
+                ])
+              ])
+            ])
+          ])
         ])
       ])
     ])

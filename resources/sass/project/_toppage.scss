@@ -1,5 +1,5 @@
 .p {
-  &-toppagetilte {
+  &-toppagetitle {
     color: $White;
     font-weight: 800;
     font-size: $font-size_24px;
@@ -10,5 +10,21 @@
     background: url('images/toppage/firstview_backgtound.png') no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
+  }
+  &-toppageintoroduce {
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: 800;
+    font-size: $font-size_18px;
+    margin-top: 0;
+  }
+  &-introduction {
+    &__title {
+      text-align: center;
+      border-bottom: dashed 2px $boxunderColor;
+      letter-spacing: $letter-spacing;
+      margin-bottom: $space_2l;
+      font-size: 1.0rem;
+    }
   }
 }

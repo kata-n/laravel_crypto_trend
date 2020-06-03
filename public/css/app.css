@@ -631,6 +631,21 @@ li {
   padding: 3rem 1rem;
 }
 
+.l-introduction {
+  width: 95%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+.l-introduction__column {
+  width: 30%;
+  margin-bottom: 0.9rem;
+  margin: 1rem;
+}
+
 .c-atagbtn {
   display: block;
   text-align: center;
@@ -939,7 +954,7 @@ li {
   border-radius: 0 3px 3px 0;
 }
 
-.p-toppagetilte {
+.p-toppagetitle {
   color: #fff;
   font-weight: 800;
   font-size: 2.4rem;
@@ -951,6 +966,22 @@ li {
   background: url(/images/firstview_backgtound.png?aa7067afcc0c8c9bae081df7b7eff490) no-repeat center center;
   background-attachment: fixed;
   background-size: cover;
+}
+
+.p-toppageintoroduce {
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+.p-introduction__title {
+  text-align: center;
+  border-bottom: dashed 2px #3be5ae;
+  letter-spacing: 2px;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
 }
 
 .p-accountarea {
