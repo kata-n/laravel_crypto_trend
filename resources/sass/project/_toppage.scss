@@ -11,7 +11,8 @@
     background-attachment: fixed;
     background-size: cover;
   }
-  &-toppageintoroduce {
+  &-toppageintoroduce,
+  &-toppageend {
     text-align: center;
     letter-spacing: 5px;
     font-weight: 800;
@@ -23,8 +24,26 @@
       text-align: center;
       border-bottom: dashed 2px $boxunderColor;
       letter-spacing: $letter-spacing;
-      margin-bottom: $space_2l;
+      margin-bottom: $space_m;
       font-size: 1.0rem;
+    }
+    &__img {
+      width: 90%;
+      margin: 0 auto;
+      position: relative;
+    }
+    &__img img {
+      width: 100%;
+      vertical-align: middle;
+      object-fit: contain;
+    }
+    &__comment {
+      text-align: center;
+    }
+    &__comment p {
+      letter-spacing: $letter-spacing;
+      line-height: 2.5;
+      margin: 0
     }
   }
 }

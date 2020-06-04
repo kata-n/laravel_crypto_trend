@@ -1,19 +1,33 @@
 .l{
-  &-toppagecontent {
-    padding-top: $headerHeight;
+  &-toppagecontent,
+  &-introend {
     width: 80%;
     margin: 0 auto;
+    @include mq() {
+      width: 100%;
+    }
   }
-  &-firstview,
-  &-secondview {
+  &-firstview {
     height: 100vh;
     width: 100%;
     margin: 0 auto;
+  }
+  &-secondview {
+    height: 145vh;
+    width: 100%;
+    margin: 0 auto;
+    @include mq() {
+      height: 280vh;
+    }
   }
   &-toparea {
     padding: $space_4l $space_m;
     display: flex;
     justify-content: center;
+    @include mq() {
+      display: list-item;
+      padding: $space_l $space_m;
+    }
   }
   &-toptwitterarea {
     text-align: center;
@@ -30,6 +44,16 @@
       width: 30%;
       margin-bottom: $space_xxs;
       margin: $space_m;
+      @include mq() {
+        width: 100%;
+      }
     }
+  }
+  &-toppagecontent {
+    padding-top: $headerHeight;
+  }
+  &-introend {
+    padding-top: $headerHeight;
+
   }
 }

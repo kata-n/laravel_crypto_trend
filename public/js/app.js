@@ -2261,6 +2261,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {}
 });
@@ -3254,27 +3260,27 @@ var staticRenderFns = [
                 _c("p", [_vm._v("つぶやき数をランキングで表示")])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "introduction__img" }, [
+              _c("div", { staticClass: "p-introduction__img" }, [
                 _c("img", {
                   attrs: { src: "/images/toppage/introduction1.png", alt: "" }
                 })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "introduction__comment" }, [
+              _c("div", { staticClass: "p-introduction__comment" }, [
                 _c("p", [
                   _vm._v(
                     "\n                仮想通貨の各銘柄をキーワードに\n                "
                   ),
                   _c("br"),
-                  _vm._v("集計結果をランキング形式で表示。\n                "),
+                  _vm._v(
+                    "集計結果をランキング形式で表示しています。\n                "
+                  ),
                   _c("br"),
                   _vm._v(
                     "1時間、1日、1週間ごとで表示が可能。\n                "
                   ),
                   _c("br"),
-                  _vm._v(
-                    "話題の仮想通貨を知るきっかけになります。\n              "
-                  )
+                  _vm._v("話題の仮想通貨を知るきっかけに。\n              ")
                 ])
               ])
             ]),
@@ -3284,13 +3290,13 @@ var staticRenderFns = [
                 _c("p", [_vm._v("Twitterユーザー表示")])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "introduction__img" }, [
+              _c("div", { staticClass: "p-introduction__img" }, [
                 _c("img", {
                   attrs: { src: "/images/toppage/introduction2.png", alt: "" }
                 })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "introduction__comment" }, [
+              _c("div", { staticClass: "p-introduction__comment" }, [
                 _c("p", [
                   _vm._v(
                     "\n                仮想通貨に関連したTwitterユーザーを表示。\n                "
@@ -3300,9 +3306,7 @@ var staticRenderFns = [
                   _c("br"),
                   _vm._v("画面上からフォローする事が可能。\n                "),
                   _c("br"),
-                  _vm._v(
-                    "ユーザーを見つけるきっかけになります。\n              "
-                  )
+                  _vm._v("ユーザーを見つけるきっかけに。\n              ")
                 ])
               ])
             ]),
@@ -3312,13 +3316,13 @@ var staticRenderFns = [
                 _c("p", [_vm._v("仮想通貨関連ニュース")])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "introduction__img" }, [
+              _c("div", { staticClass: "p-introduction__img" }, [
                 _c("img", {
-                  attrs: { src: "/images/toppage/introduction3.png", alt: "" }
+                  attrs: { src: "/images/toppage/introduction2.png", alt: "" }
                 })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "introduction__comment" }, [
+              _c("div", { staticClass: "p-introduction__comment" }, [
                 _c("p", [
                   _vm._v(
                     "\n                仮想通貨に関連したニュースを表示。\n                "
@@ -3330,11 +3334,24 @@ var staticRenderFns = [
                     "詳細への外部ページへのリンクも設置。\n                "
                   ),
                   _c("br"),
-                  _vm._v(
-                    "話題の仮想通貨を知るきっかけになります。\n              "
-                  )
+                  _vm._v("仮想通貨をニュースで知る。\n              ")
                 ])
               ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "l-introend" }, [
+            _c("p", { staticClass: "p-toppageend" }, [_vm._v("まずは登録")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "l-introend__btn" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "c-atagbtn c-endbtn",
+                  attrs: { href: "/register" }
+                },
+                [_vm._v("登録する")]
+              )
             ])
           ])
         ])
