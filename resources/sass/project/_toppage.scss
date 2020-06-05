@@ -11,7 +11,7 @@
     background-attachment: fixed;
     background-size: cover;
   }
-  &-firstview::after {
+  &-toppagecontent::after {
     @include mq() {
       content:"";
       display:block;

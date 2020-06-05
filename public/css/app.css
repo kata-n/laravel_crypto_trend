@@ -1024,7 +1024,7 @@ li {
 }
 
 @media screen and (max-width: 476px) {
-  .p-firstview::after {
+  .p-toppagecontent::after {
     content: "";
     display: block;
     position: fixed;
