@@ -11,20 +11,6 @@
     background-attachment: fixed;
     background-size: cover;
   }
-  &-toppagecontent::after {
-    @include mq() {
-      content:"";
-      display:block;
-      position:fixed;
-      top:0;
-      left:0;
-      z-index:-1;
-      width:100%;
-      height:100vh;
-      background:url('images/toppage/firstview_backgtound.png') center no-repeat;
-      background-size:cover;
-    }
-  }
   &-toppageintoroduce,
   &-toppageend {
     text-align: center;
