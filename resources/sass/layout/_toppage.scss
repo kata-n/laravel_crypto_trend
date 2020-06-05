@@ -54,6 +54,8 @@
   }
   &-introend {
     padding-top: $headerHeight;
-
+    @include mq() {
+      padding-top: $space_l;
+    }
   }
 }
