@@ -1030,17 +1030,8 @@ li {
 }
 
 @media screen and (max-width: 476px) {
-  .p-firstview::before {
-    background: url(/images/firstview_backgtound.png?aa7067afcc0c8c9bae081df7b7eff490) no-repeat center;
-    background-size: cover;
-    content: "";
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100vh;
+  .p-firstview {
+    background: url(/images/firstview_sp_backgtound.png?5b924212813de997f4beed4fbf2444a7) no-repeat center center;
   }
 }
 
