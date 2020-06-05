@@ -16,6 +16,7 @@
     color: $White;
     padding: $space_m $space_xm;
     width: 40%;
+    border: 1px solid $White;
     margin: 0 auto;
     @include mq(){
       width: 80%;
