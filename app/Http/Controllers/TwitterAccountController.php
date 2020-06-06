@@ -38,27 +38,13 @@ class TwitterAccountController extends Controller
     public function follow(Request $request)
     {
         //Twitter情報取得
+
         $twitter = new TwitterOAuth(
             config('services.twitter.client_id'),
             config('services.twitter.client_secret'),
-        );
-
-    $request_token = $twitter->oauth('oauth/request_token');
-    $token_secret = $request_token["oauth_token_secret"];
-
-        $twitter2 = new TwitterOAuth(
-            config('services.twitter.client_id'),
-            config('services.twitter.client_secret'),
             config('services.twitter.access_token'),
-            $token_secret
+            config('services.twitter.access_token_secret')
         );
-
-//        $twitter = new TwitterOAuth(
-//            config('services.twitter.client_id'),
-//            config('services.twitter.client_secret'),
-//            config('services.twitter.access_token'),
-//            config('services.twitter.access_token_secret')
-//        );
 
         $user_name = $request->input('name');
         $result = $twitter2->post('friendships/create', ['screen_name'=> $user_name]);
