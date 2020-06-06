@@ -38,7 +38,6 @@ class TwitterAccountController extends Controller
 
     public function follow(Request $request)
     {
-
         //Twitter情報取得
         $connection = new TwitterOAuth(
             config('services.twitter.client_id'),
@@ -52,9 +51,9 @@ class TwitterAccountController extends Controller
             config('services.twitter.client_id'),
             config('services.twitter.client_secret'),
             $request_token['oauth_token'],
-            $request_token['oauth_token_secret']
+            $request_token['oauth_token_secret'];
         );
-      
+
 //        //Twitter情報取得
 //        $twitter = new TwitterOAuth(
 //            config('services.twitter.client_id'),
