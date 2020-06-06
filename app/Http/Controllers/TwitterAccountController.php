@@ -40,7 +40,7 @@ class TwitterAccountController extends Controller
     {
 
       $user = User::find(Auth::user()->id);
-$request_token = \App\TwitterUser::where('user_id', $user)->first();
+      $request_token = \App\TwitterUser::where('user_id', $user)->get();
 
         //Twitter情報取得
         $twitter = new TwitterOAuth(
