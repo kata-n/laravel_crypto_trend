@@ -39,7 +39,7 @@ class TwitterAccountController extends Controller
     public function follow(Request $request)
     {
         //ログインしているTwitterアカウント情報を取得する
-        $login_access_token = \App\TwitterUser::select('token','	token_secret')->get()->first();
+        $login_token = \App\TwitterUser::select('token','token_secret')->get()->first();
 
         //Twitter情報取得
         $twitter = new TwitterOAuth(
