@@ -51,7 +51,7 @@ class TwitterAccountController extends Controller
             config('services.twitter.client_id'),
             config('services.twitter.client_secret'),
             $request_token['oauth_token'],
-            $request_token['oauth_token_secret'];
+            $request_token['oauth_token_secret']
         );
 
 //        //Twitter情報取得
