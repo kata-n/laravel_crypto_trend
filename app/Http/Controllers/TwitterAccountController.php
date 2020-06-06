@@ -50,7 +50,7 @@ class TwitterAccountController extends Controller
             config('services.twitter.client_id'),
             config('services.twitter.client_secret'),
             config('services.twitter.access_token'),
-            $token_secret;
+            $token_secret
         );
 
 //        $twitter = new TwitterOAuth(
