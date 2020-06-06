@@ -39,10 +39,8 @@ class TwitterAccountController extends Controller
     public function follow(Request $request)
     {
 
-$user = User::find(Auth::user()->id);
-$request_token = TwitterUser::select()
-            ->join('user_id', $user)
-            ->get();
+      $user = User::find(Auth::user()->id);
+$request_token = \App\TwitterUser::where('user_id', $user)->first();
 
         //Twitter情報取得
         $twitter = new TwitterOAuth(
