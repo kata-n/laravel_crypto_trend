@@ -35,11 +35,11 @@ class TwitterAuthController extends Controller
         if(!empty($authUser->user->id)){
           //すでにユーザー登録している場合
           Auth::login($authUser->user);
-          return redirect('/mainpage')->with('status', 'ログインしました');
+          return redirect('/mainpage')->with('flash_message', 'ログインしました');
         } else {
           //ユーザー登録していない場合は、Twitter情報をセッションに保存し新規会員登録へ遷移する
           session(['twitter' => $data]);
-          return redirect('register')->with('status', 'ユーザー登録を行ってください');
+          return redirect('register')->with('flash_message', 'ユーザー登録を行ってください');
         }
     }
 }
