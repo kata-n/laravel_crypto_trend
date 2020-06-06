@@ -45,8 +45,8 @@ class TwitterAccountController extends Controller
         $twitter = new TwitterOAuth(
             config('services.twitter.client_id'),
             config('services.twitter.client_secret'),
-            $login_access_token['token'],
-            $login_access_token['token_secret']
+            config('services.twitter.access_token'),
+            config('services.twitter.access_token_secret')
         );
 
         $user_name = $request->input('name');
