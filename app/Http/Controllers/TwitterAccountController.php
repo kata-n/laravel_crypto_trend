@@ -44,14 +44,17 @@ class TwitterAccountController extends Controller
             config('services.twitter.client_secret')
         );
 
-        $request_token = $connection->oauth('oauth/request_token');
+$user = User::find(Auth::user()->id);
+$request_token = TwitterUser::select('token','token_secret')
+            ->join('user_id','=',$user)
+            ->get();
 
         //Twitter情報取得
         $twitter = new TwitterOAuth(
             config('services.twitter.client_id'),
             config('services.twitter.client_secret'),
-            $request_token['oauth_token'],
-            $request_token['oauth_token_secret']
+            $request_token['token'],
+            $request_token['token_secret']
         );
 
 //        //Twitter情報取得
