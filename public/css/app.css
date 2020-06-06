@@ -833,6 +833,13 @@ li {
   background-color: #fd166f;
 }
 
+.c-alert {
+  padding-top: 64px;
+  text-align: center;
+  color: #fff;
+  background-color: #fd166f;
+}
+
 .c-heading {
   letter-spacing: 2px;
   font-size: 1.4rem;
