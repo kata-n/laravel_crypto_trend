@@ -39,8 +39,8 @@ class TwitterAccountController extends Controller
     public function follow(Request $request)
     {
 
-      $user = User::find(Auth::user()->id);
-      $request_token = \App\TwitterUser::where('user_id', 11)->first();
+      $user = Auth::id();
+      $request_token = \App\TwitterUser::where('user_id', $user)->first();
 
         //Twitter情報取得
         $twitter = new TwitterOAuth(
@@ -49,14 +49,6 @@ class TwitterAccountController extends Controller
             $request_token['token'],
             $request_token['token_secret']
         );
-
-//        //Twitter情報取得
-//        $twitter = new TwitterOAuth(
-//            config('services.twitter.client_id'),
-//            config('services.twitter.client_secret'),
-//            config('services.twitter.access_token'),
-//            config('services.twitter.access_token_secret')
-//        );
 
         $user_name = $request->input('name');
         $result = $twitter->post('friendships/create', ['screen_name'=> $user_name]);
