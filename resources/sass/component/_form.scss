@@ -20,25 +20,29 @@
     }
   &-text_underline::before,
   &-text_underline::after{
-      position: absolute;
-      bottom: 0px;
-      width: 0px;
-      height: 1px;
-      content: '';
-      background-color: $boxunderColor;
-      transition: all 0.5s;
-      -webkit-transition: all 0.5s;
+    position: absolute;
+    bottom: 0px;
+    width: 0px;
+    height: 1px;
+    content: '';
+    background-color: $boxunderColor;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
   }
-
   &-text_underline::before{
-      left: 50%;
+    left: 50%;
   }
   &-ttext_underline::after{
-      right: 50%;
+    right: 50%;
   }
-
   &-inputtext:focus + &-text_underline::before,
   &-inputtext:focus + &-text_underline::after{
-      width: 50%;
+    width: 50%;
+  }
+  &-alert {
+    padding-top: $headerHeight;
+    text-align: center;
+    color: $White;
+    background-color: $CheckBgColor;
   }
 }

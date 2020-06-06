@@ -39,7 +39,7 @@ class TwitterAuthController extends Controller
         } else {
           //ユーザー登録していない場合は、Twitter情報をセッションに保存し新規会員登録へ遷移する
           session(['twitter' => $data]);
-          return redirect('register')->with('flash_message', 'ユーザー登録を行ってください');
+          return redirect('register')->with('flash_message', 'こちらのユーザー登録も行ってください');
         }
     }
 }
