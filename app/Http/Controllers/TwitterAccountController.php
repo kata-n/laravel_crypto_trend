@@ -38,7 +38,6 @@ class TwitterAccountController extends Controller
     public function follow(Request $request)
     {
         //Twitter情報取得
-
         $twitter = new TwitterOAuth(
             config('services.twitter.client_id'),
             config('services.twitter.client_secret'),
@@ -47,7 +46,7 @@ class TwitterAccountController extends Controller
         );
 
         $user_name = $request->input('name');
-        $result = $twitter2->post('friendships/create', ['screen_name'=> $user_name]);
+        $result = $twitter->post('friendships/create', ['screen_name'=> $user_name]);
     }
 
     //自動フォローを行う
