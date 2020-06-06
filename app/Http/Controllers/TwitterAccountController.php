@@ -38,15 +38,10 @@ class TwitterAccountController extends Controller
 
     public function follow(Request $request)
     {
-        //Twitter情報取得
-        $connection = new TwitterOAuth(
-            config('services.twitter.client_id'),
-            config('services.twitter.client_secret')
-        );
 
 $user = User::find(Auth::user()->id);
-$request_token = TwitterUser::select('token','token_secret')
-            ->join('user_id','=',$user)
+$request_token = TwitterUser::select()
+            ->join('user_id', $user)
             ->get();
 
         //Twitter情報取得
