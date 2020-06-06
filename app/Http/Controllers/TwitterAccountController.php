@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Abraham\TwitterOAuth\TwitterOAuth;
+use App\TwitterUser;
 use App\User;
 
 class TwitterAccountController extends Controller
@@ -37,12 +38,15 @@ class TwitterAccountController extends Controller
 
     public function follow(Request $request)
     {
+        //ログインしているTwitterアカウント情報を取得する
+        $login_access_token = \App\TwitterUser::select('token','	token_secret')->get()->first();
+
         //Twitter情報取得
         $twitter = new TwitterOAuth(
             config('services.twitter.client_id'),
             config('services.twitter.client_secret'),
-            config('services.twitter.access_token'),
-            config('services.twitter.access_token_secret')
+            $login_access_token['token'],
+            $login_access_token['token_secret']
         );
 
         $user_name = $request->input('name');
