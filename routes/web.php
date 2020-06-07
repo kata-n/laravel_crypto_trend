@@ -33,6 +33,7 @@ Route::get('/tweetcount', 'TweetcountController@counter');
 
 //TwitterAPI
 Route::get('/twitteraccount', 'TwitterAccountController@account');
+Route::get('/accountshow', 'TwitterAccountController@accountshow');
 
 Route::post('/twitteraccountfollow', 'TwitterAccountController@follow');
 //自動フォローしているか確認

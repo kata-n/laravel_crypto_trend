@@ -38,7 +38,7 @@
         },
 
         mounted() {
-          this.$http.get("/twitteraccount")
+          this.$http.get("/accountshow")
           .then(response => {this.accountdata = response.data;
           });
         },

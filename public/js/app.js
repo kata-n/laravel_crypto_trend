@@ -1948,7 +1948,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    this.$http.get("/twitteraccount").then(function (response) {
+    this.$http.get("/accountshow").then(function (response) {
       _this.accountdata = response.data;
     });
   },

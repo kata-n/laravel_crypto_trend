@@ -22,7 +22,7 @@ class TwitterAccountController extends Controller
             config('services.twitter.access_token_secret')
         );
 
-        //検索クエリ指定
+        //検索クエリを指定
         $params = array(
             "q" => "仮想通貨",
             "lang" => "ja",
@@ -63,7 +63,13 @@ class TwitterAccountController extends Controller
             $user_regist->save();
           }
         }
-    return response()->json(['results' => $userlists]);
+    }
+
+    //DBからアカウント情報を取得してJSONでVueに渡す
+    public function accountshow()
+    {
+      $Twitter_Account_Data = TwitterAccountList::all();
+      return['Twitter_Account_Data' => $Twitter_Account_Data];
     }
 
     public function follow(Request $request)
