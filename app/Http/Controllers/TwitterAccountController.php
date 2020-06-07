@@ -40,7 +40,7 @@ class TwitterAccountController extends Controller
         //teitter_users_listテーブルへAPI取得データを保存する
         foreach($userlists as $userlist => $value){
           if($registered_list->contains($value->id_str)){
-            //IDが登録されているものはteitter_users_listテーブルへAPI取得データを更新する;
+            //登録されているものはテーブルを更新する;
             $user_registed = TwitterAccountList::where('twitter_user_id',$value->id_str)->first();
             $user_registed->account_name = $value->name;
             $user_registed->account_screen_name = $value->screen_name;
@@ -62,8 +62,8 @@ class TwitterAccountController extends Controller
             $user_regist->account_text = $value->status->text;
             $user_regist->save();
           }
+                  return response()->json(['results' => $user_registed]);
         }
-        return response()->json(['results' => $user_registed]);
     }
 
     public function follow(Request $request)
