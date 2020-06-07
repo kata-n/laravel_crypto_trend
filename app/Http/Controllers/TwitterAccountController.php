@@ -34,15 +34,15 @@ class TwitterAccountController extends Controller
         $userlists = $twitter->get('users/search', $params);
 
         //teitter_users_listテーブルへ取得データを保存する
-        foreach($userlists as $userlist => $value){
+        foreach($userlists as $userlist){
           $user_regit = new TwitterUser;
-          $user_regit->twitter_user_id = $value['id'];
-          $user_regit->account_name = $value['name'];
-          $user_regit->account_screen_name = $value['screen_name'];
-          $user_regit->follow_count = $value['friends_count'];
-          $user_regit->follower_count = $value['status']['text'];
-          $user_regit->account_description = $value['description'];
-          $user_regit->account_text = $value['status']['text'];
+          $user_regit->twitter_user_id = $userlist['id'];
+          $user_regit->account_name = $userlist['name'];
+          $user_regit->account_screen_name = $userlist['screen_name'];
+          $user_regit->follow_count = $userlist['friends_count'];
+          $user_regit->follower_count = $userlist['status']['text'];
+          $user_regit->account_description = $userlist['description'];
+          $user_regit->account_text = $userlist['status']['text'];
           $user_regit->save();
         }
 
