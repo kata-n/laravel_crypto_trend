@@ -40,7 +40,8 @@ class TwitterAccountController extends Controller
         //teitter_users_listテーブルへAPI取得データを保存する
         foreach($userlists as $userlist => $value){
 
-          $key = in_array("865452033", $registered_list, true);
+//          $key = in_array("865452033", $registered_list, true);
+          $key = $registered_list->contains($value->id);
 
           if($key){
             //IDが登録されているものはteitter_users_listテーブルへAPI取得データを更新する;
