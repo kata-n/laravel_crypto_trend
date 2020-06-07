@@ -35,7 +35,7 @@ class TwitterAccountController extends Controller
         $userlists = $twitter->get('users/search', $params);
 
         //teitter_users_listテーブルのuser_idが既に入っているものを抽出
-        $registered_list = TwitterUser::select('twitter_user_id')->get()->pluck('twitter_user_id');
+        $registered_list = TwitterAccountList::select('twitter_user_id')->get()->pluck('twitter_user_id');
 
         //teitter_users_listテーブルへAPI取得データを保存する
         foreach($userlists as $userlist => $value){
@@ -55,7 +55,6 @@ class TwitterAccountController extends Controller
             $user_regist->save();
           }
         }
-        return response()->json(['results' => $registered_list]);
     }
 
     public function follow(Request $request)
