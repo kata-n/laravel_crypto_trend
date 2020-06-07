@@ -34,21 +34,28 @@ class TwitterAccountController extends Controller
         //API実行
         $userlists = $twitter->get('users/search', $params);
 
+        //teitter_users_listテーブルのuser_idが既に入っているものを抽出
+        $registered_list = App\TwitterUser::select('twitter_user_id')->get();
+
         //teitter_users_listテーブルへAPI取得データを保存する
         foreach($userlists as $userlist => $value){
-          $user_regist = new TwitterAccountList;
-          $user_regist->twitter_user_id = $value->id;
-          $user_regist->account_name = $value->name;
-          $user_regist->account_screen_name = $value->screen_name;
-          $user_regist->follow_count = $value->friends_count;
-          $user_regist->follower_count = $value->followers_count;
-          $user_regist->account_description = $value->description;
-          $user_regist->account_text = $value->status->text;
-          $user_regist->save();
+          if(in_array($value, $registered_list)){
+            //IDが登録されているものはteitter_users_listテーブルへAPI取得データを更新する
+
+          }else{
+            //IDが登録されていないものはteitter_users_listテーブルへAPI取得データを保存する
+            $user_regist = new TwitterAccountList;
+            $user_regist->twitter_user_id = $value->id;
+            $user_regist->account_name = $value->name;
+            $user_regist->account_screen_name = $value->screen_name;
+            $user_regist->follow_count = $value->friends_count;
+            $user_regist->follower_count = $value->followers_count;
+            $user_regist->account_description = $value->description;
+            $user_regist->account_text = $value->status->text;
+            $user_regist->save();
+          }
         }
 
-        //jsonにてVueに渡す
-        return response()->json(['results' => $userlists]);
     }
 
     public function follow(Request $request)
