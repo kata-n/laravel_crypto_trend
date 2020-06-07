@@ -89,7 +89,7 @@ class TwitterAccountController extends Controller
 
 //        $result = $twitter->post('friendships/create', ['screen_name'=> $user_id]);
 
-        return response()->json(['results' => $user_id]);
+        return response()->json(['results' => $follower]);
       }
     }
 
