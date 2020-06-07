@@ -58,7 +58,7 @@ class TwitterAccountController extends Controller
             $user_regist->save();
           }
         }
-        return response()->json(['results' => $valuestr]);
+        return response()->json(['results' => $key]);
     }
 
     public function follow(Request $request)
