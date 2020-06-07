@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Abraham\TwitterOAuth\TwitterOAuth;
 use App\TwitterUser;
+use App\TwitterAccountList;
 use App\User;
 
 class TwitterAccountController extends Controller
@@ -30,10 +31,24 @@ class TwitterAccountController extends Controller
             "include_entities" => "false",
         );
 
-        $result = $twitter->get('users/search', $params);
+        $userlists = $twitter->get('users/search', $params);
+
+        //teitter_users_listテーブルへ取得データを保存する
+        foreach($userlists as $userlist => $value){
+          $user_regit = new TwitterUser;
+          $user_regit->twitter_user_id = $value['id'];
+          $user_regit->account_name = $value['name'];
+          $user_regit->account_screen_name = $value['screen_name'];
+          $user_regit->follow_count = $value['friends_count'];
+          $user_regit->follower_count = $value['status']['text'];
+          $user_regit->account_description = $value['description'];
+          $user_regit->account_text = $value['id'];
+          $user_regit->save();
+
+        }
 
         //jsonにてVueに渡す
-        return response()->json(['results' => $result]);
+//        return response()->json(['results' => $result]);
     }
 
     public function follow(Request $request)
