@@ -39,7 +39,7 @@ class TwitterAccountController extends Controller
 
         //teitter_users_listテーブルへAPI取得データを保存する
         foreach($userlists as $userlist => $value){
-          $valuestr = $value->id_str;
+          $valuestr = $value->id;
 
           $key = in_array($valuestr, ["1","865452033"]);
 
