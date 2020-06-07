@@ -39,8 +39,9 @@ class TwitterAccountController extends Controller
     public function follow(Request $request)
     {
 
-      $user = Auth::id();
-      $request_token = \App\TwitterUser::where('user_id', $user)->first();
+        $user = Auth::id();
+        $request_token =
+        \App\TwitterUser::where('user_id', $user)->first();
 
         //Twitter情報取得
         $twitter = new TwitterOAuth(
@@ -57,17 +58,21 @@ class TwitterAccountController extends Controller
     //自動フォローを行う
     public function autofollowing(Request $request)
     {
-
+      //自動フォローフラグを立てているユーザーを抽出
       $users = User::where('aotofollow_flg', 1)->get();
 
       foreach($users as $user){
+
+        //ユーザーIDが一致するtokenとtoken_secretを抽出
+        $request_token =
+        \App\TwitterUser::where('user_id', $user['id'])->first();
 
         //Twitter情報取得
         $twitter = new TwitterOAuth(
             config('services.twitter.client_id'),
             config('services.twitter.client_secret'),
-            config('services.twitter.access_token'),
-            config('services.twitter.access_token_secret')
+            $request_token['token'],
+            $request_token['token_secret']
         );
 
         //検索クエリ指定
@@ -75,12 +80,13 @@ class TwitterAccountController extends Controller
             "q" => "仮想通貨",
             "lang" => "ja",
             "locale" => "ja",
-            "count" => "3",
+            "count" => "2",
             "include_entities" => "false",
         );
 
         $follower = $twitter->get('users/search', $params);
-        $user_id = array_rand($follower);
+        $user_id = array_rand($follower,1);
+
 
         $result = $twitter->post('friendships/create', ['screen_name'=> $user_id]);
 
