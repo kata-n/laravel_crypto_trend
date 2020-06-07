@@ -42,9 +42,8 @@ class TwitterAccountController extends Controller
           $user_regit->follow_count = $value['friends_count'];
           $user_regit->follower_count = $value['status']['text'];
           $user_regit->account_description = $value['description'];
-          $user_regit->account_text = $value['id'];
+          $user_regit->account_text = $value['status']['text'];
           $user_regit->save();
-
         }
 
         //jsonにてVueに渡す
