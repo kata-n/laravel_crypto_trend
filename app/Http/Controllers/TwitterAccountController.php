@@ -68,8 +68,9 @@ class TwitterAccountController extends Controller
     //DBからアカウント情報を取得してJSONでVueに渡す
     public function accountshow()
     {
-      $Twitter_Account_Data = TwitterAccountList::all();
-      return['Twitter_Account_Data' => $Twitter_Account_Data];
+      $TwitterAccountData = TwitterAccountList::all();
+//      return['TwitterAccountData' => $TwitterAccountData];
+        return response()->json(['results' => $TwitterAccountData]);
     }
 
     public function follow(Request $request)

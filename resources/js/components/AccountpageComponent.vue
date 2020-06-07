@@ -12,16 +12,16 @@
           自動フォローをする
         </button>
 
-        <div v-for="(account in accountdata.results" class="l-accountarea p-accountarea">
+        <div v-for="(account in accountdata" class="l-accountarea p-accountarea">
           <button type="submit" @click="changefollow(account.screen_name)">フォローする</button>
           <p>アカウント名：{{account.account_name}}</p>
           <p>ユーザー名：{{account.account_screen_name}}</p>
           <div class="p-profilecount">
-            <p>フォロー数：{{account.account_friends_count}}</p>
-            <p>フォロワー数：{{account.account_followers_count}}</p>
+            <p>フォロー数：{{account.follow_count}}</p>
+            <p>フォロワー数：{{account.follower_count}}</p>
           </div>
           <p>プロフィール：{{account.account_description}}</p>
-          <p>最新ツイート：{{account.account_status.text}}</p>
+          <p>最新ツイート：{{account.account_text}}</p>
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@
 
         mounted() {
           this.$http.get("/accountshow")
-          .then(response => {this.accountdata = response.data;
+          .then(response => {this.accountdata = response.data.results;
           });
         },
 

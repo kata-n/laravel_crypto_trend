@@ -1949,7 +1949,7 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     this.$http.get("/accountshow").then(function (response) {
-      _this.accountdata = response.data;
+      _this.accountdata = response.data.results;
     });
   },
   created: function created() {
@@ -2775,7 +2775,7 @@ var render = function() {
               [_vm._v("\n      自動フォローをする\n    ")]
             ),
         _vm._v(" "),
-        _vm._l(_vm.accountdata.results, function(account) {
+        _vm._l(_vm.accountdata, function(account) {
           return _c("div", { staticClass: "l-accountarea p-accountarea" }, [
             _c(
               "button",
@@ -2797,14 +2797,10 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "p-profilecount" }, [
-              _c("p", [
-                _vm._v("フォロー数：" + _vm._s(account.account_friends_count))
-              ]),
+              _c("p", [_vm._v("フォロー数：" + _vm._s(account.follow_count))]),
               _vm._v(" "),
               _c("p", [
-                _vm._v(
-                  "フォロワー数：" + _vm._s(account.account_followers_count)
-                )
+                _vm._v("フォロワー数：" + _vm._s(account.follower_count))
               ])
             ]),
             _vm._v(" "),
@@ -2812,9 +2808,7 @@ var render = function() {
               _vm._v("プロフィール：" + _vm._s(account.account_description))
             ]),
             _vm._v(" "),
-            _c("p", [
-              _vm._v("最新ツイート：" + _vm._s(account.account_status.text))
-            ])
+            _c("p", [_vm._v("最新ツイート：" + _vm._s(account.account_text))])
           ])
         })
       ],
