@@ -62,8 +62,8 @@ class TwitterAccountController extends Controller
             $user_regist->account_text = $value->status->text;
             $user_regist->save();
           }
-                  return response()->json(['results' => $user_registed]);
         }
+    return response()->json(['results' => $userlists]);
     }
 
     public function follow(Request $request)
