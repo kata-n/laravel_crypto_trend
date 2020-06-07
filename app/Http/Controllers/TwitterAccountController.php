@@ -41,7 +41,7 @@ class TwitterAccountController extends Controller
           $user_regist->account_name = $value->name;
           $user_regist->account_screen_name = $value->screen_name;
           $user_regist->follow_count = $value->friends_count;
-          $user_regist->follower_count = $value->status->text;
+          $user_regist->follower_count = $value->followers_count;
           $user_regist->account_description = $value->description;
           $user_regist->account_text = $value->status->text;
           $user_regist->save();
