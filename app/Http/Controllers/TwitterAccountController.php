@@ -61,38 +61,7 @@ class TwitterAccountController extends Controller
       //自動フォローフラグを立てているユーザーを抽出
       $users = User::where('aotofollow_flg', 1)->get();
 
-      foreach($users as $user){
 
-        //ユーザーIDが一致するtokenとtoken_secretを抽出
-        $user_screen_name =
-        \App\TwitterUser::where('user_id', $user['id'])->first();
-
-//        //Twitter情報取得
-//        $twitter = new TwitterOAuth(
-//            config('services.twitter.client_id'),
-//            config('services.twitter.client_secret'),
-//            $request_token['token'],
-//            $request_token['token_secret']
-//        );
-//
-//        //検索クエリ指定
-//        $params = array(
-//            "q" => "仮想通貨",
-//            "lang" => "ja",
-//            "locale" => "ja",
-//            "count" => "2",
-//            "include_entities" => "false",
-//        );
-//
-//        $follower = $twitter->get('users/search', $params);
-//        //スクリーンネームだけを取り出す
-//        $user_screen_name = array_column($follower,'screen_name');
-//        $key= array_rand( $user_screen_name, 1 );
-//        $user_screen_name = $user_screen_name[$key];
-//
-//        $result = $twitter->post('friendships/create', ['screen_name'=> $user_screen_name]);
-//
-//      }
         return response()->json(['results' => $users]);
     }
 
