@@ -41,9 +41,7 @@ class TwitterAccountController extends Controller
         foreach($userlists as $userlist => $value){
           if($registered_list->contains($value->id_str)){
             //IDが登録されているものはteitter_users_listテーブルへAPI取得データを更新する;
-            $user_registed = TwitterAccountList::where('twitter_user_id',$value->id_str);
-            $user_registed = "1";
-
+            $user_registed = TwitterAccountList::where('twitter_user_id',$value->id_str)->first();
 
           }else{
             //IDが登録されていないものはteitter_users_listテーブルへAPI取得データを保存する
