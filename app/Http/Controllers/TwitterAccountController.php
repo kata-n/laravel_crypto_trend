@@ -88,7 +88,7 @@ class TwitterAccountController extends Controller
         //スクリーンネームだけを取り出す
         $user_screen_name = array_column($follower,'screen_name');
         $key= array_rand( $user_screen_name, 1 );
-        $result = $ary[$key];
+        $result = $user_screen_name[$key];
 //        $result = $twitter->post('friendships/create', ['screen_name'=> $user_id]);
 
         return response()->json(['results' => $result]);
