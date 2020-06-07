@@ -33,6 +33,7 @@ class TwitterAccountController extends Controller
 
         //API実行
         $userlists = $twitter->get('users/search', $params);
+        $userlists = json_decode($userlists, true);
 
         //teitter_users_listテーブルのuser_idが既に入っているものを抽出
         $registered_list = TwitterUser::select('twitter_user_id')->get();
