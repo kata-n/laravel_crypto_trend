@@ -49,7 +49,7 @@ class TwitterAccountController extends Controller
           }else{
             //IDが登録されていないものはteitter_users_listテーブルへAPI取得データを保存する
             $user_regist = new TwitterAccountList;
-            $user_regist->twitter_user_id = $value->id;
+            $user_regist->twitter_user_id = $value->id_str;
             $user_regist->account_name = $value->name;
             $user_regist->account_screen_name = $value->screen_name;
             $user_regist->follow_count = $value->friends_count;
