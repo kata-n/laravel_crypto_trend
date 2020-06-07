@@ -59,7 +59,7 @@ class TwitterAccountController extends Controller
             $user_regist->save();
           }
         }
-        return response()->json(['results' => $registered_list]);
+        return response()->json(['results' => $userlists]);
     }
 
     public function follow(Request $request)
