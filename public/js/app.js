@@ -2783,7 +2783,7 @@ var render = function() {
                 attrs: { type: "submit" },
                 on: {
                   click: function($event) {
-                    return _vm.changefollow(account.screen_name)
+                    return _vm.changefollow(account.account_screen_name)
                   }
                 }
               },

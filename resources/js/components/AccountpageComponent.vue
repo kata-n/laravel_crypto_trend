@@ -13,7 +13,7 @@
         </button>
 
         <div v-for="(account in accountdata" class="l-accountarea p-accountarea">
-          <button type="submit" @click="changefollow(account.screen_name)">フォローする</button>
+          <button type="submit" @click="changefollow(account.account_screen_name)">フォローする</button>
           <p>アカウント名：{{account.account_name}}</p>
           <p>ユーザー名：{{account.account_screen_name}}</p>
           <div class="p-profilecount">
