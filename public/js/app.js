@@ -2790,21 +2790,31 @@ var render = function() {
               [_vm._v("フォローする")]
             ),
             _vm._v(" "),
-            _c("p", [_vm._v("アカウント名：" + _vm._s(account.name))]),
+            _c("p", [_vm._v("アカウント名：" + _vm._s(account.account_name))]),
             _vm._v(" "),
-            _c("p", [_vm._v("ユーザー名：" + _vm._s(account.screen_name))]),
+            _c("p", [
+              _vm._v("ユーザー名：" + _vm._s(account.account_screen_name))
+            ]),
             _vm._v(" "),
             _c("div", { staticClass: "p-profilecount" }, [
-              _c("p", [_vm._v("フォロー数：" + _vm._s(account.friends_count))]),
+              _c("p", [
+                _vm._v("フォロー数：" + _vm._s(account.account_friends_count))
+              ]),
               _vm._v(" "),
               _c("p", [
-                _vm._v("フォロワー数：" + _vm._s(account.followers_count))
+                _vm._v(
+                  "フォロワー数：" + _vm._s(account.account_followers_count)
+                )
               ])
             ]),
             _vm._v(" "),
-            _c("p", [_vm._v("プロフィール：" + _vm._s(account.description))]),
+            _c("p", [
+              _vm._v("プロフィール：" + _vm._s(account.account_description))
+            ]),
             _vm._v(" "),
-            _c("p", [_vm._v("最新ツイート：" + _vm._s(account.status.text))])
+            _c("p", [
+              _vm._v("最新ツイート：" + _vm._s(account.account_status.text))
+            ])
           ])
         })
       ],

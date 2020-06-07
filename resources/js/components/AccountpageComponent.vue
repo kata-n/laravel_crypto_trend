@@ -14,14 +14,14 @@
 
         <div v-for="(account in accountdata.results" class="l-accountarea p-accountarea">
           <button type="submit" @click="changefollow(account.screen_name)">フォローする</button>
-          <p>アカウント名：{{account.name}}</p>
-          <p>ユーザー名：{{account.screen_name}}</p>
+          <p>アカウント名：{{account.account_name}}</p>
+          <p>ユーザー名：{{account.account_screen_name}}</p>
           <div class="p-profilecount">
-            <p>フォロー数：{{account.friends_count}}</p>
-            <p>フォロワー数：{{account.followers_count}}</p>
+            <p>フォロー数：{{account.account_friends_count}}</p>
+            <p>フォロワー数：{{account.account_followers_count}}</p>
           </div>
-          <p>プロフィール：{{account.description}}</p>
-          <p>最新ツイート：{{account.status.text}}</p>
+          <p>プロフィール：{{account.account_description}}</p>
+          <p>最新ツイート：{{account.account_status.text}}</p>
         </div>
       </div>
     </div>
