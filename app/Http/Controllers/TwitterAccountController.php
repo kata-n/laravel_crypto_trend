@@ -61,8 +61,16 @@ class TwitterAccountController extends Controller
       //自動フォローフラグを立てているユーザーを抽出
       $users = User::where('aotofollow_flg', 1)->get();
 
+      foreach($users as $user){
 
-        return response()->json(['results' => $users]);
+        //ユーザーIDが一致するtokenとtoken_secretを抽出
+        $request_token =
+        \App\TwitterUser::where('user_id', $user['id'])->first();
+
+
+
+      }
+        return response()->json(['results' => $request_token]);
     }
 
     //ログインユーザーの自動フォローONOFFを取得
