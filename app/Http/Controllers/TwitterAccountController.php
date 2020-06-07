@@ -39,8 +39,9 @@ class TwitterAccountController extends Controller
 
         //teitter_users_listテーブルへAPI取得データを保存する
         foreach($userlists as $userlist => $value){
-          if(in_array($value->id_str, array($registered_list))){
-            //IDが登録されているものはteitter_users_listテーブルへAPI取得データを更新する
+          $key =in_array($value->id_str, array($registered_list));
+          if($key){
+            //IDが登録されているものはteitter_users_listテーブルへAPI取得データを更新する;
 
           }else{
             //IDが登録されていないものはteitter_users_listテーブルへAPI取得データを保存する
@@ -55,7 +56,7 @@ class TwitterAccountController extends Controller
             $user_regist->save();
           }
         }
-        return response()->json(['results' => $registered_list]);
+        return response()->json(['results' => $key]);
     }
 
     public function follow(Request $request)
