@@ -85,11 +85,11 @@ class TwitterAccountController extends Controller
         );
 
         $follower = $twitter->get('users/search', $params);
-        $user_id = array_rand($follower,1);
+        $user_screen_name = array_column($follower,'screen_name');
 
 //        $result = $twitter->post('friendships/create', ['screen_name'=> $user_id]);
 
-        return response()->json(['results' => $follower]);
+        return response()->json(['results' => $user_screen_name]);
       }
     }
 
