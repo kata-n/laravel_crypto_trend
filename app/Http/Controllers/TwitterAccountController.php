@@ -38,12 +38,12 @@ class TwitterAccountController extends Controller
         foreach($userlists as $userlist => $value){
           $user_regist = new TwitterAccountList;
           $user_regist->twitter_user_id = $value->id;
-          $user_regist->account_name = $value['name'];
-          $user_regist->account_screen_name = $value['screen_name'];
-          $user_regist->follow_count = $value['friends_count'];
-          $user_regist->follower_count = $value['status']['text'];
-          $user_regist->account_description = $value['description'];
-          $user_regist->account_text = $value['status']['text'];
+          $user_regist->account_name = $value->name;
+          $user_regist->account_screen_name = $value->screen_name;
+          $user_regist->follow_count = $value->friends_count;
+          $user_regist->follower_count = $value->status->text;
+          $user_regist->account_description = $value->description;
+          $user_regist->account_text = $value->status->text;
           $user_regist->save();
         }
 
