@@ -121,17 +121,29 @@ class TwitterAccountController extends Controller
             "include_user_entities" => false,
         );
 
-        $followlist = $twitter->get('friends/list', $params);
+        //API実行
+        $results = $twitter->get('friends/list', $params);
 
-        //スクリーンネームだけを取り出す
-//        $user_screen_name = array_column($follower,'screen_name');
+        //TwitterIDだけを取り出す
+        $Twitter_id_list = array_column($results,'twitter_user_id');
+
 //        $key= array_rand( $user_screen_name, 1 );
 //        $user_screen_name = $user_screen_name[$key];
 //
 //        $result = $twitter->post('friendships/create', ['screen_name'=> $user_screen_name]);
 
+
+        // これ以上取得できるユーザーがあるか判定する
+//        if(isset($results->next_cursor_str)){
+//           $next_user_list = $results->next_cursor_str;
+//           //paramsに追加
+//           $params["cursor"] = $next_user_list;
+//        }else{
+//           break;
+//        }
+
       }
-        return response()->json(['results' => $followlist]);
+        return response()->json(['results' => $Twitter_id_list]);
     }
 
     //ログインユーザーの自動フォローONOFFを取得
