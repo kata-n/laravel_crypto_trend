@@ -107,9 +107,6 @@ class TwitterAccountController extends Controller
         $request_token =
         \App\TwitterUser::where('user_id', $user['id'])->first();
 
-        //一回で取得できる数が限られているのでループ処理
-//        $request_loop = 4;
-//        for($i=0; $i<$request_loop; $i++){
           //Twitter情報取得
           $twitter = new TwitterOAuth(
               config('services.twitter.client_id'),
@@ -127,10 +124,11 @@ class TwitterAccountController extends Controller
               "include_user_entities" => false,
           );
 
-          $followlist = [];
+        $followlist = [];
 
-
-        do{
+        //一回で取得できる数が限られているのでループ処理
+        $request_loop = 3;
+        for($i=0; $i<$request_loop; $i++){
           //API実行
           $results = $twitter->get('friends/list', $params);
 //          $request_id[] = current($results);
@@ -145,9 +143,11 @@ class TwitterAccountController extends Controller
 //          }
 
         $followlist = array_merge($followlist, current($results));
-        } while ($params['cursor'] = $results->next_cursor_str);
+             $next_user_list = $results->next_cursor_str;
+             //paramsに追加
+             $params["cursor"] = $next_user_list;
 
-//        }
+        }
 
 //        //ユーザー側の登録済みTwitterIDだけを取り出す
 //        $results = current($results);
