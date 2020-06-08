@@ -157,7 +157,7 @@ class TwitterAccountController extends Controller
           //あった場合はランダムに一つのアカウントをフォローする
           $key = array_rand( $follow_target, 1 );
           $follow_target = $follow_target[$key];
-          //$result = $twitter->post('friendships/create', ['user_id'=> $follow_target]);
+          $result = $twitter->post('friendships/create', ['user_id'=> $follow_target]);
         }else{
           //なかった場合は終了
           break;
