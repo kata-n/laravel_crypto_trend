@@ -146,26 +146,24 @@ class TwitterAccountController extends Controller
           }
         }
 
-        //ユーザー側の登録済みTwitterIDだけを取り出す
-//        $results = current($results);
+        //ユーザー側,登録済みTwitterIDだけを取り出す
         $followlist = array_column($followlist,'id_str');
-//
-//        //まだフォローしていないIDを差分で比較
-//        $follow_target = array_diff($registered_list, $twitterid_list);
-//
-//        //ユーザーがまだフォローしていないTwitterアカウントがあるか
-//        if(isset($follow_target)){
-//          //あった場合はランダムに一つのアカウントをフォローする
-//          $key = array_rand( $follow_target, 1 );
-//          $follow_target = $follow_target[$key];
-//
-////          $result = $twitter->post('friendships/create', ['screen_name'=> $user_screen_name]);
-//        }else{
-//          //なかった場合は終了
-//          break;
-//        }
+
+        //まだフォローしていないTwitterIDを差分で比較
+        $follow_target = array_diff($registered_list, $followlist);
+
+        //ユーザーがまだフォローしていないTwitterアカウントがあるか
+        if(isset($follow_target)){
+          //あった場合はランダムに一つのアカウントをフォローする
+          $key = array_rand( $follow_target, 1 );
+          $follow_target = $follow_target[$key];
+          //$result = $twitter->post('friendships/create', ['user_id'=> $follow_target]);
+        }else{
+          //なかった場合は終了
+          break;
+        }
       }
-      return response()->json(['results' => $followlist]);
+      return response()->json(['results' => $follow_target]);
     }
 
     //ログインユーザーの自動フォローONOFFを取得
