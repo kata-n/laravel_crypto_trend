@@ -115,7 +115,7 @@ class TwitterAccountController extends Controller
         //フォローしている人の一覧を取得する為のクエリ指定
         $params = array(
             "user_id" => $request_token['twitter_user_id'],
-            "count" => "10",
+            "count" => "3",
             "cursor" => "-1",
             "skip_status" => false,
             "include_user_entities" => false,
@@ -125,7 +125,7 @@ class TwitterAccountController extends Controller
         $results = $twitter->get('friends/list', $params);
 
         //TwitterIDだけを取り出す
-        $twitterid_list = array_column($results['users'],'twitter_user_id');
+//        $twitterid_list = array_column($results['users'],'twitter_user_id');
 
         //スクリーンネームだけを取り出す
 //        $user_screen_name = array_column($results,'screen_name');
