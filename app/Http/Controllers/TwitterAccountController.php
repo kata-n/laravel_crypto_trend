@@ -129,7 +129,7 @@ class TwitterAccountController extends Controller
         $twitterid_list = array_column($results,'id_str');
 
         //teitter_users_listテーブルを利用してシステム側、登録済みのTwitterIDを抽出
-        $registered_list = TwitterAccountList::select('twitter_user_id')->get()->pluck('twitter_user_id');
+        $registered_list = TwitterAccountList::select('twitter_user_id')->get()->pluck('twitter_user_id')->toArray();
 
         //まだフォローしていないIDを差分で比較
         $follow_target = array_diff($twitterid_list, $registered_list);
