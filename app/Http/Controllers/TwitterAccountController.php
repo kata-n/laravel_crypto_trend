@@ -107,11 +107,13 @@ class TwitterAccountController extends Controller
         $request_token =
         \App\TwitterUser::where('user_id', $user['id'])->first();
 
+        //配列化
         $followlist = [];
+
+        //一回で取得できる数が限られているのでループ処理で対処
+        $request_loop = 2;
         $params["cursor"] = "-1";
 
-        //一回で取得できる数が限られているのでループ処理
-        $request_loop = 2;
         for($i=0; $i<$request_loop; $i++){
 
           //Twitter情報取得
@@ -144,9 +146,9 @@ class TwitterAccountController extends Controller
           }
         }
 
-//        //ユーザー側の登録済みTwitterIDだけを取り出す
+        //ユーザー側の登録済みTwitterIDだけを取り出す
 //        $results = current($results);
-//        $twitterid_list = array_column($results,'id_str');
+        $followlist = array_column($followlist,'id_str');
 //
 //        //まだフォローしていないIDを差分で比較
 //        $follow_target = array_diff($registered_list, $twitterid_list);
