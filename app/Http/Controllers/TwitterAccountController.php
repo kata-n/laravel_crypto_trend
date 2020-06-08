@@ -125,7 +125,7 @@ class TwitterAccountController extends Controller
         $results = $twitter->get('friends/list', $params);
 
         //TwitterIDだけを取り出す
-        $twitterid_list = array_column($results,'twitter_user_id');
+//        $twitterid_list = array_column($results,'twitter_user_id');
 
         //スクリーンネームだけを取り出す
 //        $user_screen_name = array_column($results,'screen_name');
@@ -145,7 +145,7 @@ class TwitterAccountController extends Controller
 //        }
 
       }
-        return response()->json(['results' => $twitterid_list]);
+        return response()->json(['results' => $results]);
     }
 
     //ログインユーザーの自動フォローONOFFを取得
