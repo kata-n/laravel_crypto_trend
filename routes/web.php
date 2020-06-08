@@ -24,16 +24,16 @@ Route::get('/mainpage', 'MainpageController@index');
 
 //Twitterアカウント一覧表示ページ
 Route::get('/accountpage', 'MainpageController@accountlist');
+Route::get('/accountshow', 'TwitterAccountController@accountshow');
 
 //googleNewsページ
 Route::get('/newspage', 'MainpageController@shownews');
 
 //Tweet数ランキングAPI
-Route::get('/tweetcount', 'TweetcountController@counter');
+//Route::get('/tweetcount', 'TweetcountController@counter');
 
 //TwitterAPI
 Route::get('/twitteraccount', 'TwitterAccountController@account');
-Route::get('/accountshow', 'TwitterAccountController@accountshow');
 
 Route::post('/twitteraccountfollow', 'TwitterAccountController@follow');
 //自動フォローしているか確認
@@ -44,7 +44,7 @@ Route::get('/autofollowswitch', 'TwitterAccountController@followswitch');
 Route::get('/autofollowing', 'TwitterAccountController@autofollowing');
 
 //CoincheckAPI
-Route::get('/ticker', 'CoincheckController@ticker');
+//Route::get('/ticker', 'CoincheckController@ticker');
 
 //GoogleNewsAPI
 Route::get('/newslist', 'GoogleNewsController@shownews');
