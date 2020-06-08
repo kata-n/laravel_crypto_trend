@@ -129,7 +129,8 @@ class TwitterAccountController extends Controller
           );
 
           //API実行
-          $results[] = $twitter->get('friends/list', $params);
+          $results = $twitter->get('friends/list', $params);
+          $request_id[] = current($results);
 
           //これ以上取得できるユーザーがあるか判定する
           if(isset($results->next_cursor_str)){
@@ -162,7 +163,7 @@ class TwitterAccountController extends Controller
 //        }
 
       }
-        return response()->json(['results' => $results]);
+        return response()->json(['results' => $request_id]);
     }
 
     //ログインユーザーの自動フォローONOFFを取得
