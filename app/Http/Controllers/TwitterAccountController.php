@@ -132,7 +132,7 @@ class TwitterAccountController extends Controller
         $registered_list = TwitterAccountList::select('twitter_user_id')->get()->pluck('twitter_user_id')->toArray();
 
         //まだフォローしていないIDを差分で比較
-        $follow_target = array_diff($twitterid_list, $registered_list);
+        $follow_target = array_diff($registered_list, $twitterid_list);
 
 //        if($registered_list->contains($twitterid_list->id_str)){
 //          break;
