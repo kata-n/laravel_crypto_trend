@@ -139,8 +139,7 @@ class TwitterAccountController extends Controller
             $next_user_list = $results->next_cursor_str;
             $params["cursor"] = $next_user_list;
           }else{
-            $next_user_list = $results->next_cursor_str;
-            $params["cursor"] = $next_user_list;
+            $rrrr = "xxxx";
           }
 
         }
@@ -164,7 +163,7 @@ class TwitterAccountController extends Controller
 //          break;
 //        }
       }
-      return response()->json(['results' => $followlist]);
+      return response()->json(['results' => $rrrr]);
     }
 
     //ログインユーザーの自動フォローONOFFを取得
