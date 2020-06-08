@@ -98,6 +98,9 @@ class TwitterAccountController extends Controller
       //自動フォローフラグを立てているユーザーを抽出
       $users = User::where('aotofollow_flg', 1)->get();
 
+      //teitter_users_listテーブルからシステム側の登録済みのTwitterIDを抽出
+      $registered_list = TwitterAccountList::select('twitter_user_id')->get()->pluck('twitter_user_id')->toArray();
+
       foreach($users as $user){
 
         //ユーザーIDが一致するtokenとtoken_secretを抽出
@@ -127,9 +130,6 @@ class TwitterAccountController extends Controller
         //ユーザー側、登録済みTwitterIDだけを取り出す
         $results = current($results);
         $twitterid_list = array_column($results,'id_str');
-
-        //teitter_users_listテーブルを利用してシステム側、登録済みのTwitterIDを抽出
-        $registered_list = TwitterAccountList::select('twitter_user_id')->get()->pluck('twitter_user_id')->toArray();
 
         //まだフォローしていないIDを差分で比較
         $follow_target = array_diff($registered_list, $twitterid_list);
