@@ -163,7 +163,6 @@ class TwitterAccountController extends Controller
           break;
         }
       }
-      return response()->json(['results' => $follow_target]);
     }
 
     //ログインユーザーの自動フォローONOFFを取得
