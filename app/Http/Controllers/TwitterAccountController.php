@@ -134,14 +134,17 @@ class TwitterAccountController extends Controller
         //まだフォローしていないIDを差分で比較
         $follow_target = array_diff($registered_list, $twitterid_list);
 
-//        if($registered_list->contains($twitterid_list->id_str)){
-//          break;
-//        }else{
-//          $key= array_rand( $user_screen_name, 1 );
-//          $user_screen_name = $user_screen_name[$key];
-//
+        //ユーザーがまだフォローしていないTwitterアカウントがあるか
+        if(isset($follow_target)){
+          //あった場合はランダムに一つのアカウントをフォローする
+          $key = array_rand( $follow_target, 1 );
+          $target_follow_user = $target_follow_user[$key];
+
 //          $result = $twitter->post('friendships/create', ['screen_name'=> $user_screen_name]);
-//        }
+        }else{
+          //なかった場合は終了
+          break;
+        }
 
         // これ以上取得できるユーザーがあるか判定する
 //        if(isset($results->next_cursor_str)){
@@ -153,7 +156,7 @@ class TwitterAccountController extends Controller
 //        }
 
       }
-        return response()->json(['results' => $follow_target]);
+        return response()->json(['results' => $target_follow_user]);
     }
 
     //ログインユーザーの自動フォローONOFFを取得
