@@ -47,13 +47,11 @@ class Kernel extends ConsoleKernel
 
         $schedule
         ->command('command:searchaccount')
-        ->withoutOverlapping()
         ->dailyAt('2:00');
 
         $schedule
         ->command('command:autofollow')
-        ->withoutOverlapping()
-        ->hourlyAt(15);
+        ->hourlyAt(20);
 
     }
 
