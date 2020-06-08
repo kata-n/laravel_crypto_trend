@@ -108,8 +108,8 @@ class TwitterAccountController extends Controller
         \App\TwitterUser::where('user_id', $user['id'])->first();
 
         //一回で取得できる数が限られているのでループ処理
-        $request_loop = 4;
-        for($i=0; $i<$request_loop; $i++){
+//        $request_loop = 4;
+//        for($i=0; $i<$request_loop; $i++){
           //Twitter情報取得
           $twitter = new TwitterOAuth(
               config('services.twitter.client_id'),
@@ -127,19 +127,27 @@ class TwitterAccountController extends Controller
               "include_user_entities" => false,
           );
 
+          $followlist = [];
+
+
+        do{
           //API実行
           $results = $twitter->get('friends/list', $params);
-          $request_id = current($results);
+//          $request_id[] = current($results);
 
-          //これ以上取得できるユーザーがあるか判定する
-          if(isset($results->next_cursor)){
-             $next_user_list = $results->next_cursor;
-             //paramsに追加
-             $params["cursor"] = $next_user_list;
-          }else{
-             break;
-          }
-        }
+//          //これ以上取得できるユーザーがあるか判定する
+//          if(isset($results->next_cursor)){
+//             $next_user_list = $results->next_cursor;
+//             //paramsに追加
+//             $params["cursor"] = $next_user_list;
+//          }else{
+//             break;
+//          }
+
+        $followlist = array_merge($followlist, $results->users);
+        } while ($params['cursor'] = $results->next_cursor_str);
+
+//        }
 
 //        //ユーザー側の登録済みTwitterIDだけを取り出す
 //        $results = current($results);
@@ -159,9 +167,8 @@ class TwitterAccountController extends Controller
 //          //なかった場合は終了
 //          break;
 //        }
-
       }
-        return response()->json(['results' => $request_id]);
+      return response()->json(['results' => $followlist]);
     }
 
     //ログインユーザーの自動フォローONOFFを取得
