@@ -93,7 +93,7 @@ class TwitterAccountController extends Controller
     }
 
     //自動フォローを行う
-    public function autofollowing(Request $request)
+    public function autofollowing()
     {
       //自動フォローフラグを立てているユーザーを抽出
       $users = User::where('aotofollow_flg', 1)->get();
