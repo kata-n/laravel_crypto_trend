@@ -142,9 +142,11 @@ class TwitterAccountController extends Controller
 //          }
 
         $followlist = array_merge($followlist, current($results));
-          if(isset($results->next_cursor)){{
+          if(isset($results->next_cursor)){
             $next_user_list = $results->next_cursor_str;
             $params["cursor"] = $next_user_list;
+          }else{
+            break;
           }
 
         }
