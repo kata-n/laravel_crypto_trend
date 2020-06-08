@@ -124,17 +124,24 @@ class TwitterAccountController extends Controller
         //API実行
         $results = $twitter->get('friends/list', $params);
 
-        //TwitterIDだけを取り出す
+        //ユーザー側、登録済みTwitterIDだけを取り出す
         $results = current($results);
         $twitterid_list = array_column($results,'id_str');
 
-        //スクリーンネームだけを取り出す
-//        $user_screen_name = array_column($results,'screen_name');
-//        $key= array_rand( $user_screen_name, 1 );
-//        $user_screen_name = $user_screen_name[$key];
-//
-//        $result = $twitter->post('friendships/create', ['screen_name'=> $user_screen_name]);
+        //teitter_users_listテーブルを利用してシステム側、登録済みのTwitterIDを抽出
+        $registered_list = TwitterAccountList::select('twitter_user_id')->get()->pluck('twitter_user_id');
 
+        //まだフォローしていないIDを差分で比較
+        $follow_target = array_diff($twitterid_list, $registered_list);
+
+//        if($registered_list->contains($twitterid_list->id_str)){
+//          break;
+//        }else{
+//          $key= array_rand( $user_screen_name, 1 );
+//          $user_screen_name = $user_screen_name[$key];
+//
+//          $result = $twitter->post('friendships/create', ['screen_name'=> $user_screen_name]);
+//        }
 
         // これ以上取得できるユーザーがあるか判定する
 //        if(isset($results->next_cursor_str)){
@@ -146,7 +153,7 @@ class TwitterAccountController extends Controller
 //        }
 
       }
-        return response()->json(['results' => $twitterid_list]);
+        return response()->json(['results' => $follow_target]);
     }
 
     //ログインユーザーの自動フォローONOFFを取得
