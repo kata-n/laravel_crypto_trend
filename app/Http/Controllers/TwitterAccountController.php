@@ -161,7 +161,7 @@ class TwitterAccountController extends Controller
 //        }
 
       }
-        return response()->json(['results' => $results]);
+        return response()->json(['results' => $request_id]);
     }
 
     //ログインユーザーの自動フォローONOFFを取得
