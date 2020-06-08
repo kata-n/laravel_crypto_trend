@@ -27,7 +27,7 @@ class TwitterAccountController extends Controller
             "q" => "仮想通貨",
             "lang" => "ja",
             "locale" => "ja",
-            "count" => "5",
+            "count" => "20",
             "include_entities" => "false",
         );
 

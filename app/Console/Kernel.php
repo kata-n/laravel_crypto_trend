@@ -15,7 +15,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         \App\Console\Commands\CoincheckCommand::class,
-        \App\Console\Commands\TweetCountCommand::class
+        \App\Console\Commands\TweetCountCommand::class,
+        \App\Console\Commands\AccountSearchCommand::class
     ];
 
     /**
@@ -42,6 +43,11 @@ class Kernel extends ConsoleKernel
           Tweetcount::query()
           ->where('created_at','<',date("Y-m-d", strtotime("-7 day")))->delete();
         })->dailyAt('13:00');
+
+        $schedule
+        ->command('command:searchaccount')
+        ->withoutOverlapping()
+        ->dailyAt('2:00');
 
     }
 
