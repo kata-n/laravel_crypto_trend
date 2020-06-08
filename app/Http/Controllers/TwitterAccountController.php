@@ -144,7 +144,7 @@ class TwitterAccountController extends Controller
 //             break;
 //          }
 
-        $followlist = array_merge($followlist, $results->users);
+        $followlist = array_merge($followlist, $results->users->id);
         } while ($params['cursor'] = $results->next_cursor_str);
 
 //        }
