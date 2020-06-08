@@ -125,7 +125,7 @@ class TwitterAccountController extends Controller
         $results = $twitter->get('friends/list', $params);
 
         //TwitterIDだけを取り出す
-        $Twitter_id_list = array_column($results,'twitter_user_id');
+        $Twitter_id_list = array_column(array($results),'twitter_user_id');
 
 //        $key= array_rand( $user_screen_name, 1 );
 //        $user_screen_name = $user_screen_name[$key];
