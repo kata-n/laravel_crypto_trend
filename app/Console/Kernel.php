@@ -16,7 +16,8 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         \App\Console\Commands\CoincheckCommand::class,
         \App\Console\Commands\TweetCountCommand::class,
-        \App\Console\Commands\AccountSearchCommand::class
+        \App\Console\Commands\AccountSearchCommand::class,
+        \App\Console\Commands\AutoFollowCommand::class,
     ];
 
     /**
@@ -48,6 +49,11 @@ class Kernel extends ConsoleKernel
         ->command('command:searchaccount')
         ->withoutOverlapping()
         ->dailyAt('2:00');
+
+        $schedule
+        ->command('command:autofollow')
+        ->withoutOverlapping()
+        ->hourlyAt(15);
 
     }
 
