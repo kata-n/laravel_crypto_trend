@@ -137,8 +137,7 @@ class TwitterAccountController extends Controller
         //ユーザーがまだフォローしていないTwitterアカウントがあるか
         if(isset($follow_target)){
           //あった場合はランダムに一つのアカウントをフォローする
-          $key = array_rand( $follow_target, 1 );
-          $target_follow_user = $target_follow_user[$key];
+          $follow_user = array_rand( $follow_target, 1 );
 
 //          $result = $twitter->post('friendships/create', ['screen_name'=> $user_screen_name]);
         }else{
@@ -156,7 +155,7 @@ class TwitterAccountController extends Controller
 //        }
 
       }
-        return response()->json(['results' => $target_follow_user]);
+        return response()->json(['results' => $follow_user]);
     }
 
     //ログインユーザーの自動フォローONOFFを取得
