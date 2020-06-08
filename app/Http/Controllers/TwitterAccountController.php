@@ -138,11 +138,10 @@ class TwitterAccountController extends Controller
           if(isset($results->next_cursor)){
             $next_user_list = $results->next_cursor_str;
             $params["cursor"] = $next_user_list;
-                        $rrrr = "oooo";
+            $rrr = $params["cursor"];
           }else{
-            $rrrr = "xxxx";
+            break;
           }
-
         }
 
 //        //ユーザー側の登録済みTwitterIDだけを取り出す
@@ -164,7 +163,7 @@ class TwitterAccountController extends Controller
 //          break;
 //        }
       }
-      return response()->json(['results' => $rrrr]);
+      return response()->json(['results' => $rrr]);
     }
 
     //ログインユーザーの自動フォローONOFFを取得
