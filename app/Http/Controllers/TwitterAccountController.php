@@ -109,8 +109,7 @@ class TwitterAccountController extends Controller
 
         //一回で取得できる数が限られているのでループ処理
         $request_loop = 2;
-        for($i = 0; $i < $request_loop; $i++){
-
+        for($i=0; $i<$request_loop; $i++){
           //Twitter情報取得
           $twitter = new TwitterOAuth(
               config('services.twitter.client_id'),
@@ -134,13 +133,12 @@ class TwitterAccountController extends Controller
 
           //これ以上取得できるユーザーがあるか判定する
           if(isset($results->next_cursor_str)){
-             $next_user_list = $results->next_cursor_str;
+             $next_user_list = $results->next_cursor;
              //paramsに追加
              $params["cursor"] = $next_user_list;
           }else{
              break;
           }
-
         }
 
 //        //ユーザー側の登録済みTwitterIDだけを取り出す
