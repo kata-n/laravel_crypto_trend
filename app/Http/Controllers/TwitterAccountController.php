@@ -107,56 +107,62 @@ class TwitterAccountController extends Controller
         $request_token =
         \App\TwitterUser::where('user_id', $user['id'])->first();
 
-        //Twitter情報取得
-        $twitter = new TwitterOAuth(
-            config('services.twitter.client_id'),
-            config('services.twitter.client_secret'),
-            $request_token['token'],
-            $request_token['token_secret']
-        );
+        //一回で取得できる数が限られているのでループ処理
+        $request_loop = 2;
+        for($i = 0; $i < $request_loop; $i++){
 
-        //フォローしている人の一覧を取得する為のクエリ指定
-        $params = array(
-            "user_id" => $request_token['twitter_user_id'],
-            "count" => "3",
-            "cursor" => "-1",
-            "skip_status" => false,
-            "include_user_entities" => false,
-        );
+          //Twitter情報取得
+          $twitter = new TwitterOAuth(
+              config('services.twitter.client_id'),
+              config('services.twitter.client_secret'),
+              $request_token['token'],
+              $request_token['token_secret']
+          );
 
-        //API実行
-        $results = $twitter->get('friends/list', $params);
+          //フォローしている人の一覧を取得する為のクエリ指定
+          $params = array(
+              "user_id" => $request_token['twitter_user_id'],
+              "count" => "3",
+              "cursor" => "-1",
+              "skip_status" => false,
+              "include_user_entities" => false,
+          );
 
-        //ユーザー側、登録済みTwitterIDだけを取り出す
-        $results = current($results);
-        $twitterid_list = array_column($results,'id_str');
+          //API実行
+          $results[] = $twitter->get('friends/list', $params);
 
-        //まだフォローしていないIDを差分で比較
-        $follow_target = array_diff($registered_list, $twitterid_list);
+          //これ以上取得できるユーザーがあるか判定する
+          if(isset($results->next_cursor_str)){
+             $next_user_list = $results->next_cursor_str;
+             //paramsに追加
+             $params["cursor"] = $next_user_list;
+          }else{
+             break;
+          }
 
-        //ユーザーがまだフォローしていないTwitterアカウントがあるか
-        if(isset($follow_target)){
-          //あった場合はランダムに一つのアカウントをフォローする
-          $key = array_rand( $follow_target, 1 );
-          $follow_target = $follow_target[$key];
-
-//          $result = $twitter->post('friendships/create', ['screen_name'=> $user_screen_name]);
-        }else{
-          //なかった場合は終了
-          break;
         }
 
-        // これ以上取得できるユーザーがあるか判定する
-//        if(isset($results->next_cursor_str)){
-//           $next_user_list = $results->next_cursor_str;
-//           //paramsに追加
-//           $params["cursor"] = $next_user_list;
+//        //ユーザー側の登録済みTwitterIDだけを取り出す
+//        $results = current($results);
+//        $twitterid_list = array_column($results,'id_str');
+//
+//        //まだフォローしていないIDを差分で比較
+//        $follow_target = array_diff($registered_list, $twitterid_list);
+//
+//        //ユーザーがまだフォローしていないTwitterアカウントがあるか
+//        if(isset($follow_target)){
+//          //あった場合はランダムに一つのアカウントをフォローする
+//          $key = array_rand( $follow_target, 1 );
+//          $follow_target = $follow_target[$key];
+//
+////          $result = $twitter->post('friendships/create', ['screen_name'=> $user_screen_name]);
 //        }else{
-//           break;
+//          //なかった場合は終了
+//          break;
 //        }
 
       }
-        return response()->json(['results' => $follow_target]);
+        return response()->json(['results' => $results]);
     }
 
     //ログインユーザーの自動フォローONOFFを取得
