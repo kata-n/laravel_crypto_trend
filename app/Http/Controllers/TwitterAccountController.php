@@ -108,6 +108,7 @@ class TwitterAccountController extends Controller
         \App\TwitterUser::where('user_id', $user['id'])->first();
 
         $followlist = [];
+        $params["cursor"] = "-1";
 
         //一回で取得できる数が限られているのでループ処理
         $request_loop = 2;
@@ -125,7 +126,7 @@ class TwitterAccountController extends Controller
           $params = array(
               "user_id" => $request_token['twitter_user_id'],
               "count" => "3",
-              "cursor" => "-1",
+              "cursor" => $params["cursor"],
               "skip_status" => false,
               "include_user_entities" => false,
           );
@@ -138,7 +139,6 @@ class TwitterAccountController extends Controller
           if(isset($results->next_cursor)){
             $next_user_list = $results->next_cursor_str;
             $params["cursor"] = $next_user_list;
-            $rrr = $params["cursor"];
           }else{
             break;
           }
@@ -163,7 +163,7 @@ class TwitterAccountController extends Controller
 //          break;
 //        }
       }
-      return response()->json(['results' => $rrr]);
+      return response()->json(['results' => $followlist]);
     }
 
     //ログインユーザーの自動フォローONOFFを取得
