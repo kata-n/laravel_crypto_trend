@@ -108,8 +108,8 @@ class TwitterAccountController extends Controller
         \App\TwitterUser::where('user_id', $user['id'])->first();
 
         //一回で取得できる数が限られているのでループ処理
-        $request_loop = 2;
-        for($i=0; $i<$request_loop; $i++){
+//        $request_loop = 2;
+//        for($i=0; $i<$request_loop; $i++){
           //Twitter情報取得
           $twitter = new TwitterOAuth(
               config('services.twitter.client_id'),
@@ -139,7 +139,7 @@ class TwitterAccountController extends Controller
           }else{
              break;
           }
-        }
+//        }
 
 //        //ユーザー側の登録済みTwitterIDだけを取り出す
 //        $results = current($results);
@@ -161,7 +161,7 @@ class TwitterAccountController extends Controller
 //        }
 
       }
-        return response()->json(['results' => $request_id]);
+        return response()->json(['results' => $results]);
     }
 
     //ログインユーザーの自動フォローONOFFを取得
