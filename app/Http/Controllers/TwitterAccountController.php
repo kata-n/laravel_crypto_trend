@@ -131,7 +131,6 @@ class TwitterAccountController extends Controller
         for($i=0; $i<$request_loop; $i++){
           //API実行
           $results = $twitter->get('friends/list', $params);
-//          $request_id[] = current($results);
 
 //          //これ以上取得できるユーザーがあるか判定する
 //          if(isset($results->next_cursor)){
@@ -144,7 +143,6 @@ class TwitterAccountController extends Controller
 
         $followlist = array_merge($followlist, current($results));
              $next_user_list = $results->next_cursor_str;
-             //paramsに追加
              $params["cursor"] = $next_user_list;
 
         }
