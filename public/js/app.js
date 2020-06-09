@@ -1938,6 +1938,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1984,6 +1995,22 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         console.log("error");
       });
+    },
+    //ページネーション
+    clickCallback: function clickCallback(pageNum) {
+      this.currentPage = Number(pageNum);
+    }
+  },
+  computed: {
+    //アカウント数
+    accountdata: function accountdata() {
+      var current = this.currentPage * this.parPage;
+      var start = current - this.parPage;
+      return this.items.slice(start, current);
+    },
+    //ページ数
+    getPageCount: function getPageCount() {
+      return Math.ceil(this.items.length / this.parPage);
     }
   }
 });
@@ -2759,65 +2786,93 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "l-accountpage" }, [
-    _c(
-      "div",
-      { staticClass: "l-mainwrapper" },
-      [
-        _vm._m(0),
-        _vm._v(" "),
-        _vm.flag
-          ? _c(
-              "button",
-              { staticClass: "c-autofollowbtn", on: { click: _vm.autofollow } },
-              [_vm._v("\n      自動フォローを解除\n    ")]
-            )
-          : _c(
-              "button",
-              { staticClass: "c-autofollowbtn", on: { click: _vm.autofollow } },
-              [_vm._v("\n      自動フォローをする\n    ")]
-            ),
-        _vm._v(" "),
-        _vm._l(_vm.accountdata, function(account) {
-          return _c("div", { staticClass: "l-accountarea p-accountarea" }, [
-            _c(
-              "button",
-              {
-                attrs: { type: "submit" },
-                on: {
-                  click: function($event) {
-                    return _vm.changefollow(account.account_screen_name)
+  return _c(
+    "div",
+    { staticClass: "l-accountpage" },
+    [
+      _c(
+        "div",
+        { staticClass: "l-mainwrapper" },
+        [
+          _vm._m(0),
+          _vm._v(" "),
+          _vm.flag
+            ? _c(
+                "button",
+                {
+                  staticClass: "c-autofollowbtn",
+                  on: { click: _vm.autofollow }
+                },
+                [_vm._v("\n      自動フォローを解除\n    ")]
+              )
+            : _c(
+                "button",
+                {
+                  staticClass: "c-autofollowbtn",
+                  on: { click: _vm.autofollow }
+                },
+                [_vm._v("\n      自動フォローをする\n    ")]
+              ),
+          _vm._v(" "),
+          _vm._l(_vm.accountdata, function(account) {
+            return _c("div", { staticClass: "l-accountarea p-accountarea" }, [
+              _c(
+                "button",
+                {
+                  attrs: { type: "submit" },
+                  on: {
+                    click: function($event) {
+                      return _vm.changefollow(account.account_screen_name)
+                    }
                   }
-                }
-              },
-              [_vm._v("フォローする")]
-            ),
-            _vm._v(" "),
-            _c("p", [_vm._v("アカウント名：" + _vm._s(account.account_name))]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v("ユーザー名：" + _vm._s(account.account_screen_name))
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "p-profilecount" }, [
-              _c("p", [_vm._v("フォロー数：" + _vm._s(account.follow_count))]),
+                },
+                [_vm._v("フォローする")]
+              ),
               _vm._v(" "),
               _c("p", [
-                _vm._v("フォロワー数：" + _vm._s(account.follower_count))
-              ])
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v("プロフィール：" + _vm._s(account.account_description))
-            ]),
-            _vm._v(" "),
-            _c("p", [_vm._v("最新ツイート：" + _vm._s(account.account_text))])
-          ])
-        })
-      ],
-      2
-    )
-  ])
+                _vm._v("アカウント名：" + _vm._s(account.account_name))
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v("ユーザー名：" + _vm._s(account.account_screen_name))
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "p-profilecount" }, [
+                _c("p", [
+                  _vm._v("フォロー数：" + _vm._s(account.follow_count))
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v("フォロワー数：" + _vm._s(account.follower_count))
+                ])
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v("プロフィール：" + _vm._s(account.account_description))
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("最新ツイート：" + _vm._s(account.account_text))])
+            ])
+          })
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _c("paginate", {
+        attrs: {
+          "page-count": _vm.getPageCount,
+          "page-range": 3,
+          "margin-pages": 2,
+          "click-handler": _vm.clickCallback,
+          "prev-text": "＜",
+          "next-text": "＞",
+          "container-class": "pagination",
+          "page-class": "page-item"
+        }
+      })
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
