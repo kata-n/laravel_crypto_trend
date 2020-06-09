@@ -524,10 +524,6 @@ li {
   height: 260vh;
 }
 
-.l-accountpage {
-  height: 1800px;
-}
-
 .l-loginwrapper,
 .l-regitwrapper,
 .l-mainwrapper {
@@ -593,6 +589,10 @@ li {
     -webkit-box-pack: center;
             justify-content: center;
   }
+}
+
+.l-accountpage {
+  height: 290vh;
 }
 
 .l-maintitle {

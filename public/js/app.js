@@ -1953,7 +1953,7 @@ __webpack_require__.r(__webpack_exports__);
     return {
       accountdata: [],
       flag: false,
-      parPage: 10,
+      parPage: 5,
       currentPage: 1
     };
   },
