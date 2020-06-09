@@ -11,7 +11,9 @@ window.Vue = require('vue');
 import axios from 'axios'
 Vue.prototype.$http = axios;
 
+//pagination
 import Paginate from 'vuejs-paginate'
+Vue.component('paginate', Paginate);
 
 /**
  * The following block of code may be used to automatically register your
@@ -35,9 +37,6 @@ Vue.component('newspage-component', require('./components/NewspageComponent.vue'
 
 //Twitterアカウントページ
 Vue.component('accountpage-component', require('./components/AccountpageComponent.vue').default);
-
-//pagination
-Vue.component('paginate', Paginate);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
