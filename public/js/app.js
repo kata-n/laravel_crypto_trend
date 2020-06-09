@@ -2783,7 +2783,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "l-accountpage" }, [
+  return _c("div", [
     _c(
       "div",
       { staticClass: "l-mainwrapper" },
@@ -2847,8 +2847,8 @@ var render = function() {
             "click-handler": _vm.clickCallback,
             "prev-text": "＜",
             "next-text": "＞",
-            "container-class": "pagination",
-            "page-class": "page-item"
+            "container-class": "p-pagination",
+            "page-class": "p-pagination__item"
           }
         })
       ],

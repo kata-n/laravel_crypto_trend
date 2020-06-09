@@ -1,5 +1,5 @@
 <template>
-    <div class="l-accountpage">
+    <div>
       <div class="l-mainwrapper">
         <div class="l-maintitle">
           <h2 class="c-heading">Twitterアカウント一覧</h2>
@@ -30,8 +30,8 @@
           :click-handler="clickCallback"
           :prev-text="'＜'"
           :next-text="'＞'"
-          :container-class="'pagination'"
-          :page-class="'page-item'">
+          :container-class="'p-pagination'"
+          :page-class="'p-pagination__item'">
         </paginate>
       </div>
     </div>
