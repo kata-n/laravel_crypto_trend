@@ -12,7 +12,7 @@
           自動フォローをする
         </button>
 
-        <div v-for="account in accountdata" class="l-accountarea p-accountarea">
+        <div v-for="account in getItems" class="l-accountarea p-accountarea">
           <button type="submit" @click="changefollow(account.account_screen_name)">フォローする</button>
           <p>アカウント名：{{account.account_name}}</p>
           <p>ユーザー名：{{account.account_screen_name}}</p>
@@ -95,6 +95,11 @@
         },
 
        computed: {
+         getItems: function() {
+          let current = this.currentPage * this.parPage;
+          let start = current - this.parPage;
+          return this.accountdata.slice(start, current);
+         },
          //ページ数
          getPageCount: function() {
           return Math.ceil(this.accountdata.length / this.parPage);

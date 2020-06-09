@@ -2000,6 +2000,11 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   computed: {
+    getItems: function getItems() {
+      var current = this.currentPage * this.parPage;
+      var start = current - this.parPage;
+      return this.accountdata.slice(start, current);
+    },
     //ページ数
     getPageCount: function getPageCount() {
       return Math.ceil(this.accountdata.length / this.parPage);
@@ -2797,7 +2802,7 @@ var render = function() {
               [_vm._v("\n      自動フォローをする\n    ")]
             ),
         _vm._v(" "),
-        _vm._l(_vm.accountdata, function(account) {
+        _vm._l(_vm.getItems, function(account) {
           return _c("div", { staticClass: "l-accountarea p-accountarea" }, [
             _c(
               "button",
