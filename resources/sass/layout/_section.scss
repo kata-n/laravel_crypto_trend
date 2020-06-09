@@ -19,9 +19,6 @@
   &-registpage {
     height: 110vh;
   }
-  &-newspage{
-    height: 260vh;
-  }
   &-loginwrapper,
   &-regitwrapper,
   &-mainwrapper {
@@ -34,7 +31,7 @@
     width: 100%;
     padding: $space_2l $space_xl;
     @include mq(){
-          padding: $space_2l $space_xs;
+      padding: $space_2l $space_xs;
     }
   }
 }

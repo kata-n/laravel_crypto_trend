@@ -520,10 +520,6 @@ li {
   height: 110vh;
 }
 
-.l-newspage {
-  height: 260vh;
-}
-
 .l-loginwrapper,
 .l-regitwrapper,
 .l-mainwrapper {
@@ -688,6 +684,16 @@ li {
 @media screen and (max-width: 476px) {
   .l-introend {
     padding-top: 1.5rem;
+  }
+}
+
+.l-newspage {
+  height: 260vh;
+}
+
+@media screen and (max-width: 476px) {
+  .l-newspage {
+    height: 290vh;
   }
 }
 
