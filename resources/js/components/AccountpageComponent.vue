@@ -96,12 +96,6 @@
         },
 
        computed: {
-         //アカウント数
-         accountdata: function() {
-          let current = this.currentPage * this.parPage;
-          let start = current - this.parPage;
-          return this.items.slice(start, current);
-         },
          //ページ数
          getPageCount: function() {
           return Math.ceil(this.items.length / this.parPage);

@@ -2002,12 +2002,6 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   computed: {
-    //アカウント数
-    accountdata: function accountdata() {
-      var current = this.currentPage * this.parPage;
-      var start = current - this.parPage;
-      return this.items.slice(start, current);
-    },
     //ページ数
     getPageCount: function getPageCount() {
       return Math.ceil(this.items.length / this.parPage);
