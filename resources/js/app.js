@@ -11,7 +11,7 @@ window.Vue = require('vue');
 import axios from 'axios'
 Vue.prototype.$http = axios;
 
-
+import Paginate from 'vuejs-paginate'
 Vue.component('paginate', Paginate);
 
 /**
