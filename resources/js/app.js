@@ -3,13 +3,10 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-require("./jQuery/script");
-window.Vue = require('vue');
-import axios from 'axios'
-Vue.prototype.$http = axios;
 
-import Paginate from 'vuejs-paginate'
-Vue.component('paginate', Paginate);
+require("./jQuery/script");
+
+window.Vue = require('vue');
 
 /**
  * The following block of code may be used to automatically register your
@@ -33,6 +30,9 @@ Vue.component('newspage-component', require('./components/NewspageComponent.vue'
 
 //Twitterアカウントページ
 Vue.component('accountpage-component', require('./components/AccountpageComponent.vue').default);
+
+//Vue.pagenateコンポーネント
+Vue.component('paginate', Paginate);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
