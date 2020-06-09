@@ -12,7 +12,7 @@ use App\User;
 
 class TwitterAccountController extends Controller
 {
-    public function account()
+    public static function account()
     {
         //Twitter情報取得
         $twitter = new TwitterOAuth(
