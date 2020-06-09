@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "g": "^2.0.1",
-        "node-gyp": "^6.1.0"
+        "node-gyp": "^6.1.0",
+        "vuejs-paginate": "^2.1.0"
     }
 }

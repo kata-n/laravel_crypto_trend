@@ -26,14 +26,29 @@
       </div>
     </div>
 
+    <paginate
+      :page-count="getPageCount"
+      :page-range="3"
+      :margin-pages="2"
+      :click-handler="clickCallback"
+      :prev-text="'＜'"
+      :next-text="'＞'"
+      :container-class="'pagination'"
+      :page-class="'page-item'">
+    </paginate>
+
 </template>
 
 <script>
     export default {
+
         data() {
           return {
-            accountdata :[],
-            flag:false
+            accountdata : [],
+            flag : false,
+            items : [],
+            parPage: 10,
+            currentPage: 1
           };
         },
 
@@ -73,6 +88,25 @@
                 })
           },
 
-        }
+          //ページネーション
+          clickCallback: function (pageNum) {
+             this.currentPage = Number(pageNum);
+          },
+
+        },
+
+       computed: {
+         //アカウント数
+         accountdata: function() {
+          let current = this.currentPage * this.parPage;
+          let start = current - this.parPage;
+          return this.items.slice(start, current);
+         },
+         //ページ数
+         getPageCount: function() {
+          return Math.ceil(this.items.length / this.parPage);
+         }
+       }
+
     }
 </script>

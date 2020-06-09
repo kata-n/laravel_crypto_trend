@@ -26,25 +26,17 @@ Route::get('/mainpage', 'MainpageController@index');
 Route::get('/accountpage', 'MainpageController@accountlist');
 Route::get('/accountshow', 'TwitterAccountController@accountshow');
 
-//googleNewsページ
-Route::get('/newspage', 'MainpageController@shownews');
-
-//Tweet数ランキングAPI
-//Route::get('/tweetcount', 'TweetcountController@counter');
-
-//TwitterAPI
-Route::get('/twitteraccount', 'TwitterAccountController@account');
-
+//Twitterアカウントフォロー
 Route::post('/twitteraccountfollow', 'TwitterAccountController@follow');
+
 //自動フォローしているか確認
 Route::get('/twitterautofollow', 'TwitterAccountController@autofollow');
+
 //自動フォロー切り替え
 Route::get('/autofollowswitch', 'TwitterAccountController@followswitch');
-//自動フォローを行う
-Route::get('/autofollowing', 'TwitterAccountController@autofollowing');
 
-//CoincheckAPI
-//Route::get('/ticker', 'CoincheckController@ticker');
+//googleNewsページ
+Route::get('/newspage', 'MainpageController@shownews');
 
 //GoogleNewsAPI
 Route::get('/newslist', 'GoogleNewsController@shownews');
@@ -57,4 +49,14 @@ Route::get('twitter/login', 'Auth\TwitterAuthController@redirectToProvider');
 //Twitterコールバック
 Route::get('twitter/callback', 'Auth\TwitterAuthController@handleProviderCallback');
 
+//Tweet数ランキングAPI
+//Route::get('/tweetcount', 'TweetcountController@counter');
 
+////TwitterAPI
+//Route::get('/twitteraccount', 'TwitterAccountController@account');
+
+//CoincheckAPI
+//Route::get('/ticker', 'CoincheckController@ticker');
+
+////自動フォローを行う
+//Route::get('/autofollowing', 'TwitterAccountController@autofollowing');

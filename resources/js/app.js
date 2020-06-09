@@ -8,6 +8,9 @@ window.Vue = require('vue');
 import axios from 'axios'
 Vue.prototype.$http = axios;
 
+import Paginate from 'vuejs-paginate'
+Vue.component('paginate', Paginate);
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
