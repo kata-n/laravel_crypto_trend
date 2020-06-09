@@ -15,7 +15,7 @@
         <div v-for="account in getItems" class="l-accountarea p-accountarea">
           <button type="submit" @click="changefollow(account.account_screen_name)">フォローする</button>
           <p class="p-accountarea__name">{{account.account_name}}</p>
-          <p>ユーザー名：{{account.account_screen_name}}</p>
+          <p class="p-accountarea__idname">@{{account.account_screen_name}}</p>
           <div class="p-profilecount">
             <p>フォロー数：{{account.follow_count}}</p>
             <p>フォロワー数：{{account.follower_count}}</p>

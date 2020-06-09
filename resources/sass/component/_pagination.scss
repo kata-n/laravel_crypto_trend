@@ -1,5 +1,8 @@
 .c {
   &-pagination{
     display: flex;
+    &__item {
+      padding: $space_xs;
+    }
   }
 }

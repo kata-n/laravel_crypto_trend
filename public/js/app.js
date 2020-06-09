@@ -2821,8 +2821,8 @@ var render = function() {
               _vm._v(_vm._s(account.account_name))
             ]),
             _vm._v(" "),
-            _c("p", [
-              _vm._v("ユーザー名：" + _vm._s(account.account_screen_name))
+            _c("p", { staticClass: "p-accountarea__idname" }, [
+              _vm._v("@" + _vm._s(account.account_screen_name))
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "p-profilecount" }, [
