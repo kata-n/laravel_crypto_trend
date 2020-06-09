@@ -1908,8 +1908,6 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vuejs_paginate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuejs-paginate */ "./node_modules/vuejs-paginate/dist/index.js");
-/* harmony import */ var vuejs_paginate__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuejs_paginate__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -1951,8 +1949,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//ページネーションはライブラリを使用
-
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -15563,7 +15559,6 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 Vue.prototype.$http = axios__WEBPACK_IMPORTED_MODULE_0___default.a;
 
-Vue.component('paginate', vuejs_paginate__WEBPACK_IMPORTED_MODULE_1___default.a);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -15581,7 +15576,9 @@ Vue.component('mainpage-component', __webpack_require__(/*! ./components/Mainpag
 
 Vue.component('newspage-component', __webpack_require__(/*! ./components/NewspageComponent.vue */ "./resources/js/components/NewspageComponent.vue")["default"]); //Twitterアカウントページ
 
-Vue.component('accountpage-component', __webpack_require__(/*! ./components/AccountpageComponent.vue */ "./resources/js/components/AccountpageComponent.vue")["default"]);
+Vue.component('accountpage-component', __webpack_require__(/*! ./components/AccountpageComponent.vue */ "./resources/js/components/AccountpageComponent.vue")["default"]); //pagination
+
+Vue.component('paginate', vuejs_paginate__WEBPACK_IMPORTED_MODULE_1___default.a);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

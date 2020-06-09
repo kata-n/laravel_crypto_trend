@@ -40,8 +40,6 @@
 </template>
 
 <script>
-    //ページネーションはライブラリを使用
-    import Paginate from 'vuejs-paginate'
 
     export default {
 
