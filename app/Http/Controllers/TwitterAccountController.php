@@ -28,6 +28,7 @@ class TwitterAccountController extends Controller
             "lang" => "ja",
             "locale" => "ja",
             "count" => "20",
+            "result_type" => "recent",
             "include_entities" => "false",
         );
 
