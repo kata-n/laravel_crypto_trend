@@ -46,7 +46,6 @@
           return {
             accountdata : [],
             flag : false,
-            items : [],
             parPage: 10,
             currentPage: 1
           };
@@ -98,7 +97,7 @@
        computed: {
          //ページ数
          getPageCount: function() {
-          return Math.ceil(this.items.length / this.parPage);
+          return Math.ceil(this.accountdata.length / this.parPage);
          }
        }
 

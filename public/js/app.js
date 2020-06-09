@@ -1953,7 +1953,6 @@ __webpack_require__.r(__webpack_exports__);
     return {
       accountdata: [],
       flag: false,
-      items: [],
       parPage: 10,
       currentPage: 1
     };
@@ -2003,7 +2002,7 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     //ページ数
     getPageCount: function getPageCount() {
-      return Math.ceil(this.items.length / this.parPage);
+      return Math.ceil(this.accountdata.length / this.parPage);
     }
   }
 });
