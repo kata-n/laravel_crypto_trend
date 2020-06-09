@@ -2783,7 +2783,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: " l-accountpage" }, [
     _c(
       "div",
       { staticClass: "l-mainwrapper" },
@@ -2817,7 +2817,9 @@ var render = function() {
               [_vm._v("フォローする")]
             ),
             _vm._v(" "),
-            _c("p", [_vm._v("アカウント名：" + _vm._s(account.account_name))]),
+            _c("p", { staticClass: "p-accountarea__name" }, [
+              _vm._v(_vm._s(account.account_name))
+            ]),
             _vm._v(" "),
             _c("p", [
               _vm._v("ユーザー名：" + _vm._s(account.account_screen_name))
@@ -2847,8 +2849,8 @@ var render = function() {
             "click-handler": _vm.clickCallback,
             "prev-text": "＜",
             "next-text": "＞",
-            "container-class": "p-pagination",
-            "page-class": "p-pagination__item"
+            "container-class": "c-pagination",
+            "page-class": "c-pagination__item"
           }
         })
       ],

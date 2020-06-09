@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class=" l-accountpage">
       <div class="l-mainwrapper">
         <div class="l-maintitle">
           <h2 class="c-heading">Twitterアカウント一覧</h2>
@@ -14,7 +14,7 @@
 
         <div v-for="account in getItems" class="l-accountarea p-accountarea">
           <button type="submit" @click="changefollow(account.account_screen_name)">フォローする</button>
-          <p>アカウント名：{{account.account_name}}</p>
+          <p class="p-accountarea__name">{{account.account_name}}</p>
           <p>ユーザー名：{{account.account_screen_name}}</p>
           <div class="p-profilecount">
             <p>フォロー数：{{account.follow_count}}</p>
@@ -30,8 +30,8 @@
           :click-handler="clickCallback"
           :prev-text="'＜'"
           :next-text="'＞'"
-          :container-class="'p-pagination'"
-          :page-class="'p-pagination__item'">
+          :container-class="'c-pagination'"
+          :page-class="'c-pagination__item'">
         </paginate>
       </div>
     </div>

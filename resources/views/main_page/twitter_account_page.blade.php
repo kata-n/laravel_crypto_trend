@@ -29,7 +29,7 @@
 @endsection
 
 @section('content')
-  <section class="l-container p-container l-accountpage">
+  <section class="l-container p-container">
     <div id="app">
       <accountpage-component></accountpage-component>
     </div>

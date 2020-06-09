@@ -2,6 +2,9 @@
   &-accountarea {
     background: $White;
     box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
+    &__name {
+      font-size: $font-size_16px;
+    }
   }
   &-profilecount {
     display: flex;
