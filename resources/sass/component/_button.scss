@@ -53,19 +53,16 @@
     border-style: none;
     margin-bottom: $space_m;
   }
-  &-followbtn {
-    padding: 0.3rem;
-    margin: 0;
+  &-followbtn,
+  &-autofollowbtn {
     background-color: $White;
     color: $twitterColor;
     border-style: solid;
     border-color: #00acee;
   }
-  &-autofollowbtn {
-    background-color: $White;
-    color: $twitterColor;
-    border-style: dotted;
-    border-color: #00acee;
+  &-followbtn {
+    padding: 0 $space_s;
+    margin: 0;
   }
   &-autofollowbtn__active {
     background-color: $twitterColor;

@@ -20,8 +20,8 @@
 
           <p class="p-accountarea__idname">@{{account.account_screen_name}}</p>
           <div class="p-profilecount">
-            <p>フォロー数：{{account.follow_count}}</p>
-            <p>フォロワー数：{{account.follower_count}}</p>
+            <p>フォロー：{{account.follow_count}}</p>
+            <p>フォロワー：{{account.follower_count}}</p>
           </div>
           <p>プロフィール：{{account.account_description}}</p>
           <p>最新ツイート：{{account.account_text}}</p>

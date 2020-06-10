@@ -5,6 +5,9 @@
     &__header {
       display: flex;
       justify-content: space-between;
+      @include mq(){
+        display: block;
+      }
     }
     &__name {
       font-size: $font-size_18px;

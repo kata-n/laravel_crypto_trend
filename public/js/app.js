@@ -2835,11 +2835,9 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "p-profilecount" }, [
-              _c("p", [_vm._v("フォロー数：" + _vm._s(account.follow_count))]),
+              _c("p", [_vm._v("フォロー：" + _vm._s(account.follow_count))]),
               _vm._v(" "),
-              _c("p", [
-                _vm._v("フォロワー数：" + _vm._s(account.follower_count))
-              ])
+              _c("p", [_vm._v("フォロワー：" + _vm._s(account.follower_count))])
             ]),
             _vm._v(" "),
             _c("p", [

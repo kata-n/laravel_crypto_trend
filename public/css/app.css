@@ -588,7 +588,13 @@ li {
 }
 
 .l-accountpage {
-  height: 330vh;
+  height: 1800px;
+}
+
+@media screen and (max-width: 476px) {
+  .l-accountpage {
+    height: 400vh;
+  }
 }
 
 .l-maintitle {
@@ -766,20 +772,17 @@ li {
   margin-bottom: 1rem;
 }
 
-.c-followbtn {
-  padding: 0.3rem;
-  margin: 0;
+.c-followbtn,
+.c-autofollowbtn {
   background-color: #fff;
   color: #00acee;
   border-style: solid;
   border-color: #00acee;
 }
 
-.c-autofollowbtn {
-  background-color: #fff;
-  color: #00acee;
-  border-style: dotted;
-  border-color: #00acee;
+.c-followbtn {
+  padding: 0 0.5rem;
+  margin: 0;
 }
 
 .c-autofollowbtn__active {
@@ -1140,6 +1143,12 @@ li {
   display: flex;
   -webkit-box-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (max-width: 476px) {
+  .p-accountarea__header {
+    display: block;
+  }
 }
 
 .p-accountarea__name {

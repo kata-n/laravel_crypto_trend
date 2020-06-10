@@ -1,6 +1,9 @@
 .l{
   &-accountpage {
-    height: 330vh;
+    height: 1800px;
+    @include mq(){
+      height: 400vh;
+    }
   }
   &-maintitle {
     margin: $space_m 0;
