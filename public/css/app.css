@@ -766,6 +766,16 @@ li {
   margin-bottom: 1rem;
 }
 
+.c-followbtn {
+  padding: 0.5rem;
+  border-style: none;
+  margin: 0;
+  background-color: #fff;
+  color: #00acee;
+  border-style: dotted;
+  border-color: #00acee;
+}
+
 .c-autofollowbtn {
   background-color: #fff;
   color: #00acee;
@@ -805,7 +815,7 @@ li {
 }
 
 .c-inputtext {
-  font-size: 0.9rem;
+  font-size: 1rem;
   width: 100%;
   border: none;
   outline: none;

@@ -2818,6 +2818,7 @@ var render = function() {
               _c(
                 "button",
                 {
+                  staticClass: "c-followbtn",
                   attrs: { type: "submit" },
                   on: {
                     click: function($event) {

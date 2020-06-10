@@ -15,7 +15,7 @@
         <div v-for="account in getItems" class="l-accountarea p-accountarea">
           <div class="p-accountarea__header">
             <p class="p-accountarea__name">{{account.account_name}}</p>
-            <button type="submit" @click="changefollow(account.account_screen_name)">フォローする</button>
+            <button  class="c-followbtn" type="submit" @click="changefollow(account.account_screen_name)">フォローする</button>
           </div>
 
           <p class="p-accountarea__idname">@{{account.account_screen_name}}</p>
