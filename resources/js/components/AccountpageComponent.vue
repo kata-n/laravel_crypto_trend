@@ -23,8 +23,10 @@
             <p>フォロー：{{account.follow_count}}</p>
             <p>フォロワー：{{account.follower_count}}</p>
           </div>
-          <p>プロフィール：{{account.account_description}}</p>
-          <p>最新ツイート：{{account.account_text}}</p>
+          <p class="p-profile__proftitle">プロフィール</p>
+          <p class="p-profile__sentence">{{account.account_description}}</p>
+          <p class="p-profile__tweet">最新ツイート</p>
+          <p class="p-profile__sentence">{{account.account_text}}</p>
         </div>
         <paginate
           :page-count="getPageCount"

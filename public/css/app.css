@@ -748,12 +748,6 @@ li {
   font-size: 0.9rem;
 }
 
-@media screen and (max-width: 476px) {
-  .c-authbtn {
-    font-size: 0.7rem;
-  }
-}
-
 .c-authbtn:hover {
   background: #464c96;
   -webkit-transition: 0.5s;
@@ -1179,6 +1173,17 @@ li {
 
 .p-profilecount p {
   margin: 0.5rem 0.8rem 0;
+}
+
+.p-profile__proftitle,
+.p-profile__tweet {
+  margin: 0;
+  padding-top: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.p-profile__sentence {
+  margin: 0;
 }
 
 .p-newstitle {

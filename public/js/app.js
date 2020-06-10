@@ -1951,6 +1951,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2842,11 +2844,21 @@ var render = function() {
               _c("p", [_vm._v("フォロワー：" + _vm._s(account.follower_count))])
             ]),
             _vm._v(" "),
-            _c("p", [
-              _vm._v("プロフィール：" + _vm._s(account.account_description))
+            _c("p", { staticClass: "p-profile__proftitle" }, [
+              _vm._v("プロフィール")
             ]),
             _vm._v(" "),
-            _c("p", [_vm._v("最新ツイート：" + _vm._s(account.account_text))])
+            _c("p", { staticClass: "p-profile__sentence" }, [
+              _vm._v(_vm._s(account.account_description))
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "p-profile__tweet" }, [
+              _vm._v("最新ツイート")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "p-profile__sentence" }, [
+              _vm._v(_vm._s(account.account_text))
+            ])
           ])
         }),
         _vm._v(" "),

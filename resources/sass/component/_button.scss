@@ -35,9 +35,6 @@
     color: $White;
     letter-spacing: $letter-spacing;
     font-size: $font-size_14px;
-    @include mq(){
-      font-size: $font-size_11px;
-    }
   }
   &-authbtn:hover {
     background: $btnHoverColor;

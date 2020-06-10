@@ -27,4 +27,13 @@
   &-profilecount p {
     margin: $space_s $space_xs 0;
   }
+  &-profile__proftitle,
+  &-profile__tweet {
+    margin: 0;
+    padding-top: $space_xs;
+    font-size: $font-size_14px;
+  }
+  &-profile__sentence {
+    margin: 0;
+  }
 }
