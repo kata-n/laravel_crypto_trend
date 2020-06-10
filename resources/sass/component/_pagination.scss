@@ -2,9 +2,7 @@
   &-pagination{
     display: flex;
     justify-content: center;
-    @include mq(){
-      padding: $space_xs 0;
-    }
+    padding: $space_xs 0;
     &__item {
       padding: 0 $space_xs $space_m;
     }

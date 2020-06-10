@@ -785,6 +785,13 @@ li {
   margin: 0;
 }
 
+@media screen and (max-width: 476px) {
+  .c-followbtn {
+    margin: 1rem 0;
+    padding: 0.5rem 0.8rem;
+  }
+}
+
 .c-autofollowbtn__active {
   background-color: #00acee;
   color: #fff;
@@ -975,12 +982,7 @@ li {
   display: flex;
   -webkit-box-pack: center;
           justify-content: center;
-}
-
-@media screen and (max-width: 476px) {
-  .c-pagination {
-    padding: 0.8rem 0;
-  }
+  padding: 0.8rem 0;
 }
 
 .c-pagination__item {

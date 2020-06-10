@@ -63,6 +63,10 @@
   &-followbtn {
     padding: 0 $space_s;
     margin: 0;
+    @include mq() {
+      margin: $space_m 0;
+      padding: $space_s $space_xs;
+    }
   }
   &-autofollowbtn__active {
     background-color: $twitterColor;
