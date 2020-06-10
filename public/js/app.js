@@ -2133,6 +2133,7 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   computed: {
+    //ソート機能
     displayWeekDatas: function displayWeekDatas() {
       var _this2 = this;
 
@@ -2156,6 +2157,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
+    //時間表示の切り替え
     change: function change(num) {
       this.isActive = num;
     }

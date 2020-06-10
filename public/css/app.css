@@ -761,7 +761,7 @@ li {
 }
 
 .c-rankingtitlebtn {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: #fd166f;
 }
 
@@ -975,6 +975,12 @@ li {
   display: flex;
   -webkit-box-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 476px) {
+  .c-pagination {
+    padding: 0.8rem 0;
+  }
 }
 
 .c-pagination__item {

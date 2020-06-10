@@ -105,6 +105,7 @@
         });
       },
       computed: {
+        //ソート機能
         displayWeekDatas() {
           return this.Weekdatas.filter(weekData => this.preview.includes(weekData.Crypto_name));
         },
@@ -116,6 +117,7 @@
         }
       },
       methods: {
+        //時間表示の切り替え
         change: function(num){
         this.isActive = num
         }

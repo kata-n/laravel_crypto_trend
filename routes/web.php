@@ -24,9 +24,11 @@ Route::get('/mainpage', 'MainpageController@index');
 
 //Twitterアカウント一覧表示ページ
 Route::get('/accountpage', 'MainpageController@accountlist');
+
+//Twitter Account 情報を取得する
 Route::get('/accountshow', 'TwitterAccountController@accountshow');
 
-//Twitterアカウントフォロー
+//Twitterアカウントフォローをおこなう
 Route::post('/twitteraccountfollow', 'TwitterAccountController@follow');
 
 //自動フォローしているか確認
