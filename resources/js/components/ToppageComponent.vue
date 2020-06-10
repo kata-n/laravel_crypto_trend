@@ -2,7 +2,7 @@
     <div class="l-toppage">
        <div class="l-firstview p-firstview">
          <div class="l-toppagecontent">
-            <p class="p-toppagetitle">仮想通貨のトレンドをTwitterから</p>
+            <p class="p-toppage__title">仮想通貨のトレンドをTwitterから</p>
             <div class="l-toparea">
                 <a href="/login" class="c-atagbtn c-topbtn">ログインする</a>
                 <a href="/register" class="c-atagbtn c-topbtn">登録する</a>

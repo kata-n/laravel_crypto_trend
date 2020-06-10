@@ -1075,10 +1075,10 @@ li {
   border-radius: 0 3px 3px 0;
 }
 
-.p-toppagetitle {
+.p-toppage__title {
   color: #fff;
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   letter-spacing: 2px;
 }
 
@@ -1180,6 +1180,7 @@ li {
   margin: 0;
   padding-top: 0.8rem;
   font-size: 0.9rem;
+  color: #00acee;
 }
 
 .p-profile__sentence {

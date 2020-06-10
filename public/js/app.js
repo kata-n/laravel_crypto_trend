@@ -3281,7 +3281,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "l-toppage" }, [
       _c("div", { staticClass: "l-firstview p-firstview" }, [
         _c("div", { staticClass: "l-toppagecontent" }, [
-          _c("p", { staticClass: "p-toppagetitle" }, [
+          _c("p", { staticClass: "p-toppage__title" }, [
             _vm._v("仮想通貨のトレンドをTwitterから")
           ]),
           _vm._v(" "),
