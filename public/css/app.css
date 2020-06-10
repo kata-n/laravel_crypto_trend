@@ -461,6 +461,12 @@ li {
   margin: 1.1rem 1.5rem;
 }
 
+@media screen and (max-width: 476px) {
+  .l-headerlogo {
+    margin: 1.2rem 1.5rem;
+  }
+}
+
 .l-nav {
   margin-left: auto;
   margin-top: 1.1rem;
@@ -593,7 +599,7 @@ li {
 
 @media screen and (max-width: 476px) {
   .l-accountpage {
-    height: 400vh;
+    height: 500vh;
   }
 }
 
@@ -1100,7 +1106,7 @@ li {
   text-align: center;
   letter-spacing: 5px;
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   margin-top: 0;
 }
 

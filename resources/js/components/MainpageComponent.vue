@@ -71,6 +71,7 @@
               <p v-else>最安取引価格：{{ Weekdata.Crypto_low }}</p>
               <p>取得日時：{{ Weekdata.Tweet_time }}</p>
             </div>
+
         </div>
     </div>
 </template>

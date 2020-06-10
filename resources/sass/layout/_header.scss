@@ -9,6 +9,9 @@
   }
   &-headerlogo {
     margin: $space_xm $space_l;
+      @include mq(){
+        margin: $space_xxm $space_l;
+      }
   }
   &-nav {
     margin-left: auto;
