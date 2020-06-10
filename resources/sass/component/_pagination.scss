@@ -1,8 +1,12 @@
 .c {
   &-pagination{
     display: flex;
+    justify-content: center;
     &__item {
-      padding: $space_xs;
+      padding: 0 $space_xs $space_m;
+    }
+    .active {
+      color: $CheckBgColor;
     }
   }
 }

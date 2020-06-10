@@ -759,12 +759,23 @@ li {
   color: #fd166f;
 }
 
-.c-autofollowbtn {
+.c-autofollowbtn,
+.c-autofollowbtn__active {
   padding: 0.5rem;
-  background-color: #00acee;
-  color: #fff;
   border-style: none;
   margin-bottom: 1rem;
+}
+
+.c-autofollowbtn {
+  background-color: #fff;
+  color: #00acee;
+  border-style: dotted;
+  border-color: #00acee;
+}
+
+.c-autofollowbtn__active {
+  background-color: #00acee;
+  color: #fff;
 }
 
 .c-topbtn {
@@ -848,7 +859,7 @@ li {
 
 .c-heading {
   letter-spacing: 2px;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   margin: 0.8rem 0;
 }
 
@@ -950,10 +961,16 @@ li {
 .c-pagination {
   display: -webkit-box;
   display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .c-pagination__item {
-  padding: 0.8rem;
+  padding: 0 0.8rem 1rem;
+}
+
+.c-pagination .active {
+  color: #fd166f;
 }
 
 .p-container {
@@ -1109,12 +1126,24 @@ li {
   box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
 }
 
+.p-accountarea__header {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
 .p-accountarea__name {
   font-size: 1.2rem;
+  margin: 0;
+  padding-top: 0.5rem;
 }
 
 .p-accountarea__idname {
   font-size: 0.9rem;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  color: #717171;
 }
 
 .p-profilecount {

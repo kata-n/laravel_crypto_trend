@@ -5,7 +5,7 @@
           <h2 class="c-heading">Twitterアカウント一覧</h2>
         </div>
 
-        <button v-if="flag" @click="autofollow" class="c-autofollowbtn">
+        <button v-if="flag" @click="autofollow" class="c-autofollowbtn__active">
           自動フォローを解除
         </button>
         <button @click="autofollow" v-else class="c-autofollowbtn">
@@ -13,8 +13,11 @@
         </button>
 
         <div v-for="account in getItems" class="l-accountarea p-accountarea">
-          <button type="submit" @click="changefollow(account.account_screen_name)">フォローする</button>
-          <p class="p-accountarea__name">{{account.account_name}}</p>
+          <div class="p-accountarea__header">
+            <p class="p-accountarea__name">{{account.account_name}}</p>
+            <button type="submit" @click="changefollow(account.account_screen_name)">フォローする</button>
+          </div>
+
           <p class="p-accountarea__idname">@{{account.account_screen_name}}</p>
           <div class="p-profilecount">
             <p>フォロー数：{{account.follow_count}}</p>

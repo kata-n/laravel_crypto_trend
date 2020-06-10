@@ -2,11 +2,20 @@
   &-accountarea {
     background: $White;
     box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
+    &__header {
+      display: flex;
+      justify-content: space-between;
+    }
     &__name {
       font-size: $font-size_18px;
+      margin: 0;
+      padding-top: $space_s;
     }
     &__idname {
       font-size: $font-size_14px;
+      margin: 0;
+      padding-bottom: $space_s;
+      color: $accountIDcolor;
     }
   }
   &-profilecount {

@@ -1948,6 +1948,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2793,7 +2796,10 @@ var render = function() {
         _vm.flag
           ? _c(
               "button",
-              { staticClass: "c-autofollowbtn", on: { click: _vm.autofollow } },
+              {
+                staticClass: "c-autofollowbtn__active",
+                on: { click: _vm.autofollow }
+              },
               [_vm._v("\n      自動フォローを解除\n    ")]
             )
           : _c(
@@ -2804,21 +2810,23 @@ var render = function() {
         _vm._v(" "),
         _vm._l(_vm.getItems, function(account) {
           return _c("div", { staticClass: "l-accountarea p-accountarea" }, [
-            _c(
-              "button",
-              {
-                attrs: { type: "submit" },
-                on: {
-                  click: function($event) {
-                    return _vm.changefollow(account.account_screen_name)
+            _c("div", { staticClass: "p-accountarea__header" }, [
+              _c("p", { staticClass: "p-accountarea__name" }, [
+                _vm._v(_vm._s(account.account_name))
+              ]),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  attrs: { type: "submit" },
+                  on: {
+                    click: function($event) {
+                      return _vm.changefollow(account.account_screen_name)
+                    }
                   }
-                }
-              },
-              [_vm._v("フォローする")]
-            ),
-            _vm._v(" "),
-            _c("p", { staticClass: "p-accountarea__name" }, [
-              _vm._v(_vm._s(account.account_name))
+                },
+                [_vm._v("フォローする")]
+              )
             ]),
             _vm._v(" "),
             _c("p", { staticClass: "p-accountarea__idname" }, [

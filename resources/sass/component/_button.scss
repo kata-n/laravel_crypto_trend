@@ -47,12 +47,21 @@
     font-size: $font-size_14px;
     color: $RnkingColor;
   }
-  &-autofollowbtn {
+  &-autofollowbtn,
+  &-autofollowbtn__active {
     padding: $space_s;
-    background-color: $twitterColor;
-    color: $White;
     border-style: none;
     margin-bottom: $space_m;
+  }
+  &-autofollowbtn {
+    background-color: $White;
+    color: $twitterColor;
+    border-style: dotted;
+    border-color: #00acee;
+  }
+  &-autofollowbtn__active {
+    background-color: $twitterColor;
+    color: $White;
   }
   &-topbtn {
     margin: $space_m $space_xm;
