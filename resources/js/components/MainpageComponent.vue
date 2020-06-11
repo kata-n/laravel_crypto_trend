@@ -75,6 +75,8 @@
             <div v-scroll="handleScroll" :class="{visible: visible}" class="c-pagetopBtn" @click="scrollTop">
               <i class="fas fa-chevron-up c-pagetopBtn__icon"></i>
             </div>
+            
+                            <a href="/twitter/login" class="c-atagbtn c-twitterbtn">Twitterでログインする</a>
 
         </div>
     </div>

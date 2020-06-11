@@ -2114,6 +2114,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -3208,6 +3210,15 @@ var render = function() {
             on: { click: _vm.scrollTop }
           },
           [_c("i", { staticClass: "fas fa-chevron-up c-pagetopBtn__icon" })]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "c-atagbtn c-twitterbtn",
+            attrs: { href: "/twitter/login" }
+          },
+          [_vm._v("Twitterでログインする")]
         )
       ],
       2
