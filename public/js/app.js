@@ -2122,7 +2122,8 @@ __webpack_require__.r(__webpack_exports__);
       Weekdatas: [],
       Crypto_lists: [],
       preview: [],
-      isActive: '1'
+      isActive: '1',
+      visible: false
     };
   },
   mounted: function mounted() {
@@ -2178,6 +2179,9 @@ __webpack_require__.r(__webpack_exports__);
         top: 0,
         behavior: "smooth"
       });
+    },
+    handleScroll: function handleScroll() {
+      this.visible = window.pageYOffset > 400;
     }
   }
 });
@@ -3190,7 +3194,19 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "c-pagetopBtn", on: { click: _vm.scrollTop } },
+          {
+            directives: [
+              {
+                name: "scroll",
+                rawName: "v-scroll",
+                value: _vm.handleScroll,
+                expression: "handleScroll"
+              }
+            ],
+            staticClass: "c-pagetopBtn",
+            class: { visible: _vm.visible },
+            on: { click: _vm.scrollTop }
+          },
           [_c("i", { staticClass: "fas fa-chevron-up c-pagetopBtn__icon" })]
         )
       ],
@@ -16129,6 +16145,8 @@ Vue.component('paginate', vuejs_paginate__WEBPACK_IMPORTED_MODULE_1___default.a)
 var VueScrollTo = __webpack_require__(/*! vue-scrollto */ "./node_modules/vue-scrollto/vue-scrollto.js");
 
 Vue.use(VueScrollTo);
+
+__webpack_require__(/*! ./plugins/scroll */ "./resources/js/plugins/scroll.js");
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -16139,6 +16157,7 @@ Vue.use(VueScrollTo);
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 //トップページ
+
 
 Vue.component('toppage-component', __webpack_require__(/*! ./components/ToppageComponent.vue */ "./resources/js/components/ToppageComponent.vue")["default"]); //メインページ
 
@@ -16458,6 +16477,27 @@ $(function () {
       $('#js-classtaget').removeClass('js-toggle-sp-menu-target');
     }
   });
+});
+
+/***/ }),
+
+/***/ "./resources/js/plugins/scroll.js":
+/*!****************************************!*\
+  !*** ./resources/js/plugins/scroll.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+Vue.directive('scroll', {
+  inserted: function inserted(el, binding) {
+    var f = function f(evt) {
+      if (binding.value(evt, el)) {
+        window.removeEventListener('scroll', f);
+      }
+    };
+
+    window.addEventListener('scroll', f);
+  }
 });
 
 /***/ }),

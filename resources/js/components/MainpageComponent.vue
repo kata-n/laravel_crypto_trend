@@ -72,7 +72,7 @@
               <p>取得日時：{{ Weekdata.Tweet_time }}</p>
             </div>
 
-            <div class="c-pagetopBtn" @click="scrollTop">
+            <div v-scroll="handleScroll" :class="{visible: visible}" class="c-pagetopBtn" @click="scrollTop">
               <i class="fas fa-chevron-up c-pagetopBtn__icon"></i>
             </div>
 
@@ -90,6 +90,7 @@
           Crypto_lists: [],
           preview: [],
           isActive: '1',
+          visible: false
         }
       },
       mounted() {
@@ -133,6 +134,10 @@
             top: 0,
             behavior: "smooth"
           });
+        },
+
+        handleScroll() {
+          this.visible = window.pageYOffset > 400;
         }
 
       }
