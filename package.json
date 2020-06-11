@@ -26,6 +26,7 @@
     "dependencies": {
         "g": "^2.0.1",
         "node-gyp": "^6.1.0",
+        "vue-scrollto": "^2.18.1",
         "vuejs-paginate": "^2.1.0"
     }
 }

@@ -15,6 +15,10 @@ Vue.prototype.$http = axios;
 import Paginate from 'vuejs-paginate'
 Vue.component('paginate', Paginate);
 
+//scroll
+var VueScrollTo = require('vue-scrollto');
+Vue.use(VueScrollTo)
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

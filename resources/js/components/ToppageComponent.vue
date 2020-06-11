@@ -53,7 +53,7 @@
                   <p>仮想通貨関連ニュース</p>
                 </div>
                 <div class="p-introduction__img">
-                  <img src="/images/toppage/introduction2.png" alt />
+                  <img src="/images/toppage/introduction3.png" alt />
                 </div>
                 <div class="p-introduction__comment">
                   <p>
