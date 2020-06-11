@@ -128,7 +128,7 @@ class TwitterAccountController extends Controller
           //フォローしている人の一覧を取得する為のクエリ指定
           $params = array(
               "user_id" => $request_token['twitter_user_id'],
-              "count" => "3",
+              "count" => "100",
               "cursor" => $params["cursor"],
               "skip_status" => false,
               "include_user_entities" => false,
