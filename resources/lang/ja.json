@@ -1,7 +1,7 @@
 {
   "Drill register": "登録する",
   "Login": "ログインする",
-  "Name": "ニックネーム",
+  "Name": "名前（必須）",
   "Register": "登録する",
   "Forgot Your Password?": "パスワードを忘れた場合はこちら",
   "Reset Password": "パスワードの再設定",
@@ -14,7 +14,7 @@
   "Confirm Password": "パスワード再入力",
   "E-Mail Address": "メールアドレス",
   "Send Password Reset Link": "メールを送信する",
-  "Password": "パスワード",
+  "Password": "パスワード（半角英数字8文字以上）",
   "Hello!":"お知らせ",
   "validation.required": "必須入力項目です",
   "Click button below and reset password.": "ボタンをクリックしてパスワードを再設定してください。",
