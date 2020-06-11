@@ -2328,7 +2328,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {}
 });
@@ -3348,7 +3347,7 @@ var staticRenderFns = [
             _c(
               "a",
               { staticClass: "c-atagbtn c-topbtn", attrs: { href: "/login" } },
-              [_vm._v("ログインする")]
+              [_vm._v("メールアドレスからログイン")]
             ),
             _vm._v(" "),
             _c(
@@ -3368,7 +3367,10 @@ var staticRenderFns = [
                 staticClass: "c-atagbtn c-twitterbtn",
                 attrs: { href: "/twitter/login" }
               },
-              [_vm._v("Twitterでログインする")]
+              [
+                _c("i", { staticClass: "fab fa-twitter" }),
+                _vm._v("Twitterでログインする")
+              ]
             )
           ])
         ])
@@ -3454,29 +3456,32 @@ var staticRenderFns = [
                     "\n                仮想通貨に関連したニュースを表示。\n                "
                   ),
                   _c("br"),
-                  _vm._v("仮想通貨のニュースを一覧で表示。\n                "),
-                  _c("br"),
                   _vm._v(
                     "詳細への外部ページへのリンクも設置。\n                "
                   ),
                   _c("br"),
-                  _vm._v("仮想通貨をニュースで知ろう。\n              ")
+                  _vm._v("気になるニュースをチェックできます。\n              ")
                 ])
               ])
             ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "l-introend" }, [
-            _c("p", { staticClass: "p-toppageend" }, [_vm._v("まずは登録")]),
+            _c("p", { staticClass: "p-toppageend" }, [
+              _vm._v("登録はTwitterから")
+            ]),
             _vm._v(" "),
             _c("div", { staticClass: "l-introend__btn" }, [
               _c(
                 "a",
                 {
-                  staticClass: "c-atagbtn c-endbtn",
-                  attrs: { href: "/register" }
+                  staticClass: "c-atagbtn c-twitterbtn",
+                  attrs: { href: "/twitter/login" }
                 },
-                [_vm._v("登録する")]
+                [
+                  _c("i", { staticClass: "fab fa-twitter" }),
+                  _vm._v("Twitterでログインする")
+                ]
               )
             ])
           ])

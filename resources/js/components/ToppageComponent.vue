@@ -4,11 +4,11 @@
          <div class="l-toppagecontent">
             <p class="p-toppage__title">仮想通貨のトレンドをTwitterから</p>
             <div class="l-toparea">
-                <a href="/login" class="c-atagbtn c-topbtn">ログインする</a>
+                <a href="/login" class="c-atagbtn c-topbtn">メールアドレスからログイン</a>
                 <a href="/register" class="c-atagbtn c-topbtn">登録する</a>
             </div>
             <div class="l-toptwitterarea">
-                <a href="/twitter/login" class="c-atagbtn c-twitterbtn">Twitterでログインする</a>
+                <a href="/twitter/login" class="c-atagbtn c-twitterbtn"><i class="fab fa-twitter"></i>Twitterでログインする</a>
             </div>
          </div>
        </div>
@@ -58,17 +58,16 @@
                 <div class="p-introduction__comment">
                   <p>
                     仮想通貨に関連したニュースを表示。
-                    <br />仮想通貨のニュースを一覧で表示。
                     <br />詳細への外部ページへのリンクも設置。
-                    <br />仮想通貨をニュースで知ろう。
+                    <br />気になるニュースをチェックできます。
                   </p>
                 </div>
               </div>
             </div>
             <div class="l-introend">
-              <p class="p-toppageend">まずは登録</p>
+              <p class="p-toppageend">登録はTwitterから</p>
               <div class="l-introend__btn">
-                <a href="/register" class="c-atagbtn c-endbtn">登録する</a>
+                <a href="/twitter/login" class="c-atagbtn c-twitterbtn"><i class="fab fa-twitter"></i>Twitterでログインする</a>
               </div>
             </div>
          </div>
