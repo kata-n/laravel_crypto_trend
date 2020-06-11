@@ -594,13 +594,7 @@ li {
 }
 
 .l-accountpage {
-  height: 1950px;
-}
-
-@media screen and (max-width: 476px) {
-  .l-accountpage {
-    height: 500vh;
-  }
+  padding-bottom: 1rem;
 }
 
 .l-maintitle {

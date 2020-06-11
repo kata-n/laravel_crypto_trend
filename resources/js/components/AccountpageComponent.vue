@@ -1,5 +1,5 @@
 <template>
-    <div class=" l-accountpage">
+    <div class="l-accountpage">
       <div class="l-mainwrapper">
         <div class="l-maintitle">
           <h2 class="c-heading">Twitterアカウント一覧</h2>
