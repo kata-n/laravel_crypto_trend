@@ -806,6 +806,23 @@ li {
   margin: 0 auto;
 }
 
+.c-pagetopBtn {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 50%;
+  background: #5bc8ac;
+}
+
+.c-pagetopBtn__icon {
+  color: #fff;
+  font-size: 16px;
+}
+
 .c-form {
   background-color: #fff;
   box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);

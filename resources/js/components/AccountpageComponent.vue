@@ -39,6 +39,7 @@
           :page-class="'c-pagination__item'">
         </paginate>
       </div>
+
     </div>
 
 </template>

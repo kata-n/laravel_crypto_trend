@@ -1953,6 +1953,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2109,6 +2110,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2166,6 +2171,13 @@ __webpack_require__.r(__webpack_exports__);
     //時間表示の切り替え
     change: function change(num) {
       this.isActive = num;
+    },
+    //トップへスクロール
+    scrollTop: function scrollTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     }
   }
 });
@@ -3174,7 +3186,13 @@ var render = function() {
                 _c("p", [_vm._v("取得日時：" + _vm._s(Weekdata.Tweet_time))])
               ])
             : _vm._e()
-        })
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "c-pagetopBtn", on: { click: _vm.scrollTop } },
+          [_c("i", { staticClass: "fas fa-chevron-up c-pagetopBtn__icon" })]
+        )
       ],
       2
     )

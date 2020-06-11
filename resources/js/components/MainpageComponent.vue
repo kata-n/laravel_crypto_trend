@@ -72,6 +72,10 @@
               <p>取得日時：{{ Weekdata.Tweet_time }}</p>
             </div>
 
+            <div class="c-pagetopBtn" @click="scrollTop">
+              <i class="fas fa-chevron-up c-pagetopBtn__icon"></i>
+            </div>
+
         </div>
     </div>
 </template>
@@ -121,7 +125,16 @@
         //時間表示の切り替え
         change: function(num){
         this.isActive = num
+        },
+
+        //トップへスクロール
+        scrollTop: function(){
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
         }
-    }
+
+      }
   }
 </script>
