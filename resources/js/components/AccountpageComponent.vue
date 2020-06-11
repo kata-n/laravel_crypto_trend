@@ -95,7 +95,7 @@
           //ページネーション
           clickCallback: function (pageNum) {
              this.currentPage = Number(pageNum);
-              this.$scrollTo('#app', 1000, {offset: -60});
+             this.$scrollTo('#app', 1000, {offset: -60});
           },
 
         },
