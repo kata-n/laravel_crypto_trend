@@ -31,7 +31,7 @@
                         <input id="name" type="text" class="c-inputtext @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                         <div class="c-text_underline"></div>
                         @error('name')
-                            <span role="alert">
+                            <span class="c-message__alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
@@ -43,7 +43,7 @@
                           <input id="email" type="email" class="c-inputtext @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                           <div class="c-text_underline"></div>
                           @error('email')
-                              <span role="alert">
+                              <span class="c-message__alert">
                                   <strong>{{ $message }}</strong>
                               </span>
                           @enderror
@@ -56,7 +56,7 @@
                           <input id="password" type="password" class="c-inputtext @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                           <div class="c-text_underline"></div>
                           @error('password')
-                              <span role="alert">
+                              <span class="c-message__alert">
                                   <strong>{{ $message }}</strong>
                               </span>
                           @enderror

@@ -5,4 +5,7 @@
     color: $White;
     background-color: $CheckBgColor;
   }
+  &-message__alert strong {
+    color: $CheckBgColor;
+  }
 }

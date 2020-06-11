@@ -892,6 +892,10 @@ li {
   background-color: #fd166f;
 }
 
+.c-message__alert strong {
+  color: #fd166f;
+}
+
 .c-heading {
   letter-spacing: 2px;
   font-size: 1.2rem;

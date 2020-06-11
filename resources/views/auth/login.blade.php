@@ -36,7 +36,7 @@
                             <div class="c-text_underline"></div>
 
                             @error('email')
-                              <span class="invalid-feedback" role="alert">
+                              <span class="c-message__alert">
                                 <strong>{{ $message }}</strong>
                               </span>
                             @enderror
@@ -51,7 +51,7 @@
                               <div class="c-text_underline"></div>
 
                               @error('password')
-                                  <span class="invalid-feedback" role="alert">
+                                  <span class="c-message__alert">
                                       <strong>{{ $message }}</strong>
                                   </span>
                               @enderror
