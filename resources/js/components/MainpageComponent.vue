@@ -17,6 +17,11 @@
               <label for="Tab3" class="p-RnkingSlect">過去一週間</label>
             </div>
 
+            <div class="p-cryptolist__all">
+              <input @click="checkAll" type="checkbox" checked id="CryoptoAll">
+              <label class="p-cryptoAll" for="CryoptoAll">チェックをすべてはずす</label>
+            </div>
+
             <div class="crypto_list l-cryptolist">
               <div v-for="Cryopto in Crypto_lists" class="p-cryptolist">
                 <input type="checkbox"
@@ -57,7 +62,7 @@
               <p>取得日時：{{ Daydata.Tweet_time }}</p>
             </div>
 
-            <div v-for="Weekdata in displayWeekDatas" 
+            <div v-for="Weekdata in displayWeekDatas"
                  v-if="isActive == '3'"
                  class="l-cryptoarea p-cryptoarea">
               <a v-bind:href="'https://twitter.com/search?q=' + Weekdata.Crypto_name" target="_blank"
@@ -75,8 +80,6 @@
             <div v-scroll="handleScroll" :class="{visible: visible}" class="c-pagetopBtn" @click="scrollTop">
               <i class="fas fa-chevron-up c-pagetopBtn__icon"></i>
             </div>
-            
-                            <a href="/twitter/login" class="c-atagbtn c-twitterbtn">Twitterでログインする</a>
 
         </div>
     </div>
@@ -140,6 +143,10 @@
 
         handleScroll() {
           this.visible = window.pageYOffset > 400;
+        },
+
+        checkAll() {
+          this.preview = []
         }
 
       }

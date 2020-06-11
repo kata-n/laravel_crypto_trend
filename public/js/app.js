@@ -2116,6 +2116,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2184,6 +2187,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     handleScroll: function handleScroll() {
       this.visible = window.pageYOffset > 400;
+    },
+    checkAll: function checkAll() {
+      this.preview = [];
     }
   }
 });
@@ -3013,6 +3019,19 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
+        _c("div", { staticClass: "p-cryptolist__all" }, [
+          _c("input", {
+            attrs: { type: "checkbox", checked: "", id: "CryoptoAll" },
+            on: { click: _vm.checkAll }
+          }),
+          _vm._v(" "),
+          _c(
+            "label",
+            { staticClass: "p-cryptoAll", attrs: { for: "CryoptoAll" } },
+            [_vm._v("チェックをすべてはずす")]
+          )
+        ]),
+        _vm._v(" "),
         _c(
           "div",
           { staticClass: "crypto_list l-cryptolist" },
@@ -3210,15 +3229,6 @@ var render = function() {
             on: { click: _vm.scrollTop }
           },
           [_c("i", { staticClass: "fas fa-chevron-up c-pagetopBtn__icon" })]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "c-atagbtn c-twitterbtn",
-            attrs: { href: "/twitter/login" }
-          },
-          [_vm._v("Twitterでログインする")]
         )
       ],
       2

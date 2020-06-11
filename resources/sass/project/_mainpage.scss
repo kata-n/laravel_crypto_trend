@@ -25,6 +25,23 @@
     background-color: $CheckBgColor;
     color: $White;
   }
+  &-cryptolist__all input {
+    display: none;
+  }
+  &-cryptoAll {
+    display: block;
+    width: 20%;
+    text-align: center;
+    padding: 0.3rem;
+    background: $noCheckBgColor;
+    margin-bottom: 0.3rem;
+    color: $Blackcolor;
+    font-size: $font-size_11px;
+    @include mq() {
+      margin: 0 auto;
+      width: 70%;
+    }
+  }
   &-cryptoarea {
     background: $White;
     box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);

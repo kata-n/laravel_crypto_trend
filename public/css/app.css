@@ -1061,6 +1061,28 @@ li {
   color: #fff;
 }
 
+.p-cryptolist__all input {
+  display: none;
+}
+
+.p-cryptoAll {
+  display: block;
+  width: 20%;
+  text-align: center;
+  padding: 0.3rem;
+  background: #e7eaeb;
+  margin-bottom: 0.3rem;
+  color: #333;
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 476px) {
+  .p-cryptoAll {
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+
 .p-cryptoarea {
   background: #fff;
   box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);

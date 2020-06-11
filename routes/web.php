@@ -50,15 +50,3 @@ Route::get('/ranking', 'RankingController@index');
 Route::get('twitter/login', 'Auth\TwitterAuthController@redirectToProvider');
 //Twitterコールバック
 Route::get('twitter/callback', 'Auth\TwitterAuthController@handleProviderCallback');
-
-//Tweet数ランキングAPI
-//Route::get('/tweetcount', 'TweetcountController@counter');
-
-////TwitterAPI
-//Route::get('/twitteraccount', 'TwitterAccountController@account');
-
-//CoincheckAPI
-//Route::get('/ticker', 'CoincheckController@ticker');
-
-////自動フォローを行う
-//Route::get('/autofollowing', 'TwitterAccountController@autofollowing');
