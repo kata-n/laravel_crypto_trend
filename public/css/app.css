@@ -551,6 +551,10 @@ li {
   margin: 1rem 0;
 }
 
+.l-formgroup__caution {
+  margin-top: 0.5rem;
+}
+
 .l-maintitle {
   margin: 1rem 0;
 }

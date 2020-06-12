@@ -79,6 +79,9 @@
                                 </a>
                             @endif
                       </div>
+                      <div class="l-formgroup__caution">
+                        <p>Twitterアカウント連携を行っていない場合は、<a href="/twitter/login">こちら</a>から連携を行ってください</p>
+                      </div>
                   </form>
               </div>
           </div>

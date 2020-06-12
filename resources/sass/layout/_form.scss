@@ -1,5 +1,8 @@
 .l{
-  &-formgroup{
+  &-formgroup {
     margin: $space_m 0;
+    &__caution {
+      margin-top: $space_s;
+    }
   }
 }
