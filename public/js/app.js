@@ -2327,7 +2327,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {}
 });
@@ -3348,15 +3347,6 @@ var staticRenderFns = [
               "a",
               { staticClass: "c-atagbtn c-topbtn", attrs: { href: "/login" } },
               [_vm._v("メールアドレスからログイン")]
-            ),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "c-atagbtn c-topbtn",
-                attrs: { href: "/register" }
-              },
-              [_vm._v("登録する")]
             )
           ]),
           _vm._v(" "),

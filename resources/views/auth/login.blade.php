@@ -13,7 +13,7 @@
     </div>
   <nav class="c-header_nav js-toggle-sp-menu-target" id="js-classtaget">
     <ul class="l-listwrapper p-listwrapper">
-      <li class="l-list p-list"><a href="/register">登録する</a></li>
+      <li class="l-list p-list"><a href="/twitter/login"><i class="fab fa-twitter"></i>Twitterでログインする</a></li>
     </ul>
   </nav>
 @endsection
