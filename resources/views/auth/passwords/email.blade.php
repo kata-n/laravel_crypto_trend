@@ -40,7 +40,7 @@
                     <label for="email">{{ __('E-Mail Address') }}</label>
 
                     <div class="">
-                        <input id="email" type="email" class="c-inputtext @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="登録したメールアドレスを入力してください">
+                        <input id="email" type="email" class="c-inputtext @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="メールアドレスを入力">
                         <div class="c-text_underline"></div>
 
                         @error('email')

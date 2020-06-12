@@ -522,6 +522,11 @@ li {
   height: 90vh;
 }
 
+.l-authpage {
+  width: 95%;
+  margin: 0 auto;
+}
+
 .l-registpage {
   height: 110vh;
 }
