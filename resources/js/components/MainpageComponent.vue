@@ -18,8 +18,8 @@
             </div>
 
             <div class="p-cryptolist__all">
-              <input @click="checkAll" type="checkbox" checked id="CryoptoAll">
-              <label class="p-cryptoAll" for="CryoptoAll">チェックをすべてはずす</label>
+              <input @click="selectAllCryptos" type="checkbox" :checked="isAllSelected"  id="CryoptoAll">
+              <label class="p-cryptoAll" for="CryoptoAll">全部にチェック</label>
             </div>
 
             <div class="crypto_list l-cryptolist">
@@ -95,7 +95,8 @@
           Crypto_lists: [],
           preview: [],
           isActive: '1',
-          visible: false
+          visible: false,
+          isAllSelected: false
         }
       },
       mounted() {
@@ -141,12 +142,21 @@
           });
         },
 
+        //スクロールで表示非表示の切り替え
         handleScroll() {
           this.visible = window.pageYOffset > 400;
         },
 
-        checkAll() {
-          this.preview = []
+        //全選択
+        selectAllCryptos() {
+          if (this.isAllSelected) {
+            this.preview = []
+            this.isAllSelected = false
+          } else {
+            this.preview = []
+            this.preview = this.Crypto_lists
+            this.isAllSelected = true
+          }
         }
 
       }

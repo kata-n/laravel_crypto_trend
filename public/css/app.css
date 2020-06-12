@@ -642,7 +642,7 @@ li {
 
 @media screen and (max-width: 476px) {
   .l-secondview {
-    height: 280vh;
+    height: 300vh;
   }
 }
 
@@ -1087,7 +1087,7 @@ li {
   text-align: center;
   padding: 0.3rem;
   background: #e7eaeb;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.8rem;
   color: #333;
   font-size: 0.7rem;
 }

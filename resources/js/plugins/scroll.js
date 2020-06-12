@@ -1,3 +1,4 @@
+//カスタムディレクティブ、スクロールイベント処理
 Vue.directive('scroll', {
   inserted: function (el, binding) {
     let f = function (evt) {

@@ -2128,7 +2128,8 @@ __webpack_require__.r(__webpack_exports__);
       Crypto_lists: [],
       preview: [],
       isActive: '1',
-      visible: false
+      visible: false,
+      isAllSelected: false
     };
   },
   mounted: function mounted() {
@@ -2185,11 +2186,20 @@ __webpack_require__.r(__webpack_exports__);
         behavior: "smooth"
       });
     },
+    //スクロールで表示非表示の切り替え
     handleScroll: function handleScroll() {
       this.visible = window.pageYOffset > 400;
     },
-    checkAll: function checkAll() {
-      this.preview = [];
+    //全選択
+    selectAllCryptos: function selectAllCryptos() {
+      if (this.isAllSelected) {
+        this.preview = [];
+        this.isAllSelected = false;
+      } else {
+        this.preview = [];
+        this.preview = this.Crypto_lists;
+        this.isAllSelected = true;
+      }
     }
   }
 });
@@ -3019,14 +3029,15 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "p-cryptolist__all" }, [
           _c("input", {
-            attrs: { type: "checkbox", checked: "", id: "CryoptoAll" },
-            on: { click: _vm.checkAll }
+            attrs: { type: "checkbox", id: "CryoptoAll" },
+            domProps: { checked: _vm.isAllSelected },
+            on: { click: _vm.selectAllCryptos }
           }),
           _vm._v(" "),
           _c(
             "label",
             { staticClass: "p-cryptoAll", attrs: { for: "CryoptoAll" } },
-            [_vm._v("チェックをすべてはずす")]
+            [_vm._v("全部にチェック")]
           )
         ]),
         _vm._v(" "),
@@ -16504,6 +16515,7 @@ $(function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+//カスタムディレクティブ、スクロールイベント処理
 Vue.directive('scroll', {
   inserted: function inserted(el, binding) {
     var f = function f(evt) {

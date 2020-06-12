@@ -11,9 +11,10 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 
 class TweetcountController extends Controller
 {
+  //つぶやきを集計する
   public static function counter()
   {
-
+    //認証を行う
     $twitter = new TwitterOAuth(
         config('services.twitter.client_id'),
         config('services.twitter.client_secret'),
@@ -40,7 +41,7 @@ class TweetcountController extends Controller
             "q" => $value["name"].'+'.$value["name_ja"].$time.' -rt -Bot -replies',
             "lang" => "ja",
             "locale" => "ja",
-            "count" => "50",
+            "count" => "100",
             "include_entities" => "false",
         );
 
