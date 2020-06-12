@@ -18,7 +18,7 @@
             </div>
 
             <div class="p-cryptolist__all">
-              <input @click="selectAllCryptos" type="checkbox" :checked="isAllSelected"  id="CryoptoAll">
+              <input @click="selectAllCryptos" type="checkbox"  id="CryoptoAll">
               <label class="p-cryptoAll" for="CryoptoAll">全部にチェック</label>
             </div>
 
@@ -96,7 +96,7 @@
           preview: [],
           isActive: '1',
           visible: false,
-          isAllSelected: false
+          isAllSelected: true
         }
       },
       mounted() {

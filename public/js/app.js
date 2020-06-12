@@ -2129,7 +2129,7 @@ __webpack_require__.r(__webpack_exports__);
       preview: [],
       isActive: '1',
       visible: false,
-      isAllSelected: false
+      isAllSelected: true
     };
   },
   mounted: function mounted() {
@@ -3030,7 +3030,6 @@ var render = function() {
         _c("div", { staticClass: "p-cryptolist__all" }, [
           _c("input", {
             attrs: { type: "checkbox", id: "CryoptoAll" },
-            domProps: { checked: _vm.isAllSelected },
             on: { click: _vm.selectAllCryptos }
           }),
           _vm._v(" "),
