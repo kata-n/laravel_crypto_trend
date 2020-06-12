@@ -22,6 +22,10 @@
       width: 80%;
     }
   }
+  &-twitterbtn:hover {
+    opacity: 0.9;
+    transition: .5s;
+  }
   &-headerlogobtn {
     color: $White;
   }
@@ -36,7 +40,8 @@
     letter-spacing: $letter-spacing;
     font-size: $font-size_14px;
   }
-  &-authbtn:hover {
+  &-authbtn:hover,
+  &-topbtn:hover {
     background: $btnHoverColor;
     transition: .5s;
   }

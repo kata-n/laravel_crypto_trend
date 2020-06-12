@@ -2,7 +2,7 @@
     <div class="l-newspage">
         <div class="mainwrapper">
             <div class="l-maintitle">
-              <h2 class="c-heading">仮想通貨News一覧</h2>
+              <h2 class="c-heading">仮想通貨関連ニュース</h2>
             </div>
 
             <div class="l-newslist p-newslist">

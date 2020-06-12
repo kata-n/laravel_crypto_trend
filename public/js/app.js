@@ -3303,7 +3303,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "l-maintitle" }, [
-      _c("h2", { staticClass: "c-heading" }, [_vm._v("仮想通貨News一覧")])
+      _c("h2", { staticClass: "c-heading" }, [_vm._v("仮想通貨関連ニュース")])
     ])
   }
 ]

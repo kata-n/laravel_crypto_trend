@@ -741,6 +741,12 @@ li {
   }
 }
 
+.c-twitterbtn:hover {
+  opacity: 0.9;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .c-headerlogobtn {
   color: #fff;
 }
@@ -757,7 +763,8 @@ li {
   font-size: 0.9rem;
 }
 
-.c-authbtn:hover {
+.c-authbtn:hover,
+.c-topbtn:hover {
   background: #464c96;
   -webkit-transition: 0.5s;
   transition: 0.5s;
