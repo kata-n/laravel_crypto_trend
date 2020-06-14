@@ -34,7 +34,7 @@
   &-registform {
     width: 100%;
     padding: $space_2l $space_xl;
-    @include mq(){
+    @include mq() {
       padding: $space_2l $space_xs;
     }
   }

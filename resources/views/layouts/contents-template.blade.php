@@ -9,10 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="" />
     <meta name="twitter:card" content="summary"/>
-    <meta property="og:url" content="https://application-keigen-quiz.shikatana.com/"/>
+    <meta property="og:url" content="https://application-virtual-currency.shikatana.com/"/>
     <meta property="og:title" content="Crypto Trend"/>
     <meta property="og:description" content=""/>
-    <meta property="og:image" content="{{ asset('images/top_view2.png') }}"/>
+    <meta property="og:image" content="{{ asset('images/firstview_backgtound.png') }}"/>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <title>Crypto Trend | @yield ('title','')</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

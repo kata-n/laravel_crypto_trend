@@ -28,7 +28,7 @@
                   @csrf
                   <div class="l-formgroup">
                       <label for="name">{{ __('Name') }}</label>
-                        <input id="name" type="text" class="c-inputtext @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                        <input id="name" type="text" class="c-inputtext @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="必須">
                         <div class="c-text_underline"></div>
                         @error('name')
                             <span class="c-message__alert">
