@@ -16161,7 +16161,8 @@ __webpack_require__.r(__webpack_exports__);
  */
 __webpack_require__(/*! ./jQuery/script */ "./resources/js/jQuery/script.js");
 
-window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js"); //axios
+
 
 Vue.prototype.$http = axios__WEBPACK_IMPORTED_MODULE_0___default.a; //pagination
 

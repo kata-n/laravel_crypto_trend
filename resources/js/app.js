@@ -8,6 +8,7 @@ require("./jQuery/script");
 
 window.Vue = require('vue');
 
+//axios
 import axios from 'axios'
 Vue.prototype.$http = axios;
 

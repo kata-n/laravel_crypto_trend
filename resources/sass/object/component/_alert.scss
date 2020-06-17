@@ -8,4 +8,7 @@
   &-message__alert strong {
     color: $CheckBgColor;
   }
+  &-alert__success {
+    color: blue;
+  }
 }

@@ -29,7 +29,7 @@
   &-headerlogobtn {
     color: $White;
   }
-  &-authbtn{
+  &-authbtn {
     width: 70%;
     border: none;
     display: block;
@@ -88,9 +88,9 @@
     position: fixed;
     right: $space_xxs;
     bottom: $space_xxs;
-    width: 42px;
-    height: 42px;
-    line-height: 32px;
+    width: $space_2xl;
+    height: $space_2xl;
+    line-height: $space_xl;
     text-align: center;
     border-radius: 50%;
     cursor: pointer;
@@ -99,7 +99,7 @@
     transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
     &__icon {
       color: $White;
-      font-size: 16px;
+      font-size: $font-size_16px;
       margin-top: 25%;
     }
   }

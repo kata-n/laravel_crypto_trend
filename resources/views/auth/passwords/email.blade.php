@@ -28,7 +28,7 @@
 
         <div class="l-authbody">
             @if (session('status'))
-                <div class="p-alert_success" role="alert">
+                <div class="c-alert__success">
                     {{ session('status') }}
                 </div>
             @endif
@@ -39,12 +39,12 @@
                 <div class="l-formgroup">
                     <label for="email">{{ __('E-Mail Address') }}</label>
 
-                    <div class="">
+                    <div>
                         <input id="email" type="email" class="c-inputtext @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="メールアドレスを入力">
                         <div class="c-text_underline"></div>
 
                         @error('email')
-                            <span class="invalid-feedback" role="alert">
+                            <span class="c-message__alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror

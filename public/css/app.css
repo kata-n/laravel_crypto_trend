@@ -824,11 +824,11 @@ li {
 
 .c-pagetopBtn {
   position: fixed;
-  right: 14px;
-  bottom: 14px;
-  width: 42px;
-  height: 42px;
-  line-height: 32px;
+  right: 0.9rem;
+  bottom: 0.9rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  line-height: 2rem;
   text-align: center;
   border-radius: 50%;
   cursor: pointer;
@@ -840,7 +840,7 @@ li {
 
 .c-pagetopBtn__icon {
   color: #fff;
-  font-size: 16px;
+  font-size: 1rem;
   margin-top: 25%;
 }
 
@@ -910,6 +910,10 @@ li {
 
 .c-message__alert strong {
   color: #fd166f;
+}
+
+.c-alert__success {
+  color: blue;
 }
 
 .c-heading {
@@ -1273,10 +1277,6 @@ li {
 .p-footerabout,
 .p-footername {
   font-size: 0.5rem;
-}
-
-.p-alert_success {
-  color: blue;
 }
 
 active {

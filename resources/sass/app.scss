@@ -2,6 +2,7 @@
 @import "foundation/_reset";
 @import "foundation/_variable";
 @import "foundation/_mixins";
+
 //layout
 @import "layout/_header";
 @import "layout/_footer";
@@ -12,22 +13,23 @@
 @import "layout/_accountpage";
 @import "layout/_toppage";
 @import "layout/_newspage";
+
 //component
-@import "component/_button";
-@import "component/_form";
-@import "component/_alert";
-@import "component/_letter";
-@import "component/_menutoggle";
-@import "component/_pagination";
+@import "object/component/_button";
+@import "object/component/_form";
+@import "object/component/_alert";
+@import "object/component/_letter";
+@import "object/component/_menutoggle";
+@import "object/component/_pagination";
+
 //project
-@import "project/_container";
-@import "project/_header";
-@import "project/_loginpage";
-@import "project/_mainpage";
-@import "project/_toppage";
-@import "project/_accountpage";
-@import "project/_newspage";
-@import "project/_footer";
-@import "project/_authpage";
+@import "object/project/_container";
+@import "object/project/_header";
+@import "object/project/_mainpage";
+@import "object/project/_toppage";
+@import "object/project/_accountpage";
+@import "object/project/_newspage";
+@import "object/project/_footer";
+
 //utillity
-@import "utility/_jsscript";
+@import "object/utility/_jsscript";

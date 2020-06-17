@@ -33,7 +33,7 @@
         background-color: $Blackcolor;
       }
     }
-    @include mq(){
+    @include mq() {
       display: inline-block;
     }
   }
@@ -46,7 +46,7 @@
   &-menu_trigger span:nth-of-type(3) {
     bottom: 0;
   }
-  &-header_nav{
+  &-header_nav {
     @include mq() {
       display: block;
       position: fixed;

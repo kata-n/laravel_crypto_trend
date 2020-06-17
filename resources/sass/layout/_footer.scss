@@ -1,9 +1,10 @@
-.l-footer {
-  background-color: $footerBgColor;
-  height: $footerHeight;
-
-  padding: 18px;
-  z-index: 9999;
-  text-align: center;
-  justify-content: space-around;
+.l {
+  &-footer {
+    background-color: $footerBgColor;
+    height: $footerHeight;
+    padding: 18px;
+    z-index: 9999;
+    text-align: center;
+    justify-content: space-around;
+  }
 }
