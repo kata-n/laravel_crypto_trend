@@ -63,7 +63,7 @@
                       </div>
                   </div>
 
-                  <div class="fl-formgroup">
+                  <div class="l-formgroup">
                       <label for="password-confirm">{{ __('Confirm Password') }}</label>
                       <div>
                           <input id="password-confirm" type="password" class="c-inputtext" name="password_confirmation" required autocomplete="new-password">
