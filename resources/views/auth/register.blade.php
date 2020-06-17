@@ -40,7 +40,7 @@
                   <div class="l-formgroup">
                       <label for="email">{{ __('E-Mail Address') }}</label>
                       <div>
-                          <input id="email" type="email" class="c-inputtext @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                          <input id="email" type="email" class="c-inputtext @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="必須">
                           <div class="c-text_underline"></div>
                           @error('email')
                               <span class="c-message__alert">

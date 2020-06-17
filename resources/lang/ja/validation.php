@@ -109,7 +109,7 @@ return [
     ],
     'string'               => ':attributeは文字列にしてください。',
     'timezone'             => ':attributeは正しいタイムゾーンを指定してください。',
-    'unique'               => ':attributeは既に存在します。',
+    'unique'               => ':attributeは既に登録されています。',
     'uploaded'             => ':attributeのアップロードに失敗しました。',             // 追加
     'url'                  => ':attributeを正しい書式にしてください。',
 
