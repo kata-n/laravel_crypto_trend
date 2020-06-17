@@ -29,7 +29,7 @@
         <div class="l-authbody">
             @if (session('status'))
                 <div class="c-alert__success">
-                    {{ session('status') }}
+                    <strong>{{ session('status') }}</strong>
                 </div>
             @endif
 
