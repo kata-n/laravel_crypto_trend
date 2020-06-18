@@ -3233,7 +3233,7 @@ var render = function() {
               }
             ],
             staticClass: "c-pagetopBtn",
-            class: { visible: _vm.u - _vm.visible },
+            class: { visible: _vm.visible },
             on: { click: _vm.scrollTop }
           },
           [_c("i", { staticClass: "fas fa-chevron-up c-pagetopBtn__icon" })]
