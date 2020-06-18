@@ -16499,9 +16499,9 @@ $(function () {
     var y = 767;
 
     if (x <= y) {
-      $('#js-classtaget').addClass('js-toggle-sp-menu-target');
+      $('.js-navtarget').addClass('js-toggle-sp-menu-target');
     } else {
-      $('#js-classtaget').removeClass('js-toggle-sp-menu-target');
+      $('.js-navtarget').removeClass('js-toggle-sp-menu-target');
     }
   });
 });

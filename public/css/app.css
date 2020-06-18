@@ -912,7 +912,7 @@ li {
   color: #fd166f;
 }
 
-.c-alert__success {
+.c-alert__success strong {
   color: blue;
 }
 

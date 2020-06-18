@@ -11,7 +11,7 @@
       <span></span>
       <span></span>
     </div>
-  <nav class="c-header_nav js-toggle-sp-menu-target" id="js-classtaget">
+  <nav class="c-header_nav js-toggle-sp-menu-target js-navtarget">
     <ul class="l-listwrapper p-listwrapper">
       <li class="l-list p-list"><a href="/mainpage">Twitterランキング</a></li>
       <li class="l-list p-list"><a href="/accountpage">Twitterアカウント</a></li>
