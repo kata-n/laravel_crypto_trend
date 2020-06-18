@@ -1,10 +1,11 @@
 $(function() {
-  //spメニュー
+  //spメニュー開閉
   $('.js-toggle-sp-menu').click(function(){
-    $(this).toggleClass('active');
-    $('.js-toggle-sp-menu-target').toggleClass('active');
+    $(this).toggleClass('u-active');
+    $('.js-toggle-sp-menu-target').toggleClass('u-active');
   });
 
+  //スマホ用メニュー
   $(window).outerWidth(function(){
       var x = $(window).outerWidth();
       var y = 767;
