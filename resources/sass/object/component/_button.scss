@@ -102,9 +102,5 @@
       font-size: $font-size_16px;
       margin-top: 25%;
     }
-    & visible {
-      opacity: 1;
-      transform: translate3d(0, -10px, 0);
-    }
   }
 }

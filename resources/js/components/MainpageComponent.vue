@@ -77,7 +77,7 @@
               <p>取得日時：{{ Weekdata.Tweet_time }}</p>
             </div>
 
-            <div v-scroll="handleScroll" :class="{visible: visible}" class="c-pagetopBtn" @click="scrollTop">
+            <div v-scroll="handleScroll" :class="{visible: u-visible}" class="c-pagetopBtn" @click="scrollTop">
               <i class="fas fa-chevron-up c-pagetopBtn__icon"></i>
             </div>
 

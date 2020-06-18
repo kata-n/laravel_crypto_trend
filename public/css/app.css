@@ -844,12 +844,6 @@ li {
   margin-top: 25%;
 }
 
-.c-pagetopBtn visible {
-  opacity: 1;
-  -webkit-transform: translate3d(0, -10px, 0);
-          transform: translate3d(0, -10px, 0);
-}
-
 .c-form {
   background-color: #fff;
   box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.3);
@@ -1289,5 +1283,11 @@ active {
   -webkit-transition: 3s;
   transition: 3s;
   opacity: 1;
+}
+
+.u-visible {
+  opacity: 1;
+  -webkit-transform: translate3d(0, -10px, 0);
+          transform: translate3d(0, -10px, 0);
 }
 
