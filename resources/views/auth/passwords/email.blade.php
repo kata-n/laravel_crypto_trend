@@ -6,7 +6,7 @@
   @parent
   <div class="l-headerlogo"><a href="/" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>
   <nav class="l-nav">
-    <div class="c-menu_trigger js-toggle-sp-menu" id="js-sp-nav-menu">
+    <div class="c-menu_trigger js-toggle-sp-menu">
       <span></span>
       <span></span>
       <span></span>
