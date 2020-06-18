@@ -16491,8 +16491,8 @@ __webpack_require__.r(__webpack_exports__);
 $(function () {
   //spメニュー開閉
   $('.js-toggle-sp-menu').click(function () {
-    $(this).toggleClass('u-active');
-    $('.js-toggle-sp-menu-target').toggleClass('u-active');
+    $(this).toggleClass('active');
+    $('.js-toggle-sp-menu-target').toggleClass('active');
   }); //スマホ用メニュー
 
   $(window).outerWidth(function () {
