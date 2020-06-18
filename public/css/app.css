@@ -1279,7 +1279,7 @@ li {
   font-size: 0.5rem;
 }
 
-active {
+.u-active {
   -webkit-transition: 3s;
   transition: 3s;
   opacity: 1;
