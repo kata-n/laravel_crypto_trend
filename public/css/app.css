@@ -517,9 +517,12 @@ li {
   height: 4600px;
 }
 
-.l-loginpage,
 .l-authpage {
   height: 90vh;
+}
+
+.l-loginpage {
+  height: 100vh;
 }
 
 .l-authpage {
@@ -556,8 +559,8 @@ li {
   margin: 1rem 0;
 }
 
-.l-formgroup__caution {
-  margin-top: 0.5rem;
+.l-formgroup__twitter {
+  margin-top: 0.9rem;
 }
 
 .l-maintitle {
@@ -893,6 +896,10 @@ li {
 .c-inputtext:focus + .c-text_underline::before,
 .c-inputtext:focus + .c-text_underline::after {
   width: 50%;
+}
+
+.c-lineborder {
+  border-top: 1px solid #e6e6e6;
 }
 
 .c-alert {

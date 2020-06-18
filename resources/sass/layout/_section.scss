@@ -12,9 +12,11 @@
   &-mainpage {
     height: $mainpageheight;
   }
-  &-loginpage,
   &-authpage {
     height: 90vh;
+  }
+  &-loginpage {
+    height: 100vh;
   }
   &-authpage {
     width: 95%;

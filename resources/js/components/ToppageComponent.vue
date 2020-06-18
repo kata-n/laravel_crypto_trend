@@ -3,11 +3,11 @@
        <div class="l-firstview p-firstview">
          <div class="l-toppagecontent">
             <p class="p-toppage__title">仮想通貨のトレンドをTwitterから</p>
-            <div class="l-toparea">
-                <a href="/login" class="c-atagbtn c-topbtn">メールアドレスからログイン</a>
-            </div>
             <div class="l-toptwitterarea">
-                <a href="/twitter/login" class="c-atagbtn c-twitterbtn"><i class="fab fa-twitter"></i>Twitterでログインする</a>
+                <a href="/twitter/login" class="c-atagbtn c-twitterbtn"><i class="fab fa-twitter"></i>Twitterから新規登録</a>
+            </div>
+            <div class="l-toparea">
+                <a href="/login" class="c-atagbtn c-topbtn">ログイン</a>
             </div>
          </div>
        </div>
@@ -66,9 +66,14 @@
             <div class="l-introend">
               <p class="p-toppageend">登録はTwitterから</p>
               <div class="l-introend__btn">
-                <a href="/twitter/login" class="c-atagbtn c-twitterbtn"><i class="fab fa-twitter"></i>Twitterでログインする</a>
+                <a href="/twitter/login" class="c-atagbtn c-twitterbtn"><i class="fab fa-twitter"></i>新規登録</a>
               </div>
             </div>
+
+            <div v-scroll="handleScroll" :class="{'u-visible':visible}" class="c-pagetopBtn" @click="scrollTop">
+              <i class="fas fa-chevron-up c-pagetopBtn__icon"></i>
+            </div>
+
          </div>
        </div>
     </div>
@@ -77,7 +82,24 @@
 
 <script>
     export default {
-        mounted() {
+      data(){
+        return {
+          visible: false,
         }
+      },
+      methods: {
+        //トップへスクロール
+        scrollTop: function(){
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        },
+
+        //スクロールで表示非表示の切り替え
+        handleScroll() {
+          this.visible = window.pageYOffset > 400;
+        },
+      }
     }
 </script>

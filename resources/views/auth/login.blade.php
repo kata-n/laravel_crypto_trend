@@ -78,9 +78,13 @@
                                     {{ __('Forgot Your Password?') }}
                                 </a>
                             @endif
+
+                            <p>※Twitterアカウント連携を行っていない場合は、<a href="/twitter/login">こちら</a>から連携を行ってください</p>
+
                       </div>
-                      <div class="l-formgroup__caution">
-                        <p>Twitterアカウント連携を行っていない場合は、<a href="/twitter/login">こちら</a>から連携を行ってください</p>
+                      <div class="l-formgroup__twitter c-lineborder">
+                        <p>または</p>
+                        <a href="/twitter/login" class="c-atagbtn c-twitterbtn"><i class="fab fa-twitter"></i>Twitterでログインする</a>
                       </div>
                   </form>
               </div>

@@ -39,6 +39,9 @@
   &-inputtext:focus + &-text_underline::after {
     width: 50%;
   }
+  &-lineborder {
+    border-top: 1px solid $loginborderColor;
+  }
   &-alert {
     padding-top: $headerHeight;
     text-align: center;
