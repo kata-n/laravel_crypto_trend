@@ -4,7 +4,7 @@
          <div class="l-toppagecontent">
             <p class="p-toppage__title">仮想通貨のトレンドをTwitterから</p>
             <div class="l-toptwitterarea">
-                <a href="/twitter/login" class="c-atagbtn c-twitterbtn"><i class="fab fa-twitter"></i>Twitterから新規登録</a>
+                <a href="/twitter/login" class="c-atagbtn c-twitterbtn"><i class="fab fa-twitter"></i>Twitterアカウントで新規登録</a>
             </div>
             <div class="l-toparea">
                 <a href="/login" class="c-atagbtn c-topbtn">ログイン</a>
@@ -66,7 +66,7 @@
             <div class="l-introend">
               <p class="p-toppageend">登録はTwitterから</p>
               <div class="l-introend__btn">
-                <a href="/twitter/login" class="c-atagbtn c-twitterbtn"><i class="fab fa-twitter"></i>新規登録</a>
+                <a href="/twitter/login" class="c-atagbtn c-twitterbtn"><i class="fab fa-twitter"></i>Twitterアカウントで新規登録</a>
               </div>
             </div>
 

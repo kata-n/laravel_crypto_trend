@@ -3412,7 +3412,7 @@ var staticRenderFns = [
             },
             [
               _c("i", { staticClass: "fab fa-twitter" }),
-              _vm._v("Twitterから新規登録")
+              _vm._v("Twitterアカウントで新規登録")
             ]
           )
         ]),
@@ -3525,7 +3525,10 @@ var staticRenderFns = [
             staticClass: "c-atagbtn c-twitterbtn",
             attrs: { href: "/twitter/login" }
           },
-          [_c("i", { staticClass: "fab fa-twitter" }), _vm._v("新規登録")]
+          [
+            _c("i", { staticClass: "fab fa-twitter" }),
+            _vm._v("Twitterアカウントで新規登録")
+          ]
         )
       ])
     ])
