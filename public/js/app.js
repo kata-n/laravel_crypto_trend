@@ -2009,6 +2009,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   computed: {
+    //アカウント数
     getItems: function getItems() {
       var current = this.currentPage * this.parPage;
       var start = current - this.parPage;
@@ -3418,11 +3419,13 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "c-loginfont" }, [
-                _vm._v("特徴はTwitterを使った話題性の把握です。")
+                _vm._v("特徴はTwitterを利用した話題性の把握。")
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "c-loginfont" }, [
-                _vm._v("各銘柄の話題性をCrypto Trendで知る事ができます。")
+                _vm._v(
+                  "つぶやきを自動集計し、各銘柄の話題性をCrypto Trendで知る事ができます。"
+                )
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "c-loginfont__regist" }, [

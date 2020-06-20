@@ -6,8 +6,8 @@
             <div class="l-toppagecontent__sentence p-toppage__sentence">
                <div class="l-toptwitterarea">
                   <p class="c-loginfont">Crypto Trend(クリプト トレンド)は、仮想通貨の情報サイトです。</p>
-                  <p class="c-loginfont">特徴はTwitterを使った話題性の把握です。</p>
-                  <p class="c-loginfont">各銘柄の話題性をCrypto Trendで知る事ができます。</p>
+                  <p class="c-loginfont">特徴はTwitterを利用した話題性の把握。</p>
+                  <p class="c-loginfont">つぶやきを自動集計し、各銘柄の話題性をCrypto Trendで知る事ができます。</p>
                   <p class="c-loginfont__regist">Twitter連携をおこなって、登録してみよう</p>
                   <a href="/twitter/login" class="c-atagbtn c-twitterbtn"><i class="fab fa-twitter"></i>Twitterアカウントで新規登録</a>
                </div>

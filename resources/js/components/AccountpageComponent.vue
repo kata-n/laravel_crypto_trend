@@ -102,6 +102,7 @@
         },
 
        computed: {
+         //アカウント数
          getItems: function() {
           let current = this.currentPage * this.parPage;
           let start = current - this.parPage;
