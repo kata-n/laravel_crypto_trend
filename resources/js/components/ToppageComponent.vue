@@ -7,7 +7,6 @@
                 <a href="/twitter/login" class="c-atagbtn c-twitterbtn"><i class="fab fa-twitter"></i>Twitterアカウントで新規登録</a>
             </div>
             <div class="l-toparea">
-                <a href="/login" class="c-atagbtn c-topbtn">ログイン</a>
             </div>
          </div>
        </div>

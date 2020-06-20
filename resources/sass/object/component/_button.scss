@@ -26,6 +26,16 @@
     opacity: 0.9;
     transition: .5s;
   }
+  &-loginbtn {
+    color: $White;
+    border: 1px $White solid;
+    padding: $space_s $space_m;
+  }
+  &-loginbtn:hover {
+    background: $White;
+    color: $btnHoverColor;
+    transition: .5s;
+  }
   &-headerlogobtn {
     color: $White;
   }

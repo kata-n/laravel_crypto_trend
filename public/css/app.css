@@ -457,13 +457,27 @@ li {
   display: flex;
 }
 
-.l-headerlogo {
+.l-header__logo {
   margin: 1.1rem 1.5rem;
 }
 
 @media screen and (max-width: 476px) {
-  .l-headerlogo {
+  .l-header__logo {
     margin: 1.2rem 1.5rem;
+  }
+}
+
+.l-header__login {
+  margin: 0.7rem 2rem;
+  display: block;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 476px) {
+  .l-header__login {
+    margin: 0.7rem 1rem;
+    display: block;
+    margin-left: auto;
   }
 }
 
@@ -747,6 +761,19 @@ li {
 
 .c-twitterbtn:hover {
   opacity: 0.9;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.c-loginbtn {
+  color: #fff;
+  border: 1px #fff solid;
+  padding: 0.5rem 1rem;
+}
+
+.c-loginbtn:hover {
+  background: #fff;
+  color: #464c96;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }

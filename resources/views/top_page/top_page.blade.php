@@ -4,7 +4,8 @@
 
 @section('header')
   @parent
-    <div class="l-headerlogo"><a href="/" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>
+    <div class="l-header__logo"><a href="/" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>
+    <div class="l-header__login"><a href="/login" class="c-atagbtn c-loginbtn">ログインする</a></div>
 @endsection
 
 @section('content')

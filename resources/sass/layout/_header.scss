@@ -7,10 +7,20 @@
     z-index: 9999;
     display: flex;
   }
-  &-headerlogo {
+  &-header__logo {
     margin: $space_xm $space_l;
     @include mq(){
       margin: $space_xxm $space_l;
+    }
+  }
+  &-header__login {
+    margin: $space_ss $space_xl;
+    display: block;
+    margin-left: auto;
+    @include mq(){
+      margin: $space_ss $space_m;
+      display: block;
+      margin-left: auto;
     }
   }
   &-nav {

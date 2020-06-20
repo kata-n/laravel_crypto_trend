@@ -4,7 +4,7 @@
 
 @section('header')
   @parent
-  <div class="l-headerlogo"><a href="/mainpage" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>
+  <div class="l-header__logo"><a href="/mainpage" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>
   <nav class="l-nav">
     <div class="c-menu_trigger js-toggle-sp-menu">
       <span></span>

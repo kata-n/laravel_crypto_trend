@@ -2341,7 +2341,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -3417,13 +3416,7 @@ var staticRenderFns = [
           )
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "l-toparea" }, [
-          _c(
-            "a",
-            { staticClass: "c-atagbtn c-topbtn", attrs: { href: "/login" } },
-            [_vm._v("ログイン")]
-          )
-        ])
+        _c("div", { staticClass: "l-toparea" })
       ])
     ])
   },
