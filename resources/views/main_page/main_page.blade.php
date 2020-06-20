@@ -30,6 +30,14 @@
 
 @section('content')
   <section class="l-container p-container">
+
+    <!--フラッシュメッセージ-->
+    @if (session('flash_message'))
+      <div class="c-alert text-center">
+        {{ session('flash_message') }}
+      </div>
+    @endif
+
     <div id="app">
       <mainpage-component></mainpage-component>
     </div>

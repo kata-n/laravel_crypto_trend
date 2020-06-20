@@ -27,12 +27,6 @@
         @show
         </header>
 
-        @if (session('flash_message'))
-          <div class="c-alert text-center">
-            {{ session('flash_message') }}
-          </div>
-        @endif
-
         @yield('content')
 
         <footer class="l-footer">
