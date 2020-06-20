@@ -3422,9 +3422,7 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "c-loginfont" }, [
-                _vm._v(
-                  "仮想通貨に関するつぶやきを自動集計し、各銘柄の話題性を知ることができます。"
-                )
+                _vm._v("各銘柄の話題性をCrypto Trendで知る事ができます。")
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "c-loginfont__regist" }, [
