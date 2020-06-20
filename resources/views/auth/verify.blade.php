@@ -2,6 +2,8 @@
 
 @section('title','パスワードの認証')
 
+@section('description','Crypto Trendパスワードの認証')
+
 @section('header')
   @parent
   <div class="l-header__logo"><a href="/mainpage" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>

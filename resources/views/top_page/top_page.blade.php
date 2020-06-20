@@ -2,6 +2,8 @@
 
 @section('title','トップ画面')
 
+@section('description','Twitterでの仮想通貨のトレンドを知るきっかけに。Twitterのアカウントを連携して仮想通貨のトレンドを知ろう。')
+
 @section('header')
   @parent
     <div class="l-header__logo"><a href="/" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>

@@ -2,6 +2,8 @@
 
 @section('title','ニュース画面')
 
+@section('description','仮想通貨に関連したニュース情報をGoogle newsを使って非表示しています')
+
 @section('header')
   @parent
   <div class="l-header__logo"><a href="/mainpage" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>

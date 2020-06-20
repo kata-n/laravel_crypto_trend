@@ -2,6 +2,8 @@
 
 @section('title','Twitterアカウント画面')
 
+@section('description','仮想通貨に関連したTwitterアカウント一覧です')
+
 @section('header')
   @parent
   <div class="l-header__logo"><a href="/mainpage" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>

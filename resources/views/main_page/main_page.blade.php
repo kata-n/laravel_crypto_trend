@@ -2,6 +2,8 @@
 
 @section('title','メイン画面')
 
+@section('description','Twitterでのつぶやき数を集計したランキングページ')
+
 @section('header')
   @parent
   <div class="l-header__logo"><a href="/mainpage" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>
@@ -31,7 +33,7 @@
 @section('content')
   <section class="l-container p-container">
 
-    <!--フラッシュメッセージ-->
+    <!--flash message-->
     @if (session('flash_message'))
       <div class="c-alert text-center">
         {{ session('flash_message') }}

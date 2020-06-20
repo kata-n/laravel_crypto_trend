@@ -27,14 +27,13 @@ class ResetPasswordController extends Controller
      * @var string
      */
 
-//    protected $redirectTo = '/mainpage';
-
     protected function sendResetResponse(Request $request, $response)
     {
         // リダイレクト先でフラッシュメッセージを表示する
         return redirect('/mainpage')
         ->with('flash_message', 'パスワードの変更が完了しました。');
     }
+
     /**
      * Create a new controller instance.
      *

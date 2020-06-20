@@ -2,6 +2,8 @@
 
 @section('title','新規登録する')
 
+@section('description','Crypto Trend新規登録画面')
+
 @section('header')
   @parent
   <div class="l-header__logo"><a href="/" class="c-atagbtn c-headerlogobtn">Crypto Trend</a></div>
