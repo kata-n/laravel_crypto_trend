@@ -1,14 +1,15 @@
 .c {
   &-alert {
     padding-top: $headerHeight;
+    margin-bottom: -$headerHeight;
     text-align: center;
     color: $White;
-    background-color: $CheckBgColor;
+    background-color: $alartSuccessColor;
   }
   &-message__alert strong {
     color: $CheckBgColor;
   }
   &-alert__success strong {
-    color: $alartokColor;
+    color: $alartSuccessColor;
   }
 }

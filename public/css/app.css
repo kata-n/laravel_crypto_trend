@@ -941,9 +941,10 @@ li {
 
 .c-alert {
   padding-top: 64px;
+  margin-bottom: -64px;
   text-align: center;
   color: #fff;
-  background-color: #fd166f;
+  background-color: #16d3fd;
 }
 
 .c-message__alert strong {
@@ -951,7 +952,7 @@ li {
 }
 
 .c-alert__success strong {
-  color: #1628fd;
+  color: #16d3fd;
 }
 
 .c-heading {
