@@ -5,6 +5,9 @@
     font-size: $font-size_28px;
     letter-spacing: $letter-spacing;
   }
+  &-toppage__sentence {
+    background-color: $toppageFistBgColor;
+  }
   &-firstview {
     position: relative;
     background: url('images/toppage/firstview_backgtound.png') no-repeat center center;

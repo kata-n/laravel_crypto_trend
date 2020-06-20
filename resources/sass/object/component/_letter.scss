@@ -4,4 +4,17 @@
     font-size: $font-size_18px;
     margin: $space_xs 0;
   }
+  &-loginfont {
+    color: $atagFontColor;
+    letter-spacing: $letter-spacing;
+    text-align: left;
+    margin-bottom: $space_2l;
+    &__regist {
+      font-weight: 400;
+      font-size: $font-size_18px;
+      letter-spacing: $letter-spacing;
+      color: $loginfontColor;
+      text-align: center;
+    }
+  }
 }

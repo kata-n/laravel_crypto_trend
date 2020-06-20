@@ -664,25 +664,16 @@ li {
   }
 }
 
-.l-toparea {
-  padding: 4rem 1rem;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-}
-
-@media screen and (max-width: 476px) {
-  .l-toparea {
-    display: list-item;
-    padding: 1.5rem 1rem;
-  }
-}
-
 .l-toptwitterarea {
   text-align: center;
   margin: 0 auto;
   padding: 3rem 1rem;
+}
+
+@media screen and (max-width: 476px) {
+  .l-toptwitterarea {
+    padding: 2.5rem 1rem;
+  }
 }
 
 .l-introduction {
@@ -708,6 +699,17 @@ li {
 
 .l-toppagecontent {
   padding-top: 64px;
+}
+
+.l-toppagecontent__sentence {
+  width: 100%;
+  margin-top: 4rem;
+}
+
+@media screen and (max-width: 476px) {
+  .l-toppagecontent__sentence {
+    margin-top: 2.5rem;
+  }
 }
 
 .l-introend {
@@ -860,6 +862,7 @@ li {
   width: 2.6rem;
   height: 2.6rem;
   line-height: 2rem;
+  margin-right: 1rem;
   text-align: center;
   border-radius: 50%;
   cursor: pointer;
@@ -955,6 +958,21 @@ li {
   letter-spacing: 2px;
   font-size: 1.2rem;
   margin: 0.8rem 0;
+}
+
+.c-loginfont {
+  color: #464c96;
+  letter-spacing: 2px;
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.c-loginfont__regist {
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #51505f;
+  text-align: center;
 }
 
 .c-menu_trigger {
@@ -1183,6 +1201,10 @@ li {
   font-weight: 800;
   font-size: 1.8rem;
   letter-spacing: 2px;
+}
+
+.p-toppage__sentence {
+  background-color: rgba(231, 236, 236, 0.4);
 }
 
 .p-firstview {

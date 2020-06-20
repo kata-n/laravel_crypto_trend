@@ -2341,6 +2341,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -3402,21 +3406,43 @@ var staticRenderFns = [
           _vm._v("仮想通貨のトレンドをTwitterから")
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "l-toptwitterarea" }, [
-          _c(
-            "a",
-            {
-              staticClass: "c-atagbtn c-twitterbtn",
-              attrs: { href: "/twitter/login" }
-            },
-            [
-              _c("i", { staticClass: "fab fa-twitter" }),
-              _vm._v("Twitterアカウントで新規登録")
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "l-toparea" })
+        _c(
+          "div",
+          { staticClass: "l-toppagecontent__sentence p-toppage__sentence" },
+          [
+            _c("div", { staticClass: "l-toptwitterarea" }, [
+              _c("p", { staticClass: "c-loginfont" }, [
+                _vm._v(
+                  "Crypto Trend(クリプト トレンド)は、仮想通貨の情報サイトです。"
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "c-loginfont" }, [
+                _vm._v("特徴はTwitterでのトレンドの把握。")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "c-loginfont" }, [
+                _vm._v("つぶやきを自動集計し、話題の仮想通貨を教えてくれます。")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "c-loginfont__regist" }, [
+                _vm._v("Twitter連携をおこなって、登録してみよう")
+              ]),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "c-atagbtn c-twitterbtn",
+                  attrs: { href: "/twitter/login" }
+                },
+                [
+                  _c("i", { staticClass: "fab fa-twitter" }),
+                  _vm._v("Twitterアカウントで新規登録")
+                ]
+              )
+            ])
+          ]
+        )
       ])
     ])
   },

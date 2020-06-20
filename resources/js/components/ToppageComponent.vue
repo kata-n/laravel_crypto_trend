@@ -3,10 +3,14 @@
        <div class="l-firstview p-firstview">
          <div class="l-toppagecontent">
             <p class="p-toppage__title">仮想通貨のトレンドをTwitterから</p>
-            <div class="l-toptwitterarea">
-                <a href="/twitter/login" class="c-atagbtn c-twitterbtn"><i class="fab fa-twitter"></i>Twitterアカウントで新規登録</a>
-            </div>
-            <div class="l-toparea">
+            <div class="l-toppagecontent__sentence p-toppage__sentence">
+               <div class="l-toptwitterarea">
+                  <p class="c-loginfont">Crypto Trend(クリプト トレンド)は、仮想通貨の情報サイトです。</p>
+                  <p class="c-loginfont">特徴はTwitterでのトレンドの把握。</p>
+                  <p class="c-loginfont">つぶやきを自動集計し、話題の仮想通貨を教えてくれます。</p>
+                  <p class="c-loginfont__regist">Twitter連携をおこなって、登録してみよう</p>
+                  <a href="/twitter/login" class="c-atagbtn c-twitterbtn"><i class="fab fa-twitter"></i>Twitterアカウントで新規登録</a>
+               </div>
             </div>
          </div>
        </div>
