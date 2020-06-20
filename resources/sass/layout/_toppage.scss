@@ -25,7 +25,7 @@
     margin: 0 auto;
     padding: $space_3l $space_m;
     @include mq() {
-      padding: $space_2l $space_m;
+      padding: $space_l $space_m;
     }
   }
   &-introduction {
