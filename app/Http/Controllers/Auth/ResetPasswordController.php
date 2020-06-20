@@ -33,7 +33,7 @@ class ResetPasswordController extends Controller
     {
         // リダイレクト先でフラッシュメッセージを表示する
         return redirect('/mainpage')
-        ->with('flash_message', 'パスワード変更が完了しました。';
+        ->with('flash_message', 'パスワード変更が完了しました。');
     }
     /**
      * Create a new controller instance.
