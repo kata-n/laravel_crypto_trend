@@ -1,7 +1,7 @@
 ## 反省点
 
-###git使い方
-<p>・ブランチを切っていない→次回以降はブランチを切って管理している</p>
+### git使い方
+<p>・ブランチを切っていない→次回以降はブランチを切って管理する</p>
 
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
