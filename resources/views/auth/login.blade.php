@@ -101,6 +101,6 @@
       Copyright kata. AlL Rights Reserved.
     </div>
     <div class="p-footername">
-      My Twitter Account: <a href="{{ url('https://twitter.com/denknit')}}" target="_blank">kata</a>
+      This github Repositories: <a href="{{ url('https://github.com/kata-n/laravel_crypto_trend')}}" target="_blank">crypto_trend</a>
     </div>
 @endsection
