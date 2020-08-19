@@ -13,7 +13,7 @@
     <meta property="og:title" content="Crypto Trend"/>
     <meta property="og:description" content="Twitterでの仮想通貨のトレンドを知るきっかけに。まずはTwitterのアカウントを連携してみよう。"/>
     <meta property="og:image" content="{{ asset('images/top_view2.png') }}"/>
- 
+
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -32,8 +32,8 @@
         <footer class="l-footer">
           @yield('footer')
         </footer>
-      </div>
-      <script src="{{ asset('js/app.js') }}" defer></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     </div>
+     <script src="{{ asset('js/app.js') }}" defer></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </body>
 </html>
