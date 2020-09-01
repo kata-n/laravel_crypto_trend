@@ -1,0 +1,18 @@
+.u {
+  &-crypto__animetion-leave-active,
+  &-crypto__animetion-enter-active {
+    transition: opacity .5s, transform .5s ease;
+  }
+  &-crypto__animetion-leave-to,
+  &-crypto__animetion-enter {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  &-crypto__animetion-leave,
+  &-crypto__animetion-enter-to {
+    opacity: 1;
+  }
+  &-crypto__animetion-move {
+    transition: transform .5s;
+  }
+}

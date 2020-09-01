@@ -1954,6 +1954,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2033,6 +2034,18 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2947,7 +2960,11 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "l-maintitle" }, [
-      _c("h2", { staticClass: "c-heading" }, [_vm._v("Twitterアカウント一覧")])
+      _c("h2", { staticClass: "c-heading" }, [_vm._v("Twitterアカウント一覧")]),
+      _vm._v(" "),
+      _c("div", [
+        _vm._v("仮想通貨に関連するTwitterアカウント一覧を表示しています。")
+      ])
     ])
   }
 ]
@@ -3120,132 +3137,181 @@ var render = function() {
           0
         ),
         _vm._v(" "),
-        _vm._l(_vm.displayHourDatas, function(Hourdata) {
-          return _vm.isActive == "1"
-            ? _c("div", { staticClass: "l-cryptoarea p-cryptoarea" }, [
-                _c(
-                  "a",
+        _c(
+          "transition-group",
+          { attrs: { name: "u-crypto__animetion", tag: "div" } },
+          _vm._l(_vm.displayHourDatas, function(Hourdata) {
+            return _vm.isActive == "1"
+              ? _c(
+                  "div",
                   {
-                    staticClass: "c-rankingtitlebtn",
-                    attrs: {
-                      href:
-                        "https://twitter.com/search?q=" + Hourdata.Crypto_name,
-                      target: "_blank"
-                    }
+                    key: Hourdata.Crypto_name,
+                    staticClass: "l-cryptoarea p-cryptoarea"
                   },
                   [
-                    _vm._v(
-                      "\n          " +
-                        _vm._s(Hourdata.Crypto_name) +
-                        "\n          "
-                    )
+                    _c(
+                      "a",
+                      {
+                        staticClass: "c-rankingtitlebtn",
+                        attrs: {
+                          href:
+                            "https://twitter.com/search?q=" +
+                            Hourdata.Crypto_name,
+                          target: "_blank"
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n            " +
+                            _vm._s(Hourdata.Crypto_name) +
+                            "\n            "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v("ツイート数：" + _vm._s(Hourdata.Tweet_count))
+                    ]),
+                    _vm._v(" "),
+                    Hourdata.Crypto_high == 0
+                      ? _c("p", [_vm._v("最高取引価格：不明")])
+                      : _c("p", [
+                          _vm._v(
+                            "最高取引価格：" + _vm._s(Hourdata.Crypto_high)
+                          )
+                        ]),
+                    _vm._v(" "),
+                    Hourdata.Crypto_low == 0
+                      ? _c("p", [_vm._v("最安取引価格：不明")])
+                      : _c("p", [
+                          _vm._v("最安取引価格：" + _vm._s(Hourdata.Crypto_low))
+                        ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v("取得日時：" + _vm._s(Hourdata.Tweet_time))
+                    ])
                   ]
-                ),
-                _vm._v(" "),
-                _c("p", [
-                  _vm._v("ツイート数：" + _vm._s(Hourdata.Tweet_count))
-                ]),
-                _vm._v(" "),
-                Hourdata.Crypto_high == 0
-                  ? _c("p", [_vm._v("最高取引価格：不明")])
-                  : _c("p", [
-                      _vm._v("最高取引価格：" + _vm._s(Hourdata.Crypto_high))
-                    ]),
-                _vm._v(" "),
-                Hourdata.Crypto_low == 0
-                  ? _c("p", [_vm._v("最安取引価格：不明")])
-                  : _c("p", [
-                      _vm._v("最安取引価格：" + _vm._s(Hourdata.Crypto_low))
-                    ]),
-                _vm._v(" "),
-                _c("p", [_vm._v("取得日時：" + _vm._s(Hourdata.Tweet_time))])
-              ])
-            : _vm._e()
-        }),
+                )
+              : _vm._e()
+          }),
+          0
+        ),
         _vm._v(" "),
-        _vm._l(_vm.displayDayDatas, function(Daydata) {
-          return _vm.isActive == "2"
-            ? _c("div", { staticClass: "l-cryptoarea p-cryptoarea" }, [
-                _c(
-                  "a",
+        _c(
+          "transition-group",
+          { attrs: { name: "u-crypto__animetion", tag: "div" } },
+          _vm._l(_vm.displayDayDatas, function(Daydata) {
+            return _vm.isActive == "2"
+              ? _c(
+                  "div",
                   {
-                    staticClass: "c-rankingtitlebtn",
-                    attrs: {
-                      href:
-                        "https://twitter.com/search?q=" + Daydata.Crypto_name,
-                      target: "_blank"
-                    }
+                    key: Daydata.Crypto_name,
+                    staticClass: "l-cryptoarea p-cryptoarea"
                   },
                   [
-                    _vm._v(
-                      "\n          " +
-                        _vm._s(Daydata.Crypto_name) +
-                        "\n          "
-                    )
+                    _c(
+                      "a",
+                      {
+                        staticClass: "c-rankingtitlebtn",
+                        attrs: {
+                          href:
+                            "https://twitter.com/search?q=" +
+                            Daydata.Crypto_name,
+                          target: "_blank"
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n            " +
+                            _vm._s(Daydata.Crypto_name) +
+                            "\n            "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v("ツイート数：" + _vm._s(Daydata.Tweet_count))
+                    ]),
+                    _vm._v(" "),
+                    Daydata.Crypto_high == 0
+                      ? _c("p", [_vm._v("最高取引価格：不明")])
+                      : _c("p", [
+                          _vm._v("最高取引価格：" + _vm._s(Daydata.Crypto_high))
+                        ]),
+                    _vm._v(" "),
+                    Daydata.Crypto_low == 0
+                      ? _c("p", [_vm._v("最安取引価格：不明")])
+                      : _c("p", [
+                          _vm._v("最安取引価格：" + _vm._s(Daydata.Crypto_low))
+                        ]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("取得日時：" + _vm._s(Daydata.Tweet_time))])
                   ]
-                ),
-                _vm._v(" "),
-                _c("p", [_vm._v("ツイート数：" + _vm._s(Daydata.Tweet_count))]),
-                _vm._v(" "),
-                Daydata.Crypto_high == 0
-                  ? _c("p", [_vm._v("最高取引価格：不明")])
-                  : _c("p", [
-                      _vm._v("最高取引価格：" + _vm._s(Daydata.Crypto_high))
-                    ]),
-                _vm._v(" "),
-                Daydata.Crypto_low == 0
-                  ? _c("p", [_vm._v("最安取引価格：不明")])
-                  : _c("p", [
-                      _vm._v("最安取引価格：" + _vm._s(Daydata.Crypto_low))
-                    ]),
-                _vm._v(" "),
-                _c("p", [_vm._v("取得日時：" + _vm._s(Daydata.Tweet_time))])
-              ])
-            : _vm._e()
-        }),
+                )
+              : _vm._e()
+          }),
+          0
+        ),
         _vm._v(" "),
-        _vm._l(_vm.displayWeekDatas, function(Weekdata) {
-          return _vm.isActive == "3"
-            ? _c("div", { staticClass: "l-cryptoarea p-cryptoarea" }, [
-                _c(
-                  "a",
+        _c(
+          "transition-group",
+          { attrs: { name: "u-crypto__animetion", tag: "div" } },
+          _vm._l(_vm.displayWeekDatas, function(Weekdata) {
+            return _vm.isActive == "3"
+              ? _c(
+                  "div",
                   {
-                    staticClass: "c-rankingtitlebtn",
-                    attrs: {
-                      href:
-                        "https://twitter.com/search?q=" + Weekdata.Crypto_name,
-                      target: "_blank"
-                    }
+                    key: Weekdata.Crypto_name,
+                    staticClass: "l-cryptoarea p-cryptoarea"
                   },
                   [
-                    _vm._v(
-                      "\n          " +
-                        _vm._s(Weekdata.Crypto_name) +
-                        "\n          "
-                    )
+                    _c(
+                      "a",
+                      {
+                        staticClass: "c-rankingtitlebtn",
+                        attrs: {
+                          href:
+                            "https://twitter.com/search?q=" +
+                            Weekdata.Crypto_name,
+                          target: "_blank"
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n            " +
+                            _vm._s(Weekdata.Crypto_name) +
+                            "\n            "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v("ツイート数：" + _vm._s(Weekdata.Tweet_count))
+                    ]),
+                    _vm._v(" "),
+                    Weekdata.Crypto_high == 0
+                      ? _c("p", [_vm._v("最高取引価格：不明")])
+                      : _c("p", [
+                          _vm._v(
+                            "最高取引価格：" + _vm._s(Weekdata.Crypto_high)
+                          )
+                        ]),
+                    _vm._v(" "),
+                    Weekdata.Crypto_low == 0
+                      ? _c("p", [_vm._v("最安取引価格：不明")])
+                      : _c("p", [
+                          _vm._v("最安取引価格：" + _vm._s(Weekdata.Crypto_low))
+                        ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v("取得日時：" + _vm._s(Weekdata.Tweet_time))
+                    ])
                   ]
-                ),
-                _vm._v(" "),
-                _c("p", [
-                  _vm._v("ツイート数：" + _vm._s(Weekdata.Tweet_count))
-                ]),
-                _vm._v(" "),
-                Weekdata.Crypto_high == 0
-                  ? _c("p", [_vm._v("最高取引価格：不明")])
-                  : _c("p", [
-                      _vm._v("最高取引価格：" + _vm._s(Weekdata.Crypto_high))
-                    ]),
-                _vm._v(" "),
-                Weekdata.Crypto_low == 0
-                  ? _c("p", [_vm._v("最安取引価格：不明")])
-                  : _c("p", [
-                      _vm._v("最安取引価格：" + _vm._s(Weekdata.Crypto_low))
-                    ]),
-                _vm._v(" "),
-                _c("p", [_vm._v("取得日時：" + _vm._s(Weekdata.Tweet_time))])
-              ])
-            : _vm._e()
-        }),
+                )
+              : _vm._e()
+          }),
+          0
+        ),
         _vm._v(" "),
         _c(
           "div",
@@ -3265,7 +3331,7 @@ var render = function() {
           [_c("i", { staticClass: "fas fa-chevron-up c-pagetopBtn__icon" })]
         )
       ],
-      2
+      1
     )
   ])
 }
@@ -3279,7 +3345,9 @@ var staticRenderFns = [
         _vm._v("仮想通貨Twitterランキング")
       ]),
       _vm._v(" "),
-      _c("div", [_vm._v("各銘柄毎でツイート数が多い順に表示しています。")])
+      _c("div", [
+        _vm._v("各銘柄毎でツイート数が多い順に集計し表示しています。")
+      ])
     ])
   }
 ]

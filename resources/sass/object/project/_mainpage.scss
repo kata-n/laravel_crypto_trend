@@ -37,6 +37,7 @@
     margin-bottom: $space_xs;
     color: $Blackcolor;
     font-size: $font-size_11px;
+    cursor: pointer;
     @include mq() {
       margin: 0 auto;
       width: 70%;

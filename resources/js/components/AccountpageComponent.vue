@@ -3,6 +3,7 @@
       <div class="l-mainwrapper">
         <div class="l-maintitle">
           <h2 class="c-heading">Twitterアカウント一覧</h2>
+          <div>仮想通貨に関連するTwitterアカウント一覧を表示しています。</div>
         </div>
 
         <button v-if="flag" @click="autofollow" class="c-autofollowbtn__active">

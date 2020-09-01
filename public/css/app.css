@@ -1148,6 +1148,7 @@ li {
   margin-bottom: 0.8rem;
   color: #333;
   font-size: 0.7rem;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 476px) {
@@ -1341,5 +1342,32 @@ li {
   opacity: 1;
   -webkit-transform: translate3d(0, -10px, 0);
           transform: translate3d(0, -10px, 0);
+}
+
+.u-crypto__animetion-leave-active,
+.u-crypto__animetion-enter-active {
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s, transform 0.5s ease;
+  transition: opacity 0.5s, transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.u-crypto__animetion-leave-to,
+.u-crypto__animetion-enter {
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+.u-crypto__animetion-leave,
+.u-crypto__animetion-enter-to {
+  opacity: 1;
+}
+
+.u-crypto__animetion-move {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 

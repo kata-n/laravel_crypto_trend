@@ -3,7 +3,7 @@
         <div class="l-mainwrapper">
             <div class="l-maintitle">
               <h2 class="c-heading">仮想通貨Twitterランキング</h2>
-              <div>各銘柄毎でツイート数が多い順に表示しています。</div>
+              <div>各銘柄毎でツイート数が多い順に集計し表示しています。</div>
             </div>
 
             <div class="l-cryptoranking p-cryptoranking">
@@ -32,50 +32,62 @@
               </div>
             </div>
 
-            <div v-for="Hourdata in displayHourDatas" 
-                 v-if="isActive == '1'"
-                 class="l-cryptoarea p-cryptoarea">
-              <a v-bind:href="'https://twitter.com/search?q=' + Hourdata.Crypto_name" target="_blank"
-              class="c-rankingtitlebtn">
-              {{ Hourdata.Crypto_name }}
-              </a>
-              <p>ツイート数：{{ Hourdata.Tweet_count }}</p>
-              <p v-if="Hourdata.Crypto_high == 0">最高取引価格：不明</p>
-              <p v-else>最高取引価格：{{ Hourdata.Crypto_high }}</p>
-              <p v-if="Hourdata.Crypto_low == 0">最安取引価格：不明</p>
-              <p v-else>最安取引価格：{{ Hourdata.Crypto_low }}</p>
-              <p>取得日時：{{ Hourdata.Tweet_time }}</p>
-            </div>
+            <transition-group name="u-crypto__animetion" tag="div">
+              <div v-for="Hourdata in displayHourDatas"
+                  v-if="isActive == '1'"
+                  class="l-cryptoarea p-cryptoarea"
+                  :key="Hourdata.Crypto_name"
+                  >
+                <a v-bind:href="'https://twitter.com/search?q=' + Hourdata.Crypto_name" target="_blank"
+                class="c-rankingtitlebtn">
+                {{ Hourdata.Crypto_name }}
+                </a>
+                <p>ツイート数：{{ Hourdata.Tweet_count }}</p>
+                <p v-if="Hourdata.Crypto_high == 0">最高取引価格：不明</p>
+                <p v-else>最高取引価格：{{ Hourdata.Crypto_high }}</p>
+                <p v-if="Hourdata.Crypto_low == 0">最安取引価格：不明</p>
+                <p v-else>最安取引価格：{{ Hourdata.Crypto_low }}</p>
+                <p>取得日時：{{ Hourdata.Tweet_time }}</p>
+              </div>
+            </transition-group>
 
-            <div v-for="Daydata in displayDayDatas"
-                 v-if="isActive == '2'"
-                 class="l-cryptoarea p-cryptoarea">
-              <a v-bind:href="'https://twitter.com/search?q=' + Daydata.Crypto_name" target="_blank"
-              class="c-rankingtitlebtn">
-              {{ Daydata.Crypto_name }}
-              </a>
-              <p>ツイート数：{{ Daydata.Tweet_count }}</p>
-              <p v-if="Daydata.Crypto_high == 0">最高取引価格：不明</p>
-              <p v-else>最高取引価格：{{ Daydata.Crypto_high }}</p>
-              <p v-if="Daydata.Crypto_low == 0">最安取引価格：不明</p>
-              <p v-else>最安取引価格：{{ Daydata.Crypto_low }}</p>
-              <p>取得日時：{{ Daydata.Tweet_time }}</p>
-            </div>
+            <transition-group name="u-crypto__animetion" tag="div">
+              <div v-for="Daydata in displayDayDatas"
+                  v-if="isActive == '2'"
+                  class="l-cryptoarea p-cryptoarea"
+                  :key="Daydata.Crypto_name"
+                  >
+                <a v-bind:href="'https://twitter.com/search?q=' + Daydata.Crypto_name" target="_blank"
+                class="c-rankingtitlebtn">
+                {{ Daydata.Crypto_name }}
+                </a>
+                <p>ツイート数：{{ Daydata.Tweet_count }}</p>
+                <p v-if="Daydata.Crypto_high == 0">最高取引価格：不明</p>
+                <p v-else>最高取引価格：{{ Daydata.Crypto_high }}</p>
+                <p v-if="Daydata.Crypto_low == 0">最安取引価格：不明</p>
+                <p v-else>最安取引価格：{{ Daydata.Crypto_low }}</p>
+                <p>取得日時：{{ Daydata.Tweet_time }}</p>
+              </div>
+            </transition-group>
 
-            <div v-for="Weekdata in displayWeekDatas"
-                 v-if="isActive == '3'"
-                 class="l-cryptoarea p-cryptoarea">
-              <a v-bind:href="'https://twitter.com/search?q=' + Weekdata.Crypto_name" target="_blank"
-              class="c-rankingtitlebtn">
-              {{ Weekdata.Crypto_name }}
-              </a>
-              <p>ツイート数：{{ Weekdata.Tweet_count }}</p>
-              <p v-if="Weekdata.Crypto_high == 0">最高取引価格：不明</p>
-              <p v-else>最高取引価格：{{ Weekdata.Crypto_high }}</p>
-              <p v-if="Weekdata.Crypto_low == 0">最安取引価格：不明</p>
-              <p v-else>最安取引価格：{{ Weekdata.Crypto_low }}</p>
-              <p>取得日時：{{ Weekdata.Tweet_time }}</p>
-            </div>
+            <transition-group name="u-crypto__animetion" tag="div">
+              <div v-for="Weekdata in displayWeekDatas"
+                  v-if="isActive == '3'"
+                  class="l-cryptoarea p-cryptoarea"
+                  :key="Weekdata.Crypto_name"
+                  >
+                <a v-bind:href="'https://twitter.com/search?q=' + Weekdata.Crypto_name" target="_blank"
+                class="c-rankingtitlebtn">
+                {{ Weekdata.Crypto_name }}
+                </a>
+                <p>ツイート数：{{ Weekdata.Tweet_count }}</p>
+                <p v-if="Weekdata.Crypto_high == 0">最高取引価格：不明</p>
+                <p v-else>最高取引価格：{{ Weekdata.Crypto_high }}</p>
+                <p v-if="Weekdata.Crypto_low == 0">最安取引価格：不明</p>
+                <p v-else>最安取引価格：{{ Weekdata.Crypto_low }}</p>
+                <p>取得日時：{{ Weekdata.Tweet_time }}</p>
+              </div>
+            </transition-group>
 
             <div v-scroll="handleScroll" :class="{'u-visible':visible}" class="c-pagetopBtn" @click="scrollTop">
               <i class="fas fa-chevron-up c-pagetopBtn__icon"></i>
